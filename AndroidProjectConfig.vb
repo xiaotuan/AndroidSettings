@@ -91,4 +91,19 @@ Public Class AndroidSettingsForm
     Private Sub CbChiperModel_TextChanged(sender As ComboBox, e As EventArgs) Handles CbChiperModel.TextChanged
         MyProjectInfo.ChiperModel = sender.Text
     End Sub
+
+    Private Sub btVersion_Click(sender As Object, e As EventArgs) Handles btVersion.Click
+        If tbVersion.Text.Trim().Length > 0 Then
+            VersionController.SetVersion(Me, tbVersion.Text)
+        Else
+            MessageBox.Show("版本号不能为空！")
+        End If
+    End Sub
+
+    Private Sub tcAndroidSettings_SelectedIndexChanged(sender As TabControl, e As EventArgs) Handles tcAndroidSettings.SelectedIndexChanged
+        If sender.SelectedTab.Name.Equals("tpVersion") Then
+            VersionController.UpdateVersionInfo(Me)
+        End If
+    End Sub
+
 End Class

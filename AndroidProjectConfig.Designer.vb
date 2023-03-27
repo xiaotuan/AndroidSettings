@@ -22,8 +22,8 @@ Partial Class AndroidSettingsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tcAndroidSettings = New System.Windows.Forms.TabControl()
+        Me.tpProjectInfo = New System.Windows.Forms.TabPage()
         Me.GbChiperOptions = New System.Windows.Forms.GroupBox()
         Me.CbChiperModel = New System.Windows.Forms.ComboBox()
         Me.CbChiperMaker = New System.Windows.Forms.ComboBox()
@@ -52,39 +52,44 @@ Partial Class AndroidSettingsForm
         Me.LbProjectPath = New System.Windows.Forms.Label()
         Me.CBProjectId = New System.Windows.Forms.ComboBox()
         Me.LbProjectId = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.tpVersion = New System.Windows.Forms.TabPage()
+        Me.lbVersionState = New System.Windows.Forms.Label()
+        Me.btVersion = New System.Windows.Forms.Button()
+        Me.tbVersion = New System.Windows.Forms.TextBox()
+        Me.lbVersion = New System.Windows.Forms.Label()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.tcAndroidSettings.SuspendLayout()
+        Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
         Me.GbGoOptions.SuspendLayout()
         Me.GbGmsOptions.SuspendLayout()
         Me.GBProject.SuspendLayout()
+        Me.tpVersion.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'tcAndroidSettings
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(823, 486)
-        Me.TabControl1.TabIndex = 0
+        Me.tcAndroidSettings.Controls.Add(Me.tpProjectInfo)
+        Me.tcAndroidSettings.Controls.Add(Me.tpVersion)
+        Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
+        Me.tcAndroidSettings.Name = "tcAndroidSettings"
+        Me.tcAndroidSettings.SelectedIndex = 0
+        Me.tcAndroidSettings.Size = New System.Drawing.Size(823, 486)
+        Me.tcAndroidSettings.TabIndex = 0
         '
-        'TabPage1
+        'tpProjectInfo
         '
-        Me.TabPage1.Controls.Add(Me.GbChiperOptions)
-        Me.TabPage1.Controls.Add(Me.GbGoOptions)
-        Me.TabPage1.Controls.Add(Me.GbGmsOptions)
-        Me.TabPage1.Controls.Add(Me.GBProject)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(815, 456)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "工程信息"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.tpProjectInfo.Controls.Add(Me.GbChiperOptions)
+        Me.tpProjectInfo.Controls.Add(Me.GbGoOptions)
+        Me.tpProjectInfo.Controls.Add(Me.GbGmsOptions)
+        Me.tpProjectInfo.Controls.Add(Me.GBProject)
+        Me.tpProjectInfo.Location = New System.Drawing.Point(4, 26)
+        Me.tpProjectInfo.Name = "tpProjectInfo"
+        Me.tpProjectInfo.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 456)
+        Me.tpProjectInfo.TabIndex = 0
+        Me.tpProjectInfo.Text = "工程信息"
+        Me.tpProjectInfo.UseVisualStyleBackColor = True
         '
         'GbChiperOptions
         '
@@ -112,7 +117,7 @@ Partial Class AndroidSettingsForm
         'CbChiperMaker
         '
         Me.CbChiperMaker.FormattingEnabled = True
-        Me.CbChiperMaker.Items.AddRange(New Object() {"MTK", "UNISOC"})
+        Me.CbChiperMaker.Items.AddRange(New Object() {"MTK"})
         Me.CbChiperMaker.Location = New System.Drawing.Point(80, 21)
         Me.CbChiperMaker.Name = "CbChiperMaker"
         Me.CbChiperMaker.Size = New System.Drawing.Size(212, 25)
@@ -363,28 +368,71 @@ Partial Class AndroidSettingsForm
         Me.LbProjectId.TabIndex = 0
         Me.LbProjectId.Text = "禅道号："
         '
-        'TabPage2
+        'tpVersion
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(815, 456)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.tpVersion.Controls.Add(Me.lbVersionState)
+        Me.tpVersion.Controls.Add(Me.btVersion)
+        Me.tpVersion.Controls.Add(Me.tbVersion)
+        Me.tpVersion.Controls.Add(Me.lbVersion)
+        Me.tpVersion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.tpVersion.Location = New System.Drawing.Point(4, 26)
+        Me.tpVersion.Name = "tpVersion"
+        Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpVersion.Size = New System.Drawing.Size(815, 456)
+        Me.tpVersion.TabIndex = 1
+        Me.tpVersion.Text = "版本号"
+        Me.tpVersion.UseVisualStyleBackColor = True
+        '
+        'lbVersionState
+        '
+        Me.lbVersionState.AutoSize = True
+        Me.lbVersionState.BackColor = System.Drawing.Color.Transparent
+        Me.lbVersionState.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbVersionState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lbVersionState.Location = New System.Drawing.Point(772, 41)
+        Me.lbVersionState.Name = "lbVersionState"
+        Me.lbVersionState.Size = New System.Drawing.Size(37, 17)
+        Me.lbVersionState.TabIndex = 3
+        Me.lbVersionState.Text = "PASS"
+        Me.lbVersionState.Visible = False
+        '
+        'btVersion
+        '
+        Me.btVersion.Location = New System.Drawing.Point(6, 80)
+        Me.btVersion.Name = "btVersion"
+        Me.btVersion.Size = New System.Drawing.Size(75, 23)
+        Me.btVersion.TabIndex = 2
+        Me.btVersion.Text = "设置"
+        Me.btVersion.UseVisualStyleBackColor = True
+        '
+        'tbVersion
+        '
+        Me.tbVersion.Location = New System.Drawing.Point(6, 38)
+        Me.tbVersion.Name = "tbVersion"
+        Me.tbVersion.Size = New System.Drawing.Size(760, 23)
+        Me.tbVersion.TabIndex = 1
+        '
+        'lbVersion
+        '
+        Me.lbVersion.AutoSize = True
+        Me.lbVersion.Location = New System.Drawing.Point(6, 18)
+        Me.lbVersion.Name = "lbVersion"
+        Me.lbVersion.Size = New System.Drawing.Size(355, 17)
+        Me.lbVersion.TabIndex = 0
+        Me.lbVersion.Text = "版本号：（例如：UMIDIGI_G3 Tab_V1.0_`date +%Y%m%d`）"
         '
         'AndroidSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 508)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.tcAndroidSettings)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "AndroidSettingsForm"
         Me.Text = "Android 工程配置"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
+        Me.tcAndroidSettings.ResumeLayout(False)
+        Me.tpProjectInfo.ResumeLayout(False)
         Me.GbChiperOptions.ResumeLayout(False)
         Me.GbChiperOptions.PerformLayout()
         Me.GbGoOptions.ResumeLayout(False)
@@ -393,12 +441,14 @@ Partial Class AndroidSettingsForm
         Me.GbGmsOptions.PerformLayout()
         Me.GBProject.ResumeLayout(False)
         Me.GBProject.PerformLayout()
+        Me.tpVersion.ResumeLayout(False)
+        Me.tpVersion.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents tcAndroidSettings As TabControl
+    Friend WithEvents tpProjectInfo As TabPage
     Friend WithEvents GBProject As GroupBox
     Friend WithEvents CbAndroidVersin As ComboBox
     Friend WithEvents LbAndroidVersion As Label
@@ -411,7 +461,7 @@ Partial Class AndroidSettingsForm
     Friend WithEvents LbProjectPath As Label
     Friend WithEvents CBProjectId As ComboBox
     Friend WithEvents LbProjectId As Label
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents tpVersion As TabPage
     Friend WithEvents GbGmsOptions As GroupBox
     Friend WithEvents RbNotGms As RadioButton
     Friend WithEvents RbGms As RadioButton
@@ -429,4 +479,8 @@ Partial Class AndroidSettingsForm
     Friend WithEvents TbDriveName As TextBox
     Friend WithEvents TbPublicName As TextBox
     Friend WithEvents FbdSelectPath As FolderBrowserDialog
+    Friend WithEvents btVersion As Button
+    Friend WithEvents tbVersion As TextBox
+    Private WithEvents lbVersion As Label
+    Friend WithEvents lbVersionState As Label
 End Class
