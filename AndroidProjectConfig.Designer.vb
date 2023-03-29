@@ -57,6 +57,12 @@ Partial Class AndroidSettingsForm
         Me.btVersion = New System.Windows.Forms.Button()
         Me.tbVersion = New System.Windows.Forms.TextBox()
         Me.lbVersion = New System.Windows.Forms.Label()
+        Me.tpFingerprint = New System.Windows.Forms.TabPage()
+        Me.btFingerprintSet = New System.Windows.Forms.Button()
+        Me.btRandom = New System.Windows.Forms.Button()
+        Me.lbFingerprintState = New System.Windows.Forms.Label()
+        Me.tbFingerprint = New System.Windows.Forms.TextBox()
+        Me.lbFingerprint = New System.Windows.Forms.Label()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
@@ -65,12 +71,14 @@ Partial Class AndroidSettingsForm
         Me.GbGmsOptions.SuspendLayout()
         Me.GBProject.SuspendLayout()
         Me.tpVersion.SuspendLayout()
+        Me.tpFingerprint.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
         '
         Me.tcAndroidSettings.Controls.Add(Me.tpProjectInfo)
         Me.tcAndroidSettings.Controls.Add(Me.tpVersion)
+        Me.tcAndroidSettings.Controls.Add(Me.tpFingerprint)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
         Me.tcAndroidSettings.Name = "tcAndroidSettings"
         Me.tcAndroidSettings.SelectedIndex = 0
@@ -398,7 +406,7 @@ Partial Class AndroidSettingsForm
         '
         'btVersion
         '
-        Me.btVersion.Location = New System.Drawing.Point(6, 80)
+        Me.btVersion.Location = New System.Drawing.Point(6, 75)
         Me.btVersion.Name = "btVersion"
         Me.btVersion.Size = New System.Drawing.Size(75, 23)
         Me.btVersion.TabIndex = 2
@@ -407,7 +415,7 @@ Partial Class AndroidSettingsForm
         '
         'tbVersion
         '
-        Me.tbVersion.Location = New System.Drawing.Point(6, 38)
+        Me.tbVersion.Location = New System.Drawing.Point(6, 33)
         Me.tbVersion.Name = "tbVersion"
         Me.tbVersion.Size = New System.Drawing.Size(760, 23)
         Me.tbVersion.TabIndex = 1
@@ -415,11 +423,69 @@ Partial Class AndroidSettingsForm
         'lbVersion
         '
         Me.lbVersion.AutoSize = True
-        Me.lbVersion.Location = New System.Drawing.Point(6, 18)
+        Me.lbVersion.Location = New System.Drawing.Point(6, 13)
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(355, 17)
         Me.lbVersion.TabIndex = 0
         Me.lbVersion.Text = "版本号：（例如：UMIDIGI_G3 Tab_V1.0_`date +%Y%m%d`）"
+        '
+        'tpFingerprint
+        '
+        Me.tpFingerprint.Controls.Add(Me.btFingerprintSet)
+        Me.tpFingerprint.Controls.Add(Me.btRandom)
+        Me.tpFingerprint.Controls.Add(Me.lbFingerprintState)
+        Me.tpFingerprint.Controls.Add(Me.tbFingerprint)
+        Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
+        Me.tpFingerprint.Location = New System.Drawing.Point(4, 26)
+        Me.tpFingerprint.Name = "tpFingerprint"
+        Me.tpFingerprint.Size = New System.Drawing.Size(815, 456)
+        Me.tpFingerprint.TabIndex = 2
+        Me.tpFingerprint.Text = "Fingerprint"
+        Me.tpFingerprint.UseVisualStyleBackColor = True
+        '
+        'btFingerprintSet
+        '
+        Me.btFingerprintSet.Location = New System.Drawing.Point(6, 76)
+        Me.btFingerprintSet.Name = "btFingerprintSet"
+        Me.btFingerprintSet.Size = New System.Drawing.Size(75, 23)
+        Me.btFingerprintSet.TabIndex = 4
+        Me.btFingerprintSet.Text = "设置"
+        Me.btFingerprintSet.UseVisualStyleBackColor = True
+        '
+        'btRandom
+        '
+        Me.btRandom.Location = New System.Drawing.Point(685, 35)
+        Me.btRandom.Name = "btRandom"
+        Me.btRandom.Size = New System.Drawing.Size(75, 23)
+        Me.btRandom.TabIndex = 3
+        Me.btRandom.Text = "随机生成"
+        Me.btRandom.UseVisualStyleBackColor = True
+        '
+        'lbFingerprintState
+        '
+        Me.lbFingerprintState.AutoSize = True
+        Me.lbFingerprintState.ForeColor = System.Drawing.Color.Green
+        Me.lbFingerprintState.Location = New System.Drawing.Point(766, 38)
+        Me.lbFingerprintState.Name = "lbFingerprintState"
+        Me.lbFingerprintState.Size = New System.Drawing.Size(37, 17)
+        Me.lbFingerprintState.TabIndex = 2
+        Me.lbFingerprintState.Text = "PASS"
+        '
+        'tbFingerprint
+        '
+        Me.tbFingerprint.Location = New System.Drawing.Point(6, 35)
+        Me.tbFingerprint.Name = "tbFingerprint"
+        Me.tbFingerprint.Size = New System.Drawing.Size(673, 23)
+        Me.tbFingerprint.TabIndex = 1
+        '
+        'lbFingerprint
+        '
+        Me.lbFingerprint.AutoSize = True
+        Me.lbFingerprint.Location = New System.Drawing.Point(6, 13)
+        Me.lbFingerprint.Name = "lbFingerprint"
+        Me.lbFingerprint.Size = New System.Drawing.Size(83, 17)
+        Me.lbFingerprint.TabIndex = 0
+        Me.lbFingerprint.Text = "Fingerprint："
         '
         'AndroidSettingsForm
         '
@@ -443,6 +509,8 @@ Partial Class AndroidSettingsForm
         Me.GBProject.PerformLayout()
         Me.tpVersion.ResumeLayout(False)
         Me.tpVersion.PerformLayout()
+        Me.tpFingerprint.ResumeLayout(False)
+        Me.tpFingerprint.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -483,4 +551,10 @@ Partial Class AndroidSettingsForm
     Friend WithEvents tbVersion As TextBox
     Private WithEvents lbVersion As Label
     Friend WithEvents lbVersionState As Label
+    Friend WithEvents tpFingerprint As TabPage
+    Friend WithEvents lbFingerprint As Label
+    Friend WithEvents btFingerprintSet As Button
+    Friend WithEvents btRandom As Button
+    Friend WithEvents lbFingerprintState As Label
+    Friend WithEvents tbFingerprint As TextBox
 End Class

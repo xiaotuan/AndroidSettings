@@ -8,13 +8,14 @@ Module AndroidTVersion
         versionCustomPath = info.ProjectPath + "/sys/weibu/" + info.MssiDirName + "/" + info.CustomDirName + "/alps/build/make/tools/buildinfo.sh"
         Debug.WriteLine("[AndroidTVersion] GetVersion=>versionCustomPath: " & versionCustomPath)
         If System.IO.File.Exists(versionCustomPath) Then
-            Dim fileReader As New System.IO.StreamReader(versionCustomPath, System.Text.Encoding.UTF8)
+            Dim utf8 = New System.Text.UTF8Encoding(False)
+            Dim fileReader As New System.IO.StreamReader(versionCustomPath, utf8)
             Dim line = fileReader.ReadLine()
             Do Until line Is Nothing
                 Debug.WriteLine("Line=>line: " & line)
                 If line.StartsWith("echo ""ro.build.display.id=") Then
-                    version = line.Split("=")(1)
-                    version = version.Substring(0, Len(version) - 1)
+                    version = line.Split("=")(1).Trim
+                    version = version.Substring(0, Len(version) - 1).Trim
                 End If
                 line = fileReader.ReadLine()
             Loop
@@ -59,9 +60,11 @@ Module AndroidTVersion
 
         Try
             Dim fs As FileStream = Nothing
+            Dim utf8 = New System.Text.UTF8Encoding(False)
             fs = New FileStream(androidTVersionCustomPath, FileMode.Open)
-            Dim fileReader As New System.IO.StreamReader(backVersionPath, System.Text.Encoding.UTF8)
-            Dim fileWriter As New System.IO.StreamWriter(fs, System.Text.Encoding.UTF8)
+            Dim fileReader As New System.IO.StreamReader(backVersionPath, utf8)
+            Dim fileWriter As New System.IO.StreamWriter(fs, utf8)
+            fileWriter.NewLine = vbLf
             Dim line = fileReader.ReadLine()
             Do Until line Is Nothing
                 If line.StartsWith("echo ""ro.build.display.id=") Then
@@ -113,9 +116,11 @@ Module AndroidTVersion
 
         Try
             Dim fs As FileStream = Nothing
+            Dim utf8 = New System.Text.UTF8Encoding(False)
             fs = New FileStream(androidSVersionCustomPath, FileMode.Open)
-            Dim fileReader As New System.IO.StreamReader(backVersionPath, System.Text.Encoding.UTF8)
-            Dim fileWriter As New System.IO.StreamWriter(fs, System.Text.Encoding.UTF8)
+            Dim fileReader As New System.IO.StreamReader(backVersionPath, utf8)
+            Dim fileWriter As New System.IO.StreamWriter(fs, utf8)
+            fileWriter.NewLine = vbLf
             Dim line = fileReader.ReadLine()
             Do Until line Is Nothing
                 If line.StartsWith("echo ""ro.build.display.id=") Then

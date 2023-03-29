@@ -1,4 +1,6 @@
-﻿Imports System.Runtime.CompilerServices
+﻿Imports System.Globalization
+Imports System.Runtime.CompilerServices
+Imports Microsoft.VisualBasic.Devices
 
 Public Class AndroidSettingsForm
 
@@ -93,6 +95,7 @@ Public Class AndroidSettingsForm
     End Sub
 
     Private Sub btVersion_Click(sender As Object, e As EventArgs) Handles btVersion.Click
+
         If tbVersion.Text.Trim().Length > 0 Then
             VersionController.SetVersion(Me, tbVersion.Text)
         Else
@@ -103,7 +106,17 @@ Public Class AndroidSettingsForm
     Private Sub tcAndroidSettings_SelectedIndexChanged(sender As TabControl, e As EventArgs) Handles tcAndroidSettings.SelectedIndexChanged
         If sender.SelectedTab.Name.Equals("tpVersion") Then
             VersionController.UpdateVersionInfo(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpFingerprint") Then
+            FingerprintController.UpdateFingerprintInfo(Me)
         End If
     End Sub
 
+    Private Sub btRandom_Click(sender As Object, e As EventArgs) Handles btRandom.Click
+        Dim time As Long = DateDiff("s", "1970-1-1 0:0:0", DateTime.UtcNow)
+        tbFingerprint.Text = Str(time).Trim
+    End Sub
+
+    Private Sub btFingerprintSet_Click(sender As Object, e As EventArgs) Handles btFingerprintSet.Click
+        FingerprintController.SetFingerprint(Me, tbFingerprint.Text)
+    End Sub
 End Class
