@@ -52,6 +52,23 @@ Partial Class AndroidSettingsForm
         Me.LbProjectPath = New System.Windows.Forms.Label()
         Me.CBProjectId = New System.Windows.Forms.ComboBox()
         Me.LbProjectId = New System.Windows.Forms.Label()
+        Me.tpProperty = New System.Windows.Forms.TabPage()
+        Me.lbProductManufacturerState = New System.Windows.Forms.Label()
+        Me.lbProductDeviceState = New System.Windows.Forms.Label()
+        Me.lbProductBrandState = New System.Windows.Forms.Label()
+        Me.lbProductModelState = New System.Windows.Forms.Label()
+        Me.lbProductNameState = New System.Windows.Forms.Label()
+        Me.btPropertySetting = New System.Windows.Forms.Button()
+        Me.tbProductManufacturer = New System.Windows.Forms.TextBox()
+        Me.lbProductManufacturer = New System.Windows.Forms.Label()
+        Me.tbProductDevice = New System.Windows.Forms.TextBox()
+        Me.lbProductDevice = New System.Windows.Forms.Label()
+        Me.tbProductBrand = New System.Windows.Forms.TextBox()
+        Me.lbProductBrand = New System.Windows.Forms.Label()
+        Me.tbProductModel = New System.Windows.Forms.TextBox()
+        Me.lbProductModel = New System.Windows.Forms.Label()
+        Me.tbProductName = New System.Windows.Forms.TextBox()
+        Me.lbProductName = New System.Windows.Forms.Label()
         Me.tpVersion = New System.Windows.Forms.TabPage()
         Me.lbVersionState = New System.Windows.Forms.Label()
         Me.btVersion = New System.Windows.Forms.Button()
@@ -70,6 +87,7 @@ Partial Class AndroidSettingsForm
         Me.GbGoOptions.SuspendLayout()
         Me.GbGmsOptions.SuspendLayout()
         Me.GBProject.SuspendLayout()
+        Me.tpProperty.SuspendLayout()
         Me.tpVersion.SuspendLayout()
         Me.tpFingerprint.SuspendLayout()
         Me.SuspendLayout()
@@ -77,6 +95,7 @@ Partial Class AndroidSettingsForm
         'tcAndroidSettings
         '
         Me.tcAndroidSettings.Controls.Add(Me.tpProjectInfo)
+        Me.tcAndroidSettings.Controls.Add(Me.tpProperty)
         Me.tcAndroidSettings.Controls.Add(Me.tpVersion)
         Me.tcAndroidSettings.Controls.Add(Me.tpFingerprint)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
@@ -376,6 +395,165 @@ Partial Class AndroidSettingsForm
         Me.LbProjectId.TabIndex = 0
         Me.LbProjectId.Text = "禅道号："
         '
+        'tpProperty
+        '
+        Me.tpProperty.Controls.Add(Me.lbProductManufacturerState)
+        Me.tpProperty.Controls.Add(Me.lbProductDeviceState)
+        Me.tpProperty.Controls.Add(Me.lbProductBrandState)
+        Me.tpProperty.Controls.Add(Me.lbProductModelState)
+        Me.tpProperty.Controls.Add(Me.lbProductNameState)
+        Me.tpProperty.Controls.Add(Me.btPropertySetting)
+        Me.tpProperty.Controls.Add(Me.tbProductManufacturer)
+        Me.tpProperty.Controls.Add(Me.lbProductManufacturer)
+        Me.tpProperty.Controls.Add(Me.tbProductDevice)
+        Me.tpProperty.Controls.Add(Me.lbProductDevice)
+        Me.tpProperty.Controls.Add(Me.tbProductBrand)
+        Me.tpProperty.Controls.Add(Me.lbProductBrand)
+        Me.tpProperty.Controls.Add(Me.tbProductModel)
+        Me.tpProperty.Controls.Add(Me.lbProductModel)
+        Me.tpProperty.Controls.Add(Me.tbProductName)
+        Me.tpProperty.Controls.Add(Me.lbProductName)
+        Me.tpProperty.Location = New System.Drawing.Point(4, 26)
+        Me.tpProperty.Name = "tpProperty"
+        Me.tpProperty.Size = New System.Drawing.Size(815, 456)
+        Me.tpProperty.TabIndex = 3
+        Me.tpProperty.Text = "系统属性"
+        Me.tpProperty.UseVisualStyleBackColor = True
+        '
+        'lbProductManufacturerState
+        '
+        Me.lbProductManufacturerState.AutoSize = True
+        Me.lbProductManufacturerState.Location = New System.Drawing.Point(756, 158)
+        Me.lbProductManufacturerState.Name = "lbProductManufacturerState"
+        Me.lbProductManufacturerState.Size = New System.Drawing.Size(37, 17)
+        Me.lbProductManufacturerState.TabIndex = 3
+        Me.lbProductManufacturerState.Text = "PASS"
+        '
+        'lbProductDeviceState
+        '
+        Me.lbProductDeviceState.AutoSize = True
+        Me.lbProductDeviceState.Location = New System.Drawing.Point(756, 123)
+        Me.lbProductDeviceState.Name = "lbProductDeviceState"
+        Me.lbProductDeviceState.Size = New System.Drawing.Size(37, 17)
+        Me.lbProductDeviceState.TabIndex = 3
+        Me.lbProductDeviceState.Text = "PASS"
+        '
+        'lbProductBrandState
+        '
+        Me.lbProductBrandState.AutoSize = True
+        Me.lbProductBrandState.Location = New System.Drawing.Point(756, 88)
+        Me.lbProductBrandState.Name = "lbProductBrandState"
+        Me.lbProductBrandState.Size = New System.Drawing.Size(37, 17)
+        Me.lbProductBrandState.TabIndex = 3
+        Me.lbProductBrandState.Text = "PASS"
+        '
+        'lbProductModelState
+        '
+        Me.lbProductModelState.AutoSize = True
+        Me.lbProductModelState.Location = New System.Drawing.Point(756, 51)
+        Me.lbProductModelState.Name = "lbProductModelState"
+        Me.lbProductModelState.Size = New System.Drawing.Size(37, 17)
+        Me.lbProductModelState.TabIndex = 3
+        Me.lbProductModelState.Text = "PASS"
+        '
+        'lbProductNameState
+        '
+        Me.lbProductNameState.AutoSize = True
+        Me.lbProductNameState.Location = New System.Drawing.Point(756, 15)
+        Me.lbProductNameState.Name = "lbProductNameState"
+        Me.lbProductNameState.Size = New System.Drawing.Size(37, 17)
+        Me.lbProductNameState.TabIndex = 3
+        Me.lbProductNameState.Text = "PASS"
+        '
+        'btPropertySetting
+        '
+        Me.btPropertySetting.Location = New System.Drawing.Point(13, 211)
+        Me.btPropertySetting.Name = "btPropertySetting"
+        Me.btPropertySetting.Size = New System.Drawing.Size(75, 23)
+        Me.btPropertySetting.TabIndex = 2
+        Me.btPropertySetting.Text = "设置"
+        Me.btPropertySetting.UseVisualStyleBackColor = True
+        '
+        'tbProductManufacturer
+        '
+        Me.tbProductManufacturer.Location = New System.Drawing.Point(257, 158)
+        Me.tbProductManufacturer.Name = "tbProductManufacturer"
+        Me.tbProductManufacturer.Size = New System.Drawing.Size(493, 23)
+        Me.tbProductManufacturer.TabIndex = 1
+        '
+        'lbProductManufacturer
+        '
+        Me.lbProductManufacturer.AutoSize = True
+        Me.lbProductManufacturer.Location = New System.Drawing.Point(13, 158)
+        Me.lbProductManufacturer.Name = "lbProductManufacturer"
+        Me.lbProductManufacturer.Size = New System.Drawing.Size(238, 17)
+        Me.lbProductManufacturer.TabIndex = 0
+        Me.lbProductManufacturer.Text = "设备制造商（ro.product.manufacturer)："
+        '
+        'tbProductDevice
+        '
+        Me.tbProductDevice.Location = New System.Drawing.Point(257, 120)
+        Me.tbProductDevice.Name = "tbProductDevice"
+        Me.tbProductDevice.Size = New System.Drawing.Size(493, 23)
+        Me.tbProductDevice.TabIndex = 1
+        '
+        'lbProductDevice
+        '
+        Me.lbProductDevice.AutoSize = True
+        Me.lbProductDevice.Location = New System.Drawing.Point(13, 123)
+        Me.lbProductDevice.Name = "lbProductDevice"
+        Me.lbProductDevice.Size = New System.Drawing.Size(186, 17)
+        Me.lbProductDevice.TabIndex = 0
+        Me.lbProductDevice.Text = "设备名称（ro.product.device)："
+        '
+        'tbProductBrand
+        '
+        Me.tbProductBrand.Location = New System.Drawing.Point(257, 85)
+        Me.tbProductBrand.Name = "tbProductBrand"
+        Me.tbProductBrand.Size = New System.Drawing.Size(493, 23)
+        Me.tbProductBrand.TabIndex = 1
+        '
+        'lbProductBrand
+        '
+        Me.lbProductBrand.AutoSize = True
+        Me.lbProductBrand.Location = New System.Drawing.Point(13, 88)
+        Me.lbProductBrand.Name = "lbProductBrand"
+        Me.lbProductBrand.Size = New System.Drawing.Size(184, 17)
+        Me.lbProductBrand.TabIndex = 0
+        Me.lbProductBrand.Text = "设备品牌（ro.product.brand)："
+        '
+        'tbProductModel
+        '
+        Me.tbProductModel.Location = New System.Drawing.Point(257, 48)
+        Me.tbProductModel.Name = "tbProductModel"
+        Me.tbProductModel.Size = New System.Drawing.Size(493, 23)
+        Me.tbProductModel.TabIndex = 1
+        '
+        'lbProductModel
+        '
+        Me.lbProductModel.AutoSize = True
+        Me.lbProductModel.Location = New System.Drawing.Point(13, 51)
+        Me.lbProductModel.Name = "lbProductModel"
+        Me.lbProductModel.Size = New System.Drawing.Size(186, 17)
+        Me.lbProductModel.TabIndex = 0
+        Me.lbProductModel.Text = "产品型号（ro.product.model)："
+        '
+        'tbProductName
+        '
+        Me.tbProductName.Location = New System.Drawing.Point(257, 12)
+        Me.tbProductName.Name = "tbProductName"
+        Me.tbProductName.Size = New System.Drawing.Size(493, 23)
+        Me.tbProductName.TabIndex = 1
+        '
+        'lbProductName
+        '
+        Me.lbProductName.AutoSize = True
+        Me.lbProductName.Location = New System.Drawing.Point(13, 15)
+        Me.lbProductName.Name = "lbProductName"
+        Me.lbProductName.Size = New System.Drawing.Size(181, 17)
+        Me.lbProductName.TabIndex = 0
+        Me.lbProductName.Text = "产品名称（ro.product.name)："
+        '
         'tpVersion
         '
         Me.tpVersion.Controls.Add(Me.lbVersionState)
@@ -496,6 +674,7 @@ Partial Class AndroidSettingsForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "AndroidSettingsForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Android 工程配置"
         Me.tcAndroidSettings.ResumeLayout(False)
         Me.tpProjectInfo.ResumeLayout(False)
@@ -507,6 +686,8 @@ Partial Class AndroidSettingsForm
         Me.GbGmsOptions.PerformLayout()
         Me.GBProject.ResumeLayout(False)
         Me.GBProject.PerformLayout()
+        Me.tpProperty.ResumeLayout(False)
+        Me.tpProperty.PerformLayout()
         Me.tpVersion.ResumeLayout(False)
         Me.tpVersion.PerformLayout()
         Me.tpFingerprint.ResumeLayout(False)
@@ -557,4 +738,21 @@ Partial Class AndroidSettingsForm
     Friend WithEvents btRandom As Button
     Friend WithEvents lbFingerprintState As Label
     Friend WithEvents tbFingerprint As TextBox
+    Friend WithEvents tpProperty As TabPage
+    Friend WithEvents lbProductManufacturerState As Label
+    Friend WithEvents lbProductDeviceState As Label
+    Friend WithEvents lbProductBrandState As Label
+    Friend WithEvents lbProductModelState As Label
+    Friend WithEvents lbProductNameState As Label
+    Friend WithEvents tbProductManufacturer As TextBox
+    Friend WithEvents lbProductManufacturer As Label
+    Friend WithEvents tbProductDevice As TextBox
+    Friend WithEvents lbProductDevice As Label
+    Friend WithEvents tbProductBrand As TextBox
+    Friend WithEvents lbProductBrand As Label
+    Friend WithEvents tbProductModel As TextBox
+    Friend WithEvents lbProductModel As Label
+    Friend WithEvents tbProductName As TextBox
+    Friend WithEvents lbProductName As Label
+    Friend WithEvents btPropertySetting As Button
 End Class

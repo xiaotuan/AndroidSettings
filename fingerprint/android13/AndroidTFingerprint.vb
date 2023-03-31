@@ -6,7 +6,8 @@ Module AndroidTFingerprint
         Dim fingerprint As String = ""
         Dim fingerprintFilePath As String = info.ProjectPath + "/sys/weibu/" + info.MssiDirName + "/" + info.CustomDirName + "/alps/device/mediatek/system/common/BoardConfig.mk"
         If System.IO.File.Exists(fingerprintFilePath) Then
-            Dim fileReader As New System.IO.StreamReader(fingerprintFilePath, System.Text.Encoding.UTF8)
+            Dim utf8 = New System.Text.UTF8Encoding(False)
+            Dim fileReader As New System.IO.StreamReader(fingerprintFilePath, utf8)
             Dim line = fileReader.ReadLine()
             Do Until line Is Nothing
                 Debug.WriteLine("Line=>line: " & line)

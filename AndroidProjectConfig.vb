@@ -108,6 +108,8 @@ Public Class AndroidSettingsForm
             VersionController.UpdateVersionInfo(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpFingerprint") Then
             FingerprintController.UpdateFingerprintInfo(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpProperty") Then
+            PropertyController.UpdatePropertyInfo(Me)
         End If
     End Sub
 
@@ -118,5 +120,9 @@ Public Class AndroidSettingsForm
 
     Private Sub btFingerprintSet_Click(sender As Object, e As EventArgs) Handles btFingerprintSet.Click
         FingerprintController.SetFingerprint(Me, tbFingerprint.Text)
+    End Sub
+
+    Private Sub btPropertySetting_Click(sender As Object, e As EventArgs) Handles btPropertySetting.Click
+        PropertyController.SetProperties(Me)
     End Sub
 End Class
