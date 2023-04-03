@@ -46,29 +46,38 @@ Module AndroidTProperty
         Dim name As String = ""
         Dim originFilePath As String = info.ProjectPath & "/sys/device/mediatek/system/" + info.MssiDirName + "/sys_" & info.MssiDirName & ".mk"
         Dim customFilePath As String = info.ProjectPath & "/sys/weibu/" & info.MssiDirName & "/" & info.CustomDirName & "/alps/device/mediatek/system/" + info.MssiDirName + "/sys_" & info.MssiDirName & ".mk"
-        If System.IO.File.Exists(customFilePath) Then
-            Dim utf8 = New System.Text.UTF8Encoding(False)
-            Dim fileReader As New System.IO.StreamReader(customFilePath, utf8)
-            Dim line = fileReader.ReadLine()
-            Do Until line Is Nothing
-                If line.StartsWith(tag) Then
-                    name = line.Split(":=")(1).Trim
-                End If
-                line = fileReader.ReadLine()
-            Loop
-            fileReader.Close()
-        Else
-            Dim utf8 = New System.Text.UTF8Encoding(False)
-            Dim fileReader As New System.IO.StreamReader(originFilePath, utf8)
-            Dim line = fileReader.ReadLine()
-            Do Until line Is Nothing
-                If line.StartsWith(tag) Then
-                    name = line.Split(":=")(1).Trim
-                End If
-                line = fileReader.ReadLine()
-            Loop
-            fileReader.Close()
-        End If
+        Dim fileReader As System.IO.StreamReader = Nothing
+        Try
+            If System.IO.File.Exists(customFilePath) Then
+                Dim utf8 = New System.Text.UTF8Encoding(False)
+                fileReader = New System.IO.StreamReader(customFilePath, utf8)
+                Dim line = fileReader.ReadLine()
+                Do Until line Is Nothing
+                    If line.StartsWith(tag) Then
+                        name = line.Split(":=")(1).Trim
+                    End If
+                    line = fileReader.ReadLine()
+                Loop
+                fileReader.Close()
+            Else
+                Dim utf8 = New System.Text.UTF8Encoding(False)
+                fileReader = New System.IO.StreamReader(originFilePath, utf8)
+                Dim line = fileReader.ReadLine()
+                Do Until line Is Nothing
+                    If line.StartsWith(tag) Then
+                        name = line.Split(":=")(1).Trim
+                    End If
+                    line = fileReader.ReadLine()
+                Loop
+            End If
+        Catch ex As Exception
+            Debug.WriteLine("[AndroidTProperty] GetPropertyValue=>error: " & ex.ToString)
+        Finally
+            If Not IsNothing(fileReader) Then
+                fileReader.Close()
+                fileReader = Nothing
+            End If
+        End Try
         Return name
     End Function
 

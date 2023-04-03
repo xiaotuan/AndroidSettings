@@ -80,7 +80,19 @@ Partial Class AndroidSettingsForm
         Me.lbFingerprintState = New System.Windows.Forms.Label()
         Me.tbFingerprint = New System.Windows.Forms.TextBox()
         Me.lbFingerprint = New System.Windows.Forms.Label()
+        Me.tpWifi = New System.Windows.Forms.TabPage()
+        Me.lbWifiStatus = New System.Windows.Forms.Label()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
+        Me.rbWifiOpen = New System.Windows.Forms.RadioButton()
+        Me.rbWifiClose = New System.Windows.Forms.RadioButton()
+        Me.lbWifiHotspotName = New System.Windows.Forms.Label()
+        Me.tbWifiHotspotName = New System.Windows.Forms.TextBox()
+        Me.lbWifiStatusState = New System.Windows.Forms.Label()
+        Me.lbWifiHotspotNameState = New System.Windows.Forms.Label()
+        Me.lbWifiScreenCast = New System.Windows.Forms.Label()
+        Me.tbWifiScreenCast = New System.Windows.Forms.TextBox()
+        Me.lbWifiScreenCastState = New System.Windows.Forms.Label()
+        Me.btWifiSetting = New System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -90,6 +102,7 @@ Partial Class AndroidSettingsForm
         Me.tpProperty.SuspendLayout()
         Me.tpVersion.SuspendLayout()
         Me.tpFingerprint.SuspendLayout()
+        Me.tpWifi.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -98,6 +111,7 @@ Partial Class AndroidSettingsForm
         Me.tcAndroidSettings.Controls.Add(Me.tpProperty)
         Me.tcAndroidSettings.Controls.Add(Me.tpVersion)
         Me.tcAndroidSettings.Controls.Add(Me.tpFingerprint)
+        Me.tcAndroidSettings.Controls.Add(Me.tpWifi)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
         Me.tcAndroidSettings.Name = "tcAndroidSettings"
         Me.tcAndroidSettings.SelectedIndex = 0
@@ -665,6 +679,126 @@ Partial Class AndroidSettingsForm
         Me.lbFingerprint.TabIndex = 0
         Me.lbFingerprint.Text = "Fingerprint："
         '
+        'tpWifi
+        '
+        Me.tpWifi.Controls.Add(Me.btWifiSetting)
+        Me.tpWifi.Controls.Add(Me.lbWifiScreenCastState)
+        Me.tpWifi.Controls.Add(Me.lbWifiHotspotNameState)
+        Me.tpWifi.Controls.Add(Me.lbWifiStatusState)
+        Me.tpWifi.Controls.Add(Me.tbWifiScreenCast)
+        Me.tpWifi.Controls.Add(Me.tbWifiHotspotName)
+        Me.tpWifi.Controls.Add(Me.lbWifiScreenCast)
+        Me.tpWifi.Controls.Add(Me.lbWifiHotspotName)
+        Me.tpWifi.Controls.Add(Me.rbWifiClose)
+        Me.tpWifi.Controls.Add(Me.rbWifiOpen)
+        Me.tpWifi.Controls.Add(Me.lbWifiStatus)
+        Me.tpWifi.Location = New System.Drawing.Point(4, 26)
+        Me.tpWifi.Name = "tpWifi"
+        Me.tpWifi.Size = New System.Drawing.Size(815, 456)
+        Me.tpWifi.TabIndex = 4
+        Me.tpWifi.Text = "WiFi"
+        Me.tpWifi.UseVisualStyleBackColor = True
+        '
+        'lbWifiStatus
+        '
+        Me.lbWifiStatus.AutoSize = True
+        Me.lbWifiStatus.Location = New System.Drawing.Point(14, 20)
+        Me.lbWifiStatus.Name = "lbWifiStatus"
+        Me.lbWifiStatus.Size = New System.Drawing.Size(96, 17)
+        Me.lbWifiStatus.TabIndex = 0
+        Me.lbWifiStatus.Text = "WiFi 默认状态："
+        '
+        'rbWifiOpen
+        '
+        Me.rbWifiOpen.AutoSize = True
+        Me.rbWifiOpen.Location = New System.Drawing.Point(116, 18)
+        Me.rbWifiOpen.Name = "rbWifiOpen"
+        Me.rbWifiOpen.Size = New System.Drawing.Size(50, 21)
+        Me.rbWifiOpen.TabIndex = 1
+        Me.rbWifiOpen.TabStop = True
+        Me.rbWifiOpen.Text = "打开"
+        Me.rbWifiOpen.UseVisualStyleBackColor = True
+        '
+        'rbWifiClose
+        '
+        Me.rbWifiClose.AutoSize = True
+        Me.rbWifiClose.Checked = True
+        Me.rbWifiClose.Location = New System.Drawing.Point(204, 18)
+        Me.rbWifiClose.Name = "rbWifiClose"
+        Me.rbWifiClose.Size = New System.Drawing.Size(50, 21)
+        Me.rbWifiClose.TabIndex = 1
+        Me.rbWifiClose.TabStop = True
+        Me.rbWifiClose.Text = "关闭"
+        Me.rbWifiClose.UseVisualStyleBackColor = True
+        '
+        'lbWifiHotspotName
+        '
+        Me.lbWifiHotspotName.AutoSize = True
+        Me.lbWifiHotspotName.Location = New System.Drawing.Point(14, 59)
+        Me.lbWifiHotspotName.Name = "lbWifiHotspotName"
+        Me.lbWifiHotspotName.Size = New System.Drawing.Size(96, 17)
+        Me.lbWifiHotspotName.TabIndex = 2
+        Me.lbWifiHotspotName.Text = "WiFi 热点名称："
+        '
+        'tbWifiHotspotName
+        '
+        Me.tbWifiHotspotName.Location = New System.Drawing.Point(116, 56)
+        Me.tbWifiHotspotName.Name = "tbWifiHotspotName"
+        Me.tbWifiHotspotName.Size = New System.Drawing.Size(619, 23)
+        Me.tbWifiHotspotName.TabIndex = 3
+        '
+        'lbWifiStatusState
+        '
+        Me.lbWifiStatusState.AutoSize = True
+        Me.lbWifiStatusState.Location = New System.Drawing.Point(757, 22)
+        Me.lbWifiStatusState.Name = "lbWifiStatusState"
+        Me.lbWifiStatusState.Size = New System.Drawing.Size(37, 17)
+        Me.lbWifiStatusState.TabIndex = 4
+        Me.lbWifiStatusState.Text = "PASS"
+        '
+        'lbWifiHotspotNameState
+        '
+        Me.lbWifiHotspotNameState.AutoSize = True
+        Me.lbWifiHotspotNameState.Location = New System.Drawing.Point(757, 59)
+        Me.lbWifiHotspotNameState.Name = "lbWifiHotspotNameState"
+        Me.lbWifiHotspotNameState.Size = New System.Drawing.Size(37, 17)
+        Me.lbWifiHotspotNameState.TabIndex = 4
+        Me.lbWifiHotspotNameState.Text = "PASS"
+        '
+        'lbWifiScreenCast
+        '
+        Me.lbWifiScreenCast.AutoSize = True
+        Me.lbWifiScreenCast.Location = New System.Drawing.Point(14, 100)
+        Me.lbWifiScreenCast.Name = "lbWifiScreenCast"
+        Me.lbWifiScreenCast.Size = New System.Drawing.Size(96, 17)
+        Me.lbWifiScreenCast.TabIndex = 2
+        Me.lbWifiScreenCast.Text = "WiFi 投屏名称："
+        '
+        'tbWifiScreenCast
+        '
+        Me.tbWifiScreenCast.Location = New System.Drawing.Point(116, 97)
+        Me.tbWifiScreenCast.Name = "tbWifiScreenCast"
+        Me.tbWifiScreenCast.Size = New System.Drawing.Size(619, 23)
+        Me.tbWifiScreenCast.TabIndex = 3
+        '
+        'lbWifiScreenCastState
+        '
+        Me.lbWifiScreenCastState.AutoSize = True
+        Me.lbWifiScreenCastState.Location = New System.Drawing.Point(757, 100)
+        Me.lbWifiScreenCastState.Name = "lbWifiScreenCastState"
+        Me.lbWifiScreenCastState.Size = New System.Drawing.Size(37, 17)
+        Me.lbWifiScreenCastState.TabIndex = 4
+        Me.lbWifiScreenCastState.Text = "PASS"
+        '
+        'btWifiSetting
+        '
+        Me.btWifiSetting.Location = New System.Drawing.Point(14, 149)
+        Me.btWifiSetting.Name = "btWifiSetting"
+        Me.btWifiSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btWifiSetting.TabIndex = 5
+        Me.btWifiSetting.Text = "设置"
+        Me.btWifiSetting.UseVisualStyleBackColor = True
+        '
         'AndroidSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -692,6 +826,8 @@ Partial Class AndroidSettingsForm
         Me.tpVersion.PerformLayout()
         Me.tpFingerprint.ResumeLayout(False)
         Me.tpFingerprint.PerformLayout()
+        Me.tpWifi.ResumeLayout(False)
+        Me.tpWifi.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -755,4 +891,16 @@ Partial Class AndroidSettingsForm
     Friend WithEvents tbProductName As TextBox
     Friend WithEvents lbProductName As Label
     Friend WithEvents btPropertySetting As Button
+    Friend WithEvents tpWifi As TabPage
+    Friend WithEvents lbWifiStatus As Label
+    Friend WithEvents btWifiSetting As Button
+    Friend WithEvents lbWifiScreenCastState As Label
+    Friend WithEvents lbWifiHotspotNameState As Label
+    Friend WithEvents lbWifiStatusState As Label
+    Friend WithEvents tbWifiScreenCast As TextBox
+    Friend WithEvents tbWifiHotspotName As TextBox
+    Friend WithEvents lbWifiScreenCast As Label
+    Friend WithEvents lbWifiHotspotName As Label
+    Friend WithEvents rbWifiClose As RadioButton
+    Friend WithEvents rbWifiOpen As RadioButton
 End Class

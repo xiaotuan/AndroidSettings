@@ -110,6 +110,8 @@ Public Class AndroidSettingsForm
             FingerprintController.UpdateFingerprintInfo(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpProperty") Then
             PropertyController.UpdatePropertyInfo(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpWifi") Then
+            WifiController.UpdateWifiInfo(Me)
         End If
     End Sub
 
@@ -124,5 +126,9 @@ Public Class AndroidSettingsForm
 
     Private Sub btPropertySetting_Click(sender As Object, e As EventArgs) Handles btPropertySetting.Click
         PropertyController.SetProperties(Me)
+    End Sub
+
+    Private Sub btWifiSetting_Click(sender As Object, e As EventArgs) Handles btWifiSetting.Click
+        WifiController.SetWifiInfos(Me)
     End Sub
 End Class

@@ -6,23 +6,23 @@
         Dim brand = form.tbProductBrand.Text
         Dim device = form.tbProductDevice.Text
         Dim manufacturer = form.tbProductManufacturer.Text
-        If IsEmptyText(name) Then
+        If Utils.IsEmptyText(name) Then
             MessageBox.Show(form, "产品名称不能为空！", "提示")
             Return
         End If
-        If IsEmptyText(model) Then
+        If Utils.IsEmptyText(model) Then
             MessageBox.Show(form, "产品型号不能为空！", "提示")
             Return
         End If
-        If IsEmptyText(brand) Then
+        If Utils.IsEmptyText(brand) Then
             MessageBox.Show("设备品牌不能为空！", "提示")
             Return
         End If
-        If IsEmptyText(device) Then
+        If Utils.IsEmptyText(device) Then
             MessageBox.Show("设备名称不能为空！", "提示")
             Return
         End If
-        If IsEmptyText(manufacturer) Then
+        If Utils.IsEmptyText(manufacturer) Then
             MessageBox.Show("设备制造商不能为空！", "提示")
             Return
         End If
@@ -86,12 +86,5 @@
         form.tbProductDevice.Text = AndroidProperty.GetProductDevice(form.MyProjectInfo)
         form.tbProductManufacturer.Text = AndroidProperty.GetProductManufacturer(form.MyProjectInfo)
     End Sub
-
-    Private Function IsEmptyText(ByVal str As String) As Boolean
-        If IsNothing(str) Or Len(str.Trim) = 0 Then
-            Return True
-        End If
-        Return False
-    End Function
 
 End Module
