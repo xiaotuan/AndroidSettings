@@ -10,6 +10,14 @@ Public Class AndroidSettingsForm
         For Each Project As ProjectInfo In MyProjects.GetProjects()
             CBProjectId.Items.Add(Project.ProjectId)
         Next
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\A\mtk_sp_t0")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\B\mtk_sp_t0")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\A\mtk_sp_t0")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\B\mtk_sp_t0")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\12\mt8766\A\mt8766_s")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\12\mt8766_s\A\mt8766_s")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\12\mt8766_s\B\mt8766_s")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\11\mt8766_r\A\mt8766_r")
     End Sub
 
     Private Sub CBProjectId_SelectedIndexChanged(sender As ComboBox, e As EventArgs) Handles CBProjectId.SelectedIndexChanged
@@ -27,7 +35,7 @@ Public Class AndroidSettingsForm
 
     Private Sub BtSelectProjectPath_Click(sender As Object, e As EventArgs) Handles BtSelectProjectPath.Click
         If FbdSelectPath.ShowDialog() <> System.Windows.Forms.DialogResult.Cancel Then
-            TBProjectPath.Text = FbdSelectPath.SelectedPath
+            CbProjectPath.Text = FbdSelectPath.SelectedPath
             MyProjectInfo.ProjectPath = FbdSelectPath.SelectedPath
         End If
     End Sub
@@ -38,10 +46,6 @@ Public Class AndroidSettingsForm
 
     Private Sub CbAndroidVersin_TextChanged(sender As ComboBox, e As EventArgs) Handles CbAndroidVersin.TextChanged
         MyProjectInfo.AndroidVersion = sender.Text
-    End Sub
-
-    Private Sub TBProjectPath_TextChanged(sender As TextBox, e As EventArgs) Handles TBProjectPath.TextChanged
-        MyProjectInfo.ProjectPath = sender.Text
     End Sub
 
     Private Sub TbPublicName_TextChanged(sender As TextBox, e As EventArgs) Handles TbPublicName.TextChanged
@@ -112,6 +116,8 @@ Public Class AndroidSettingsForm
             PropertyController.UpdatePropertyInfo(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpWifi") Then
             WifiController.UpdateWifiInfo(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpBluetooth") Then
+            BluetoothController.UpdateBluetoothInfo(Me)
         End If
     End Sub
 
@@ -130,5 +136,17 @@ Public Class AndroidSettingsForm
 
     Private Sub btWifiSetting_Click(sender As Object, e As EventArgs) Handles btWifiSetting.Click
         WifiController.SetWifiInfos(Me)
+    End Sub
+
+    Private Sub CbProjectPath_SelectedIndexChanged(sender As ComboBox, e As EventArgs) Handles CbProjectPath.SelectedIndexChanged
+        MyProjectInfo.ProjectPath = sender.Text
+    End Sub
+
+    Private Sub CbProjectPath_TextChanged(sender As Object, e As EventArgs) Handles CbProjectPath.TextChanged
+        MyProjectInfo.ProjectPath = sender.Text
+    End Sub
+
+    Private Sub btBluetoothSetting_Click(sender As Object, e As EventArgs) Handles btBluetoothSetting.Click
+        BluetoothController.SetBluetoothInfos(Me)
     End Sub
 End Class

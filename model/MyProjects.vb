@@ -3,6 +3,21 @@
     Public Function GetProjects() As ArrayList
         Dim Projects As New ArrayList()
 
+        ' 新基德 645 项目
+        Dim XJD645Project As New ProjectInfo()
+        XJD645Project.ProjectId = "645"
+        XJD645Project.AndroidVersion = "Android 13"
+        XJD645Project.ProjectPath = ""
+        XJD645Project.PublicDirName = "tb8766p1_64_bsp"
+        XJD645Project.MssiDirName = "mssi_t_64_cn"
+        XJD645Project.DriveDirName = "M863YAR310_XJD_645"
+        XJD645Project.CustomDirName = "M863YAR310_XJD_645-MMI"
+        XJD645Project.Gms = 1
+        XJD645Project.Go = 0
+        XJD645Project.ChiperMaker = "MTK"
+        XJD645Project.ChiperModel = "MT6761"
+        Projects.Add(XJD645Project)
+
         ' 优米 536 项目
         Dim YM536Project As New ProjectInfo()
         YM536Project.ProjectId = "536"
@@ -122,6 +137,66 @@
         CC474Project.ChiperMaker = "MTK"
         CC474Project.ChiperModel = "MT8183"
         Projects.Add(CC474Project)
+
+        ' 长城 M10-11 PAPAP 项目
+        Dim CC475Project As New ProjectInfo()
+        CC475Project.ProjectId = "475"
+        CC475Project.AndroidVersion = "Android 12"
+        CC475Project.ProjectPath = ""
+        CC475Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        CC475Project.MssiDirName = ""
+        CC475Project.DriveDirName = "M100BS_CC_475_WIFI"
+        CC475Project.CustomDirName = "M100BS_CC_475_WIFI-MMI"
+        CC475Project.Gms = 1
+        CC475Project.Go = 0
+        CC475Project.ChiperMaker = "MTK"
+        CC475Project.ChiperModel = "MT8183"
+        Projects.Add(CC475Project)
+
+        ' 长城 598 项目
+        Dim CC598Project As New ProjectInfo()
+        CC598Project.ProjectId = "598"
+        CC598Project.AndroidVersion = "Android 12"
+        CC598Project.ProjectPath = ""
+        CC598Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        CC598Project.MssiDirName = ""
+        CC598Project.DriveDirName = "M100BS_CC_598"
+        CC598Project.CustomDirName = "M100BS_CC_598-MMI"
+        CC598Project.Gms = 1
+        CC598Project.Go = 0
+        CC598Project.ChiperMaker = "MTK"
+        CC598Project.ChiperModel = "MT8183"
+        Projects.Add(CC598Project)
+
+        ' 长城 600 项目
+        Dim CC600Project As New ProjectInfo()
+        CC600Project.ProjectId = "600"
+        CC600Project.AndroidVersion = "Android 12"
+        CC600Project.ProjectPath = ""
+        CC600Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        CC600Project.MssiDirName = ""
+        CC600Project.DriveDirName = "M100BS_CC_600_WIFI"
+        CC600Project.CustomDirName = "M100BS_CC_600_WIFI-MMI"
+        CC600Project.Gms = 1
+        CC600Project.Go = 0
+        CC600Project.ChiperMaker = "MTK"
+        CC600Project.ChiperModel = "MT8183"
+        Projects.Add(CC600Project)
+
+        ' 长城 671 项目
+        Dim CC671Project As New ProjectInfo()
+        CC671Project.ProjectId = "671"
+        CC671Project.AndroidVersion = "Android 12"
+        CC671Project.ProjectPath = ""
+        CC671Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        CC671Project.MssiDirName = ""
+        CC671Project.DriveDirName = "M100BS_CC_671"
+        CC671Project.CustomDirName = "M100BS_CC_671-MMI"
+        CC671Project.Gms = 1
+        CC671Project.Go = 0
+        CC671Project.ChiperMaker = "MTK"
+        CC671Project.ChiperModel = "MT8183"
+        Projects.Add(CC671Project)
 
         ' 格瑞特亚 134 项目
         Dim GRTY134Project As New ProjectInfo()
