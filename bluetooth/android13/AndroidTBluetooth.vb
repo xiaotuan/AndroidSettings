@@ -106,11 +106,11 @@ Module AndroidTBluetooth
                 If Not System.IO.Directory.Exists(Path.GetDirectoryName(customFilePath)) Then
                     System.IO.Directory.CreateDirectory(Path.GetDirectoryName(customFilePath))
                 End If
-                System.IO.File.Copy(originFilePath, customFilePath)
+                System.IO.File.Copy(originFilePath, customFilePath, True)
             Else
                 fileExists = True
             End If
-            System.IO.File.Copy(customFilePath, backPath)
+            System.IO.File.Copy(customFilePath, backPath, True)
             fs = New FileStream(customFilePath, FileMode.Open)
             Dim utf8 = New System.Text.UTF8Encoding(False)
             fileReader = New System.IO.StreamReader(backPath, utf8)
@@ -152,7 +152,7 @@ Module AndroidTBluetooth
                 End If
             Else
                 If needRestore And System.IO.File.Exists(backPath) Then
-                    'System.IO.File.Copy(backPath, customFilePath, True)
+                    System.IO.File.Copy(backPath, customFilePath, True)
                 End If
             End If
         End Try

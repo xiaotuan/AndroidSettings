@@ -101,6 +101,16 @@ Partial Class AndroidSettingsForm
         Me.lbBluetoothName = New System.Windows.Forms.Label()
         Me.lbBluetoothStatusState = New System.Windows.Forms.Label()
         Me.lbBluetoothStatus = New System.Windows.Forms.Label()
+        Me.tpLanguage = New System.Windows.Forms.TabPage()
+        Me.btLanguageSetting = New System.Windows.Forms.Button()
+        Me.cbLanguage = New System.Windows.Forms.ComboBox()
+        Me.lbLanguageState = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tpTimezone = New System.Windows.Forms.TabPage()
+        Me.cbTimezone = New System.Windows.Forms.ComboBox()
+        Me.lbTimezoneState = New System.Windows.Forms.Label()
+        Me.lbTimezone = New System.Windows.Forms.Label()
+        Me.btTimezoneSetting = New System.Windows.Forms.Button()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
@@ -113,6 +123,8 @@ Partial Class AndroidSettingsForm
         Me.tpFingerprint.SuspendLayout()
         Me.tpWifi.SuspendLayout()
         Me.tpBluetooth.SuspendLayout()
+        Me.tpLanguage.SuspendLayout()
+        Me.tpTimezone.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -123,6 +135,8 @@ Partial Class AndroidSettingsForm
         Me.tcAndroidSettings.Controls.Add(Me.tpFingerprint)
         Me.tcAndroidSettings.Controls.Add(Me.tpWifi)
         Me.tcAndroidSettings.Controls.Add(Me.tpBluetooth)
+        Me.tcAndroidSettings.Controls.Add(Me.tpLanguage)
+        Me.tcAndroidSettings.Controls.Add(Me.tpTimezone)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
         Me.tcAndroidSettings.Name = "tcAndroidSettings"
         Me.tcAndroidSettings.SelectedIndex = 0
@@ -902,6 +916,102 @@ Partial Class AndroidSettingsForm
         Me.lbBluetoothStatus.TabIndex = 0
         Me.lbBluetoothStatus.Text = "蓝牙默认状态："
         '
+        'tpLanguage
+        '
+        Me.tpLanguage.Controls.Add(Me.btLanguageSetting)
+        Me.tpLanguage.Controls.Add(Me.cbLanguage)
+        Me.tpLanguage.Controls.Add(Me.lbLanguageState)
+        Me.tpLanguage.Controls.Add(Me.Label1)
+        Me.tpLanguage.Location = New System.Drawing.Point(4, 26)
+        Me.tpLanguage.Name = "tpLanguage"
+        Me.tpLanguage.Size = New System.Drawing.Size(815, 456)
+        Me.tpLanguage.TabIndex = 6
+        Me.tpLanguage.Text = "语言"
+        Me.tpLanguage.UseVisualStyleBackColor = True
+        '
+        'btLanguageSetting
+        '
+        Me.btLanguageSetting.Location = New System.Drawing.Point(13, 67)
+        Me.btLanguageSetting.Name = "btLanguageSetting"
+        Me.btLanguageSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btLanguageSetting.TabIndex = 4
+        Me.btLanguageSetting.Text = "设置"
+        Me.btLanguageSetting.UseVisualStyleBackColor = True
+        '
+        'cbLanguage
+        '
+        Me.cbLanguage.FormattingEnabled = True
+        Me.cbLanguage.Location = New System.Drawing.Point(63, 16)
+        Me.cbLanguage.Name = "cbLanguage"
+        Me.cbLanguage.Size = New System.Drawing.Size(667, 25)
+        Me.cbLanguage.TabIndex = 2
+        '
+        'lbLanguageState
+        '
+        Me.lbLanguageState.AutoSize = True
+        Me.lbLanguageState.Location = New System.Drawing.Point(752, 19)
+        Me.lbLanguageState.Name = "lbLanguageState"
+        Me.lbLanguageState.Size = New System.Drawing.Size(37, 17)
+        Me.lbLanguageState.TabIndex = 0
+        Me.lbLanguageState.Text = "PASS"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "语言："
+        '
+        'tpTimezone
+        '
+        Me.tpTimezone.Controls.Add(Me.cbTimezone)
+        Me.tpTimezone.Controls.Add(Me.lbTimezoneState)
+        Me.tpTimezone.Controls.Add(Me.lbTimezone)
+        Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
+        Me.tpTimezone.Location = New System.Drawing.Point(4, 26)
+        Me.tpTimezone.Name = "tpTimezone"
+        Me.tpTimezone.Size = New System.Drawing.Size(815, 456)
+        Me.tpTimezone.TabIndex = 7
+        Me.tpTimezone.Text = "时区"
+        Me.tpTimezone.UseVisualStyleBackColor = True
+        '
+        'cbTimezone
+        '
+        Me.cbTimezone.FormattingEnabled = True
+        Me.cbTimezone.Location = New System.Drawing.Point(63, 16)
+        Me.cbTimezone.Name = "cbTimezone"
+        Me.cbTimezone.Size = New System.Drawing.Size(667, 25)
+        Me.cbTimezone.TabIndex = 8
+        '
+        'lbTimezoneState
+        '
+        Me.lbTimezoneState.AutoSize = True
+        Me.lbTimezoneState.Location = New System.Drawing.Point(752, 19)
+        Me.lbTimezoneState.Name = "lbTimezoneState"
+        Me.lbTimezoneState.Size = New System.Drawing.Size(37, 17)
+        Me.lbTimezoneState.TabIndex = 6
+        Me.lbTimezoneState.Text = "PASS"
+        '
+        'lbTimezone
+        '
+        Me.lbTimezone.AutoSize = True
+        Me.lbTimezone.Location = New System.Drawing.Point(13, 19)
+        Me.lbTimezone.Name = "lbTimezone"
+        Me.lbTimezone.Size = New System.Drawing.Size(44, 17)
+        Me.lbTimezone.TabIndex = 7
+        Me.lbTimezone.Text = "时区："
+        '
+        'btTimezoneSetting
+        '
+        Me.btTimezoneSetting.Location = New System.Drawing.Point(13, 67)
+        Me.btTimezoneSetting.Name = "btTimezoneSetting"
+        Me.btTimezoneSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btTimezoneSetting.TabIndex = 5
+        Me.btTimezoneSetting.Text = "设置"
+        Me.btTimezoneSetting.UseVisualStyleBackColor = True
+        '
         'AndroidSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -933,6 +1043,10 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.PerformLayout()
         Me.tpBluetooth.ResumeLayout(False)
         Me.tpBluetooth.PerformLayout()
+        Me.tpLanguage.ResumeLayout(False)
+        Me.tpLanguage.PerformLayout()
+        Me.tpTimezone.ResumeLayout(False)
+        Me.tpTimezone.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1017,4 +1131,14 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbBluetoothName As Label
     Friend WithEvents lbBluetoothStatusState As Label
     Friend WithEvents lbBluetoothStatus As Label
+    Friend WithEvents tpLanguage As TabPage
+    Friend WithEvents btLanguageSetting As Button
+    Friend WithEvents cbLanguage As ComboBox
+    Friend WithEvents lbLanguageState As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tpTimezone As TabPage
+    Friend WithEvents cbTimezone As ComboBox
+    Friend WithEvents lbTimezoneState As Label
+    Friend WithEvents lbTimezone As Label
+    Friend WithEvents btTimezoneSetting As Button
 End Class
