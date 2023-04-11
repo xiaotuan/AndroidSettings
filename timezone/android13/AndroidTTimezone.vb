@@ -89,13 +89,15 @@ Module AndroidTTimezone
                 fs.Close()
                 fs = Nothing
             End If
-            If Not fileExists Then
-                If System.IO.File.Exists(customFilePath) Then
-                    System.IO.File.Delete(customFilePath)
-                End If
-            Else
-                If needRestore And System.IO.File.Exists(backPath) Then
-                    System.IO.File.Copy(backPath, customFilePath, True)
+            If needRestore Then
+                If Not fileExists Then
+                    If System.IO.File.Exists(customFilePath) Then
+                        System.IO.File.Delete(customFilePath)
+                    End If
+                Else
+                    If System.IO.File.Exists(backPath) Then
+                        System.IO.File.Copy(backPath, customFilePath, True)
+                    End If
                 End If
             End If
         End Try
