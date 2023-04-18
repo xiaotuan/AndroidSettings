@@ -272,7 +272,11 @@ Public Class AndroidSettingsForm
         ElseIf sender.SelectedTab.Name.Equals("tpLanguage") Then
             LanguageController.UpdateLanguage(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpTimezone") Then
-            TimezoneController.UpdateTimezone(Me)
+            TimezoneController.UpdateTimezoneInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpLogo") Then
+            LogoController.UpdateLogo(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpWallpaper") Then
+            WallpaperController.UpdateWallpaperInfos(Me)
         End If
     End Sub
 
@@ -310,6 +314,38 @@ Public Class AndroidSettingsForm
     End Sub
 
     Private Sub btTimezoneSetting_Click(sender As Object, e As EventArgs) Handles btTimezoneSetting.Click
-        TimezoneController.setTimezone(Me)
+        TimezoneController.setTimezoneInfos(Me)
+    End Sub
+
+    Private Sub bLogo_Click(sender As Object, e As EventArgs) Handles bLogo.Click
+        ofdSelectFile.Title = "选择 Logo 图片"
+        ofdSelectFile.Filter = "Windows Bitmaps|*.BMP"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbLogo.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btLogoSetting_Click(sender As Object, e As EventArgs) Handles btLogoSetting.Click
+        LogoController.SetLogo(Me)
+    End Sub
+
+    Private Sub btWallpaper_Click(sender As Object, e As EventArgs) Handles btWallpaper.Click
+        ofdSelectFile.Title = "选择壁纸图片"
+        ofdSelectFile.Filter = "PNG|*.png"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbWallpaper.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btInserWallpaper_Click(sender As Object, e As EventArgs) Handles btInserWallpaper.Click
+        If FbdSelectPath.ShowDialog() <> DialogResult.Cancel Then
+            tbInsertWallpaper.Text = FbdSelectPath.SelectedPath
+        End If
+    End Sub
+
+    Private Sub btWallpaperSetting_Click(sender As Object, e As EventArgs) Handles btWallpaperSetting.Click
+        WallpaperController.SetWallpaperInfos(Me)
     End Sub
 End Class

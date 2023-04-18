@@ -107,11 +107,48 @@ Partial Class AndroidSettingsForm
         Me.lbLanguageState = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tpTimezone = New System.Windows.Forms.TabPage()
+        Me.rbTimezoneClose = New System.Windows.Forms.RadioButton()
+        Me.rbTimezoneOpen = New System.Windows.Forms.RadioButton()
+        Me.lbAutoTimezone = New System.Windows.Forms.Label()
         Me.cbTimezone = New System.Windows.Forms.ComboBox()
+        Me.lbAutoTimezoneState = New System.Windows.Forms.Label()
         Me.lbTimezoneState = New System.Windows.Forms.Label()
         Me.lbTimezone = New System.Windows.Forms.Label()
         Me.btTimezoneSetting = New System.Windows.Forms.Button()
+        Me.tpLogo = New System.Windows.Forms.TabPage()
+        Me.btLogoSetting = New System.Windows.Forms.Button()
+        Me.bLogo = New System.Windows.Forms.Button()
+        Me.tbLogo = New System.Windows.Forms.TextBox()
+        Me.lbLogoState = New System.Windows.Forms.Label()
+        Me.lbLogo = New System.Windows.Forms.Label()
+        Me.tpWallpaper = New System.Windows.Forms.TabPage()
+        Me.btWallpaperSetting = New System.Windows.Forms.Button()
+        Me.btInserWallpaper = New System.Windows.Forms.Button()
+        Me.btWallpaper = New System.Windows.Forms.Button()
+        Me.tbInsertWallpaper = New System.Windows.Forms.TextBox()
+        Me.lbInsertWallpaperState = New System.Windows.Forms.Label()
+        Me.tbWallpaper = New System.Windows.Forms.TextBox()
+        Me.lbInsertWallpaper = New System.Windows.Forms.Label()
+        Me.lbWallpaperState = New System.Windows.Forms.Label()
+        Me.lbWallpaper = New System.Windows.Forms.Label()
+        Me.TabSample = New System.Windows.Forms.TabPage()
+        Me.tbSampleName = New System.Windows.Forms.TextBox()
+        Me.btSampleSetting = New System.Windows.Forms.Button()
+        Me.rbSampleClose = New System.Windows.Forms.RadioButton()
+        Me.rbSampleOpen = New System.Windows.Forms.RadioButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbSampleNameState = New System.Windows.Forms.Label()
+        Me.lbSampleState = New System.Windows.Forms.Label()
+        Me.lbSample = New System.Windows.Forms.Label()
+        Me.tpScreenBrightness = New System.Windows.Forms.TabPage()
+        Me.tpVolume = New System.Windows.Forms.TabPage()
+        Me.tpTee = New System.Windows.Forms.TabPage()
+        Me.tpGoogleCustom = New System.Windows.Forms.TabPage()
+        Me.tpAnimation = New System.Windows.Forms.TabPage()
+        Me.tpCheckApk = New System.Windows.Forms.TabPage()
+        Me.tpSystemSettings = New System.Windows.Forms.TabPage()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
+        Me.ofdSelectFile = New System.Windows.Forms.OpenFileDialog()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -125,6 +162,9 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.SuspendLayout()
         Me.tpLanguage.SuspendLayout()
         Me.tpTimezone.SuspendLayout()
+        Me.tpLogo.SuspendLayout()
+        Me.tpWallpaper.SuspendLayout()
+        Me.TabSample.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -137,10 +177,23 @@ Partial Class AndroidSettingsForm
         Me.tcAndroidSettings.Controls.Add(Me.tpBluetooth)
         Me.tcAndroidSettings.Controls.Add(Me.tpLanguage)
         Me.tcAndroidSettings.Controls.Add(Me.tpTimezone)
+        Me.tcAndroidSettings.Controls.Add(Me.tpLogo)
+        Me.tcAndroidSettings.Controls.Add(Me.tpWallpaper)
+        Me.tcAndroidSettings.Controls.Add(Me.TabSample)
+        Me.tcAndroidSettings.Controls.Add(Me.tpScreenBrightness)
+        Me.tcAndroidSettings.Controls.Add(Me.tpVolume)
+        Me.tcAndroidSettings.Controls.Add(Me.tpTee)
+        Me.tcAndroidSettings.Controls.Add(Me.tpGoogleCustom)
+        Me.tcAndroidSettings.Controls.Add(Me.tpAnimation)
+        Me.tcAndroidSettings.Controls.Add(Me.tpCheckApk)
+        Me.tcAndroidSettings.Controls.Add(Me.tpSystemSettings)
+        Me.tcAndroidSettings.ItemSize = New System.Drawing.Size(80, 22)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
+        Me.tcAndroidSettings.Multiline = True
         Me.tcAndroidSettings.Name = "tcAndroidSettings"
         Me.tcAndroidSettings.SelectedIndex = 0
         Me.tcAndroidSettings.Size = New System.Drawing.Size(823, 486)
+        Me.tcAndroidSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.tcAndroidSettings.TabIndex = 0
         '
         'tpProjectInfo
@@ -149,10 +202,10 @@ Partial Class AndroidSettingsForm
         Me.tpProjectInfo.Controls.Add(Me.GbGoOptions)
         Me.tpProjectInfo.Controls.Add(Me.GbGmsOptions)
         Me.tpProjectInfo.Controls.Add(Me.GBProject)
-        Me.tpProjectInfo.Location = New System.Drawing.Point(4, 26)
+        Me.tpProjectInfo.Location = New System.Drawing.Point(4, 48)
         Me.tpProjectInfo.Name = "tpProjectInfo"
         Me.tpProjectInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 456)
+        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 434)
         Me.tpProjectInfo.TabIndex = 0
         Me.tpProjectInfo.Text = "工程信息"
         Me.tpProjectInfo.UseVisualStyleBackColor = True
@@ -453,9 +506,9 @@ Partial Class AndroidSettingsForm
         Me.tpProperty.Controls.Add(Me.lbProductModel)
         Me.tpProperty.Controls.Add(Me.tbProductName)
         Me.tpProperty.Controls.Add(Me.lbProductName)
-        Me.tpProperty.Location = New System.Drawing.Point(4, 26)
+        Me.tpProperty.Location = New System.Drawing.Point(4, 48)
         Me.tpProperty.Name = "tpProperty"
-        Me.tpProperty.Size = New System.Drawing.Size(815, 456)
+        Me.tpProperty.Size = New System.Drawing.Size(815, 434)
         Me.tpProperty.TabIndex = 3
         Me.tpProperty.Text = "系统属性"
         Me.tpProperty.UseVisualStyleBackColor = True
@@ -601,10 +654,10 @@ Partial Class AndroidSettingsForm
         Me.tpVersion.Controls.Add(Me.tbVersion)
         Me.tpVersion.Controls.Add(Me.lbVersion)
         Me.tpVersion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.tpVersion.Location = New System.Drawing.Point(4, 26)
+        Me.tpVersion.Location = New System.Drawing.Point(4, 48)
         Me.tpVersion.Name = "tpVersion"
         Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpVersion.Size = New System.Drawing.Size(815, 456)
+        Me.tpVersion.Size = New System.Drawing.Size(815, 434)
         Me.tpVersion.TabIndex = 1
         Me.tpVersion.Text = "版本号"
         Me.tpVersion.UseVisualStyleBackColor = True
@@ -654,9 +707,9 @@ Partial Class AndroidSettingsForm
         Me.tpFingerprint.Controls.Add(Me.lbFingerprintState)
         Me.tpFingerprint.Controls.Add(Me.tbFingerprint)
         Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
-        Me.tpFingerprint.Location = New System.Drawing.Point(4, 26)
+        Me.tpFingerprint.Location = New System.Drawing.Point(4, 48)
         Me.tpFingerprint.Name = "tpFingerprint"
-        Me.tpFingerprint.Size = New System.Drawing.Size(815, 456)
+        Me.tpFingerprint.Size = New System.Drawing.Size(815, 434)
         Me.tpFingerprint.TabIndex = 2
         Me.tpFingerprint.Text = "Fingerprint"
         Me.tpFingerprint.UseVisualStyleBackColor = True
@@ -718,9 +771,9 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.Controls.Add(Me.rbWifiClose)
         Me.tpWifi.Controls.Add(Me.rbWifiOpen)
         Me.tpWifi.Controls.Add(Me.lbWifiStatus)
-        Me.tpWifi.Location = New System.Drawing.Point(4, 26)
+        Me.tpWifi.Location = New System.Drawing.Point(4, 48)
         Me.tpWifi.Name = "tpWifi"
-        Me.tpWifi.Size = New System.Drawing.Size(815, 456)
+        Me.tpWifi.Size = New System.Drawing.Size(815, 434)
         Me.tpWifi.TabIndex = 4
         Me.tpWifi.Text = "WiFi"
         Me.tpWifi.UseVisualStyleBackColor = True
@@ -835,9 +888,9 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothName)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatusState)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatus)
-        Me.tpBluetooth.Location = New System.Drawing.Point(4, 26)
+        Me.tpBluetooth.Location = New System.Drawing.Point(4, 48)
         Me.tpBluetooth.Name = "tpBluetooth"
-        Me.tpBluetooth.Size = New System.Drawing.Size(815, 456)
+        Me.tpBluetooth.Size = New System.Drawing.Size(815, 434)
         Me.tpBluetooth.TabIndex = 5
         Me.tpBluetooth.Text = "蓝牙"
         Me.tpBluetooth.UseVisualStyleBackColor = True
@@ -922,9 +975,9 @@ Partial Class AndroidSettingsForm
         Me.tpLanguage.Controls.Add(Me.cbLanguage)
         Me.tpLanguage.Controls.Add(Me.lbLanguageState)
         Me.tpLanguage.Controls.Add(Me.Label1)
-        Me.tpLanguage.Location = New System.Drawing.Point(4, 26)
+        Me.tpLanguage.Location = New System.Drawing.Point(4, 48)
         Me.tpLanguage.Name = "tpLanguage"
-        Me.tpLanguage.Size = New System.Drawing.Size(815, 456)
+        Me.tpLanguage.Size = New System.Drawing.Size(815, 434)
         Me.tpLanguage.TabIndex = 6
         Me.tpLanguage.Text = "语言"
         Me.tpLanguage.UseVisualStyleBackColor = True
@@ -966,29 +1019,73 @@ Partial Class AndroidSettingsForm
         '
         'tpTimezone
         '
+        Me.tpTimezone.Controls.Add(Me.rbTimezoneClose)
+        Me.tpTimezone.Controls.Add(Me.rbTimezoneOpen)
+        Me.tpTimezone.Controls.Add(Me.lbAutoTimezone)
         Me.tpTimezone.Controls.Add(Me.cbTimezone)
+        Me.tpTimezone.Controls.Add(Me.lbAutoTimezoneState)
         Me.tpTimezone.Controls.Add(Me.lbTimezoneState)
         Me.tpTimezone.Controls.Add(Me.lbTimezone)
         Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
-        Me.tpTimezone.Location = New System.Drawing.Point(4, 26)
+        Me.tpTimezone.Location = New System.Drawing.Point(4, 48)
         Me.tpTimezone.Name = "tpTimezone"
-        Me.tpTimezone.Size = New System.Drawing.Size(815, 456)
+        Me.tpTimezone.Size = New System.Drawing.Size(815, 434)
         Me.tpTimezone.TabIndex = 7
         Me.tpTimezone.Text = "时区"
         Me.tpTimezone.UseVisualStyleBackColor = True
         '
+        'rbTimezoneClose
+        '
+        Me.rbTimezoneClose.AutoSize = True
+        Me.rbTimezoneClose.Location = New System.Drawing.Point(220, 16)
+        Me.rbTimezoneClose.Name = "rbTimezoneClose"
+        Me.rbTimezoneClose.Size = New System.Drawing.Size(50, 21)
+        Me.rbTimezoneClose.TabIndex = 10
+        Me.rbTimezoneClose.TabStop = True
+        Me.rbTimezoneClose.Text = "关闭"
+        Me.rbTimezoneClose.UseVisualStyleBackColor = True
+        '
+        'rbTimezoneOpen
+        '
+        Me.rbTimezoneOpen.AutoSize = True
+        Me.rbTimezoneOpen.Location = New System.Drawing.Point(109, 16)
+        Me.rbTimezoneOpen.Name = "rbTimezoneOpen"
+        Me.rbTimezoneOpen.Size = New System.Drawing.Size(50, 21)
+        Me.rbTimezoneOpen.TabIndex = 10
+        Me.rbTimezoneOpen.TabStop = True
+        Me.rbTimezoneOpen.Text = "开启"
+        Me.rbTimezoneOpen.UseVisualStyleBackColor = True
+        '
+        'lbAutoTimezone
+        '
+        Me.lbAutoTimezone.AutoSize = True
+        Me.lbAutoTimezone.Location = New System.Drawing.Point(11, 18)
+        Me.lbAutoTimezone.Name = "lbAutoTimezone"
+        Me.lbAutoTimezone.Size = New System.Drawing.Size(92, 17)
+        Me.lbAutoTimezone.TabIndex = 9
+        Me.lbAutoTimezone.Text = "自动更新时区："
+        '
         'cbTimezone
         '
         Me.cbTimezone.FormattingEnabled = True
-        Me.cbTimezone.Location = New System.Drawing.Point(63, 16)
+        Me.cbTimezone.Location = New System.Drawing.Point(61, 54)
         Me.cbTimezone.Name = "cbTimezone"
         Me.cbTimezone.Size = New System.Drawing.Size(667, 25)
         Me.cbTimezone.TabIndex = 8
         '
+        'lbAutoTimezoneState
+        '
+        Me.lbAutoTimezoneState.AutoSize = True
+        Me.lbAutoTimezoneState.Location = New System.Drawing.Point(750, 20)
+        Me.lbAutoTimezoneState.Name = "lbAutoTimezoneState"
+        Me.lbAutoTimezoneState.Size = New System.Drawing.Size(37, 17)
+        Me.lbAutoTimezoneState.TabIndex = 6
+        Me.lbAutoTimezoneState.Text = "PASS"
+        '
         'lbTimezoneState
         '
         Me.lbTimezoneState.AutoSize = True
-        Me.lbTimezoneState.Location = New System.Drawing.Point(752, 19)
+        Me.lbTimezoneState.Location = New System.Drawing.Point(750, 57)
         Me.lbTimezoneState.Name = "lbTimezoneState"
         Me.lbTimezoneState.Size = New System.Drawing.Size(37, 17)
         Me.lbTimezoneState.TabIndex = 6
@@ -997,7 +1094,7 @@ Partial Class AndroidSettingsForm
         'lbTimezone
         '
         Me.lbTimezone.AutoSize = True
-        Me.lbTimezone.Location = New System.Drawing.Point(13, 19)
+        Me.lbTimezone.Location = New System.Drawing.Point(11, 57)
         Me.lbTimezone.Name = "lbTimezone"
         Me.lbTimezone.Size = New System.Drawing.Size(44, 17)
         Me.lbTimezone.TabIndex = 7
@@ -1005,12 +1102,322 @@ Partial Class AndroidSettingsForm
         '
         'btTimezoneSetting
         '
-        Me.btTimezoneSetting.Location = New System.Drawing.Point(13, 67)
+        Me.btTimezoneSetting.Location = New System.Drawing.Point(11, 108)
         Me.btTimezoneSetting.Name = "btTimezoneSetting"
         Me.btTimezoneSetting.Size = New System.Drawing.Size(75, 23)
         Me.btTimezoneSetting.TabIndex = 5
         Me.btTimezoneSetting.Text = "设置"
         Me.btTimezoneSetting.UseVisualStyleBackColor = True
+        '
+        'tpLogo
+        '
+        Me.tpLogo.Controls.Add(Me.btLogoSetting)
+        Me.tpLogo.Controls.Add(Me.bLogo)
+        Me.tpLogo.Controls.Add(Me.tbLogo)
+        Me.tpLogo.Controls.Add(Me.lbLogoState)
+        Me.tpLogo.Controls.Add(Me.lbLogo)
+        Me.tpLogo.Location = New System.Drawing.Point(4, 48)
+        Me.tpLogo.Name = "tpLogo"
+        Me.tpLogo.Size = New System.Drawing.Size(815, 434)
+        Me.tpLogo.TabIndex = 8
+        Me.tpLogo.Text = "LOGO"
+        Me.tpLogo.UseVisualStyleBackColor = True
+        '
+        'btLogoSetting
+        '
+        Me.btLogoSetting.Location = New System.Drawing.Point(18, 65)
+        Me.btLogoSetting.Name = "btLogoSetting"
+        Me.btLogoSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btLogoSetting.TabIndex = 2
+        Me.btLogoSetting.Text = "设置"
+        Me.btLogoSetting.UseVisualStyleBackColor = True
+        '
+        'bLogo
+        '
+        Me.bLogo.Location = New System.Drawing.Point(654, 17)
+        Me.bLogo.Name = "bLogo"
+        Me.bLogo.Size = New System.Drawing.Size(75, 23)
+        Me.bLogo.TabIndex = 2
+        Me.bLogo.Text = "选择图片"
+        Me.bLogo.UseVisualStyleBackColor = True
+        '
+        'tbLogo
+        '
+        Me.tbLogo.Location = New System.Drawing.Point(102, 17)
+        Me.tbLogo.Name = "tbLogo"
+        Me.tbLogo.Size = New System.Drawing.Size(546, 23)
+        Me.tbLogo.TabIndex = 1
+        '
+        'lbLogoState
+        '
+        Me.lbLogoState.AutoSize = True
+        Me.lbLogoState.Location = New System.Drawing.Point(753, 20)
+        Me.lbLogoState.Name = "lbLogoState"
+        Me.lbLogoState.Size = New System.Drawing.Size(37, 17)
+        Me.lbLogoState.TabIndex = 0
+        Me.lbLogoState.Text = "PASS"
+        '
+        'lbLogo
+        '
+        Me.lbLogo.AutoSize = True
+        Me.lbLogo.Location = New System.Drawing.Point(18, 20)
+        Me.lbLogo.Name = "lbLogo"
+        Me.lbLogo.Size = New System.Drawing.Size(78, 17)
+        Me.lbLogo.TabIndex = 0
+        Me.lbLogo.Text = "Logo 图片："
+        '
+        'tpWallpaper
+        '
+        Me.tpWallpaper.Controls.Add(Me.btWallpaperSetting)
+        Me.tpWallpaper.Controls.Add(Me.btInserWallpaper)
+        Me.tpWallpaper.Controls.Add(Me.btWallpaper)
+        Me.tpWallpaper.Controls.Add(Me.tbInsertWallpaper)
+        Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaperState)
+        Me.tpWallpaper.Controls.Add(Me.tbWallpaper)
+        Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaper)
+        Me.tpWallpaper.Controls.Add(Me.lbWallpaperState)
+        Me.tpWallpaper.Controls.Add(Me.lbWallpaper)
+        Me.tpWallpaper.Location = New System.Drawing.Point(4, 48)
+        Me.tpWallpaper.Name = "tpWallpaper"
+        Me.tpWallpaper.Size = New System.Drawing.Size(815, 434)
+        Me.tpWallpaper.TabIndex = 9
+        Me.tpWallpaper.Text = "壁纸"
+        Me.tpWallpaper.UseVisualStyleBackColor = True
+        '
+        'btWallpaperSetting
+        '
+        Me.btWallpaperSetting.Location = New System.Drawing.Point(17, 103)
+        Me.btWallpaperSetting.Name = "btWallpaperSetting"
+        Me.btWallpaperSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btWallpaperSetting.TabIndex = 6
+        Me.btWallpaperSetting.Text = "设置"
+        Me.btWallpaperSetting.UseVisualStyleBackColor = True
+        '
+        'btInserWallpaper
+        '
+        Me.btInserWallpaper.Location = New System.Drawing.Point(647, 53)
+        Me.btInserWallpaper.Name = "btInserWallpaper"
+        Me.btInserWallpaper.Size = New System.Drawing.Size(81, 23)
+        Me.btInserWallpaper.TabIndex = 7
+        Me.btInserWallpaper.Text = "选择内置壁纸"
+        Me.btInserWallpaper.UseVisualStyleBackColor = True
+        '
+        'btWallpaper
+        '
+        Me.btWallpaper.Location = New System.Drawing.Point(647, 14)
+        Me.btWallpaper.Name = "btWallpaper"
+        Me.btWallpaper.Size = New System.Drawing.Size(81, 23)
+        Me.btWallpaper.TabIndex = 7
+        Me.btWallpaper.Text = "选择图片"
+        Me.btWallpaper.UseVisualStyleBackColor = True
+        '
+        'tbInsertWallpaper
+        '
+        Me.tbInsertWallpaper.Location = New System.Drawing.Point(101, 53)
+        Me.tbInsertWallpaper.Name = "tbInsertWallpaper"
+        Me.tbInsertWallpaper.Size = New System.Drawing.Size(540, 23)
+        Me.tbInsertWallpaper.TabIndex = 5
+        '
+        'lbInsertWallpaperState
+        '
+        Me.lbInsertWallpaperState.AutoSize = True
+        Me.lbInsertWallpaperState.Location = New System.Drawing.Point(752, 56)
+        Me.lbInsertWallpaperState.Name = "lbInsertWallpaperState"
+        Me.lbInsertWallpaperState.Size = New System.Drawing.Size(37, 17)
+        Me.lbInsertWallpaperState.TabIndex = 3
+        Me.lbInsertWallpaperState.Text = "PASS"
+        '
+        'tbWallpaper
+        '
+        Me.tbWallpaper.Location = New System.Drawing.Point(101, 14)
+        Me.tbWallpaper.Name = "tbWallpaper"
+        Me.tbWallpaper.Size = New System.Drawing.Size(540, 23)
+        Me.tbWallpaper.TabIndex = 5
+        '
+        'lbInsertWallpaper
+        '
+        Me.lbInsertWallpaper.AutoSize = True
+        Me.lbInsertWallpaper.Location = New System.Drawing.Point(17, 56)
+        Me.lbInsertWallpaper.Name = "lbInsertWallpaper"
+        Me.lbInsertWallpaper.Size = New System.Drawing.Size(68, 17)
+        Me.lbInsertWallpaper.TabIndex = 4
+        Me.lbInsertWallpaper.Text = "内置壁纸："
+        '
+        'lbWallpaperState
+        '
+        Me.lbWallpaperState.AutoSize = True
+        Me.lbWallpaperState.Location = New System.Drawing.Point(752, 17)
+        Me.lbWallpaperState.Name = "lbWallpaperState"
+        Me.lbWallpaperState.Size = New System.Drawing.Size(37, 17)
+        Me.lbWallpaperState.TabIndex = 3
+        Me.lbWallpaperState.Text = "PASS"
+        '
+        'lbWallpaper
+        '
+        Me.lbWallpaper.AutoSize = True
+        Me.lbWallpaper.Location = New System.Drawing.Point(17, 17)
+        Me.lbWallpaper.Name = "lbWallpaper"
+        Me.lbWallpaper.Size = New System.Drawing.Size(44, 17)
+        Me.lbWallpaper.TabIndex = 4
+        Me.lbWallpaper.Text = "壁纸："
+        '
+        'TabSample
+        '
+        Me.TabSample.Controls.Add(Me.tbSampleName)
+        Me.TabSample.Controls.Add(Me.btSampleSetting)
+        Me.TabSample.Controls.Add(Me.rbSampleClose)
+        Me.TabSample.Controls.Add(Me.rbSampleOpen)
+        Me.TabSample.Controls.Add(Me.Label3)
+        Me.TabSample.Controls.Add(Me.lbSampleNameState)
+        Me.TabSample.Controls.Add(Me.lbSampleState)
+        Me.TabSample.Controls.Add(Me.lbSample)
+        Me.TabSample.Location = New System.Drawing.Point(4, 48)
+        Me.TabSample.Name = "TabSample"
+        Me.TabSample.Size = New System.Drawing.Size(815, 434)
+        Me.TabSample.TabIndex = 10
+        Me.TabSample.Text = "送样"
+        Me.TabSample.UseVisualStyleBackColor = True
+        '
+        'tbSampleName
+        '
+        Me.tbSampleName.Location = New System.Drawing.Point(97, 64)
+        Me.tbSampleName.Name = "tbSampleName"
+        Me.tbSampleName.Size = New System.Drawing.Size(638, 23)
+        Me.tbSampleName.TabIndex = 3
+        '
+        'btSampleSetting
+        '
+        Me.btSampleSetting.Location = New System.Drawing.Point(23, 119)
+        Me.btSampleSetting.Name = "btSampleSetting"
+        Me.btSampleSetting.Size = New System.Drawing.Size(75, 23)
+        Me.btSampleSetting.TabIndex = 2
+        Me.btSampleSetting.Text = "设置"
+        Me.btSampleSetting.UseVisualStyleBackColor = True
+        '
+        'rbSampleClose
+        '
+        Me.rbSampleClose.AutoSize = True
+        Me.rbSampleClose.Checked = True
+        Me.rbSampleClose.Location = New System.Drawing.Point(205, 20)
+        Me.rbSampleClose.Name = "rbSampleClose"
+        Me.rbSampleClose.Size = New System.Drawing.Size(50, 21)
+        Me.rbSampleClose.TabIndex = 1
+        Me.rbSampleClose.TabStop = True
+        Me.rbSampleClose.Text = "关闭"
+        Me.rbSampleClose.UseVisualStyleBackColor = True
+        '
+        'rbSampleOpen
+        '
+        Me.rbSampleOpen.AutoSize = True
+        Me.rbSampleOpen.Location = New System.Drawing.Point(97, 20)
+        Me.rbSampleOpen.Name = "rbSampleOpen"
+        Me.rbSampleOpen.Size = New System.Drawing.Size(50, 21)
+        Me.rbSampleOpen.TabIndex = 1
+        Me.rbSampleOpen.Text = "开启"
+        Me.rbSampleOpen.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(23, 67)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(68, 17)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "设备名称："
+        '
+        'lbSampleNameState
+        '
+        Me.lbSampleNameState.AutoSize = True
+        Me.lbSampleNameState.Location = New System.Drawing.Point(758, 67)
+        Me.lbSampleNameState.Name = "lbSampleNameState"
+        Me.lbSampleNameState.Size = New System.Drawing.Size(37, 17)
+        Me.lbSampleNameState.TabIndex = 0
+        Me.lbSampleNameState.Text = "PASS"
+        '
+        'lbSampleState
+        '
+        Me.lbSampleState.AutoSize = True
+        Me.lbSampleState.Location = New System.Drawing.Point(758, 22)
+        Me.lbSampleState.Name = "lbSampleState"
+        Me.lbSampleState.Size = New System.Drawing.Size(37, 17)
+        Me.lbSampleState.TabIndex = 0
+        Me.lbSampleState.Text = "PASS"
+        '
+        'lbSample
+        '
+        Me.lbSample.AutoSize = True
+        Me.lbSample.Location = New System.Drawing.Point(23, 20)
+        Me.lbSample.Name = "lbSample"
+        Me.lbSample.Size = New System.Drawing.Size(68, 17)
+        Me.lbSample.TabIndex = 0
+        Me.lbSample.Text = "送样功能："
+        '
+        'tpScreenBrightness
+        '
+        Me.tpScreenBrightness.Location = New System.Drawing.Point(4, 48)
+        Me.tpScreenBrightness.Name = "tpScreenBrightness"
+        Me.tpScreenBrightness.Size = New System.Drawing.Size(815, 434)
+        Me.tpScreenBrightness.TabIndex = 11
+        Me.tpScreenBrightness.Text = "屏幕亮度"
+        Me.tpScreenBrightness.UseVisualStyleBackColor = True
+        '
+        'tpVolume
+        '
+        Me.tpVolume.Location = New System.Drawing.Point(4, 48)
+        Me.tpVolume.Name = "tpVolume"
+        Me.tpVolume.Size = New System.Drawing.Size(815, 434)
+        Me.tpVolume.TabIndex = 12
+        Me.tpVolume.Text = "系统音量"
+        Me.tpVolume.UseVisualStyleBackColor = True
+        '
+        'tpTee
+        '
+        Me.tpTee.Location = New System.Drawing.Point(4, 48)
+        Me.tpTee.Name = "tpTee"
+        Me.tpTee.Size = New System.Drawing.Size(815, 434)
+        Me.tpTee.TabIndex = 13
+        Me.tpTee.Text = "TEE"
+        Me.tpTee.UseVisualStyleBackColor = True
+        '
+        'tpGoogleCustom
+        '
+        Me.tpGoogleCustom.Location = New System.Drawing.Point(4, 48)
+        Me.tpGoogleCustom.Name = "tpGoogleCustom"
+        Me.tpGoogleCustom.Size = New System.Drawing.Size(815, 434)
+        Me.tpGoogleCustom.TabIndex = 14
+        Me.tpGoogleCustom.Text = "谷歌客制化"
+        Me.tpGoogleCustom.UseVisualStyleBackColor = True
+        '
+        'tpAnimation
+        '
+        Me.tpAnimation.Location = New System.Drawing.Point(4, 48)
+        Me.tpAnimation.Name = "tpAnimation"
+        Me.tpAnimation.Size = New System.Drawing.Size(815, 434)
+        Me.tpAnimation.TabIndex = 15
+        Me.tpAnimation.Text = "开关机动画"
+        Me.tpAnimation.UseVisualStyleBackColor = True
+        '
+        'tpCheckApk
+        '
+        Me.tpCheckApk.Location = New System.Drawing.Point(4, 48)
+        Me.tpCheckApk.Name = "tpCheckApk"
+        Me.tpCheckApk.Size = New System.Drawing.Size(815, 434)
+        Me.tpCheckApk.TabIndex = 16
+        Me.tpCheckApk.Text = "检测应用"
+        Me.tpCheckApk.UseVisualStyleBackColor = True
+        '
+        'tpSystemSettings
+        '
+        Me.tpSystemSettings.Location = New System.Drawing.Point(4, 48)
+        Me.tpSystemSettings.Name = "tpSystemSettings"
+        Me.tpSystemSettings.Size = New System.Drawing.Size(815, 434)
+        Me.tpSystemSettings.TabIndex = 17
+        Me.tpSystemSettings.Text = "系统配置"
+        Me.tpSystemSettings.UseVisualStyleBackColor = True
+        '
+        'ofdSelectFile
+        '
+        Me.ofdSelectFile.FileName = "OpenFileDialog1"
         '
         'AndroidSettingsForm
         '
@@ -1047,6 +1454,12 @@ Partial Class AndroidSettingsForm
         Me.tpLanguage.PerformLayout()
         Me.tpTimezone.ResumeLayout(False)
         Me.tpTimezone.PerformLayout()
+        Me.tpLogo.ResumeLayout(False)
+        Me.tpLogo.PerformLayout()
+        Me.tpWallpaper.ResumeLayout(False)
+        Me.tpWallpaper.PerformLayout()
+        Me.TabSample.ResumeLayout(False)
+        Me.TabSample.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1141,4 +1554,41 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbTimezoneState As Label
     Friend WithEvents lbTimezone As Label
     Friend WithEvents btTimezoneSetting As Button
+    Friend WithEvents rbTimezoneClose As RadioButton
+    Friend WithEvents rbTimezoneOpen As RadioButton
+    Friend WithEvents lbAutoTimezone As Label
+    Friend WithEvents lbAutoTimezoneState As Label
+    Friend WithEvents tpLogo As TabPage
+    Friend WithEvents tpWallpaper As TabPage
+    Friend WithEvents TabSample As TabPage
+    Friend WithEvents btLogoSetting As Button
+    Friend WithEvents bLogo As Button
+    Friend WithEvents tbLogo As TextBox
+    Friend WithEvents lbLogoState As Label
+    Friend WithEvents lbLogo As Label
+    Friend WithEvents btWallpaperSetting As Button
+    Friend WithEvents btInserWallpaper As Button
+    Friend WithEvents btWallpaper As Button
+    Friend WithEvents tbInsertWallpaper As TextBox
+    Friend WithEvents lbInsertWallpaperState As Label
+    Friend WithEvents tbWallpaper As TextBox
+    Friend WithEvents lbInsertWallpaper As Label
+    Friend WithEvents lbWallpaperState As Label
+    Friend WithEvents lbWallpaper As Label
+    Friend WithEvents tbSampleName As TextBox
+    Friend WithEvents btSampleSetting As Button
+    Friend WithEvents rbSampleClose As RadioButton
+    Friend WithEvents rbSampleOpen As RadioButton
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lbSampleNameState As Label
+    Friend WithEvents lbSampleState As Label
+    Friend WithEvents lbSample As Label
+    Friend WithEvents tpScreenBrightness As TabPage
+    Friend WithEvents ofdSelectFile As OpenFileDialog
+    Friend WithEvents tpVolume As TabPage
+    Friend WithEvents tpTee As TabPage
+    Friend WithEvents tpGoogleCustom As TabPage
+    Friend WithEvents tpAnimation As TabPage
+    Friend WithEvents tpCheckApk As TabPage
+    Friend WithEvents tpSystemSettings As TabPage
 End Class

@@ -3,6 +3,21 @@
     Public Function GetProjects() As ArrayList
         Dim Projects As New ArrayList()
 
+        ' 启昌智能 511 项目
+        Dim QCZN511Project As New ProjectInfo()
+        QCZN511Project.ProjectId = "511"
+        QCZN511Project.AndroidVersion = "Android 13"
+        QCZN511Project.ProjectPath = ""
+        QCZN511Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        QCZN511Project.MssiDirName = "mssi_t_64_cn"
+        QCZN511Project.DriveDirName = "M102BS_QCZN_511"
+        QCZN511Project.CustomDirName = "M102BS_QCZN_511-MMI"
+        QCZN511Project.Gms = 1
+        QCZN511Project.Go = 0
+        QCZN511Project.ChiperMaker = "MTK"
+        QCZN511Project.ChiperModel = "MT8788"
+        Projects.Add(QCZN511Project)
+
         ' 铭优 657 项目
         Dim MY657Project As New ProjectInfo()
         MY657Project.ProjectId = "657"
