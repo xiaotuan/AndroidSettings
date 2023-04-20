@@ -3,6 +3,21 @@
     Public Function GetProjects() As ArrayList
         Dim Projects As New ArrayList()
 
+        ' 纳斯达 395 项目
+        Dim NSD395Project As New ProjectInfo()
+        NSD395Project.ProjectId = "395"
+        NSD395Project.AndroidVersion = "Android 12"
+        NSD395Project.ProjectPath = ""
+        NSD395Project.PublicDirName = "tb8788p1_64_bsp_k419"
+        NSD395Project.MssiDirName = ""
+        NSD395Project.DriveDirName = "M868B_NSD_395_WIFI"
+        NSD395Project.CustomDirName = "M868B_NSD_395_WIFI-MMI"
+        NSD395Project.Gms = 1
+        NSD395Project.Go = 0
+        NSD395Project.ChiperMaker = "MTK"
+        NSD395Project.ChiperModel = "MT8788"
+        Projects.Add(NSD395Project)
+
         ' 启昌智能 511 项目
         Dim QCZN511Project As New ProjectInfo()
         QCZN511Project.ProjectId = "511"

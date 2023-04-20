@@ -131,7 +131,7 @@ Partial Class AndroidSettingsForm
         Me.lbInsertWallpaper = New System.Windows.Forms.Label()
         Me.lbWallpaperState = New System.Windows.Forms.Label()
         Me.lbWallpaper = New System.Windows.Forms.Label()
-        Me.TabSample = New System.Windows.Forms.TabPage()
+        Me.tpSample = New System.Windows.Forms.TabPage()
         Me.tbSampleName = New System.Windows.Forms.TextBox()
         Me.btSampleSetting = New System.Windows.Forms.Button()
         Me.rbSampleClose = New System.Windows.Forms.RadioButton()
@@ -149,6 +149,8 @@ Partial Class AndroidSettingsForm
         Me.tpSystemSettings = New System.Windows.Forms.TabPage()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New System.Windows.Forms.OpenFileDialog()
+        Me.btSample = New System.Windows.Forms.Button()
+        Me.btSampleName = New System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -164,7 +166,7 @@ Partial Class AndroidSettingsForm
         Me.tpTimezone.SuspendLayout()
         Me.tpLogo.SuspendLayout()
         Me.tpWallpaper.SuspendLayout()
-        Me.TabSample.SuspendLayout()
+        Me.tpSample.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -179,7 +181,7 @@ Partial Class AndroidSettingsForm
         Me.tcAndroidSettings.Controls.Add(Me.tpTimezone)
         Me.tcAndroidSettings.Controls.Add(Me.tpLogo)
         Me.tcAndroidSettings.Controls.Add(Me.tpWallpaper)
-        Me.tcAndroidSettings.Controls.Add(Me.TabSample)
+        Me.tcAndroidSettings.Controls.Add(Me.tpSample)
         Me.tcAndroidSettings.Controls.Add(Me.tpScreenBrightness)
         Me.tcAndroidSettings.Controls.Add(Me.tpVolume)
         Me.tcAndroidSettings.Controls.Add(Me.tpTee)
@@ -506,9 +508,9 @@ Partial Class AndroidSettingsForm
         Me.tpProperty.Controls.Add(Me.lbProductModel)
         Me.tpProperty.Controls.Add(Me.tbProductName)
         Me.tpProperty.Controls.Add(Me.lbProductName)
-        Me.tpProperty.Location = New System.Drawing.Point(4, 48)
+        Me.tpProperty.Location = New System.Drawing.Point(4, 26)
         Me.tpProperty.Name = "tpProperty"
-        Me.tpProperty.Size = New System.Drawing.Size(815, 434)
+        Me.tpProperty.Size = New System.Drawing.Size(815, 456)
         Me.tpProperty.TabIndex = 3
         Me.tpProperty.Text = "系统属性"
         Me.tpProperty.UseVisualStyleBackColor = True
@@ -654,10 +656,10 @@ Partial Class AndroidSettingsForm
         Me.tpVersion.Controls.Add(Me.tbVersion)
         Me.tpVersion.Controls.Add(Me.lbVersion)
         Me.tpVersion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.tpVersion.Location = New System.Drawing.Point(4, 48)
+        Me.tpVersion.Location = New System.Drawing.Point(4, 26)
         Me.tpVersion.Name = "tpVersion"
         Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpVersion.Size = New System.Drawing.Size(815, 434)
+        Me.tpVersion.Size = New System.Drawing.Size(815, 456)
         Me.tpVersion.TabIndex = 1
         Me.tpVersion.Text = "版本号"
         Me.tpVersion.UseVisualStyleBackColor = True
@@ -707,9 +709,9 @@ Partial Class AndroidSettingsForm
         Me.tpFingerprint.Controls.Add(Me.lbFingerprintState)
         Me.tpFingerprint.Controls.Add(Me.tbFingerprint)
         Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
-        Me.tpFingerprint.Location = New System.Drawing.Point(4, 48)
+        Me.tpFingerprint.Location = New System.Drawing.Point(4, 26)
         Me.tpFingerprint.Name = "tpFingerprint"
-        Me.tpFingerprint.Size = New System.Drawing.Size(815, 434)
+        Me.tpFingerprint.Size = New System.Drawing.Size(815, 456)
         Me.tpFingerprint.TabIndex = 2
         Me.tpFingerprint.Text = "Fingerprint"
         Me.tpFingerprint.UseVisualStyleBackColor = True
@@ -771,9 +773,9 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.Controls.Add(Me.rbWifiClose)
         Me.tpWifi.Controls.Add(Me.rbWifiOpen)
         Me.tpWifi.Controls.Add(Me.lbWifiStatus)
-        Me.tpWifi.Location = New System.Drawing.Point(4, 48)
+        Me.tpWifi.Location = New System.Drawing.Point(4, 26)
         Me.tpWifi.Name = "tpWifi"
-        Me.tpWifi.Size = New System.Drawing.Size(815, 434)
+        Me.tpWifi.Size = New System.Drawing.Size(815, 456)
         Me.tpWifi.TabIndex = 4
         Me.tpWifi.Text = "WiFi"
         Me.tpWifi.UseVisualStyleBackColor = True
@@ -888,9 +890,9 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothName)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatusState)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatus)
-        Me.tpBluetooth.Location = New System.Drawing.Point(4, 48)
+        Me.tpBluetooth.Location = New System.Drawing.Point(4, 26)
         Me.tpBluetooth.Name = "tpBluetooth"
-        Me.tpBluetooth.Size = New System.Drawing.Size(815, 434)
+        Me.tpBluetooth.Size = New System.Drawing.Size(815, 456)
         Me.tpBluetooth.TabIndex = 5
         Me.tpBluetooth.Text = "蓝牙"
         Me.tpBluetooth.UseVisualStyleBackColor = True
@@ -975,9 +977,9 @@ Partial Class AndroidSettingsForm
         Me.tpLanguage.Controls.Add(Me.cbLanguage)
         Me.tpLanguage.Controls.Add(Me.lbLanguageState)
         Me.tpLanguage.Controls.Add(Me.Label1)
-        Me.tpLanguage.Location = New System.Drawing.Point(4, 48)
+        Me.tpLanguage.Location = New System.Drawing.Point(4, 26)
         Me.tpLanguage.Name = "tpLanguage"
-        Me.tpLanguage.Size = New System.Drawing.Size(815, 434)
+        Me.tpLanguage.Size = New System.Drawing.Size(815, 456)
         Me.tpLanguage.TabIndex = 6
         Me.tpLanguage.Text = "语言"
         Me.tpLanguage.UseVisualStyleBackColor = True
@@ -1027,9 +1029,9 @@ Partial Class AndroidSettingsForm
         Me.tpTimezone.Controls.Add(Me.lbTimezoneState)
         Me.tpTimezone.Controls.Add(Me.lbTimezone)
         Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
-        Me.tpTimezone.Location = New System.Drawing.Point(4, 48)
+        Me.tpTimezone.Location = New System.Drawing.Point(4, 26)
         Me.tpTimezone.Name = "tpTimezone"
-        Me.tpTimezone.Size = New System.Drawing.Size(815, 434)
+        Me.tpTimezone.Size = New System.Drawing.Size(815, 456)
         Me.tpTimezone.TabIndex = 7
         Me.tpTimezone.Text = "时区"
         Me.tpTimezone.UseVisualStyleBackColor = True
@@ -1116,9 +1118,9 @@ Partial Class AndroidSettingsForm
         Me.tpLogo.Controls.Add(Me.tbLogo)
         Me.tpLogo.Controls.Add(Me.lbLogoState)
         Me.tpLogo.Controls.Add(Me.lbLogo)
-        Me.tpLogo.Location = New System.Drawing.Point(4, 48)
+        Me.tpLogo.Location = New System.Drawing.Point(4, 26)
         Me.tpLogo.Name = "tpLogo"
-        Me.tpLogo.Size = New System.Drawing.Size(815, 434)
+        Me.tpLogo.Size = New System.Drawing.Size(815, 456)
         Me.tpLogo.TabIndex = 8
         Me.tpLogo.Text = "LOGO"
         Me.tpLogo.UseVisualStyleBackColor = True
@@ -1177,9 +1179,9 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaper)
         Me.tpWallpaper.Controls.Add(Me.lbWallpaperState)
         Me.tpWallpaper.Controls.Add(Me.lbWallpaper)
-        Me.tpWallpaper.Location = New System.Drawing.Point(4, 48)
+        Me.tpWallpaper.Location = New System.Drawing.Point(4, 26)
         Me.tpWallpaper.Name = "tpWallpaper"
-        Me.tpWallpaper.Size = New System.Drawing.Size(815, 434)
+        Me.tpWallpaper.Size = New System.Drawing.Size(815, 456)
         Me.tpWallpaper.TabIndex = 9
         Me.tpWallpaper.Text = "壁纸"
         Me.tpWallpaper.UseVisualStyleBackColor = True
@@ -1261,28 +1263,30 @@ Partial Class AndroidSettingsForm
         Me.lbWallpaper.TabIndex = 4
         Me.lbWallpaper.Text = "壁纸："
         '
-        'TabSample
+        'tpSample
         '
-        Me.TabSample.Controls.Add(Me.tbSampleName)
-        Me.TabSample.Controls.Add(Me.btSampleSetting)
-        Me.TabSample.Controls.Add(Me.rbSampleClose)
-        Me.TabSample.Controls.Add(Me.rbSampleOpen)
-        Me.TabSample.Controls.Add(Me.Label3)
-        Me.TabSample.Controls.Add(Me.lbSampleNameState)
-        Me.TabSample.Controls.Add(Me.lbSampleState)
-        Me.TabSample.Controls.Add(Me.lbSample)
-        Me.TabSample.Location = New System.Drawing.Point(4, 48)
-        Me.TabSample.Name = "TabSample"
-        Me.TabSample.Size = New System.Drawing.Size(815, 434)
-        Me.TabSample.TabIndex = 10
-        Me.TabSample.Text = "送样"
-        Me.TabSample.UseVisualStyleBackColor = True
+        Me.tpSample.Controls.Add(Me.btSampleName)
+        Me.tpSample.Controls.Add(Me.btSample)
+        Me.tpSample.Controls.Add(Me.tbSampleName)
+        Me.tpSample.Controls.Add(Me.btSampleSetting)
+        Me.tpSample.Controls.Add(Me.rbSampleClose)
+        Me.tpSample.Controls.Add(Me.rbSampleOpen)
+        Me.tpSample.Controls.Add(Me.Label3)
+        Me.tpSample.Controls.Add(Me.lbSampleNameState)
+        Me.tpSample.Controls.Add(Me.lbSampleState)
+        Me.tpSample.Controls.Add(Me.lbSample)
+        Me.tpSample.Location = New System.Drawing.Point(4, 48)
+        Me.tpSample.Name = "tpSample"
+        Me.tpSample.Size = New System.Drawing.Size(815, 434)
+        Me.tpSample.TabIndex = 10
+        Me.tpSample.Text = "送样"
+        Me.tpSample.UseVisualStyleBackColor = True
         '
         'tbSampleName
         '
         Me.tbSampleName.Location = New System.Drawing.Point(97, 64)
         Me.tbSampleName.Name = "tbSampleName"
-        Me.tbSampleName.Size = New System.Drawing.Size(638, 23)
+        Me.tbSampleName.Size = New System.Drawing.Size(549, 23)
         Me.tbSampleName.TabIndex = 3
         '
         'btSampleSetting
@@ -1291,7 +1295,7 @@ Partial Class AndroidSettingsForm
         Me.btSampleSetting.Name = "btSampleSetting"
         Me.btSampleSetting.Size = New System.Drawing.Size(75, 23)
         Me.btSampleSetting.TabIndex = 2
-        Me.btSampleSetting.Text = "设置"
+        Me.btSampleSetting.Text = "全部设置"
         Me.btSampleSetting.UseVisualStyleBackColor = True
         '
         'rbSampleClose
@@ -1419,6 +1423,24 @@ Partial Class AndroidSettingsForm
         '
         Me.ofdSelectFile.FileName = "OpenFileDialog1"
         '
+        'btSample
+        '
+        Me.btSample.Location = New System.Drawing.Point(660, 19)
+        Me.btSample.Name = "btSample"
+        Me.btSample.Size = New System.Drawing.Size(75, 23)
+        Me.btSample.TabIndex = 4
+        Me.btSample.Text = "设置"
+        Me.btSample.UseVisualStyleBackColor = True
+        '
+        'btSampleName
+        '
+        Me.btSampleName.Location = New System.Drawing.Point(660, 64)
+        Me.btSampleName.Name = "btSampleName"
+        Me.btSampleName.Size = New System.Drawing.Size(75, 23)
+        Me.btSampleName.TabIndex = 4
+        Me.btSampleName.Text = "设置"
+        Me.btSampleName.UseVisualStyleBackColor = True
+        '
         'AndroidSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -1458,8 +1480,8 @@ Partial Class AndroidSettingsForm
         Me.tpLogo.PerformLayout()
         Me.tpWallpaper.ResumeLayout(False)
         Me.tpWallpaper.PerformLayout()
-        Me.TabSample.ResumeLayout(False)
-        Me.TabSample.PerformLayout()
+        Me.tpSample.ResumeLayout(False)
+        Me.tpSample.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1560,7 +1582,7 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbAutoTimezoneState As Label
     Friend WithEvents tpLogo As TabPage
     Friend WithEvents tpWallpaper As TabPage
-    Friend WithEvents TabSample As TabPage
+    Friend WithEvents tpSample As TabPage
     Friend WithEvents btLogoSetting As Button
     Friend WithEvents bLogo As Button
     Friend WithEvents tbLogo As TextBox
@@ -1591,4 +1613,6 @@ Partial Class AndroidSettingsForm
     Friend WithEvents tpAnimation As TabPage
     Friend WithEvents tpCheckApk As TabPage
     Friend WithEvents tpSystemSettings As TabPage
+    Friend WithEvents btSampleName As Button
+    Friend WithEvents btSample As Button
 End Class

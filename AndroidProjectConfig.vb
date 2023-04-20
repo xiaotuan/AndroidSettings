@@ -277,6 +277,8 @@ Public Class AndroidSettingsForm
             LogoController.UpdateLogo(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpWallpaper") Then
             WallpaperController.UpdateWallpaperInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpSample") Then
+            SampleController.UpdateSampleInfos(Me)
         End If
     End Sub
 
@@ -347,5 +349,18 @@ Public Class AndroidSettingsForm
 
     Private Sub btWallpaperSetting_Click(sender As Object, e As EventArgs) Handles btWallpaperSetting.Click
         WallpaperController.SetWallpaperInfos(Me)
+    End Sub
+
+    Private Sub btSample_Click(sender As Object, e As EventArgs) Handles btSample.Click
+        SampleController.SetSampleStatus(Me)
+    End Sub
+
+    Private Sub btSampleName_Click(sender As Object, e As EventArgs) Handles btSampleName.Click
+        SampleController.SetSampleName(Me)
+    End Sub
+
+    Private Sub btSampleSetting_Click(sender As Object, e As EventArgs) Handles btSampleSetting.Click
+        SampleController.SetSampleStatus(Me)
+        SampleController.SetSampleName(Me)
     End Sub
 End Class
