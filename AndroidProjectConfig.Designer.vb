@@ -132,6 +132,8 @@ Partial Class AndroidSettingsForm
         Me.lbWallpaperState = New System.Windows.Forms.Label()
         Me.lbWallpaper = New System.Windows.Forms.Label()
         Me.tpSample = New System.Windows.Forms.TabPage()
+        Me.btSampleName = New System.Windows.Forms.Button()
+        Me.btSample = New System.Windows.Forms.Button()
         Me.tbSampleName = New System.Windows.Forms.TextBox()
         Me.btSampleSetting = New System.Windows.Forms.Button()
         Me.rbSampleClose = New System.Windows.Forms.RadioButton()
@@ -145,12 +147,22 @@ Partial Class AndroidSettingsForm
         Me.tpTee = New System.Windows.Forms.TabPage()
         Me.tpGoogleCustom = New System.Windows.Forms.TabPage()
         Me.tpAnimation = New System.Windows.Forms.TabPage()
-        Me.tpCheckApk = New System.Windows.Forms.TabPage()
         Me.tpSystemSettings = New System.Windows.Forms.TabPage()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New System.Windows.Forms.OpenFileDialog()
-        Me.btSample = New System.Windows.Forms.Button()
-        Me.btSampleName = New System.Windows.Forms.Button()
+        Me.lbDefaultBrightness = New System.Windows.Forms.Label()
+        Me.tbDefaultBrightness = New System.Windows.Forms.TextBox()
+        Me.btDefaultBrightness = New System.Windows.Forms.Button()
+        Me.lbDefaultBrightnessStatus = New System.Windows.Forms.Label()
+        Me.btBrightnessAllSet = New System.Windows.Forms.Button()
+        Me.lbMaxBrightness = New System.Windows.Forms.Label()
+        Me.tbMaxBrightness = New System.Windows.Forms.TextBox()
+        Me.lbMaxBrightnessStatus = New System.Windows.Forms.Label()
+        Me.btMaxBrightness = New System.Windows.Forms.Button()
+        Me.lbMinBrightness = New System.Windows.Forms.Label()
+        Me.tbMinBrightness = New System.Windows.Forms.TextBox()
+        Me.lbMinBrightnessStatus = New System.Windows.Forms.Label()
+        Me.btMinBrightness = New System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -167,6 +179,7 @@ Partial Class AndroidSettingsForm
         Me.tpLogo.SuspendLayout()
         Me.tpWallpaper.SuspendLayout()
         Me.tpSample.SuspendLayout()
+        Me.tpScreenBrightness.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -187,14 +200,13 @@ Partial Class AndroidSettingsForm
         Me.tcAndroidSettings.Controls.Add(Me.tpTee)
         Me.tcAndroidSettings.Controls.Add(Me.tpGoogleCustom)
         Me.tcAndroidSettings.Controls.Add(Me.tpAnimation)
-        Me.tcAndroidSettings.Controls.Add(Me.tpCheckApk)
         Me.tcAndroidSettings.Controls.Add(Me.tpSystemSettings)
         Me.tcAndroidSettings.ItemSize = New System.Drawing.Size(80, 22)
         Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
         Me.tcAndroidSettings.Multiline = True
         Me.tcAndroidSettings.Name = "tcAndroidSettings"
         Me.tcAndroidSettings.SelectedIndex = 0
-        Me.tcAndroidSettings.Size = New System.Drawing.Size(823, 486)
+        Me.tcAndroidSettings.Size = New System.Drawing.Size(823, 501)
         Me.tcAndroidSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.tcAndroidSettings.TabIndex = 0
         '
@@ -207,7 +219,7 @@ Partial Class AndroidSettingsForm
         Me.tpProjectInfo.Location = New System.Drawing.Point(4, 48)
         Me.tpProjectInfo.Name = "tpProjectInfo"
         Me.tpProjectInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 434)
+        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 449)
         Me.tpProjectInfo.TabIndex = 0
         Me.tpProjectInfo.Text = "工程信息"
         Me.tpProjectInfo.UseVisualStyleBackColor = True
@@ -510,7 +522,7 @@ Partial Class AndroidSettingsForm
         Me.tpProperty.Controls.Add(Me.lbProductName)
         Me.tpProperty.Location = New System.Drawing.Point(4, 26)
         Me.tpProperty.Name = "tpProperty"
-        Me.tpProperty.Size = New System.Drawing.Size(815, 456)
+        Me.tpProperty.Size = New System.Drawing.Size(815, 471)
         Me.tpProperty.TabIndex = 3
         Me.tpProperty.Text = "系统属性"
         Me.tpProperty.UseVisualStyleBackColor = True
@@ -659,7 +671,7 @@ Partial Class AndroidSettingsForm
         Me.tpVersion.Location = New System.Drawing.Point(4, 26)
         Me.tpVersion.Name = "tpVersion"
         Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpVersion.Size = New System.Drawing.Size(815, 456)
+        Me.tpVersion.Size = New System.Drawing.Size(815, 471)
         Me.tpVersion.TabIndex = 1
         Me.tpVersion.Text = "版本号"
         Me.tpVersion.UseVisualStyleBackColor = True
@@ -711,7 +723,7 @@ Partial Class AndroidSettingsForm
         Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
         Me.tpFingerprint.Location = New System.Drawing.Point(4, 26)
         Me.tpFingerprint.Name = "tpFingerprint"
-        Me.tpFingerprint.Size = New System.Drawing.Size(815, 456)
+        Me.tpFingerprint.Size = New System.Drawing.Size(815, 471)
         Me.tpFingerprint.TabIndex = 2
         Me.tpFingerprint.Text = "Fingerprint"
         Me.tpFingerprint.UseVisualStyleBackColor = True
@@ -775,7 +787,7 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.Controls.Add(Me.lbWifiStatus)
         Me.tpWifi.Location = New System.Drawing.Point(4, 26)
         Me.tpWifi.Name = "tpWifi"
-        Me.tpWifi.Size = New System.Drawing.Size(815, 456)
+        Me.tpWifi.Size = New System.Drawing.Size(815, 471)
         Me.tpWifi.TabIndex = 4
         Me.tpWifi.Text = "WiFi"
         Me.tpWifi.UseVisualStyleBackColor = True
@@ -892,7 +904,7 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatus)
         Me.tpBluetooth.Location = New System.Drawing.Point(4, 26)
         Me.tpBluetooth.Name = "tpBluetooth"
-        Me.tpBluetooth.Size = New System.Drawing.Size(815, 456)
+        Me.tpBluetooth.Size = New System.Drawing.Size(815, 471)
         Me.tpBluetooth.TabIndex = 5
         Me.tpBluetooth.Text = "蓝牙"
         Me.tpBluetooth.UseVisualStyleBackColor = True
@@ -979,7 +991,7 @@ Partial Class AndroidSettingsForm
         Me.tpLanguage.Controls.Add(Me.Label1)
         Me.tpLanguage.Location = New System.Drawing.Point(4, 26)
         Me.tpLanguage.Name = "tpLanguage"
-        Me.tpLanguage.Size = New System.Drawing.Size(815, 456)
+        Me.tpLanguage.Size = New System.Drawing.Size(815, 471)
         Me.tpLanguage.TabIndex = 6
         Me.tpLanguage.Text = "语言"
         Me.tpLanguage.UseVisualStyleBackColor = True
@@ -1031,7 +1043,7 @@ Partial Class AndroidSettingsForm
         Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
         Me.tpTimezone.Location = New System.Drawing.Point(4, 26)
         Me.tpTimezone.Name = "tpTimezone"
-        Me.tpTimezone.Size = New System.Drawing.Size(815, 456)
+        Me.tpTimezone.Size = New System.Drawing.Size(815, 471)
         Me.tpTimezone.TabIndex = 7
         Me.tpTimezone.Text = "时区"
         Me.tpTimezone.UseVisualStyleBackColor = True
@@ -1120,7 +1132,7 @@ Partial Class AndroidSettingsForm
         Me.tpLogo.Controls.Add(Me.lbLogo)
         Me.tpLogo.Location = New System.Drawing.Point(4, 26)
         Me.tpLogo.Name = "tpLogo"
-        Me.tpLogo.Size = New System.Drawing.Size(815, 456)
+        Me.tpLogo.Size = New System.Drawing.Size(815, 471)
         Me.tpLogo.TabIndex = 8
         Me.tpLogo.Text = "LOGO"
         Me.tpLogo.UseVisualStyleBackColor = True
@@ -1181,7 +1193,7 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.Controls.Add(Me.lbWallpaper)
         Me.tpWallpaper.Location = New System.Drawing.Point(4, 26)
         Me.tpWallpaper.Name = "tpWallpaper"
-        Me.tpWallpaper.Size = New System.Drawing.Size(815, 456)
+        Me.tpWallpaper.Size = New System.Drawing.Size(815, 471)
         Me.tpWallpaper.TabIndex = 9
         Me.tpWallpaper.Text = "壁纸"
         Me.tpWallpaper.UseVisualStyleBackColor = True
@@ -1277,10 +1289,28 @@ Partial Class AndroidSettingsForm
         Me.tpSample.Controls.Add(Me.lbSample)
         Me.tpSample.Location = New System.Drawing.Point(4, 48)
         Me.tpSample.Name = "tpSample"
-        Me.tpSample.Size = New System.Drawing.Size(815, 434)
+        Me.tpSample.Size = New System.Drawing.Size(815, 449)
         Me.tpSample.TabIndex = 10
         Me.tpSample.Text = "送样"
         Me.tpSample.UseVisualStyleBackColor = True
+        '
+        'btSampleName
+        '
+        Me.btSampleName.Location = New System.Drawing.Point(660, 64)
+        Me.btSampleName.Name = "btSampleName"
+        Me.btSampleName.Size = New System.Drawing.Size(75, 23)
+        Me.btSampleName.TabIndex = 4
+        Me.btSampleName.Text = "设置"
+        Me.btSampleName.UseVisualStyleBackColor = True
+        '
+        'btSample
+        '
+        Me.btSample.Location = New System.Drawing.Point(660, 19)
+        Me.btSample.Name = "btSample"
+        Me.btSample.Size = New System.Drawing.Size(75, 23)
+        Me.btSample.TabIndex = 4
+        Me.btSample.Text = "设置"
+        Me.btSample.UseVisualStyleBackColor = True
         '
         'tbSampleName
         '
@@ -1358,9 +1388,22 @@ Partial Class AndroidSettingsForm
         '
         'tpScreenBrightness
         '
+        Me.tpScreenBrightness.Controls.Add(Me.btBrightnessAllSet)
+        Me.tpScreenBrightness.Controls.Add(Me.btMinBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.btMaxBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.btDefaultBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.lbMinBrightnessStatus)
+        Me.tpScreenBrightness.Controls.Add(Me.lbMaxBrightnessStatus)
+        Me.tpScreenBrightness.Controls.Add(Me.lbDefaultBrightnessStatus)
+        Me.tpScreenBrightness.Controls.Add(Me.tbMinBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.lbMinBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.tbMaxBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.lbMaxBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.tbDefaultBrightness)
+        Me.tpScreenBrightness.Controls.Add(Me.lbDefaultBrightness)
         Me.tpScreenBrightness.Location = New System.Drawing.Point(4, 48)
         Me.tpScreenBrightness.Name = "tpScreenBrightness"
-        Me.tpScreenBrightness.Size = New System.Drawing.Size(815, 434)
+        Me.tpScreenBrightness.Size = New System.Drawing.Size(815, 449)
         Me.tpScreenBrightness.TabIndex = 11
         Me.tpScreenBrightness.Text = "屏幕亮度"
         Me.tpScreenBrightness.UseVisualStyleBackColor = True
@@ -1369,7 +1412,7 @@ Partial Class AndroidSettingsForm
         '
         Me.tpVolume.Location = New System.Drawing.Point(4, 48)
         Me.tpVolume.Name = "tpVolume"
-        Me.tpVolume.Size = New System.Drawing.Size(815, 434)
+        Me.tpVolume.Size = New System.Drawing.Size(815, 449)
         Me.tpVolume.TabIndex = 12
         Me.tpVolume.Text = "系统音量"
         Me.tpVolume.UseVisualStyleBackColor = True
@@ -1378,7 +1421,7 @@ Partial Class AndroidSettingsForm
         '
         Me.tpTee.Location = New System.Drawing.Point(4, 48)
         Me.tpTee.Name = "tpTee"
-        Me.tpTee.Size = New System.Drawing.Size(815, 434)
+        Me.tpTee.Size = New System.Drawing.Size(815, 449)
         Me.tpTee.TabIndex = 13
         Me.tpTee.Text = "TEE"
         Me.tpTee.UseVisualStyleBackColor = True
@@ -1387,7 +1430,7 @@ Partial Class AndroidSettingsForm
         '
         Me.tpGoogleCustom.Location = New System.Drawing.Point(4, 48)
         Me.tpGoogleCustom.Name = "tpGoogleCustom"
-        Me.tpGoogleCustom.Size = New System.Drawing.Size(815, 434)
+        Me.tpGoogleCustom.Size = New System.Drawing.Size(815, 449)
         Me.tpGoogleCustom.TabIndex = 14
         Me.tpGoogleCustom.Text = "谷歌客制化"
         Me.tpGoogleCustom.UseVisualStyleBackColor = True
@@ -1396,25 +1439,16 @@ Partial Class AndroidSettingsForm
         '
         Me.tpAnimation.Location = New System.Drawing.Point(4, 48)
         Me.tpAnimation.Name = "tpAnimation"
-        Me.tpAnimation.Size = New System.Drawing.Size(815, 434)
+        Me.tpAnimation.Size = New System.Drawing.Size(815, 449)
         Me.tpAnimation.TabIndex = 15
         Me.tpAnimation.Text = "开关机动画"
         Me.tpAnimation.UseVisualStyleBackColor = True
-        '
-        'tpCheckApk
-        '
-        Me.tpCheckApk.Location = New System.Drawing.Point(4, 48)
-        Me.tpCheckApk.Name = "tpCheckApk"
-        Me.tpCheckApk.Size = New System.Drawing.Size(815, 434)
-        Me.tpCheckApk.TabIndex = 16
-        Me.tpCheckApk.Text = "检测应用"
-        Me.tpCheckApk.UseVisualStyleBackColor = True
         '
         'tpSystemSettings
         '
         Me.tpSystemSettings.Location = New System.Drawing.Point(4, 48)
         Me.tpSystemSettings.Name = "tpSystemSettings"
-        Me.tpSystemSettings.Size = New System.Drawing.Size(815, 434)
+        Me.tpSystemSettings.Size = New System.Drawing.Size(815, 449)
         Me.tpSystemSettings.TabIndex = 17
         Me.tpSystemSettings.Text = "系统配置"
         Me.tpSystemSettings.UseVisualStyleBackColor = True
@@ -1423,29 +1457,122 @@ Partial Class AndroidSettingsForm
         '
         Me.ofdSelectFile.FileName = "OpenFileDialog1"
         '
-        'btSample
+        'lbDefaultBrightness
         '
-        Me.btSample.Location = New System.Drawing.Point(660, 19)
-        Me.btSample.Name = "btSample"
-        Me.btSample.Size = New System.Drawing.Size(75, 23)
-        Me.btSample.TabIndex = 4
-        Me.btSample.Text = "设置"
-        Me.btSample.UseVisualStyleBackColor = True
+        Me.lbDefaultBrightness.AutoSize = True
+        Me.lbDefaultBrightness.Location = New System.Drawing.Point(15, 16)
+        Me.lbDefaultBrightness.Name = "lbDefaultBrightness"
+        Me.lbDefaultBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbDefaultBrightness.TabIndex = 0
+        Me.lbDefaultBrightness.Text = "默认亮度："
         '
-        'btSampleName
+        'tbDefaultBrightness
         '
-        Me.btSampleName.Location = New System.Drawing.Point(660, 64)
-        Me.btSampleName.Name = "btSampleName"
-        Me.btSampleName.Size = New System.Drawing.Size(75, 23)
-        Me.btSampleName.TabIndex = 4
-        Me.btSampleName.Text = "设置"
-        Me.btSampleName.UseVisualStyleBackColor = True
+        Me.tbDefaultBrightness.Location = New System.Drawing.Point(89, 13)
+        Me.tbDefaultBrightness.Name = "tbDefaultBrightness"
+        Me.tbDefaultBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbDefaultBrightness.TabIndex = 1
+        '
+        'btDefaultBrightness
+        '
+        Me.btDefaultBrightness.Location = New System.Drawing.Point(657, 13)
+        Me.btDefaultBrightness.Name = "btDefaultBrightness"
+        Me.btDefaultBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btDefaultBrightness.TabIndex = 2
+        Me.btDefaultBrightness.Text = "设置"
+        Me.btDefaultBrightness.UseVisualStyleBackColor = True
+        '
+        'lbDefaultBrightnessStatus
+        '
+        Me.lbDefaultBrightnessStatus.AutoSize = True
+        Me.lbDefaultBrightnessStatus.Location = New System.Drawing.Point(757, 16)
+        Me.lbDefaultBrightnessStatus.Name = "lbDefaultBrightnessStatus"
+        Me.lbDefaultBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbDefaultBrightnessStatus.TabIndex = 0
+        Me.lbDefaultBrightnessStatus.Text = "PASS"
+        '
+        'btBrightnessAllSet
+        '
+        Me.btBrightnessAllSet.Location = New System.Drawing.Point(15, 144)
+        Me.btBrightnessAllSet.Name = "btBrightnessAllSet"
+        Me.btBrightnessAllSet.Size = New System.Drawing.Size(75, 23)
+        Me.btBrightnessAllSet.TabIndex = 2
+        Me.btBrightnessAllSet.Text = "全部设置"
+        Me.btBrightnessAllSet.UseVisualStyleBackColor = True
+        '
+        'lbMaxBrightness
+        '
+        Me.lbMaxBrightness.AutoSize = True
+        Me.lbMaxBrightness.Location = New System.Drawing.Point(15, 56)
+        Me.lbMaxBrightness.Name = "lbMaxBrightness"
+        Me.lbMaxBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbMaxBrightness.TabIndex = 0
+        Me.lbMaxBrightness.Text = "最大亮度："
+        '
+        'tbMaxBrightness
+        '
+        Me.tbMaxBrightness.Location = New System.Drawing.Point(89, 53)
+        Me.tbMaxBrightness.Name = "tbMaxBrightness"
+        Me.tbMaxBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbMaxBrightness.TabIndex = 1
+        '
+        'lbMaxBrightnessStatus
+        '
+        Me.lbMaxBrightnessStatus.AutoSize = True
+        Me.lbMaxBrightnessStatus.Location = New System.Drawing.Point(757, 56)
+        Me.lbMaxBrightnessStatus.Name = "lbMaxBrightnessStatus"
+        Me.lbMaxBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbMaxBrightnessStatus.TabIndex = 0
+        Me.lbMaxBrightnessStatus.Text = "PASS"
+        '
+        'btMaxBrightness
+        '
+        Me.btMaxBrightness.Location = New System.Drawing.Point(657, 53)
+        Me.btMaxBrightness.Name = "btMaxBrightness"
+        Me.btMaxBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btMaxBrightness.TabIndex = 2
+        Me.btMaxBrightness.Text = "设置"
+        Me.btMaxBrightness.UseVisualStyleBackColor = True
+        '
+        'lbMinBrightness
+        '
+        Me.lbMinBrightness.AutoSize = True
+        Me.lbMinBrightness.Location = New System.Drawing.Point(15, 95)
+        Me.lbMinBrightness.Name = "lbMinBrightness"
+        Me.lbMinBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbMinBrightness.TabIndex = 0
+        Me.lbMinBrightness.Text = "最小亮度："
+        '
+        'tbMinBrightness
+        '
+        Me.tbMinBrightness.Location = New System.Drawing.Point(89, 92)
+        Me.tbMinBrightness.Name = "tbMinBrightness"
+        Me.tbMinBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbMinBrightness.TabIndex = 1
+        '
+        'lbMinBrightnessStatus
+        '
+        Me.lbMinBrightnessStatus.AutoSize = True
+        Me.lbMinBrightnessStatus.Location = New System.Drawing.Point(757, 95)
+        Me.lbMinBrightnessStatus.Name = "lbMinBrightnessStatus"
+        Me.lbMinBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbMinBrightnessStatus.TabIndex = 0
+        Me.lbMinBrightnessStatus.Text = "PASS"
+        '
+        'btMinBrightness
+        '
+        Me.btMinBrightness.Location = New System.Drawing.Point(657, 92)
+        Me.btMinBrightness.Name = "btMinBrightness"
+        Me.btMinBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btMinBrightness.TabIndex = 2
+        Me.btMinBrightness.Text = "设置"
+        Me.btMinBrightness.UseVisualStyleBackColor = True
         '
         'AndroidSettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(847, 508)
+        Me.ClientSize = New System.Drawing.Size(847, 522)
         Me.Controls.Add(Me.tcAndroidSettings)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -1482,6 +1609,8 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.PerformLayout()
         Me.tpSample.ResumeLayout(False)
         Me.tpSample.PerformLayout()
+        Me.tpScreenBrightness.ResumeLayout(False)
+        Me.tpScreenBrightness.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1611,8 +1740,20 @@ Partial Class AndroidSettingsForm
     Friend WithEvents tpTee As TabPage
     Friend WithEvents tpGoogleCustom As TabPage
     Friend WithEvents tpAnimation As TabPage
-    Friend WithEvents tpCheckApk As TabPage
     Friend WithEvents tpSystemSettings As TabPage
     Friend WithEvents btSampleName As Button
     Friend WithEvents btSample As Button
+    Friend WithEvents btBrightnessAllSet As Button
+    Friend WithEvents btMinBrightness As Button
+    Friend WithEvents btMaxBrightness As Button
+    Friend WithEvents btDefaultBrightness As Button
+    Friend WithEvents lbMinBrightnessStatus As Label
+    Friend WithEvents lbMaxBrightnessStatus As Label
+    Friend WithEvents lbDefaultBrightnessStatus As Label
+    Friend WithEvents tbMinBrightness As TextBox
+    Friend WithEvents lbMinBrightness As Label
+    Friend WithEvents tbMaxBrightness As TextBox
+    Friend WithEvents lbMaxBrightness As Label
+    Friend WithEvents tbDefaultBrightness As TextBox
+    Friend WithEvents lbDefaultBrightness As Label
 End Class

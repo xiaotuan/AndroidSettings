@@ -279,6 +279,8 @@ Public Class AndroidSettingsForm
             WallpaperController.UpdateWallpaperInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpSample") Then
             SampleController.UpdateSampleInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpScreenBrightness") Then
+            BrightnessController.UpdateBrightnessInfos(Me)
         End If
     End Sub
 
@@ -362,5 +364,23 @@ Public Class AndroidSettingsForm
     Private Sub btSampleSetting_Click(sender As Object, e As EventArgs) Handles btSampleSetting.Click
         SampleController.SetSampleStatus(Me)
         SampleController.SetSampleName(Me)
+    End Sub
+
+    Private Sub btDefaultBrightness_Click(sender As Object, e As EventArgs) Handles btDefaultBrightness.Click
+        BrightnessController.SetDefaultBrightness(Me)
+    End Sub
+
+    Private Sub btMaxBrightness_Click(sender As Object, e As EventArgs) Handles btMaxBrightness.Click
+        BrightnessController.SetMaxBrightness(Me)
+    End Sub
+
+    Private Sub btMinBrightness_Click(sender As Object, e As EventArgs) Handles btMinBrightness.Click
+        BrightnessController.SetMinBrightness(Me)
+    End Sub
+
+    Private Sub btBrightnessAllSet_Click(sender As Object, e As EventArgs) Handles btBrightnessAllSet.Click
+        BrightnessController.SetDefaultBrightness(Me)
+        BrightnessController.SetMaxBrightness(Me)
+        BrightnessController.SetMinBrightness(Me)
     End Sub
 End Class
