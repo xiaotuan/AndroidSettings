@@ -281,6 +281,8 @@ Public Class AndroidSettingsForm
             SampleController.UpdateSampleInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpScreenBrightness") Then
             BrightnessController.UpdateBrightnessInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpVolume") Then
+            VolumeController.UpdateVolumeInfos(Me)
         End If
     End Sub
 
@@ -382,5 +384,38 @@ Public Class AndroidSettingsForm
         BrightnessController.SetDefaultBrightness(Me)
         BrightnessController.SetMaxBrightness(Me)
         BrightnessController.SetMinBrightness(Me)
+    End Sub
+
+    Private Sub btCallVolume_Click(sender As Object, e As EventArgs) Handles btCallVolume.Click
+        VolumeController.SetCallVolume(Me)
+    End Sub
+
+    Private Sub btRingVolume_Click(sender As Object, e As EventArgs) Handles btRingVolume.Click
+        VolumeController.SetRingVolume(Me)
+    End Sub
+
+    Private Sub btMusicVolume_Click(sender As Object, e As EventArgs) Handles btMusicVolume.Click
+        VolumeController.SetMusicVolume(Me)
+    End Sub
+
+    Private Sub btAlarmVolume_Click(sender As Object, e As EventArgs) Handles btAlarmVolume.Click
+        VolumeController.SetAlarmVolume(Me)
+    End Sub
+
+    Private Sub btNotifyVolume_Click(sender As Object, e As EventArgs) Handles btNotifyVolume.Click
+        VolumeController.SetNotificationVolume(Me)
+    End Sub
+
+    Private Sub btOtherVolume_Click(sender As Object, e As EventArgs) Handles btOtherVolume.Click
+        VolumeController.SetOtherVolume(Me)
+    End Sub
+
+    Private Sub btVolumeAllSet_Click(sender As Object, e As EventArgs) Handles btVolumeAllSet.Click
+        VolumeController.SetCallVolume(Me)
+        VolumeController.SetRingVolume(Me)
+        VolumeController.SetMusicVolume(Me)
+        VolumeController.SetAlarmVolume(Me)
+        VolumeController.SetNotificationVolume(Me)
+        VolumeController.SetOtherVolume(Me)
     End Sub
 End Class

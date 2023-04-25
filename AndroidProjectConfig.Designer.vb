@@ -143,26 +143,51 @@ Partial Class AndroidSettingsForm
         Me.lbSampleState = New System.Windows.Forms.Label()
         Me.lbSample = New System.Windows.Forms.Label()
         Me.tpScreenBrightness = New System.Windows.Forms.TabPage()
+        Me.btBrightnessAllSet = New System.Windows.Forms.Button()
+        Me.btMinBrightness = New System.Windows.Forms.Button()
+        Me.btMaxBrightness = New System.Windows.Forms.Button()
+        Me.btDefaultBrightness = New System.Windows.Forms.Button()
+        Me.lbMinBrightnessStatus = New System.Windows.Forms.Label()
+        Me.lbMaxBrightnessStatus = New System.Windows.Forms.Label()
+        Me.lbDefaultBrightnessStatus = New System.Windows.Forms.Label()
+        Me.tbMinBrightness = New System.Windows.Forms.TextBox()
+        Me.lbMinBrightness = New System.Windows.Forms.Label()
+        Me.tbMaxBrightness = New System.Windows.Forms.TextBox()
+        Me.lbMaxBrightness = New System.Windows.Forms.Label()
+        Me.tbDefaultBrightness = New System.Windows.Forms.TextBox()
+        Me.lbDefaultBrightness = New System.Windows.Forms.Label()
         Me.tpVolume = New System.Windows.Forms.TabPage()
+        Me.cbOtherVolume = New System.Windows.Forms.ComboBox()
+        Me.cbNotifyVolume = New System.Windows.Forms.ComboBox()
+        Me.cbAlarmVolume = New System.Windows.Forms.ComboBox()
+        Me.cbMusicVolume = New System.Windows.Forms.ComboBox()
+        Me.cbRingVolume = New System.Windows.Forms.ComboBox()
+        Me.cbCallVolume = New System.Windows.Forms.ComboBox()
+        Me.btVolumeAllSet = New System.Windows.Forms.Button()
+        Me.btOtherVolume = New System.Windows.Forms.Button()
+        Me.btNotifyVolume = New System.Windows.Forms.Button()
+        Me.btAlarmVolume = New System.Windows.Forms.Button()
+        Me.btMusicVolume = New System.Windows.Forms.Button()
+        Me.btRingVolume = New System.Windows.Forms.Button()
+        Me.btCallVolume = New System.Windows.Forms.Button()
+        Me.lbOtherVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbNotifyVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbAlarmVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbMusicVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbRingVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbCallVolumeStatus = New System.Windows.Forms.Label()
+        Me.lbOtherVolume = New System.Windows.Forms.Label()
+        Me.lbNotifyVolume = New System.Windows.Forms.Label()
+        Me.lbAlarmVolume = New System.Windows.Forms.Label()
+        Me.lbMusicVolume = New System.Windows.Forms.Label()
+        Me.lbRingVolume = New System.Windows.Forms.Label()
+        Me.lbCallVolume = New System.Windows.Forms.Label()
         Me.tpTee = New System.Windows.Forms.TabPage()
         Me.tpGoogleCustom = New System.Windows.Forms.TabPage()
         Me.tpAnimation = New System.Windows.Forms.TabPage()
         Me.tpSystemSettings = New System.Windows.Forms.TabPage()
         Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New System.Windows.Forms.OpenFileDialog()
-        Me.lbDefaultBrightness = New System.Windows.Forms.Label()
-        Me.tbDefaultBrightness = New System.Windows.Forms.TextBox()
-        Me.btDefaultBrightness = New System.Windows.Forms.Button()
-        Me.lbDefaultBrightnessStatus = New System.Windows.Forms.Label()
-        Me.btBrightnessAllSet = New System.Windows.Forms.Button()
-        Me.lbMaxBrightness = New System.Windows.Forms.Label()
-        Me.tbMaxBrightness = New System.Windows.Forms.TextBox()
-        Me.lbMaxBrightnessStatus = New System.Windows.Forms.Label()
-        Me.btMaxBrightness = New System.Windows.Forms.Button()
-        Me.lbMinBrightness = New System.Windows.Forms.Label()
-        Me.tbMinBrightness = New System.Windows.Forms.TextBox()
-        Me.lbMinBrightnessStatus = New System.Windows.Forms.Label()
-        Me.btMinBrightness = New System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -180,6 +205,7 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.SuspendLayout()
         Me.tpSample.SuspendLayout()
         Me.tpScreenBrightness.SuspendLayout()
+        Me.tpVolume.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcAndroidSettings
@@ -520,9 +546,9 @@ Partial Class AndroidSettingsForm
         Me.tpProperty.Controls.Add(Me.lbProductModel)
         Me.tpProperty.Controls.Add(Me.tbProductName)
         Me.tpProperty.Controls.Add(Me.lbProductName)
-        Me.tpProperty.Location = New System.Drawing.Point(4, 26)
+        Me.tpProperty.Location = New System.Drawing.Point(4, 48)
         Me.tpProperty.Name = "tpProperty"
-        Me.tpProperty.Size = New System.Drawing.Size(815, 471)
+        Me.tpProperty.Size = New System.Drawing.Size(815, 449)
         Me.tpProperty.TabIndex = 3
         Me.tpProperty.Text = "系统属性"
         Me.tpProperty.UseVisualStyleBackColor = True
@@ -668,10 +694,10 @@ Partial Class AndroidSettingsForm
         Me.tpVersion.Controls.Add(Me.tbVersion)
         Me.tpVersion.Controls.Add(Me.lbVersion)
         Me.tpVersion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.tpVersion.Location = New System.Drawing.Point(4, 26)
+        Me.tpVersion.Location = New System.Drawing.Point(4, 48)
         Me.tpVersion.Name = "tpVersion"
         Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpVersion.Size = New System.Drawing.Size(815, 471)
+        Me.tpVersion.Size = New System.Drawing.Size(815, 449)
         Me.tpVersion.TabIndex = 1
         Me.tpVersion.Text = "版本号"
         Me.tpVersion.UseVisualStyleBackColor = True
@@ -721,9 +747,9 @@ Partial Class AndroidSettingsForm
         Me.tpFingerprint.Controls.Add(Me.lbFingerprintState)
         Me.tpFingerprint.Controls.Add(Me.tbFingerprint)
         Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
-        Me.tpFingerprint.Location = New System.Drawing.Point(4, 26)
+        Me.tpFingerprint.Location = New System.Drawing.Point(4, 48)
         Me.tpFingerprint.Name = "tpFingerprint"
-        Me.tpFingerprint.Size = New System.Drawing.Size(815, 471)
+        Me.tpFingerprint.Size = New System.Drawing.Size(815, 449)
         Me.tpFingerprint.TabIndex = 2
         Me.tpFingerprint.Text = "Fingerprint"
         Me.tpFingerprint.UseVisualStyleBackColor = True
@@ -785,9 +811,9 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.Controls.Add(Me.rbWifiClose)
         Me.tpWifi.Controls.Add(Me.rbWifiOpen)
         Me.tpWifi.Controls.Add(Me.lbWifiStatus)
-        Me.tpWifi.Location = New System.Drawing.Point(4, 26)
+        Me.tpWifi.Location = New System.Drawing.Point(4, 48)
         Me.tpWifi.Name = "tpWifi"
-        Me.tpWifi.Size = New System.Drawing.Size(815, 471)
+        Me.tpWifi.Size = New System.Drawing.Size(815, 449)
         Me.tpWifi.TabIndex = 4
         Me.tpWifi.Text = "WiFi"
         Me.tpWifi.UseVisualStyleBackColor = True
@@ -902,9 +928,9 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothName)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatusState)
         Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatus)
-        Me.tpBluetooth.Location = New System.Drawing.Point(4, 26)
+        Me.tpBluetooth.Location = New System.Drawing.Point(4, 48)
         Me.tpBluetooth.Name = "tpBluetooth"
-        Me.tpBluetooth.Size = New System.Drawing.Size(815, 471)
+        Me.tpBluetooth.Size = New System.Drawing.Size(815, 449)
         Me.tpBluetooth.TabIndex = 5
         Me.tpBluetooth.Text = "蓝牙"
         Me.tpBluetooth.UseVisualStyleBackColor = True
@@ -989,9 +1015,9 @@ Partial Class AndroidSettingsForm
         Me.tpLanguage.Controls.Add(Me.cbLanguage)
         Me.tpLanguage.Controls.Add(Me.lbLanguageState)
         Me.tpLanguage.Controls.Add(Me.Label1)
-        Me.tpLanguage.Location = New System.Drawing.Point(4, 26)
+        Me.tpLanguage.Location = New System.Drawing.Point(4, 48)
         Me.tpLanguage.Name = "tpLanguage"
-        Me.tpLanguage.Size = New System.Drawing.Size(815, 471)
+        Me.tpLanguage.Size = New System.Drawing.Size(815, 449)
         Me.tpLanguage.TabIndex = 6
         Me.tpLanguage.Text = "语言"
         Me.tpLanguage.UseVisualStyleBackColor = True
@@ -1041,9 +1067,9 @@ Partial Class AndroidSettingsForm
         Me.tpTimezone.Controls.Add(Me.lbTimezoneState)
         Me.tpTimezone.Controls.Add(Me.lbTimezone)
         Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
-        Me.tpTimezone.Location = New System.Drawing.Point(4, 26)
+        Me.tpTimezone.Location = New System.Drawing.Point(4, 48)
         Me.tpTimezone.Name = "tpTimezone"
-        Me.tpTimezone.Size = New System.Drawing.Size(815, 471)
+        Me.tpTimezone.Size = New System.Drawing.Size(815, 449)
         Me.tpTimezone.TabIndex = 7
         Me.tpTimezone.Text = "时区"
         Me.tpTimezone.UseVisualStyleBackColor = True
@@ -1130,9 +1156,9 @@ Partial Class AndroidSettingsForm
         Me.tpLogo.Controls.Add(Me.tbLogo)
         Me.tpLogo.Controls.Add(Me.lbLogoState)
         Me.tpLogo.Controls.Add(Me.lbLogo)
-        Me.tpLogo.Location = New System.Drawing.Point(4, 26)
+        Me.tpLogo.Location = New System.Drawing.Point(4, 48)
         Me.tpLogo.Name = "tpLogo"
-        Me.tpLogo.Size = New System.Drawing.Size(815, 471)
+        Me.tpLogo.Size = New System.Drawing.Size(815, 449)
         Me.tpLogo.TabIndex = 8
         Me.tpLogo.Text = "LOGO"
         Me.tpLogo.UseVisualStyleBackColor = True
@@ -1191,9 +1217,9 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaper)
         Me.tpWallpaper.Controls.Add(Me.lbWallpaperState)
         Me.tpWallpaper.Controls.Add(Me.lbWallpaper)
-        Me.tpWallpaper.Location = New System.Drawing.Point(4, 26)
+        Me.tpWallpaper.Location = New System.Drawing.Point(4, 48)
         Me.tpWallpaper.Name = "tpWallpaper"
-        Me.tpWallpaper.Size = New System.Drawing.Size(815, 471)
+        Me.tpWallpaper.Size = New System.Drawing.Size(815, 449)
         Me.tpWallpaper.TabIndex = 9
         Me.tpWallpaper.Text = "壁纸"
         Me.tpWallpaper.UseVisualStyleBackColor = True
@@ -1408,14 +1434,375 @@ Partial Class AndroidSettingsForm
         Me.tpScreenBrightness.Text = "屏幕亮度"
         Me.tpScreenBrightness.UseVisualStyleBackColor = True
         '
+        'btBrightnessAllSet
+        '
+        Me.btBrightnessAllSet.Location = New System.Drawing.Point(15, 144)
+        Me.btBrightnessAllSet.Name = "btBrightnessAllSet"
+        Me.btBrightnessAllSet.Size = New System.Drawing.Size(75, 23)
+        Me.btBrightnessAllSet.TabIndex = 2
+        Me.btBrightnessAllSet.Text = "全部设置"
+        Me.btBrightnessAllSet.UseVisualStyleBackColor = True
+        '
+        'btMinBrightness
+        '
+        Me.btMinBrightness.Location = New System.Drawing.Point(657, 92)
+        Me.btMinBrightness.Name = "btMinBrightness"
+        Me.btMinBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btMinBrightness.TabIndex = 2
+        Me.btMinBrightness.Text = "设置"
+        Me.btMinBrightness.UseVisualStyleBackColor = True
+        '
+        'btMaxBrightness
+        '
+        Me.btMaxBrightness.Location = New System.Drawing.Point(657, 53)
+        Me.btMaxBrightness.Name = "btMaxBrightness"
+        Me.btMaxBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btMaxBrightness.TabIndex = 2
+        Me.btMaxBrightness.Text = "设置"
+        Me.btMaxBrightness.UseVisualStyleBackColor = True
+        '
+        'btDefaultBrightness
+        '
+        Me.btDefaultBrightness.Location = New System.Drawing.Point(657, 13)
+        Me.btDefaultBrightness.Name = "btDefaultBrightness"
+        Me.btDefaultBrightness.Size = New System.Drawing.Size(75, 23)
+        Me.btDefaultBrightness.TabIndex = 2
+        Me.btDefaultBrightness.Text = "设置"
+        Me.btDefaultBrightness.UseVisualStyleBackColor = True
+        '
+        'lbMinBrightnessStatus
+        '
+        Me.lbMinBrightnessStatus.AutoSize = True
+        Me.lbMinBrightnessStatus.Location = New System.Drawing.Point(757, 95)
+        Me.lbMinBrightnessStatus.Name = "lbMinBrightnessStatus"
+        Me.lbMinBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbMinBrightnessStatus.TabIndex = 0
+        Me.lbMinBrightnessStatus.Text = "PASS"
+        '
+        'lbMaxBrightnessStatus
+        '
+        Me.lbMaxBrightnessStatus.AutoSize = True
+        Me.lbMaxBrightnessStatus.Location = New System.Drawing.Point(757, 56)
+        Me.lbMaxBrightnessStatus.Name = "lbMaxBrightnessStatus"
+        Me.lbMaxBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbMaxBrightnessStatus.TabIndex = 0
+        Me.lbMaxBrightnessStatus.Text = "PASS"
+        '
+        'lbDefaultBrightnessStatus
+        '
+        Me.lbDefaultBrightnessStatus.AutoSize = True
+        Me.lbDefaultBrightnessStatus.Location = New System.Drawing.Point(757, 16)
+        Me.lbDefaultBrightnessStatus.Name = "lbDefaultBrightnessStatus"
+        Me.lbDefaultBrightnessStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbDefaultBrightnessStatus.TabIndex = 0
+        Me.lbDefaultBrightnessStatus.Text = "PASS"
+        '
+        'tbMinBrightness
+        '
+        Me.tbMinBrightness.Location = New System.Drawing.Point(89, 92)
+        Me.tbMinBrightness.Name = "tbMinBrightness"
+        Me.tbMinBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbMinBrightness.TabIndex = 1
+        '
+        'lbMinBrightness
+        '
+        Me.lbMinBrightness.AutoSize = True
+        Me.lbMinBrightness.Location = New System.Drawing.Point(15, 95)
+        Me.lbMinBrightness.Name = "lbMinBrightness"
+        Me.lbMinBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbMinBrightness.TabIndex = 0
+        Me.lbMinBrightness.Text = "最小亮度："
+        '
+        'tbMaxBrightness
+        '
+        Me.tbMaxBrightness.Location = New System.Drawing.Point(89, 53)
+        Me.tbMaxBrightness.Name = "tbMaxBrightness"
+        Me.tbMaxBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbMaxBrightness.TabIndex = 1
+        '
+        'lbMaxBrightness
+        '
+        Me.lbMaxBrightness.AutoSize = True
+        Me.lbMaxBrightness.Location = New System.Drawing.Point(15, 56)
+        Me.lbMaxBrightness.Name = "lbMaxBrightness"
+        Me.lbMaxBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbMaxBrightness.TabIndex = 0
+        Me.lbMaxBrightness.Text = "最大亮度："
+        '
+        'tbDefaultBrightness
+        '
+        Me.tbDefaultBrightness.Location = New System.Drawing.Point(89, 13)
+        Me.tbDefaultBrightness.Name = "tbDefaultBrightness"
+        Me.tbDefaultBrightness.Size = New System.Drawing.Size(562, 23)
+        Me.tbDefaultBrightness.TabIndex = 1
+        '
+        'lbDefaultBrightness
+        '
+        Me.lbDefaultBrightness.AutoSize = True
+        Me.lbDefaultBrightness.Location = New System.Drawing.Point(15, 16)
+        Me.lbDefaultBrightness.Name = "lbDefaultBrightness"
+        Me.lbDefaultBrightness.Size = New System.Drawing.Size(68, 17)
+        Me.lbDefaultBrightness.TabIndex = 0
+        Me.lbDefaultBrightness.Text = "默认亮度："
+        '
         'tpVolume
         '
+        Me.tpVolume.Controls.Add(Me.cbOtherVolume)
+        Me.tpVolume.Controls.Add(Me.cbNotifyVolume)
+        Me.tpVolume.Controls.Add(Me.cbAlarmVolume)
+        Me.tpVolume.Controls.Add(Me.cbMusicVolume)
+        Me.tpVolume.Controls.Add(Me.cbRingVolume)
+        Me.tpVolume.Controls.Add(Me.cbCallVolume)
+        Me.tpVolume.Controls.Add(Me.btVolumeAllSet)
+        Me.tpVolume.Controls.Add(Me.btOtherVolume)
+        Me.tpVolume.Controls.Add(Me.btNotifyVolume)
+        Me.tpVolume.Controls.Add(Me.btAlarmVolume)
+        Me.tpVolume.Controls.Add(Me.btMusicVolume)
+        Me.tpVolume.Controls.Add(Me.btRingVolume)
+        Me.tpVolume.Controls.Add(Me.btCallVolume)
+        Me.tpVolume.Controls.Add(Me.lbOtherVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbNotifyVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbAlarmVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbMusicVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbRingVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbCallVolumeStatus)
+        Me.tpVolume.Controls.Add(Me.lbOtherVolume)
+        Me.tpVolume.Controls.Add(Me.lbNotifyVolume)
+        Me.tpVolume.Controls.Add(Me.lbAlarmVolume)
+        Me.tpVolume.Controls.Add(Me.lbMusicVolume)
+        Me.tpVolume.Controls.Add(Me.lbRingVolume)
+        Me.tpVolume.Controls.Add(Me.lbCallVolume)
         Me.tpVolume.Location = New System.Drawing.Point(4, 48)
         Me.tpVolume.Name = "tpVolume"
         Me.tpVolume.Size = New System.Drawing.Size(815, 449)
         Me.tpVolume.TabIndex = 12
         Me.tpVolume.Text = "系统音量"
         Me.tpVolume.UseVisualStyleBackColor = True
+        '
+        'cbOtherVolume
+        '
+        Me.cbOtherVolume.FormattingEnabled = True
+        Me.cbOtherVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cbOtherVolume.Location = New System.Drawing.Point(113, 206)
+        Me.cbOtherVolume.Name = "cbOtherVolume"
+        Me.cbOtherVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbOtherVolume.TabIndex = 3
+        '
+        'cbNotifyVolume
+        '
+        Me.cbNotifyVolume.FormattingEnabled = True
+        Me.cbNotifyVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cbNotifyVolume.Location = New System.Drawing.Point(113, 168)
+        Me.cbNotifyVolume.Name = "cbNotifyVolume"
+        Me.cbNotifyVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbNotifyVolume.TabIndex = 3
+        '
+        'cbAlarmVolume
+        '
+        Me.cbAlarmVolume.FormattingEnabled = True
+        Me.cbAlarmVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cbAlarmVolume.Location = New System.Drawing.Point(113, 132)
+        Me.cbAlarmVolume.Name = "cbAlarmVolume"
+        Me.cbAlarmVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbAlarmVolume.TabIndex = 3
+        '
+        'cbMusicVolume
+        '
+        Me.cbMusicVolume.FormattingEnabled = True
+        Me.cbMusicVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cbMusicVolume.Location = New System.Drawing.Point(113, 95)
+        Me.cbMusicVolume.Name = "cbMusicVolume"
+        Me.cbMusicVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbMusicVolume.TabIndex = 3
+        '
+        'cbRingVolume
+        '
+        Me.cbRingVolume.FormattingEnabled = True
+        Me.cbRingVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cbRingVolume.Location = New System.Drawing.Point(113, 58)
+        Me.cbRingVolume.Name = "cbRingVolume"
+        Me.cbRingVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbRingVolume.TabIndex = 3
+        '
+        'cbCallVolume
+        '
+        Me.cbCallVolume.FormattingEnabled = True
+        Me.cbCallVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7"})
+        Me.cbCallVolume.Location = New System.Drawing.Point(113, 20)
+        Me.cbCallVolume.Name = "cbCallVolume"
+        Me.cbCallVolume.Size = New System.Drawing.Size(546, 25)
+        Me.cbCallVolume.TabIndex = 3
+        '
+        'btVolumeAllSet
+        '
+        Me.btVolumeAllSet.Location = New System.Drawing.Point(15, 263)
+        Me.btVolumeAllSet.Name = "btVolumeAllSet"
+        Me.btVolumeAllSet.Size = New System.Drawing.Size(75, 23)
+        Me.btVolumeAllSet.TabIndex = 2
+        Me.btVolumeAllSet.Text = "全部设置"
+        Me.btVolumeAllSet.UseVisualStyleBackColor = True
+        '
+        'btOtherVolume
+        '
+        Me.btOtherVolume.Location = New System.Drawing.Point(665, 206)
+        Me.btOtherVolume.Name = "btOtherVolume"
+        Me.btOtherVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btOtherVolume.TabIndex = 2
+        Me.btOtherVolume.Text = "设置"
+        Me.btOtherVolume.UseVisualStyleBackColor = True
+        '
+        'btNotifyVolume
+        '
+        Me.btNotifyVolume.Location = New System.Drawing.Point(665, 168)
+        Me.btNotifyVolume.Name = "btNotifyVolume"
+        Me.btNotifyVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btNotifyVolume.TabIndex = 2
+        Me.btNotifyVolume.Text = "设置"
+        Me.btNotifyVolume.UseVisualStyleBackColor = True
+        '
+        'btAlarmVolume
+        '
+        Me.btAlarmVolume.Location = New System.Drawing.Point(665, 132)
+        Me.btAlarmVolume.Name = "btAlarmVolume"
+        Me.btAlarmVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btAlarmVolume.TabIndex = 2
+        Me.btAlarmVolume.Text = "设置"
+        Me.btAlarmVolume.UseVisualStyleBackColor = True
+        '
+        'btMusicVolume
+        '
+        Me.btMusicVolume.Location = New System.Drawing.Point(665, 95)
+        Me.btMusicVolume.Name = "btMusicVolume"
+        Me.btMusicVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btMusicVolume.TabIndex = 2
+        Me.btMusicVolume.Text = "设置"
+        Me.btMusicVolume.UseVisualStyleBackColor = True
+        '
+        'btRingVolume
+        '
+        Me.btRingVolume.Location = New System.Drawing.Point(665, 58)
+        Me.btRingVolume.Name = "btRingVolume"
+        Me.btRingVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btRingVolume.TabIndex = 2
+        Me.btRingVolume.Text = "设置"
+        Me.btRingVolume.UseVisualStyleBackColor = True
+        '
+        'btCallVolume
+        '
+        Me.btCallVolume.Location = New System.Drawing.Point(665, 20)
+        Me.btCallVolume.Name = "btCallVolume"
+        Me.btCallVolume.Size = New System.Drawing.Size(75, 23)
+        Me.btCallVolume.TabIndex = 2
+        Me.btCallVolume.Text = "设置"
+        Me.btCallVolume.UseVisualStyleBackColor = True
+        '
+        'lbOtherVolumeStatus
+        '
+        Me.lbOtherVolumeStatus.AutoSize = True
+        Me.lbOtherVolumeStatus.Location = New System.Drawing.Point(762, 209)
+        Me.lbOtherVolumeStatus.Name = "lbOtherVolumeStatus"
+        Me.lbOtherVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbOtherVolumeStatus.TabIndex = 0
+        Me.lbOtherVolumeStatus.Text = "PASS"
+        '
+        'lbNotifyVolumeStatus
+        '
+        Me.lbNotifyVolumeStatus.AutoSize = True
+        Me.lbNotifyVolumeStatus.Location = New System.Drawing.Point(762, 171)
+        Me.lbNotifyVolumeStatus.Name = "lbNotifyVolumeStatus"
+        Me.lbNotifyVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbNotifyVolumeStatus.TabIndex = 0
+        Me.lbNotifyVolumeStatus.Text = "PASS"
+        '
+        'lbAlarmVolumeStatus
+        '
+        Me.lbAlarmVolumeStatus.AutoSize = True
+        Me.lbAlarmVolumeStatus.Location = New System.Drawing.Point(762, 135)
+        Me.lbAlarmVolumeStatus.Name = "lbAlarmVolumeStatus"
+        Me.lbAlarmVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbAlarmVolumeStatus.TabIndex = 0
+        Me.lbAlarmVolumeStatus.Text = "PASS"
+        '
+        'lbMusicVolumeStatus
+        '
+        Me.lbMusicVolumeStatus.AutoSize = True
+        Me.lbMusicVolumeStatus.Location = New System.Drawing.Point(762, 98)
+        Me.lbMusicVolumeStatus.Name = "lbMusicVolumeStatus"
+        Me.lbMusicVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbMusicVolumeStatus.TabIndex = 0
+        Me.lbMusicVolumeStatus.Text = "PASS"
+        '
+        'lbRingVolumeStatus
+        '
+        Me.lbRingVolumeStatus.AutoSize = True
+        Me.lbRingVolumeStatus.Location = New System.Drawing.Point(762, 61)
+        Me.lbRingVolumeStatus.Name = "lbRingVolumeStatus"
+        Me.lbRingVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbRingVolumeStatus.TabIndex = 0
+        Me.lbRingVolumeStatus.Text = "PASS"
+        '
+        'lbCallVolumeStatus
+        '
+        Me.lbCallVolumeStatus.AutoSize = True
+        Me.lbCallVolumeStatus.Location = New System.Drawing.Point(762, 23)
+        Me.lbCallVolumeStatus.Name = "lbCallVolumeStatus"
+        Me.lbCallVolumeStatus.Size = New System.Drawing.Size(37, 17)
+        Me.lbCallVolumeStatus.TabIndex = 0
+        Me.lbCallVolumeStatus.Text = "PASS"
+        '
+        'lbOtherVolume
+        '
+        Me.lbOtherVolume.AutoSize = True
+        Me.lbOtherVolume.Location = New System.Drawing.Point(15, 209)
+        Me.lbOtherVolume.Name = "lbOtherVolume"
+        Me.lbOtherVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbOtherVolume.TabIndex = 0
+        Me.lbOtherVolume.Text = "其他默认音量："
+        '
+        'lbNotifyVolume
+        '
+        Me.lbNotifyVolume.AutoSize = True
+        Me.lbNotifyVolume.Location = New System.Drawing.Point(15, 171)
+        Me.lbNotifyVolume.Name = "lbNotifyVolume"
+        Me.lbNotifyVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbNotifyVolume.TabIndex = 0
+        Me.lbNotifyVolume.Text = "通知默认音量："
+        '
+        'lbAlarmVolume
+        '
+        Me.lbAlarmVolume.AutoSize = True
+        Me.lbAlarmVolume.Location = New System.Drawing.Point(15, 135)
+        Me.lbAlarmVolume.Name = "lbAlarmVolume"
+        Me.lbAlarmVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbAlarmVolume.TabIndex = 0
+        Me.lbAlarmVolume.Text = "闹钟默认音量："
+        '
+        'lbMusicVolume
+        '
+        Me.lbMusicVolume.AutoSize = True
+        Me.lbMusicVolume.Location = New System.Drawing.Point(15, 98)
+        Me.lbMusicVolume.Name = "lbMusicVolume"
+        Me.lbMusicVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbMusicVolume.TabIndex = 0
+        Me.lbMusicVolume.Text = "音乐默认音量："
+        '
+        'lbRingVolume
+        '
+        Me.lbRingVolume.AutoSize = True
+        Me.lbRingVolume.Location = New System.Drawing.Point(15, 61)
+        Me.lbRingVolume.Name = "lbRingVolume"
+        Me.lbRingVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbRingVolume.TabIndex = 0
+        Me.lbRingVolume.Text = "铃声默认音量："
+        '
+        'lbCallVolume
+        '
+        Me.lbCallVolume.AutoSize = True
+        Me.lbCallVolume.Location = New System.Drawing.Point(15, 23)
+        Me.lbCallVolume.Name = "lbCallVolume"
+        Me.lbCallVolume.Size = New System.Drawing.Size(92, 17)
+        Me.lbCallVolume.TabIndex = 0
+        Me.lbCallVolume.Text = "通话默认音量："
         '
         'tpTee
         '
@@ -1456,117 +1843,6 @@ Partial Class AndroidSettingsForm
         'ofdSelectFile
         '
         Me.ofdSelectFile.FileName = "OpenFileDialog1"
-        '
-        'lbDefaultBrightness
-        '
-        Me.lbDefaultBrightness.AutoSize = True
-        Me.lbDefaultBrightness.Location = New System.Drawing.Point(15, 16)
-        Me.lbDefaultBrightness.Name = "lbDefaultBrightness"
-        Me.lbDefaultBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbDefaultBrightness.TabIndex = 0
-        Me.lbDefaultBrightness.Text = "默认亮度："
-        '
-        'tbDefaultBrightness
-        '
-        Me.tbDefaultBrightness.Location = New System.Drawing.Point(89, 13)
-        Me.tbDefaultBrightness.Name = "tbDefaultBrightness"
-        Me.tbDefaultBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbDefaultBrightness.TabIndex = 1
-        '
-        'btDefaultBrightness
-        '
-        Me.btDefaultBrightness.Location = New System.Drawing.Point(657, 13)
-        Me.btDefaultBrightness.Name = "btDefaultBrightness"
-        Me.btDefaultBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btDefaultBrightness.TabIndex = 2
-        Me.btDefaultBrightness.Text = "设置"
-        Me.btDefaultBrightness.UseVisualStyleBackColor = True
-        '
-        'lbDefaultBrightnessStatus
-        '
-        Me.lbDefaultBrightnessStatus.AutoSize = True
-        Me.lbDefaultBrightnessStatus.Location = New System.Drawing.Point(757, 16)
-        Me.lbDefaultBrightnessStatus.Name = "lbDefaultBrightnessStatus"
-        Me.lbDefaultBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbDefaultBrightnessStatus.TabIndex = 0
-        Me.lbDefaultBrightnessStatus.Text = "PASS"
-        '
-        'btBrightnessAllSet
-        '
-        Me.btBrightnessAllSet.Location = New System.Drawing.Point(15, 144)
-        Me.btBrightnessAllSet.Name = "btBrightnessAllSet"
-        Me.btBrightnessAllSet.Size = New System.Drawing.Size(75, 23)
-        Me.btBrightnessAllSet.TabIndex = 2
-        Me.btBrightnessAllSet.Text = "全部设置"
-        Me.btBrightnessAllSet.UseVisualStyleBackColor = True
-        '
-        'lbMaxBrightness
-        '
-        Me.lbMaxBrightness.AutoSize = True
-        Me.lbMaxBrightness.Location = New System.Drawing.Point(15, 56)
-        Me.lbMaxBrightness.Name = "lbMaxBrightness"
-        Me.lbMaxBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbMaxBrightness.TabIndex = 0
-        Me.lbMaxBrightness.Text = "最大亮度："
-        '
-        'tbMaxBrightness
-        '
-        Me.tbMaxBrightness.Location = New System.Drawing.Point(89, 53)
-        Me.tbMaxBrightness.Name = "tbMaxBrightness"
-        Me.tbMaxBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbMaxBrightness.TabIndex = 1
-        '
-        'lbMaxBrightnessStatus
-        '
-        Me.lbMaxBrightnessStatus.AutoSize = True
-        Me.lbMaxBrightnessStatus.Location = New System.Drawing.Point(757, 56)
-        Me.lbMaxBrightnessStatus.Name = "lbMaxBrightnessStatus"
-        Me.lbMaxBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbMaxBrightnessStatus.TabIndex = 0
-        Me.lbMaxBrightnessStatus.Text = "PASS"
-        '
-        'btMaxBrightness
-        '
-        Me.btMaxBrightness.Location = New System.Drawing.Point(657, 53)
-        Me.btMaxBrightness.Name = "btMaxBrightness"
-        Me.btMaxBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btMaxBrightness.TabIndex = 2
-        Me.btMaxBrightness.Text = "设置"
-        Me.btMaxBrightness.UseVisualStyleBackColor = True
-        '
-        'lbMinBrightness
-        '
-        Me.lbMinBrightness.AutoSize = True
-        Me.lbMinBrightness.Location = New System.Drawing.Point(15, 95)
-        Me.lbMinBrightness.Name = "lbMinBrightness"
-        Me.lbMinBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbMinBrightness.TabIndex = 0
-        Me.lbMinBrightness.Text = "最小亮度："
-        '
-        'tbMinBrightness
-        '
-        Me.tbMinBrightness.Location = New System.Drawing.Point(89, 92)
-        Me.tbMinBrightness.Name = "tbMinBrightness"
-        Me.tbMinBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbMinBrightness.TabIndex = 1
-        '
-        'lbMinBrightnessStatus
-        '
-        Me.lbMinBrightnessStatus.AutoSize = True
-        Me.lbMinBrightnessStatus.Location = New System.Drawing.Point(757, 95)
-        Me.lbMinBrightnessStatus.Name = "lbMinBrightnessStatus"
-        Me.lbMinBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbMinBrightnessStatus.TabIndex = 0
-        Me.lbMinBrightnessStatus.Text = "PASS"
-        '
-        'btMinBrightness
-        '
-        Me.btMinBrightness.Location = New System.Drawing.Point(657, 92)
-        Me.btMinBrightness.Name = "btMinBrightness"
-        Me.btMinBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btMinBrightness.TabIndex = 2
-        Me.btMinBrightness.Text = "设置"
-        Me.btMinBrightness.UseVisualStyleBackColor = True
         '
         'AndroidSettingsForm
         '
@@ -1611,6 +1887,8 @@ Partial Class AndroidSettingsForm
         Me.tpSample.PerformLayout()
         Me.tpScreenBrightness.ResumeLayout(False)
         Me.tpScreenBrightness.PerformLayout()
+        Me.tpVolume.ResumeLayout(False)
+        Me.tpVolume.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1756,4 +2034,29 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbMaxBrightness As Label
     Friend WithEvents tbDefaultBrightness As TextBox
     Friend WithEvents lbDefaultBrightness As Label
+    Friend WithEvents cbOtherVolume As ComboBox
+    Friend WithEvents cbNotifyVolume As ComboBox
+    Friend WithEvents cbAlarmVolume As ComboBox
+    Friend WithEvents cbMusicVolume As ComboBox
+    Friend WithEvents cbRingVolume As ComboBox
+    Friend WithEvents cbCallVolume As ComboBox
+    Friend WithEvents btVolumeAllSet As Button
+    Friend WithEvents btOtherVolume As Button
+    Friend WithEvents btNotifyVolume As Button
+    Friend WithEvents btAlarmVolume As Button
+    Friend WithEvents btMusicVolume As Button
+    Friend WithEvents btRingVolume As Button
+    Friend WithEvents btCallVolume As Button
+    Friend WithEvents lbOtherVolumeStatus As Label
+    Friend WithEvents lbNotifyVolumeStatus As Label
+    Friend WithEvents lbAlarmVolumeStatus As Label
+    Friend WithEvents lbMusicVolumeStatus As Label
+    Friend WithEvents lbRingVolumeStatus As Label
+    Friend WithEvents lbCallVolumeStatus As Label
+    Friend WithEvents lbOtherVolume As Label
+    Friend WithEvents lbNotifyVolume As Label
+    Friend WithEvents lbAlarmVolume As Label
+    Friend WithEvents lbMusicVolume As Label
+    Friend WithEvents lbRingVolume As Label
+    Friend WithEvents lbCallVolume As Label
 End Class
