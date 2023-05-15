@@ -22,1875 +22,2053 @@ Partial Class AndroidSettingsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.tcAndroidSettings = New System.Windows.Forms.TabControl()
-        Me.tpProjectInfo = New System.Windows.Forms.TabPage()
-        Me.GbChiperOptions = New System.Windows.Forms.GroupBox()
-        Me.CbChiperModel = New System.Windows.Forms.ComboBox()
-        Me.CbChiperMaker = New System.Windows.Forms.ComboBox()
-        Me.LbChiperModel = New System.Windows.Forms.Label()
-        Me.LbChiperMaker = New System.Windows.Forms.Label()
-        Me.GbGoOptions = New System.Windows.Forms.GroupBox()
-        Me.RbOneGbGo = New System.Windows.Forms.RadioButton()
-        Me.RbTwoGbGo = New System.Windows.Forms.RadioButton()
-        Me.RbNotGo = New System.Windows.Forms.RadioButton()
-        Me.GbGmsOptions = New System.Windows.Forms.GroupBox()
-        Me.RbNotGms = New System.Windows.Forms.RadioButton()
-        Me.RbGms = New System.Windows.Forms.RadioButton()
-        Me.GBProject = New System.Windows.Forms.GroupBox()
-        Me.CbProjectPath = New System.Windows.Forms.ComboBox()
-        Me.TbCustomName = New System.Windows.Forms.TextBox()
-        Me.TbMssiName = New System.Windows.Forms.TextBox()
-        Me.TbDriveName = New System.Windows.Forms.TextBox()
-        Me.TbPublicName = New System.Windows.Forms.TextBox()
-        Me.CbAndroidVersin = New System.Windows.Forms.ComboBox()
-        Me.LbAndroidVersion = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.LbDriveName = New System.Windows.Forms.Label()
-        Me.LbMssiName = New System.Windows.Forms.Label()
-        Me.LbPublicName = New System.Windows.Forms.Label()
-        Me.BtSelectProjectPath = New System.Windows.Forms.Button()
-        Me.LbProjectPath = New System.Windows.Forms.Label()
-        Me.CBProjectId = New System.Windows.Forms.ComboBox()
-        Me.LbProjectId = New System.Windows.Forms.Label()
-        Me.tpProperty = New System.Windows.Forms.TabPage()
-        Me.lbProductManufacturerState = New System.Windows.Forms.Label()
-        Me.lbProductDeviceState = New System.Windows.Forms.Label()
-        Me.lbProductBrandState = New System.Windows.Forms.Label()
-        Me.lbProductModelState = New System.Windows.Forms.Label()
-        Me.lbProductNameState = New System.Windows.Forms.Label()
-        Me.btPropertySetting = New System.Windows.Forms.Button()
-        Me.tbProductManufacturer = New System.Windows.Forms.TextBox()
-        Me.lbProductManufacturer = New System.Windows.Forms.Label()
-        Me.tbProductDevice = New System.Windows.Forms.TextBox()
-        Me.lbProductDevice = New System.Windows.Forms.Label()
-        Me.tbProductBrand = New System.Windows.Forms.TextBox()
-        Me.lbProductBrand = New System.Windows.Forms.Label()
-        Me.tbProductModel = New System.Windows.Forms.TextBox()
-        Me.lbProductModel = New System.Windows.Forms.Label()
-        Me.tbProductName = New System.Windows.Forms.TextBox()
-        Me.lbProductName = New System.Windows.Forms.Label()
-        Me.tpVersion = New System.Windows.Forms.TabPage()
-        Me.lbVersionState = New System.Windows.Forms.Label()
-        Me.btVersion = New System.Windows.Forms.Button()
-        Me.tbVersion = New System.Windows.Forms.TextBox()
-        Me.lbVersion = New System.Windows.Forms.Label()
-        Me.tpFingerprint = New System.Windows.Forms.TabPage()
-        Me.btFingerprintSet = New System.Windows.Forms.Button()
-        Me.btRandom = New System.Windows.Forms.Button()
-        Me.lbFingerprintState = New System.Windows.Forms.Label()
-        Me.tbFingerprint = New System.Windows.Forms.TextBox()
-        Me.lbFingerprint = New System.Windows.Forms.Label()
-        Me.tpWifi = New System.Windows.Forms.TabPage()
-        Me.btWifiSetting = New System.Windows.Forms.Button()
-        Me.lbWifiScreenCastState = New System.Windows.Forms.Label()
-        Me.lbWifiHotspotNameState = New System.Windows.Forms.Label()
-        Me.lbWifiStatusState = New System.Windows.Forms.Label()
-        Me.tbWifiScreenCast = New System.Windows.Forms.TextBox()
-        Me.tbWifiHotspotName = New System.Windows.Forms.TextBox()
-        Me.lbWifiScreenCast = New System.Windows.Forms.Label()
-        Me.lbWifiHotspotName = New System.Windows.Forms.Label()
-        Me.rbWifiClose = New System.Windows.Forms.RadioButton()
-        Me.rbWifiOpen = New System.Windows.Forms.RadioButton()
-        Me.lbWifiStatus = New System.Windows.Forms.Label()
-        Me.tpBluetooth = New System.Windows.Forms.TabPage()
-        Me.btBluetoothSetting = New System.Windows.Forms.Button()
-        Me.tbBluetoothName = New System.Windows.Forms.TextBox()
-        Me.rbBluetoothClose = New System.Windows.Forms.RadioButton()
-        Me.rbBluetoothOpen = New System.Windows.Forms.RadioButton()
-        Me.lbBluetoothNameState = New System.Windows.Forms.Label()
-        Me.lbBluetoothName = New System.Windows.Forms.Label()
-        Me.lbBluetoothStatusState = New System.Windows.Forms.Label()
-        Me.lbBluetoothStatus = New System.Windows.Forms.Label()
-        Me.tpLanguage = New System.Windows.Forms.TabPage()
-        Me.btLanguageSetting = New System.Windows.Forms.Button()
-        Me.cbLanguage = New System.Windows.Forms.ComboBox()
-        Me.lbLanguageState = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tpTimezone = New System.Windows.Forms.TabPage()
-        Me.rbTimezoneClose = New System.Windows.Forms.RadioButton()
-        Me.rbTimezoneOpen = New System.Windows.Forms.RadioButton()
-        Me.lbAutoTimezone = New System.Windows.Forms.Label()
-        Me.cbTimezone = New System.Windows.Forms.ComboBox()
-        Me.lbAutoTimezoneState = New System.Windows.Forms.Label()
-        Me.lbTimezoneState = New System.Windows.Forms.Label()
-        Me.lbTimezone = New System.Windows.Forms.Label()
-        Me.btTimezoneSetting = New System.Windows.Forms.Button()
-        Me.tpLogo = New System.Windows.Forms.TabPage()
-        Me.btLogoSetting = New System.Windows.Forms.Button()
-        Me.bLogo = New System.Windows.Forms.Button()
-        Me.tbLogo = New System.Windows.Forms.TextBox()
-        Me.lbLogoState = New System.Windows.Forms.Label()
-        Me.lbLogo = New System.Windows.Forms.Label()
-        Me.tpWallpaper = New System.Windows.Forms.TabPage()
-        Me.btWallpaperSetting = New System.Windows.Forms.Button()
-        Me.btInserWallpaper = New System.Windows.Forms.Button()
-        Me.btWallpaper = New System.Windows.Forms.Button()
-        Me.tbInsertWallpaper = New System.Windows.Forms.TextBox()
-        Me.lbInsertWallpaperState = New System.Windows.Forms.Label()
-        Me.tbWallpaper = New System.Windows.Forms.TextBox()
-        Me.lbInsertWallpaper = New System.Windows.Forms.Label()
-        Me.lbWallpaperState = New System.Windows.Forms.Label()
-        Me.lbWallpaper = New System.Windows.Forms.Label()
-        Me.tpSample = New System.Windows.Forms.TabPage()
-        Me.btSampleName = New System.Windows.Forms.Button()
-        Me.btSample = New System.Windows.Forms.Button()
-        Me.tbSampleName = New System.Windows.Forms.TextBox()
-        Me.btSampleSetting = New System.Windows.Forms.Button()
-        Me.rbSampleClose = New System.Windows.Forms.RadioButton()
-        Me.rbSampleOpen = New System.Windows.Forms.RadioButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbSampleNameState = New System.Windows.Forms.Label()
-        Me.lbSampleState = New System.Windows.Forms.Label()
-        Me.lbSample = New System.Windows.Forms.Label()
-        Me.tpScreenBrightness = New System.Windows.Forms.TabPage()
-        Me.btBrightnessAllSet = New System.Windows.Forms.Button()
-        Me.btMinBrightness = New System.Windows.Forms.Button()
-        Me.btMaxBrightness = New System.Windows.Forms.Button()
-        Me.btDefaultBrightness = New System.Windows.Forms.Button()
-        Me.lbMinBrightnessStatus = New System.Windows.Forms.Label()
-        Me.lbMaxBrightnessStatus = New System.Windows.Forms.Label()
-        Me.lbDefaultBrightnessStatus = New System.Windows.Forms.Label()
-        Me.tbMinBrightness = New System.Windows.Forms.TextBox()
-        Me.lbMinBrightness = New System.Windows.Forms.Label()
-        Me.tbMaxBrightness = New System.Windows.Forms.TextBox()
-        Me.lbMaxBrightness = New System.Windows.Forms.Label()
-        Me.tbDefaultBrightness = New System.Windows.Forms.TextBox()
-        Me.lbDefaultBrightness = New System.Windows.Forms.Label()
-        Me.tpVolume = New System.Windows.Forms.TabPage()
-        Me.cbOtherVolume = New System.Windows.Forms.ComboBox()
-        Me.cbNotifyVolume = New System.Windows.Forms.ComboBox()
-        Me.cbAlarmVolume = New System.Windows.Forms.ComboBox()
-        Me.cbMusicVolume = New System.Windows.Forms.ComboBox()
-        Me.cbRingVolume = New System.Windows.Forms.ComboBox()
-        Me.cbCallVolume = New System.Windows.Forms.ComboBox()
-        Me.btVolumeAllSet = New System.Windows.Forms.Button()
-        Me.btOtherVolume = New System.Windows.Forms.Button()
-        Me.btNotifyVolume = New System.Windows.Forms.Button()
-        Me.btAlarmVolume = New System.Windows.Forms.Button()
-        Me.btMusicVolume = New System.Windows.Forms.Button()
-        Me.btRingVolume = New System.Windows.Forms.Button()
-        Me.btCallVolume = New System.Windows.Forms.Button()
-        Me.lbOtherVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbNotifyVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbAlarmVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbMusicVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbRingVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbCallVolumeStatus = New System.Windows.Forms.Label()
-        Me.lbOtherVolume = New System.Windows.Forms.Label()
-        Me.lbNotifyVolume = New System.Windows.Forms.Label()
-        Me.lbAlarmVolume = New System.Windows.Forms.Label()
-        Me.lbMusicVolume = New System.Windows.Forms.Label()
-        Me.lbRingVolume = New System.Windows.Forms.Label()
-        Me.lbCallVolume = New System.Windows.Forms.Label()
-        Me.tpTee = New System.Windows.Forms.TabPage()
-        Me.tpGoogleCustom = New System.Windows.Forms.TabPage()
-        Me.tpAnimation = New System.Windows.Forms.TabPage()
-        Me.tpSystemSettings = New System.Windows.Forms.TabPage()
-        Me.FbdSelectPath = New System.Windows.Forms.FolderBrowserDialog()
-        Me.ofdSelectFile = New System.Windows.Forms.OpenFileDialog()
-        Me.tcAndroidSettings.SuspendLayout()
-        Me.tpProjectInfo.SuspendLayout()
-        Me.GbChiperOptions.SuspendLayout()
-        Me.GbGoOptions.SuspendLayout()
-        Me.GbGmsOptions.SuspendLayout()
-        Me.GBProject.SuspendLayout()
-        Me.tpProperty.SuspendLayout()
-        Me.tpVersion.SuspendLayout()
-        Me.tpFingerprint.SuspendLayout()
-        Me.tpWifi.SuspendLayout()
-        Me.tpBluetooth.SuspendLayout()
-        Me.tpLanguage.SuspendLayout()
-        Me.tpTimezone.SuspendLayout()
-        Me.tpLogo.SuspendLayout()
-        Me.tpWallpaper.SuspendLayout()
-        Me.tpSample.SuspendLayout()
-        Me.tpScreenBrightness.SuspendLayout()
-        Me.tpVolume.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'tcAndroidSettings
-        '
-        Me.tcAndroidSettings.Controls.Add(Me.tpProjectInfo)
-        Me.tcAndroidSettings.Controls.Add(Me.tpProperty)
-        Me.tcAndroidSettings.Controls.Add(Me.tpVersion)
-        Me.tcAndroidSettings.Controls.Add(Me.tpFingerprint)
-        Me.tcAndroidSettings.Controls.Add(Me.tpWifi)
-        Me.tcAndroidSettings.Controls.Add(Me.tpBluetooth)
-        Me.tcAndroidSettings.Controls.Add(Me.tpLanguage)
-        Me.tcAndroidSettings.Controls.Add(Me.tpTimezone)
-        Me.tcAndroidSettings.Controls.Add(Me.tpLogo)
-        Me.tcAndroidSettings.Controls.Add(Me.tpWallpaper)
-        Me.tcAndroidSettings.Controls.Add(Me.tpSample)
-        Me.tcAndroidSettings.Controls.Add(Me.tpScreenBrightness)
-        Me.tcAndroidSettings.Controls.Add(Me.tpVolume)
-        Me.tcAndroidSettings.Controls.Add(Me.tpTee)
-        Me.tcAndroidSettings.Controls.Add(Me.tpGoogleCustom)
-        Me.tcAndroidSettings.Controls.Add(Me.tpAnimation)
-        Me.tcAndroidSettings.Controls.Add(Me.tpSystemSettings)
-        Me.tcAndroidSettings.ItemSize = New System.Drawing.Size(80, 22)
-        Me.tcAndroidSettings.Location = New System.Drawing.Point(12, 12)
-        Me.tcAndroidSettings.Multiline = True
-        Me.tcAndroidSettings.Name = "tcAndroidSettings"
-        Me.tcAndroidSettings.SelectedIndex = 0
-        Me.tcAndroidSettings.Size = New System.Drawing.Size(823, 501)
-        Me.tcAndroidSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
-        Me.tcAndroidSettings.TabIndex = 0
-        '
-        'tpProjectInfo
-        '
-        Me.tpProjectInfo.Controls.Add(Me.GbChiperOptions)
-        Me.tpProjectInfo.Controls.Add(Me.GbGoOptions)
-        Me.tpProjectInfo.Controls.Add(Me.GbGmsOptions)
-        Me.tpProjectInfo.Controls.Add(Me.GBProject)
-        Me.tpProjectInfo.Location = New System.Drawing.Point(4, 48)
-        Me.tpProjectInfo.Name = "tpProjectInfo"
-        Me.tpProjectInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpProjectInfo.Size = New System.Drawing.Size(815, 449)
-        Me.tpProjectInfo.TabIndex = 0
-        Me.tpProjectInfo.Text = "工程信息"
-        Me.tpProjectInfo.UseVisualStyleBackColor = True
-        '
-        'GbChiperOptions
-        '
-        Me.GbChiperOptions.Controls.Add(Me.CbChiperModel)
-        Me.GbChiperOptions.Controls.Add(Me.CbChiperMaker)
-        Me.GbChiperOptions.Controls.Add(Me.LbChiperModel)
-        Me.GbChiperOptions.Controls.Add(Me.LbChiperMaker)
-        Me.GbChiperOptions.Location = New System.Drawing.Point(6, 347)
-        Me.GbChiperOptions.Name = "GbChiperOptions"
-        Me.GbChiperOptions.Size = New System.Drawing.Size(803, 97)
-        Me.GbChiperOptions.TabIndex = 2
-        Me.GbChiperOptions.TabStop = False
-        Me.GbChiperOptions.Text = "芯片选项"
-        '
-        'CbChiperModel
-        '
-        Me.CbChiperModel.FormattingEnabled = True
-        Me.CbChiperModel.Items.AddRange(New Object() {"MT6761", "MT6739", "MT8183"})
-        Me.CbChiperModel.Location = New System.Drawing.Point(80, 57)
-        Me.CbChiperModel.Name = "CbChiperModel"
-        Me.CbChiperModel.Size = New System.Drawing.Size(212, 25)
-        Me.CbChiperModel.TabIndex = 1
-        Me.CbChiperModel.Text = "MT6761"
-        '
-        'CbChiperMaker
-        '
-        Me.CbChiperMaker.FormattingEnabled = True
-        Me.CbChiperMaker.Items.AddRange(New Object() {"MTK"})
-        Me.CbChiperMaker.Location = New System.Drawing.Point(80, 21)
-        Me.CbChiperMaker.Name = "CbChiperMaker"
-        Me.CbChiperMaker.Size = New System.Drawing.Size(212, 25)
-        Me.CbChiperMaker.TabIndex = 1
-        Me.CbChiperMaker.Text = "MTK"
-        '
-        'LbChiperModel
-        '
-        Me.LbChiperModel.AutoSize = True
-        Me.LbChiperModel.Location = New System.Drawing.Point(6, 60)
-        Me.LbChiperModel.Name = "LbChiperModel"
-        Me.LbChiperModel.Size = New System.Drawing.Size(68, 17)
-        Me.LbChiperModel.TabIndex = 0
-        Me.LbChiperModel.Text = "芯片型号："
-        '
-        'LbChiperMaker
-        '
-        Me.LbChiperMaker.AutoSize = True
-        Me.LbChiperMaker.Location = New System.Drawing.Point(6, 24)
-        Me.LbChiperMaker.Name = "LbChiperMaker"
-        Me.LbChiperMaker.Size = New System.Drawing.Size(68, 17)
-        Me.LbChiperMaker.TabIndex = 0
-        Me.LbChiperMaker.Text = "芯片厂商："
-        '
-        'GbGoOptions
-        '
-        Me.GbGoOptions.Controls.Add(Me.RbOneGbGo)
-        Me.GbGoOptions.Controls.Add(Me.RbTwoGbGo)
-        Me.GbGoOptions.Controls.Add(Me.RbNotGo)
-        Me.GbGoOptions.Location = New System.Drawing.Point(6, 287)
-        Me.GbGoOptions.Name = "GbGoOptions"
-        Me.GbGoOptions.Size = New System.Drawing.Size(803, 54)
-        Me.GbGoOptions.TabIndex = 1
-        Me.GbGoOptions.TabStop = False
-        Me.GbGoOptions.Text = "Go 选项"
-        '
-        'RbOneGbGo
-        '
-        Me.RbOneGbGo.AutoSize = True
-        Me.RbOneGbGo.Location = New System.Drawing.Point(373, 22)
-        Me.RbOneGbGo.Name = "RbOneGbGo"
-        Me.RbOneGbGo.Size = New System.Drawing.Size(73, 21)
-        Me.RbOneGbGo.TabIndex = 1
-        Me.RbOneGbGo.Text = "1GB GO"
-        Me.RbOneGbGo.UseVisualStyleBackColor = True
-        '
-        'RbTwoGbGo
-        '
-        Me.RbTwoGbGo.AutoSize = True
-        Me.RbTwoGbGo.Checked = True
-        Me.RbTwoGbGo.Location = New System.Drawing.Point(703, 22)
-        Me.RbTwoGbGo.Name = "RbTwoGbGo"
-        Me.RbTwoGbGo.Size = New System.Drawing.Size(73, 21)
-        Me.RbTwoGbGo.TabIndex = 1
-        Me.RbTwoGbGo.TabStop = True
-        Me.RbTwoGbGo.Text = "2GB GO"
-        Me.RbTwoGbGo.UseVisualStyleBackColor = True
-        '
-        'RbNotGo
-        '
-        Me.RbNotGo.AutoSize = True
-        Me.RbNotGo.Location = New System.Drawing.Point(6, 22)
-        Me.RbNotGo.Name = "RbNotGo"
-        Me.RbNotGo.Size = New System.Drawing.Size(61, 21)
-        Me.RbNotGo.TabIndex = 0
-        Me.RbNotGo.Text = "非 GO"
-        Me.RbNotGo.UseVisualStyleBackColor = True
-        '
-        'GbGmsOptions
-        '
-        Me.GbGmsOptions.Controls.Add(Me.RbNotGms)
-        Me.GbGmsOptions.Controls.Add(Me.RbGms)
-        Me.GbGmsOptions.Location = New System.Drawing.Point(6, 227)
-        Me.GbGmsOptions.Name = "GbGmsOptions"
-        Me.GbGmsOptions.Size = New System.Drawing.Size(803, 54)
-        Me.GbGmsOptions.TabIndex = 1
-        Me.GbGmsOptions.TabStop = False
-        Me.GbGmsOptions.Text = "GMS 选项"
-        '
-        'RbNotGms
-        '
-        Me.RbNotGms.AutoSize = True
-        Me.RbNotGms.Location = New System.Drawing.Point(6, 22)
-        Me.RbNotGms.Name = "RbNotGms"
-        Me.RbNotGms.Size = New System.Drawing.Size(70, 21)
-        Me.RbNotGms.TabIndex = 1
-        Me.RbNotGms.Text = "非 GMS"
-        Me.RbNotGms.UseVisualStyleBackColor = True
-        '
-        'RbGms
-        '
-        Me.RbGms.AutoSize = True
-        Me.RbGms.Checked = True
-        Me.RbGms.Location = New System.Drawing.Point(373, 22)
-        Me.RbGms.Name = "RbGms"
-        Me.RbGms.Size = New System.Drawing.Size(54, 21)
-        Me.RbGms.TabIndex = 0
-        Me.RbGms.TabStop = True
-        Me.RbGms.Text = "GMS"
-        Me.RbGms.UseVisualStyleBackColor = True
-        '
-        'GBProject
-        '
-        Me.GBProject.Controls.Add(Me.CbProjectPath)
-        Me.GBProject.Controls.Add(Me.TbCustomName)
-        Me.GBProject.Controls.Add(Me.TbMssiName)
-        Me.GBProject.Controls.Add(Me.TbDriveName)
-        Me.GBProject.Controls.Add(Me.TbPublicName)
-        Me.GBProject.Controls.Add(Me.CbAndroidVersin)
-        Me.GBProject.Controls.Add(Me.LbAndroidVersion)
-        Me.GBProject.Controls.Add(Me.Label4)
-        Me.GBProject.Controls.Add(Me.LbDriveName)
-        Me.GBProject.Controls.Add(Me.LbMssiName)
-        Me.GBProject.Controls.Add(Me.LbPublicName)
-        Me.GBProject.Controls.Add(Me.BtSelectProjectPath)
-        Me.GBProject.Controls.Add(Me.LbProjectPath)
-        Me.GBProject.Controls.Add(Me.CBProjectId)
-        Me.GBProject.Controls.Add(Me.LbProjectId)
-        Me.GBProject.Location = New System.Drawing.Point(6, 6)
-        Me.GBProject.Name = "GBProject"
-        Me.GBProject.Size = New System.Drawing.Size(803, 215)
-        Me.GBProject.TabIndex = 0
-        Me.GBProject.TabStop = False
-        Me.GBProject.Text = "项目信息选项"
-        '
-        'CbProjectPath
-        '
-        Me.CbProjectPath.FormattingEnabled = True
-        Me.CbProjectPath.Location = New System.Drawing.Point(104, 98)
-        Me.CbProjectPath.Name = "CbProjectPath"
-        Me.CbProjectPath.Size = New System.Drawing.Size(612, 25)
-        Me.CbProjectPath.TabIndex = 16
-        '
-        'TbCustomName
-        '
-        Me.TbCustomName.Location = New System.Drawing.Point(513, 173)
-        Me.TbCustomName.Name = "TbCustomName"
-        Me.TbCustomName.Size = New System.Drawing.Size(284, 23)
-        Me.TbCustomName.TabIndex = 15
-        '
-        'TbMssiName
-        '
-        Me.TbMssiName.Location = New System.Drawing.Point(513, 137)
-        Me.TbMssiName.Name = "TbMssiName"
-        Me.TbMssiName.Size = New System.Drawing.Size(284, 23)
-        Me.TbMssiName.TabIndex = 15
-        '
-        'TbDriveName
-        '
-        Me.TbDriveName.Location = New System.Drawing.Point(104, 173)
-        Me.TbDriveName.Name = "TbDriveName"
-        Me.TbDriveName.Size = New System.Drawing.Size(293, 23)
-        Me.TbDriveName.TabIndex = 15
-        '
-        'TbPublicName
-        '
-        Me.TbPublicName.Location = New System.Drawing.Point(104, 137)
-        Me.TbPublicName.Name = "TbPublicName"
-        Me.TbPublicName.Size = New System.Drawing.Size(293, 23)
-        Me.TbPublicName.TabIndex = 15
-        '
-        'CbAndroidVersin
-        '
-        Me.CbAndroidVersin.FormattingEnabled = True
-        Me.CbAndroidVersin.Items.AddRange(New Object() {"Android 11", "Android 12", "Android 13"})
-        Me.CbAndroidVersin.Location = New System.Drawing.Point(104, 62)
-        Me.CbAndroidVersin.Name = "CbAndroidVersin"
-        Me.CbAndroidVersin.Size = New System.Drawing.Size(293, 25)
-        Me.CbAndroidVersin.TabIndex = 14
-        Me.CbAndroidVersin.Text = "Android 13"
-        '
-        'LbAndroidVersion
-        '
-        Me.LbAndroidVersion.AutoSize = True
-        Me.LbAndroidVersion.Location = New System.Drawing.Point(6, 65)
-        Me.LbAndroidVersion.Name = "LbAndroidVersion"
-        Me.LbAndroidVersion.Size = New System.Drawing.Size(95, 17)
-        Me.LbAndroidVersion.TabIndex = 13
-        Me.LbAndroidVersion.Text = "Android 版本："
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(403, 176)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 17)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "客制化目录名称："
-        '
-        'LbDriveName
-        '
-        Me.LbDriveName.AutoSize = True
-        Me.LbDriveName.Location = New System.Drawing.Point(6, 176)
-        Me.LbDriveName.Name = "LbDriveName"
-        Me.LbDriveName.Size = New System.Drawing.Size(92, 17)
-        Me.LbDriveName.TabIndex = 9
-        Me.LbDriveName.Text = "驱动目录名称："
-        '
-        'LbMssiName
-        '
-        Me.LbMssiName.AutoSize = True
-        Me.LbMssiName.Location = New System.Drawing.Point(403, 142)
-        Me.LbMssiName.Name = "LbMssiName"
-        Me.LbMssiName.Size = New System.Drawing.Size(75, 17)
-        Me.LbMssiName.TabIndex = 7
-        Me.LbMssiName.Text = "Mssi 名称："
-        '
-        'LbPublicName
-        '
-        Me.LbPublicName.AutoSize = True
-        Me.LbPublicName.Location = New System.Drawing.Point(6, 140)
-        Me.LbPublicName.Name = "LbPublicName"
-        Me.LbPublicName.Size = New System.Drawing.Size(68, 17)
-        Me.LbPublicName.TabIndex = 5
-        Me.LbPublicName.Text = "公版名称："
-        '
-        'BtSelectProjectPath
-        '
-        Me.BtSelectProjectPath.Location = New System.Drawing.Point(722, 98)
-        Me.BtSelectProjectPath.Name = "BtSelectProjectPath"
-        Me.BtSelectProjectPath.Size = New System.Drawing.Size(75, 23)
-        Me.BtSelectProjectPath.TabIndex = 4
-        Me.BtSelectProjectPath.Text = "选择..."
-        Me.BtSelectProjectPath.UseVisualStyleBackColor = True
-        '
-        'LbProjectPath
-        '
-        Me.LbProjectPath.AutoSize = True
-        Me.LbProjectPath.Location = New System.Drawing.Point(6, 101)
-        Me.LbProjectPath.Name = "LbProjectPath"
-        Me.LbProjectPath.Size = New System.Drawing.Size(68, 17)
-        Me.LbProjectPath.TabIndex = 2
-        Me.LbProjectPath.Text = "工程路径："
-        '
-        'CBProjectId
-        '
-        Me.CBProjectId.FormattingEnabled = True
-        Me.CBProjectId.Location = New System.Drawing.Point(104, 26)
-        Me.CBProjectId.Name = "CBProjectId"
-        Me.CBProjectId.Size = New System.Drawing.Size(293, 25)
-        Me.CBProjectId.TabIndex = 1
-        '
-        'LbProjectId
-        '
-        Me.LbProjectId.AutoSize = True
-        Me.LbProjectId.Location = New System.Drawing.Point(6, 29)
-        Me.LbProjectId.Name = "LbProjectId"
-        Me.LbProjectId.Size = New System.Drawing.Size(56, 17)
-        Me.LbProjectId.TabIndex = 0
-        Me.LbProjectId.Text = "禅道号："
-        '
-        'tpProperty
-        '
-        Me.tpProperty.Controls.Add(Me.lbProductManufacturerState)
-        Me.tpProperty.Controls.Add(Me.lbProductDeviceState)
-        Me.tpProperty.Controls.Add(Me.lbProductBrandState)
-        Me.tpProperty.Controls.Add(Me.lbProductModelState)
-        Me.tpProperty.Controls.Add(Me.lbProductNameState)
-        Me.tpProperty.Controls.Add(Me.btPropertySetting)
-        Me.tpProperty.Controls.Add(Me.tbProductManufacturer)
-        Me.tpProperty.Controls.Add(Me.lbProductManufacturer)
-        Me.tpProperty.Controls.Add(Me.tbProductDevice)
-        Me.tpProperty.Controls.Add(Me.lbProductDevice)
-        Me.tpProperty.Controls.Add(Me.tbProductBrand)
-        Me.tpProperty.Controls.Add(Me.lbProductBrand)
-        Me.tpProperty.Controls.Add(Me.tbProductModel)
-        Me.tpProperty.Controls.Add(Me.lbProductModel)
-        Me.tpProperty.Controls.Add(Me.tbProductName)
-        Me.tpProperty.Controls.Add(Me.lbProductName)
-        Me.tpProperty.Location = New System.Drawing.Point(4, 48)
-        Me.tpProperty.Name = "tpProperty"
-        Me.tpProperty.Size = New System.Drawing.Size(815, 449)
-        Me.tpProperty.TabIndex = 3
-        Me.tpProperty.Text = "系统属性"
-        Me.tpProperty.UseVisualStyleBackColor = True
-        '
-        'lbProductManufacturerState
-        '
-        Me.lbProductManufacturerState.AutoSize = True
-        Me.lbProductManufacturerState.Location = New System.Drawing.Point(756, 158)
-        Me.lbProductManufacturerState.Name = "lbProductManufacturerState"
-        Me.lbProductManufacturerState.Size = New System.Drawing.Size(37, 17)
-        Me.lbProductManufacturerState.TabIndex = 3
-        Me.lbProductManufacturerState.Text = "PASS"
-        '
-        'lbProductDeviceState
-        '
-        Me.lbProductDeviceState.AutoSize = True
-        Me.lbProductDeviceState.Location = New System.Drawing.Point(756, 123)
-        Me.lbProductDeviceState.Name = "lbProductDeviceState"
-        Me.lbProductDeviceState.Size = New System.Drawing.Size(37, 17)
-        Me.lbProductDeviceState.TabIndex = 3
-        Me.lbProductDeviceState.Text = "PASS"
-        '
-        'lbProductBrandState
-        '
-        Me.lbProductBrandState.AutoSize = True
-        Me.lbProductBrandState.Location = New System.Drawing.Point(756, 88)
-        Me.lbProductBrandState.Name = "lbProductBrandState"
-        Me.lbProductBrandState.Size = New System.Drawing.Size(37, 17)
-        Me.lbProductBrandState.TabIndex = 3
-        Me.lbProductBrandState.Text = "PASS"
-        '
-        'lbProductModelState
-        '
-        Me.lbProductModelState.AutoSize = True
-        Me.lbProductModelState.Location = New System.Drawing.Point(756, 51)
-        Me.lbProductModelState.Name = "lbProductModelState"
-        Me.lbProductModelState.Size = New System.Drawing.Size(37, 17)
-        Me.lbProductModelState.TabIndex = 3
-        Me.lbProductModelState.Text = "PASS"
-        '
-        'lbProductNameState
-        '
-        Me.lbProductNameState.AutoSize = True
-        Me.lbProductNameState.Location = New System.Drawing.Point(756, 15)
-        Me.lbProductNameState.Name = "lbProductNameState"
-        Me.lbProductNameState.Size = New System.Drawing.Size(37, 17)
-        Me.lbProductNameState.TabIndex = 3
-        Me.lbProductNameState.Text = "PASS"
-        '
-        'btPropertySetting
-        '
-        Me.btPropertySetting.Location = New System.Drawing.Point(13, 211)
-        Me.btPropertySetting.Name = "btPropertySetting"
-        Me.btPropertySetting.Size = New System.Drawing.Size(75, 23)
-        Me.btPropertySetting.TabIndex = 2
-        Me.btPropertySetting.Text = "设置"
-        Me.btPropertySetting.UseVisualStyleBackColor = True
-        '
-        'tbProductManufacturer
-        '
-        Me.tbProductManufacturer.Location = New System.Drawing.Point(257, 158)
-        Me.tbProductManufacturer.Name = "tbProductManufacturer"
-        Me.tbProductManufacturer.Size = New System.Drawing.Size(493, 23)
-        Me.tbProductManufacturer.TabIndex = 1
-        '
-        'lbProductManufacturer
-        '
-        Me.lbProductManufacturer.AutoSize = True
-        Me.lbProductManufacturer.Location = New System.Drawing.Point(13, 158)
-        Me.lbProductManufacturer.Name = "lbProductManufacturer"
-        Me.lbProductManufacturer.Size = New System.Drawing.Size(238, 17)
-        Me.lbProductManufacturer.TabIndex = 0
-        Me.lbProductManufacturer.Text = "设备制造商（ro.product.manufacturer)："
-        '
-        'tbProductDevice
-        '
-        Me.tbProductDevice.Location = New System.Drawing.Point(257, 120)
-        Me.tbProductDevice.Name = "tbProductDevice"
-        Me.tbProductDevice.Size = New System.Drawing.Size(493, 23)
-        Me.tbProductDevice.TabIndex = 1
-        '
-        'lbProductDevice
-        '
-        Me.lbProductDevice.AutoSize = True
-        Me.lbProductDevice.Location = New System.Drawing.Point(13, 123)
-        Me.lbProductDevice.Name = "lbProductDevice"
-        Me.lbProductDevice.Size = New System.Drawing.Size(186, 17)
-        Me.lbProductDevice.TabIndex = 0
-        Me.lbProductDevice.Text = "设备名称（ro.product.device)："
-        '
-        'tbProductBrand
-        '
-        Me.tbProductBrand.Location = New System.Drawing.Point(257, 85)
-        Me.tbProductBrand.Name = "tbProductBrand"
-        Me.tbProductBrand.Size = New System.Drawing.Size(493, 23)
-        Me.tbProductBrand.TabIndex = 1
-        '
-        'lbProductBrand
-        '
-        Me.lbProductBrand.AutoSize = True
-        Me.lbProductBrand.Location = New System.Drawing.Point(13, 88)
-        Me.lbProductBrand.Name = "lbProductBrand"
-        Me.lbProductBrand.Size = New System.Drawing.Size(184, 17)
-        Me.lbProductBrand.TabIndex = 0
-        Me.lbProductBrand.Text = "设备品牌（ro.product.brand)："
-        '
-        'tbProductModel
-        '
-        Me.tbProductModel.Location = New System.Drawing.Point(257, 48)
-        Me.tbProductModel.Name = "tbProductModel"
-        Me.tbProductModel.Size = New System.Drawing.Size(493, 23)
-        Me.tbProductModel.TabIndex = 1
-        '
-        'lbProductModel
-        '
-        Me.lbProductModel.AutoSize = True
-        Me.lbProductModel.Location = New System.Drawing.Point(13, 51)
-        Me.lbProductModel.Name = "lbProductModel"
-        Me.lbProductModel.Size = New System.Drawing.Size(186, 17)
-        Me.lbProductModel.TabIndex = 0
-        Me.lbProductModel.Text = "产品型号（ro.product.model)："
-        '
-        'tbProductName
-        '
-        Me.tbProductName.Location = New System.Drawing.Point(257, 12)
-        Me.tbProductName.Name = "tbProductName"
-        Me.tbProductName.Size = New System.Drawing.Size(493, 23)
-        Me.tbProductName.TabIndex = 1
-        '
-        'lbProductName
-        '
-        Me.lbProductName.AutoSize = True
-        Me.lbProductName.Location = New System.Drawing.Point(13, 15)
-        Me.lbProductName.Name = "lbProductName"
-        Me.lbProductName.Size = New System.Drawing.Size(181, 17)
-        Me.lbProductName.TabIndex = 0
-        Me.lbProductName.Text = "产品名称（ro.product.name)："
-        '
-        'tpVersion
-        '
-        Me.tpVersion.Controls.Add(Me.lbVersionState)
-        Me.tpVersion.Controls.Add(Me.btVersion)
-        Me.tpVersion.Controls.Add(Me.tbVersion)
-        Me.tpVersion.Controls.Add(Me.lbVersion)
-        Me.tpVersion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.tpVersion.Location = New System.Drawing.Point(4, 48)
-        Me.tpVersion.Name = "tpVersion"
-        Me.tpVersion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpVersion.Size = New System.Drawing.Size(815, 449)
-        Me.tpVersion.TabIndex = 1
-        Me.tpVersion.Text = "版本号"
-        Me.tpVersion.UseVisualStyleBackColor = True
-        '
-        'lbVersionState
-        '
-        Me.lbVersionState.AutoSize = True
-        Me.lbVersionState.BackColor = System.Drawing.Color.Transparent
-        Me.lbVersionState.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbVersionState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbVersionState.Location = New System.Drawing.Point(772, 41)
-        Me.lbVersionState.Name = "lbVersionState"
-        Me.lbVersionState.Size = New System.Drawing.Size(37, 17)
-        Me.lbVersionState.TabIndex = 3
-        Me.lbVersionState.Text = "PASS"
-        Me.lbVersionState.Visible = False
-        '
-        'btVersion
-        '
-        Me.btVersion.Location = New System.Drawing.Point(6, 75)
-        Me.btVersion.Name = "btVersion"
-        Me.btVersion.Size = New System.Drawing.Size(75, 23)
-        Me.btVersion.TabIndex = 2
-        Me.btVersion.Text = "设置"
-        Me.btVersion.UseVisualStyleBackColor = True
-        '
-        'tbVersion
-        '
-        Me.tbVersion.Location = New System.Drawing.Point(6, 33)
-        Me.tbVersion.Name = "tbVersion"
-        Me.tbVersion.Size = New System.Drawing.Size(760, 23)
-        Me.tbVersion.TabIndex = 1
-        '
-        'lbVersion
-        '
-        Me.lbVersion.AutoSize = True
-        Me.lbVersion.Location = New System.Drawing.Point(6, 13)
-        Me.lbVersion.Name = "lbVersion"
-        Me.lbVersion.Size = New System.Drawing.Size(355, 17)
-        Me.lbVersion.TabIndex = 0
-        Me.lbVersion.Text = "版本号：（例如：UMIDIGI_G3 Tab_V1.0_`date +%Y%m%d`）"
-        '
-        'tpFingerprint
-        '
-        Me.tpFingerprint.Controls.Add(Me.btFingerprintSet)
-        Me.tpFingerprint.Controls.Add(Me.btRandom)
-        Me.tpFingerprint.Controls.Add(Me.lbFingerprintState)
-        Me.tpFingerprint.Controls.Add(Me.tbFingerprint)
-        Me.tpFingerprint.Controls.Add(Me.lbFingerprint)
-        Me.tpFingerprint.Location = New System.Drawing.Point(4, 48)
-        Me.tpFingerprint.Name = "tpFingerprint"
-        Me.tpFingerprint.Size = New System.Drawing.Size(815, 449)
-        Me.tpFingerprint.TabIndex = 2
-        Me.tpFingerprint.Text = "Fingerprint"
-        Me.tpFingerprint.UseVisualStyleBackColor = True
-        '
-        'btFingerprintSet
-        '
-        Me.btFingerprintSet.Location = New System.Drawing.Point(6, 76)
-        Me.btFingerprintSet.Name = "btFingerprintSet"
-        Me.btFingerprintSet.Size = New System.Drawing.Size(75, 23)
-        Me.btFingerprintSet.TabIndex = 4
-        Me.btFingerprintSet.Text = "设置"
-        Me.btFingerprintSet.UseVisualStyleBackColor = True
-        '
-        'btRandom
-        '
-        Me.btRandom.Location = New System.Drawing.Point(685, 35)
-        Me.btRandom.Name = "btRandom"
-        Me.btRandom.Size = New System.Drawing.Size(75, 23)
-        Me.btRandom.TabIndex = 3
-        Me.btRandom.Text = "随机生成"
-        Me.btRandom.UseVisualStyleBackColor = True
-        '
-        'lbFingerprintState
-        '
-        Me.lbFingerprintState.AutoSize = True
-        Me.lbFingerprintState.ForeColor = System.Drawing.Color.Green
-        Me.lbFingerprintState.Location = New System.Drawing.Point(766, 38)
-        Me.lbFingerprintState.Name = "lbFingerprintState"
-        Me.lbFingerprintState.Size = New System.Drawing.Size(37, 17)
-        Me.lbFingerprintState.TabIndex = 2
-        Me.lbFingerprintState.Text = "PASS"
-        '
-        'tbFingerprint
-        '
-        Me.tbFingerprint.Location = New System.Drawing.Point(6, 35)
-        Me.tbFingerprint.Name = "tbFingerprint"
-        Me.tbFingerprint.Size = New System.Drawing.Size(673, 23)
-        Me.tbFingerprint.TabIndex = 1
-        '
-        'lbFingerprint
-        '
-        Me.lbFingerprint.AutoSize = True
-        Me.lbFingerprint.Location = New System.Drawing.Point(6, 13)
-        Me.lbFingerprint.Name = "lbFingerprint"
-        Me.lbFingerprint.Size = New System.Drawing.Size(83, 17)
-        Me.lbFingerprint.TabIndex = 0
-        Me.lbFingerprint.Text = "Fingerprint："
-        '
-        'tpWifi
-        '
-        Me.tpWifi.Controls.Add(Me.btWifiSetting)
-        Me.tpWifi.Controls.Add(Me.lbWifiScreenCastState)
-        Me.tpWifi.Controls.Add(Me.lbWifiHotspotNameState)
-        Me.tpWifi.Controls.Add(Me.lbWifiStatusState)
-        Me.tpWifi.Controls.Add(Me.tbWifiScreenCast)
-        Me.tpWifi.Controls.Add(Me.tbWifiHotspotName)
-        Me.tpWifi.Controls.Add(Me.lbWifiScreenCast)
-        Me.tpWifi.Controls.Add(Me.lbWifiHotspotName)
-        Me.tpWifi.Controls.Add(Me.rbWifiClose)
-        Me.tpWifi.Controls.Add(Me.rbWifiOpen)
-        Me.tpWifi.Controls.Add(Me.lbWifiStatus)
-        Me.tpWifi.Location = New System.Drawing.Point(4, 48)
-        Me.tpWifi.Name = "tpWifi"
-        Me.tpWifi.Size = New System.Drawing.Size(815, 449)
-        Me.tpWifi.TabIndex = 4
-        Me.tpWifi.Text = "WiFi"
-        Me.tpWifi.UseVisualStyleBackColor = True
-        '
-        'btWifiSetting
-        '
-        Me.btWifiSetting.Location = New System.Drawing.Point(14, 149)
-        Me.btWifiSetting.Name = "btWifiSetting"
-        Me.btWifiSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btWifiSetting.TabIndex = 5
-        Me.btWifiSetting.Text = "设置"
-        Me.btWifiSetting.UseVisualStyleBackColor = True
-        '
-        'lbWifiScreenCastState
-        '
-        Me.lbWifiScreenCastState.AutoSize = True
-        Me.lbWifiScreenCastState.Location = New System.Drawing.Point(757, 100)
-        Me.lbWifiScreenCastState.Name = "lbWifiScreenCastState"
-        Me.lbWifiScreenCastState.Size = New System.Drawing.Size(37, 17)
-        Me.lbWifiScreenCastState.TabIndex = 4
-        Me.lbWifiScreenCastState.Text = "PASS"
-        '
-        'lbWifiHotspotNameState
-        '
-        Me.lbWifiHotspotNameState.AutoSize = True
-        Me.lbWifiHotspotNameState.Location = New System.Drawing.Point(757, 59)
-        Me.lbWifiHotspotNameState.Name = "lbWifiHotspotNameState"
-        Me.lbWifiHotspotNameState.Size = New System.Drawing.Size(37, 17)
-        Me.lbWifiHotspotNameState.TabIndex = 4
-        Me.lbWifiHotspotNameState.Text = "PASS"
-        '
-        'lbWifiStatusState
-        '
-        Me.lbWifiStatusState.AutoSize = True
-        Me.lbWifiStatusState.Location = New System.Drawing.Point(757, 22)
-        Me.lbWifiStatusState.Name = "lbWifiStatusState"
-        Me.lbWifiStatusState.Size = New System.Drawing.Size(37, 17)
-        Me.lbWifiStatusState.TabIndex = 4
-        Me.lbWifiStatusState.Text = "PASS"
-        '
-        'tbWifiScreenCast
-        '
-        Me.tbWifiScreenCast.Location = New System.Drawing.Point(116, 97)
-        Me.tbWifiScreenCast.Name = "tbWifiScreenCast"
-        Me.tbWifiScreenCast.Size = New System.Drawing.Size(619, 23)
-        Me.tbWifiScreenCast.TabIndex = 3
-        '
-        'tbWifiHotspotName
-        '
-        Me.tbWifiHotspotName.Location = New System.Drawing.Point(116, 56)
-        Me.tbWifiHotspotName.Name = "tbWifiHotspotName"
-        Me.tbWifiHotspotName.Size = New System.Drawing.Size(619, 23)
-        Me.tbWifiHotspotName.TabIndex = 3
-        '
-        'lbWifiScreenCast
-        '
-        Me.lbWifiScreenCast.AutoSize = True
-        Me.lbWifiScreenCast.Location = New System.Drawing.Point(14, 100)
-        Me.lbWifiScreenCast.Name = "lbWifiScreenCast"
-        Me.lbWifiScreenCast.Size = New System.Drawing.Size(96, 17)
-        Me.lbWifiScreenCast.TabIndex = 2
-        Me.lbWifiScreenCast.Text = "WiFi 投屏名称："
-        '
-        'lbWifiHotspotName
-        '
-        Me.lbWifiHotspotName.AutoSize = True
-        Me.lbWifiHotspotName.Location = New System.Drawing.Point(14, 59)
-        Me.lbWifiHotspotName.Name = "lbWifiHotspotName"
-        Me.lbWifiHotspotName.Size = New System.Drawing.Size(96, 17)
-        Me.lbWifiHotspotName.TabIndex = 2
-        Me.lbWifiHotspotName.Text = "WiFi 热点名称："
-        '
-        'rbWifiClose
-        '
-        Me.rbWifiClose.AutoSize = True
-        Me.rbWifiClose.Checked = True
-        Me.rbWifiClose.Location = New System.Drawing.Point(204, 18)
-        Me.rbWifiClose.Name = "rbWifiClose"
-        Me.rbWifiClose.Size = New System.Drawing.Size(50, 21)
-        Me.rbWifiClose.TabIndex = 1
-        Me.rbWifiClose.TabStop = True
-        Me.rbWifiClose.Text = "关闭"
-        Me.rbWifiClose.UseVisualStyleBackColor = True
-        '
-        'rbWifiOpen
-        '
-        Me.rbWifiOpen.AutoSize = True
-        Me.rbWifiOpen.Location = New System.Drawing.Point(116, 18)
-        Me.rbWifiOpen.Name = "rbWifiOpen"
-        Me.rbWifiOpen.Size = New System.Drawing.Size(50, 21)
-        Me.rbWifiOpen.TabIndex = 1
-        Me.rbWifiOpen.TabStop = True
-        Me.rbWifiOpen.Text = "打开"
-        Me.rbWifiOpen.UseVisualStyleBackColor = True
-        '
-        'lbWifiStatus
-        '
-        Me.lbWifiStatus.AutoSize = True
-        Me.lbWifiStatus.Location = New System.Drawing.Point(14, 20)
-        Me.lbWifiStatus.Name = "lbWifiStatus"
-        Me.lbWifiStatus.Size = New System.Drawing.Size(96, 17)
-        Me.lbWifiStatus.TabIndex = 0
-        Me.lbWifiStatus.Text = "WiFi 默认状态："
-        '
-        'tpBluetooth
-        '
-        Me.tpBluetooth.Controls.Add(Me.btBluetoothSetting)
-        Me.tpBluetooth.Controls.Add(Me.tbBluetoothName)
-        Me.tpBluetooth.Controls.Add(Me.rbBluetoothClose)
-        Me.tpBluetooth.Controls.Add(Me.rbBluetoothOpen)
-        Me.tpBluetooth.Controls.Add(Me.lbBluetoothNameState)
-        Me.tpBluetooth.Controls.Add(Me.lbBluetoothName)
-        Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatusState)
-        Me.tpBluetooth.Controls.Add(Me.lbBluetoothStatus)
-        Me.tpBluetooth.Location = New System.Drawing.Point(4, 48)
-        Me.tpBluetooth.Name = "tpBluetooth"
-        Me.tpBluetooth.Size = New System.Drawing.Size(815, 449)
-        Me.tpBluetooth.TabIndex = 5
-        Me.tpBluetooth.Text = "蓝牙"
-        Me.tpBluetooth.UseVisualStyleBackColor = True
-        '
-        'btBluetoothSetting
-        '
-        Me.btBluetoothSetting.Location = New System.Drawing.Point(20, 111)
-        Me.btBluetoothSetting.Name = "btBluetoothSetting"
-        Me.btBluetoothSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btBluetoothSetting.TabIndex = 3
-        Me.btBluetoothSetting.Text = "设置"
-        Me.btBluetoothSetting.UseVisualStyleBackColor = True
-        '
-        'tbBluetoothName
-        '
-        Me.tbBluetoothName.Location = New System.Drawing.Point(94, 59)
-        Me.tbBluetoothName.Name = "tbBluetoothName"
-        Me.tbBluetoothName.Size = New System.Drawing.Size(644, 23)
-        Me.tbBluetoothName.TabIndex = 2
-        '
-        'rbBluetoothClose
-        '
-        Me.rbBluetoothClose.AutoSize = True
-        Me.rbBluetoothClose.Checked = True
-        Me.rbBluetoothClose.Location = New System.Drawing.Point(243, 21)
-        Me.rbBluetoothClose.Name = "rbBluetoothClose"
-        Me.rbBluetoothClose.Size = New System.Drawing.Size(50, 21)
-        Me.rbBluetoothClose.TabIndex = 1
-        Me.rbBluetoothClose.TabStop = True
-        Me.rbBluetoothClose.Text = "关闭"
-        Me.rbBluetoothClose.UseVisualStyleBackColor = True
-        '
-        'rbBluetoothOpen
-        '
-        Me.rbBluetoothOpen.AutoSize = True
-        Me.rbBluetoothOpen.Location = New System.Drawing.Point(118, 21)
-        Me.rbBluetoothOpen.Name = "rbBluetoothOpen"
-        Me.rbBluetoothOpen.Size = New System.Drawing.Size(50, 21)
-        Me.rbBluetoothOpen.TabIndex = 1
-        Me.rbBluetoothOpen.Text = "打开"
-        Me.rbBluetoothOpen.UseVisualStyleBackColor = True
-        '
-        'lbBluetoothNameState
-        '
-        Me.lbBluetoothNameState.AutoSize = True
-        Me.lbBluetoothNameState.Location = New System.Drawing.Point(759, 62)
-        Me.lbBluetoothNameState.Name = "lbBluetoothNameState"
-        Me.lbBluetoothNameState.Size = New System.Drawing.Size(37, 17)
-        Me.lbBluetoothNameState.TabIndex = 0
-        Me.lbBluetoothNameState.Text = "PASS"
-        '
-        'lbBluetoothName
-        '
-        Me.lbBluetoothName.AutoSize = True
-        Me.lbBluetoothName.Location = New System.Drawing.Point(20, 65)
-        Me.lbBluetoothName.Name = "lbBluetoothName"
-        Me.lbBluetoothName.Size = New System.Drawing.Size(68, 17)
-        Me.lbBluetoothName.TabIndex = 0
-        Me.lbBluetoothName.Text = "蓝牙名称："
-        '
-        'lbBluetoothStatusState
-        '
-        Me.lbBluetoothStatusState.AutoSize = True
-        Me.lbBluetoothStatusState.Location = New System.Drawing.Point(759, 23)
-        Me.lbBluetoothStatusState.Name = "lbBluetoothStatusState"
-        Me.lbBluetoothStatusState.Size = New System.Drawing.Size(37, 17)
-        Me.lbBluetoothStatusState.TabIndex = 0
-        Me.lbBluetoothStatusState.Text = "PASS"
-        '
-        'lbBluetoothStatus
-        '
-        Me.lbBluetoothStatus.AutoSize = True
-        Me.lbBluetoothStatus.Location = New System.Drawing.Point(20, 23)
-        Me.lbBluetoothStatus.Name = "lbBluetoothStatus"
-        Me.lbBluetoothStatus.Size = New System.Drawing.Size(92, 17)
-        Me.lbBluetoothStatus.TabIndex = 0
-        Me.lbBluetoothStatus.Text = "蓝牙默认状态："
-        '
-        'tpLanguage
-        '
-        Me.tpLanguage.Controls.Add(Me.btLanguageSetting)
-        Me.tpLanguage.Controls.Add(Me.cbLanguage)
-        Me.tpLanguage.Controls.Add(Me.lbLanguageState)
-        Me.tpLanguage.Controls.Add(Me.Label1)
-        Me.tpLanguage.Location = New System.Drawing.Point(4, 48)
-        Me.tpLanguage.Name = "tpLanguage"
-        Me.tpLanguage.Size = New System.Drawing.Size(815, 449)
-        Me.tpLanguage.TabIndex = 6
-        Me.tpLanguage.Text = "语言"
-        Me.tpLanguage.UseVisualStyleBackColor = True
-        '
-        'btLanguageSetting
-        '
-        Me.btLanguageSetting.Location = New System.Drawing.Point(13, 67)
-        Me.btLanguageSetting.Name = "btLanguageSetting"
-        Me.btLanguageSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btLanguageSetting.TabIndex = 4
-        Me.btLanguageSetting.Text = "设置"
-        Me.btLanguageSetting.UseVisualStyleBackColor = True
-        '
-        'cbLanguage
-        '
-        Me.cbLanguage.FormattingEnabled = True
-        Me.cbLanguage.Location = New System.Drawing.Point(63, 16)
-        Me.cbLanguage.Name = "cbLanguage"
-        Me.cbLanguage.Size = New System.Drawing.Size(667, 25)
-        Me.cbLanguage.TabIndex = 2
-        '
-        'lbLanguageState
-        '
-        Me.lbLanguageState.AutoSize = True
-        Me.lbLanguageState.Location = New System.Drawing.Point(752, 19)
-        Me.lbLanguageState.Name = "lbLanguageState"
-        Me.lbLanguageState.Size = New System.Drawing.Size(37, 17)
-        Me.lbLanguageState.TabIndex = 0
-        Me.lbLanguageState.Text = "PASS"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "语言："
-        '
-        'tpTimezone
-        '
-        Me.tpTimezone.Controls.Add(Me.rbTimezoneClose)
-        Me.tpTimezone.Controls.Add(Me.rbTimezoneOpen)
-        Me.tpTimezone.Controls.Add(Me.lbAutoTimezone)
-        Me.tpTimezone.Controls.Add(Me.cbTimezone)
-        Me.tpTimezone.Controls.Add(Me.lbAutoTimezoneState)
-        Me.tpTimezone.Controls.Add(Me.lbTimezoneState)
-        Me.tpTimezone.Controls.Add(Me.lbTimezone)
-        Me.tpTimezone.Controls.Add(Me.btTimezoneSetting)
-        Me.tpTimezone.Location = New System.Drawing.Point(4, 48)
-        Me.tpTimezone.Name = "tpTimezone"
-        Me.tpTimezone.Size = New System.Drawing.Size(815, 449)
-        Me.tpTimezone.TabIndex = 7
-        Me.tpTimezone.Text = "时区"
-        Me.tpTimezone.UseVisualStyleBackColor = True
-        '
-        'rbTimezoneClose
-        '
-        Me.rbTimezoneClose.AutoSize = True
-        Me.rbTimezoneClose.Location = New System.Drawing.Point(220, 16)
-        Me.rbTimezoneClose.Name = "rbTimezoneClose"
-        Me.rbTimezoneClose.Size = New System.Drawing.Size(50, 21)
-        Me.rbTimezoneClose.TabIndex = 10
-        Me.rbTimezoneClose.TabStop = True
-        Me.rbTimezoneClose.Text = "关闭"
-        Me.rbTimezoneClose.UseVisualStyleBackColor = True
-        '
-        'rbTimezoneOpen
-        '
-        Me.rbTimezoneOpen.AutoSize = True
-        Me.rbTimezoneOpen.Location = New System.Drawing.Point(109, 16)
-        Me.rbTimezoneOpen.Name = "rbTimezoneOpen"
-        Me.rbTimezoneOpen.Size = New System.Drawing.Size(50, 21)
-        Me.rbTimezoneOpen.TabIndex = 10
-        Me.rbTimezoneOpen.TabStop = True
-        Me.rbTimezoneOpen.Text = "开启"
-        Me.rbTimezoneOpen.UseVisualStyleBackColor = True
-        '
-        'lbAutoTimezone
-        '
-        Me.lbAutoTimezone.AutoSize = True
-        Me.lbAutoTimezone.Location = New System.Drawing.Point(11, 18)
-        Me.lbAutoTimezone.Name = "lbAutoTimezone"
-        Me.lbAutoTimezone.Size = New System.Drawing.Size(92, 17)
-        Me.lbAutoTimezone.TabIndex = 9
-        Me.lbAutoTimezone.Text = "自动更新时区："
-        '
-        'cbTimezone
-        '
-        Me.cbTimezone.FormattingEnabled = True
-        Me.cbTimezone.Location = New System.Drawing.Point(61, 54)
-        Me.cbTimezone.Name = "cbTimezone"
-        Me.cbTimezone.Size = New System.Drawing.Size(667, 25)
-        Me.cbTimezone.TabIndex = 8
-        '
-        'lbAutoTimezoneState
-        '
-        Me.lbAutoTimezoneState.AutoSize = True
-        Me.lbAutoTimezoneState.Location = New System.Drawing.Point(750, 20)
-        Me.lbAutoTimezoneState.Name = "lbAutoTimezoneState"
-        Me.lbAutoTimezoneState.Size = New System.Drawing.Size(37, 17)
-        Me.lbAutoTimezoneState.TabIndex = 6
-        Me.lbAutoTimezoneState.Text = "PASS"
-        '
-        'lbTimezoneState
-        '
-        Me.lbTimezoneState.AutoSize = True
-        Me.lbTimezoneState.Location = New System.Drawing.Point(750, 57)
-        Me.lbTimezoneState.Name = "lbTimezoneState"
-        Me.lbTimezoneState.Size = New System.Drawing.Size(37, 17)
-        Me.lbTimezoneState.TabIndex = 6
-        Me.lbTimezoneState.Text = "PASS"
-        '
-        'lbTimezone
-        '
-        Me.lbTimezone.AutoSize = True
-        Me.lbTimezone.Location = New System.Drawing.Point(11, 57)
-        Me.lbTimezone.Name = "lbTimezone"
-        Me.lbTimezone.Size = New System.Drawing.Size(44, 17)
-        Me.lbTimezone.TabIndex = 7
-        Me.lbTimezone.Text = "时区："
-        '
-        'btTimezoneSetting
-        '
-        Me.btTimezoneSetting.Location = New System.Drawing.Point(11, 108)
-        Me.btTimezoneSetting.Name = "btTimezoneSetting"
-        Me.btTimezoneSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btTimezoneSetting.TabIndex = 5
-        Me.btTimezoneSetting.Text = "设置"
-        Me.btTimezoneSetting.UseVisualStyleBackColor = True
-        '
-        'tpLogo
-        '
-        Me.tpLogo.Controls.Add(Me.btLogoSetting)
-        Me.tpLogo.Controls.Add(Me.bLogo)
-        Me.tpLogo.Controls.Add(Me.tbLogo)
-        Me.tpLogo.Controls.Add(Me.lbLogoState)
-        Me.tpLogo.Controls.Add(Me.lbLogo)
-        Me.tpLogo.Location = New System.Drawing.Point(4, 48)
-        Me.tpLogo.Name = "tpLogo"
-        Me.tpLogo.Size = New System.Drawing.Size(815, 449)
-        Me.tpLogo.TabIndex = 8
-        Me.tpLogo.Text = "LOGO"
-        Me.tpLogo.UseVisualStyleBackColor = True
-        '
-        'btLogoSetting
-        '
-        Me.btLogoSetting.Location = New System.Drawing.Point(18, 65)
-        Me.btLogoSetting.Name = "btLogoSetting"
-        Me.btLogoSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btLogoSetting.TabIndex = 2
-        Me.btLogoSetting.Text = "设置"
-        Me.btLogoSetting.UseVisualStyleBackColor = True
-        '
-        'bLogo
-        '
-        Me.bLogo.Location = New System.Drawing.Point(654, 17)
-        Me.bLogo.Name = "bLogo"
-        Me.bLogo.Size = New System.Drawing.Size(75, 23)
-        Me.bLogo.TabIndex = 2
-        Me.bLogo.Text = "选择图片"
-        Me.bLogo.UseVisualStyleBackColor = True
-        '
-        'tbLogo
-        '
-        Me.tbLogo.Location = New System.Drawing.Point(102, 17)
-        Me.tbLogo.Name = "tbLogo"
-        Me.tbLogo.Size = New System.Drawing.Size(546, 23)
-        Me.tbLogo.TabIndex = 1
-        '
-        'lbLogoState
-        '
-        Me.lbLogoState.AutoSize = True
-        Me.lbLogoState.Location = New System.Drawing.Point(753, 20)
-        Me.lbLogoState.Name = "lbLogoState"
-        Me.lbLogoState.Size = New System.Drawing.Size(37, 17)
-        Me.lbLogoState.TabIndex = 0
-        Me.lbLogoState.Text = "PASS"
-        '
-        'lbLogo
-        '
-        Me.lbLogo.AutoSize = True
-        Me.lbLogo.Location = New System.Drawing.Point(18, 20)
-        Me.lbLogo.Name = "lbLogo"
-        Me.lbLogo.Size = New System.Drawing.Size(78, 17)
-        Me.lbLogo.TabIndex = 0
-        Me.lbLogo.Text = "Logo 图片："
-        '
-        'tpWallpaper
-        '
-        Me.tpWallpaper.Controls.Add(Me.btWallpaperSetting)
-        Me.tpWallpaper.Controls.Add(Me.btInserWallpaper)
-        Me.tpWallpaper.Controls.Add(Me.btWallpaper)
-        Me.tpWallpaper.Controls.Add(Me.tbInsertWallpaper)
-        Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaperState)
-        Me.tpWallpaper.Controls.Add(Me.tbWallpaper)
-        Me.tpWallpaper.Controls.Add(Me.lbInsertWallpaper)
-        Me.tpWallpaper.Controls.Add(Me.lbWallpaperState)
-        Me.tpWallpaper.Controls.Add(Me.lbWallpaper)
-        Me.tpWallpaper.Location = New System.Drawing.Point(4, 48)
-        Me.tpWallpaper.Name = "tpWallpaper"
-        Me.tpWallpaper.Size = New System.Drawing.Size(815, 449)
-        Me.tpWallpaper.TabIndex = 9
-        Me.tpWallpaper.Text = "壁纸"
-        Me.tpWallpaper.UseVisualStyleBackColor = True
-        '
-        'btWallpaperSetting
-        '
-        Me.btWallpaperSetting.Location = New System.Drawing.Point(17, 103)
-        Me.btWallpaperSetting.Name = "btWallpaperSetting"
-        Me.btWallpaperSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btWallpaperSetting.TabIndex = 6
-        Me.btWallpaperSetting.Text = "设置"
-        Me.btWallpaperSetting.UseVisualStyleBackColor = True
-        '
-        'btInserWallpaper
-        '
-        Me.btInserWallpaper.Location = New System.Drawing.Point(647, 53)
-        Me.btInserWallpaper.Name = "btInserWallpaper"
-        Me.btInserWallpaper.Size = New System.Drawing.Size(81, 23)
-        Me.btInserWallpaper.TabIndex = 7
-        Me.btInserWallpaper.Text = "选择内置壁纸"
-        Me.btInserWallpaper.UseVisualStyleBackColor = True
-        '
-        'btWallpaper
-        '
-        Me.btWallpaper.Location = New System.Drawing.Point(647, 14)
-        Me.btWallpaper.Name = "btWallpaper"
-        Me.btWallpaper.Size = New System.Drawing.Size(81, 23)
-        Me.btWallpaper.TabIndex = 7
-        Me.btWallpaper.Text = "选择图片"
-        Me.btWallpaper.UseVisualStyleBackColor = True
-        '
-        'tbInsertWallpaper
-        '
-        Me.tbInsertWallpaper.Location = New System.Drawing.Point(101, 53)
-        Me.tbInsertWallpaper.Name = "tbInsertWallpaper"
-        Me.tbInsertWallpaper.Size = New System.Drawing.Size(540, 23)
-        Me.tbInsertWallpaper.TabIndex = 5
-        '
-        'lbInsertWallpaperState
-        '
-        Me.lbInsertWallpaperState.AutoSize = True
-        Me.lbInsertWallpaperState.Location = New System.Drawing.Point(752, 56)
-        Me.lbInsertWallpaperState.Name = "lbInsertWallpaperState"
-        Me.lbInsertWallpaperState.Size = New System.Drawing.Size(37, 17)
-        Me.lbInsertWallpaperState.TabIndex = 3
-        Me.lbInsertWallpaperState.Text = "PASS"
-        '
-        'tbWallpaper
-        '
-        Me.tbWallpaper.Location = New System.Drawing.Point(101, 14)
-        Me.tbWallpaper.Name = "tbWallpaper"
-        Me.tbWallpaper.Size = New System.Drawing.Size(540, 23)
-        Me.tbWallpaper.TabIndex = 5
-        '
-        'lbInsertWallpaper
-        '
-        Me.lbInsertWallpaper.AutoSize = True
-        Me.lbInsertWallpaper.Location = New System.Drawing.Point(17, 56)
-        Me.lbInsertWallpaper.Name = "lbInsertWallpaper"
-        Me.lbInsertWallpaper.Size = New System.Drawing.Size(68, 17)
-        Me.lbInsertWallpaper.TabIndex = 4
-        Me.lbInsertWallpaper.Text = "内置壁纸："
-        '
-        'lbWallpaperState
-        '
-        Me.lbWallpaperState.AutoSize = True
-        Me.lbWallpaperState.Location = New System.Drawing.Point(752, 17)
-        Me.lbWallpaperState.Name = "lbWallpaperState"
-        Me.lbWallpaperState.Size = New System.Drawing.Size(37, 17)
-        Me.lbWallpaperState.TabIndex = 3
-        Me.lbWallpaperState.Text = "PASS"
-        '
-        'lbWallpaper
-        '
-        Me.lbWallpaper.AutoSize = True
-        Me.lbWallpaper.Location = New System.Drawing.Point(17, 17)
-        Me.lbWallpaper.Name = "lbWallpaper"
-        Me.lbWallpaper.Size = New System.Drawing.Size(44, 17)
-        Me.lbWallpaper.TabIndex = 4
-        Me.lbWallpaper.Text = "壁纸："
-        '
-        'tpSample
-        '
-        Me.tpSample.Controls.Add(Me.btSampleName)
-        Me.tpSample.Controls.Add(Me.btSample)
-        Me.tpSample.Controls.Add(Me.tbSampleName)
-        Me.tpSample.Controls.Add(Me.btSampleSetting)
-        Me.tpSample.Controls.Add(Me.rbSampleClose)
-        Me.tpSample.Controls.Add(Me.rbSampleOpen)
-        Me.tpSample.Controls.Add(Me.Label3)
-        Me.tpSample.Controls.Add(Me.lbSampleNameState)
-        Me.tpSample.Controls.Add(Me.lbSampleState)
-        Me.tpSample.Controls.Add(Me.lbSample)
-        Me.tpSample.Location = New System.Drawing.Point(4, 48)
-        Me.tpSample.Name = "tpSample"
-        Me.tpSample.Size = New System.Drawing.Size(815, 449)
-        Me.tpSample.TabIndex = 10
-        Me.tpSample.Text = "送样"
-        Me.tpSample.UseVisualStyleBackColor = True
-        '
-        'btSampleName
-        '
-        Me.btSampleName.Location = New System.Drawing.Point(660, 64)
-        Me.btSampleName.Name = "btSampleName"
-        Me.btSampleName.Size = New System.Drawing.Size(75, 23)
-        Me.btSampleName.TabIndex = 4
-        Me.btSampleName.Text = "设置"
-        Me.btSampleName.UseVisualStyleBackColor = True
-        '
-        'btSample
-        '
-        Me.btSample.Location = New System.Drawing.Point(660, 19)
-        Me.btSample.Name = "btSample"
-        Me.btSample.Size = New System.Drawing.Size(75, 23)
-        Me.btSample.TabIndex = 4
-        Me.btSample.Text = "设置"
-        Me.btSample.UseVisualStyleBackColor = True
-        '
-        'tbSampleName
-        '
-        Me.tbSampleName.Location = New System.Drawing.Point(97, 64)
-        Me.tbSampleName.Name = "tbSampleName"
-        Me.tbSampleName.Size = New System.Drawing.Size(549, 23)
-        Me.tbSampleName.TabIndex = 3
-        '
-        'btSampleSetting
-        '
-        Me.btSampleSetting.Location = New System.Drawing.Point(23, 119)
-        Me.btSampleSetting.Name = "btSampleSetting"
-        Me.btSampleSetting.Size = New System.Drawing.Size(75, 23)
-        Me.btSampleSetting.TabIndex = 2
-        Me.btSampleSetting.Text = "全部设置"
-        Me.btSampleSetting.UseVisualStyleBackColor = True
-        '
-        'rbSampleClose
-        '
-        Me.rbSampleClose.AutoSize = True
-        Me.rbSampleClose.Checked = True
-        Me.rbSampleClose.Location = New System.Drawing.Point(205, 20)
-        Me.rbSampleClose.Name = "rbSampleClose"
-        Me.rbSampleClose.Size = New System.Drawing.Size(50, 21)
-        Me.rbSampleClose.TabIndex = 1
-        Me.rbSampleClose.TabStop = True
-        Me.rbSampleClose.Text = "关闭"
-        Me.rbSampleClose.UseVisualStyleBackColor = True
-        '
-        'rbSampleOpen
-        '
-        Me.rbSampleOpen.AutoSize = True
-        Me.rbSampleOpen.Location = New System.Drawing.Point(97, 20)
-        Me.rbSampleOpen.Name = "rbSampleOpen"
-        Me.rbSampleOpen.Size = New System.Drawing.Size(50, 21)
-        Me.rbSampleOpen.TabIndex = 1
-        Me.rbSampleOpen.Text = "开启"
-        Me.rbSampleOpen.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(23, 67)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 17)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "设备名称："
-        '
-        'lbSampleNameState
-        '
-        Me.lbSampleNameState.AutoSize = True
-        Me.lbSampleNameState.Location = New System.Drawing.Point(758, 67)
-        Me.lbSampleNameState.Name = "lbSampleNameState"
-        Me.lbSampleNameState.Size = New System.Drawing.Size(37, 17)
-        Me.lbSampleNameState.TabIndex = 0
-        Me.lbSampleNameState.Text = "PASS"
-        '
-        'lbSampleState
-        '
-        Me.lbSampleState.AutoSize = True
-        Me.lbSampleState.Location = New System.Drawing.Point(758, 22)
-        Me.lbSampleState.Name = "lbSampleState"
-        Me.lbSampleState.Size = New System.Drawing.Size(37, 17)
-        Me.lbSampleState.TabIndex = 0
-        Me.lbSampleState.Text = "PASS"
-        '
-        'lbSample
-        '
-        Me.lbSample.AutoSize = True
-        Me.lbSample.Location = New System.Drawing.Point(23, 20)
-        Me.lbSample.Name = "lbSample"
-        Me.lbSample.Size = New System.Drawing.Size(68, 17)
-        Me.lbSample.TabIndex = 0
-        Me.lbSample.Text = "送样功能："
-        '
-        'tpScreenBrightness
-        '
-        Me.tpScreenBrightness.Controls.Add(Me.btBrightnessAllSet)
-        Me.tpScreenBrightness.Controls.Add(Me.btMinBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.btMaxBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.btDefaultBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.lbMinBrightnessStatus)
-        Me.tpScreenBrightness.Controls.Add(Me.lbMaxBrightnessStatus)
-        Me.tpScreenBrightness.Controls.Add(Me.lbDefaultBrightnessStatus)
-        Me.tpScreenBrightness.Controls.Add(Me.tbMinBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.lbMinBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.tbMaxBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.lbMaxBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.tbDefaultBrightness)
-        Me.tpScreenBrightness.Controls.Add(Me.lbDefaultBrightness)
-        Me.tpScreenBrightness.Location = New System.Drawing.Point(4, 48)
-        Me.tpScreenBrightness.Name = "tpScreenBrightness"
-        Me.tpScreenBrightness.Size = New System.Drawing.Size(815, 449)
-        Me.tpScreenBrightness.TabIndex = 11
-        Me.tpScreenBrightness.Text = "屏幕亮度"
-        Me.tpScreenBrightness.UseVisualStyleBackColor = True
-        '
-        'btBrightnessAllSet
-        '
-        Me.btBrightnessAllSet.Location = New System.Drawing.Point(15, 144)
-        Me.btBrightnessAllSet.Name = "btBrightnessAllSet"
-        Me.btBrightnessAllSet.Size = New System.Drawing.Size(75, 23)
-        Me.btBrightnessAllSet.TabIndex = 2
-        Me.btBrightnessAllSet.Text = "全部设置"
-        Me.btBrightnessAllSet.UseVisualStyleBackColor = True
-        '
-        'btMinBrightness
-        '
-        Me.btMinBrightness.Location = New System.Drawing.Point(657, 92)
-        Me.btMinBrightness.Name = "btMinBrightness"
-        Me.btMinBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btMinBrightness.TabIndex = 2
-        Me.btMinBrightness.Text = "设置"
-        Me.btMinBrightness.UseVisualStyleBackColor = True
-        '
-        'btMaxBrightness
-        '
-        Me.btMaxBrightness.Location = New System.Drawing.Point(657, 53)
-        Me.btMaxBrightness.Name = "btMaxBrightness"
-        Me.btMaxBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btMaxBrightness.TabIndex = 2
-        Me.btMaxBrightness.Text = "设置"
-        Me.btMaxBrightness.UseVisualStyleBackColor = True
-        '
-        'btDefaultBrightness
-        '
-        Me.btDefaultBrightness.Location = New System.Drawing.Point(657, 13)
-        Me.btDefaultBrightness.Name = "btDefaultBrightness"
-        Me.btDefaultBrightness.Size = New System.Drawing.Size(75, 23)
-        Me.btDefaultBrightness.TabIndex = 2
-        Me.btDefaultBrightness.Text = "设置"
-        Me.btDefaultBrightness.UseVisualStyleBackColor = True
-        '
-        'lbMinBrightnessStatus
-        '
-        Me.lbMinBrightnessStatus.AutoSize = True
-        Me.lbMinBrightnessStatus.Location = New System.Drawing.Point(757, 95)
-        Me.lbMinBrightnessStatus.Name = "lbMinBrightnessStatus"
-        Me.lbMinBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbMinBrightnessStatus.TabIndex = 0
-        Me.lbMinBrightnessStatus.Text = "PASS"
-        '
-        'lbMaxBrightnessStatus
-        '
-        Me.lbMaxBrightnessStatus.AutoSize = True
-        Me.lbMaxBrightnessStatus.Location = New System.Drawing.Point(757, 56)
-        Me.lbMaxBrightnessStatus.Name = "lbMaxBrightnessStatus"
-        Me.lbMaxBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbMaxBrightnessStatus.TabIndex = 0
-        Me.lbMaxBrightnessStatus.Text = "PASS"
-        '
-        'lbDefaultBrightnessStatus
-        '
-        Me.lbDefaultBrightnessStatus.AutoSize = True
-        Me.lbDefaultBrightnessStatus.Location = New System.Drawing.Point(757, 16)
-        Me.lbDefaultBrightnessStatus.Name = "lbDefaultBrightnessStatus"
-        Me.lbDefaultBrightnessStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbDefaultBrightnessStatus.TabIndex = 0
-        Me.lbDefaultBrightnessStatus.Text = "PASS"
-        '
-        'tbMinBrightness
-        '
-        Me.tbMinBrightness.Location = New System.Drawing.Point(89, 92)
-        Me.tbMinBrightness.Name = "tbMinBrightness"
-        Me.tbMinBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbMinBrightness.TabIndex = 1
-        '
-        'lbMinBrightness
-        '
-        Me.lbMinBrightness.AutoSize = True
-        Me.lbMinBrightness.Location = New System.Drawing.Point(15, 95)
-        Me.lbMinBrightness.Name = "lbMinBrightness"
-        Me.lbMinBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbMinBrightness.TabIndex = 0
-        Me.lbMinBrightness.Text = "最小亮度："
-        '
-        'tbMaxBrightness
-        '
-        Me.tbMaxBrightness.Location = New System.Drawing.Point(89, 53)
-        Me.tbMaxBrightness.Name = "tbMaxBrightness"
-        Me.tbMaxBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbMaxBrightness.TabIndex = 1
-        '
-        'lbMaxBrightness
-        '
-        Me.lbMaxBrightness.AutoSize = True
-        Me.lbMaxBrightness.Location = New System.Drawing.Point(15, 56)
-        Me.lbMaxBrightness.Name = "lbMaxBrightness"
-        Me.lbMaxBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbMaxBrightness.TabIndex = 0
-        Me.lbMaxBrightness.Text = "最大亮度："
-        '
-        'tbDefaultBrightness
-        '
-        Me.tbDefaultBrightness.Location = New System.Drawing.Point(89, 13)
-        Me.tbDefaultBrightness.Name = "tbDefaultBrightness"
-        Me.tbDefaultBrightness.Size = New System.Drawing.Size(562, 23)
-        Me.tbDefaultBrightness.TabIndex = 1
-        '
-        'lbDefaultBrightness
-        '
-        Me.lbDefaultBrightness.AutoSize = True
-        Me.lbDefaultBrightness.Location = New System.Drawing.Point(15, 16)
-        Me.lbDefaultBrightness.Name = "lbDefaultBrightness"
-        Me.lbDefaultBrightness.Size = New System.Drawing.Size(68, 17)
-        Me.lbDefaultBrightness.TabIndex = 0
-        Me.lbDefaultBrightness.Text = "默认亮度："
-        '
-        'tpVolume
-        '
-        Me.tpVolume.Controls.Add(Me.cbOtherVolume)
-        Me.tpVolume.Controls.Add(Me.cbNotifyVolume)
-        Me.tpVolume.Controls.Add(Me.cbAlarmVolume)
-        Me.tpVolume.Controls.Add(Me.cbMusicVolume)
-        Me.tpVolume.Controls.Add(Me.cbRingVolume)
-        Me.tpVolume.Controls.Add(Me.cbCallVolume)
-        Me.tpVolume.Controls.Add(Me.btVolumeAllSet)
-        Me.tpVolume.Controls.Add(Me.btOtherVolume)
-        Me.tpVolume.Controls.Add(Me.btNotifyVolume)
-        Me.tpVolume.Controls.Add(Me.btAlarmVolume)
-        Me.tpVolume.Controls.Add(Me.btMusicVolume)
-        Me.tpVolume.Controls.Add(Me.btRingVolume)
-        Me.tpVolume.Controls.Add(Me.btCallVolume)
-        Me.tpVolume.Controls.Add(Me.lbOtherVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbNotifyVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbAlarmVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbMusicVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbRingVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbCallVolumeStatus)
-        Me.tpVolume.Controls.Add(Me.lbOtherVolume)
-        Me.tpVolume.Controls.Add(Me.lbNotifyVolume)
-        Me.tpVolume.Controls.Add(Me.lbAlarmVolume)
-        Me.tpVolume.Controls.Add(Me.lbMusicVolume)
-        Me.tpVolume.Controls.Add(Me.lbRingVolume)
-        Me.tpVolume.Controls.Add(Me.lbCallVolume)
-        Me.tpVolume.Location = New System.Drawing.Point(4, 48)
-        Me.tpVolume.Name = "tpVolume"
-        Me.tpVolume.Size = New System.Drawing.Size(815, 449)
-        Me.tpVolume.TabIndex = 12
-        Me.tpVolume.Text = "系统音量"
-        Me.tpVolume.UseVisualStyleBackColor = True
-        '
-        'cbOtherVolume
-        '
-        Me.cbOtherVolume.FormattingEnabled = True
-        Me.cbOtherVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.cbOtherVolume.Location = New System.Drawing.Point(113, 206)
-        Me.cbOtherVolume.Name = "cbOtherVolume"
-        Me.cbOtherVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbOtherVolume.TabIndex = 3
-        '
-        'cbNotifyVolume
-        '
-        Me.cbNotifyVolume.FormattingEnabled = True
-        Me.cbNotifyVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.cbNotifyVolume.Location = New System.Drawing.Point(113, 168)
-        Me.cbNotifyVolume.Name = "cbNotifyVolume"
-        Me.cbNotifyVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbNotifyVolume.TabIndex = 3
-        '
-        'cbAlarmVolume
-        '
-        Me.cbAlarmVolume.FormattingEnabled = True
-        Me.cbAlarmVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.cbAlarmVolume.Location = New System.Drawing.Point(113, 132)
-        Me.cbAlarmVolume.Name = "cbAlarmVolume"
-        Me.cbAlarmVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbAlarmVolume.TabIndex = 3
-        '
-        'cbMusicVolume
-        '
-        Me.cbMusicVolume.FormattingEnabled = True
-        Me.cbMusicVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.cbMusicVolume.Location = New System.Drawing.Point(113, 95)
-        Me.cbMusicVolume.Name = "cbMusicVolume"
-        Me.cbMusicVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbMusicVolume.TabIndex = 3
-        '
-        'cbRingVolume
-        '
-        Me.cbRingVolume.FormattingEnabled = True
-        Me.cbRingVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.cbRingVolume.Location = New System.Drawing.Point(113, 58)
-        Me.cbRingVolume.Name = "cbRingVolume"
-        Me.cbRingVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbRingVolume.TabIndex = 3
-        '
-        'cbCallVolume
-        '
-        Me.cbCallVolume.FormattingEnabled = True
-        Me.cbCallVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7"})
-        Me.cbCallVolume.Location = New System.Drawing.Point(113, 20)
-        Me.cbCallVolume.Name = "cbCallVolume"
-        Me.cbCallVolume.Size = New System.Drawing.Size(546, 25)
-        Me.cbCallVolume.TabIndex = 3
-        '
-        'btVolumeAllSet
-        '
-        Me.btVolumeAllSet.Location = New System.Drawing.Point(15, 263)
-        Me.btVolumeAllSet.Name = "btVolumeAllSet"
-        Me.btVolumeAllSet.Size = New System.Drawing.Size(75, 23)
-        Me.btVolumeAllSet.TabIndex = 2
-        Me.btVolumeAllSet.Text = "全部设置"
-        Me.btVolumeAllSet.UseVisualStyleBackColor = True
-        '
-        'btOtherVolume
-        '
-        Me.btOtherVolume.Location = New System.Drawing.Point(665, 206)
-        Me.btOtherVolume.Name = "btOtherVolume"
-        Me.btOtherVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btOtherVolume.TabIndex = 2
-        Me.btOtherVolume.Text = "设置"
-        Me.btOtherVolume.UseVisualStyleBackColor = True
-        '
-        'btNotifyVolume
-        '
-        Me.btNotifyVolume.Location = New System.Drawing.Point(665, 168)
-        Me.btNotifyVolume.Name = "btNotifyVolume"
-        Me.btNotifyVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btNotifyVolume.TabIndex = 2
-        Me.btNotifyVolume.Text = "设置"
-        Me.btNotifyVolume.UseVisualStyleBackColor = True
-        '
-        'btAlarmVolume
-        '
-        Me.btAlarmVolume.Location = New System.Drawing.Point(665, 132)
-        Me.btAlarmVolume.Name = "btAlarmVolume"
-        Me.btAlarmVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btAlarmVolume.TabIndex = 2
-        Me.btAlarmVolume.Text = "设置"
-        Me.btAlarmVolume.UseVisualStyleBackColor = True
-        '
-        'btMusicVolume
-        '
-        Me.btMusicVolume.Location = New System.Drawing.Point(665, 95)
-        Me.btMusicVolume.Name = "btMusicVolume"
-        Me.btMusicVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btMusicVolume.TabIndex = 2
-        Me.btMusicVolume.Text = "设置"
-        Me.btMusicVolume.UseVisualStyleBackColor = True
-        '
-        'btRingVolume
-        '
-        Me.btRingVolume.Location = New System.Drawing.Point(665, 58)
-        Me.btRingVolume.Name = "btRingVolume"
-        Me.btRingVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btRingVolume.TabIndex = 2
-        Me.btRingVolume.Text = "设置"
-        Me.btRingVolume.UseVisualStyleBackColor = True
-        '
-        'btCallVolume
-        '
-        Me.btCallVolume.Location = New System.Drawing.Point(665, 20)
-        Me.btCallVolume.Name = "btCallVolume"
-        Me.btCallVolume.Size = New System.Drawing.Size(75, 23)
-        Me.btCallVolume.TabIndex = 2
-        Me.btCallVolume.Text = "设置"
-        Me.btCallVolume.UseVisualStyleBackColor = True
-        '
-        'lbOtherVolumeStatus
-        '
-        Me.lbOtherVolumeStatus.AutoSize = True
-        Me.lbOtherVolumeStatus.Location = New System.Drawing.Point(762, 209)
-        Me.lbOtherVolumeStatus.Name = "lbOtherVolumeStatus"
-        Me.lbOtherVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbOtherVolumeStatus.TabIndex = 0
-        Me.lbOtherVolumeStatus.Text = "PASS"
-        '
-        'lbNotifyVolumeStatus
-        '
-        Me.lbNotifyVolumeStatus.AutoSize = True
-        Me.lbNotifyVolumeStatus.Location = New System.Drawing.Point(762, 171)
-        Me.lbNotifyVolumeStatus.Name = "lbNotifyVolumeStatus"
-        Me.lbNotifyVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbNotifyVolumeStatus.TabIndex = 0
-        Me.lbNotifyVolumeStatus.Text = "PASS"
-        '
-        'lbAlarmVolumeStatus
-        '
-        Me.lbAlarmVolumeStatus.AutoSize = True
-        Me.lbAlarmVolumeStatus.Location = New System.Drawing.Point(762, 135)
-        Me.lbAlarmVolumeStatus.Name = "lbAlarmVolumeStatus"
-        Me.lbAlarmVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbAlarmVolumeStatus.TabIndex = 0
-        Me.lbAlarmVolumeStatus.Text = "PASS"
-        '
-        'lbMusicVolumeStatus
-        '
-        Me.lbMusicVolumeStatus.AutoSize = True
-        Me.lbMusicVolumeStatus.Location = New System.Drawing.Point(762, 98)
-        Me.lbMusicVolumeStatus.Name = "lbMusicVolumeStatus"
-        Me.lbMusicVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbMusicVolumeStatus.TabIndex = 0
-        Me.lbMusicVolumeStatus.Text = "PASS"
-        '
-        'lbRingVolumeStatus
-        '
-        Me.lbRingVolumeStatus.AutoSize = True
-        Me.lbRingVolumeStatus.Location = New System.Drawing.Point(762, 61)
-        Me.lbRingVolumeStatus.Name = "lbRingVolumeStatus"
-        Me.lbRingVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbRingVolumeStatus.TabIndex = 0
-        Me.lbRingVolumeStatus.Text = "PASS"
-        '
-        'lbCallVolumeStatus
-        '
-        Me.lbCallVolumeStatus.AutoSize = True
-        Me.lbCallVolumeStatus.Location = New System.Drawing.Point(762, 23)
-        Me.lbCallVolumeStatus.Name = "lbCallVolumeStatus"
-        Me.lbCallVolumeStatus.Size = New System.Drawing.Size(37, 17)
-        Me.lbCallVolumeStatus.TabIndex = 0
-        Me.lbCallVolumeStatus.Text = "PASS"
-        '
-        'lbOtherVolume
-        '
-        Me.lbOtherVolume.AutoSize = True
-        Me.lbOtherVolume.Location = New System.Drawing.Point(15, 209)
-        Me.lbOtherVolume.Name = "lbOtherVolume"
-        Me.lbOtherVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbOtherVolume.TabIndex = 0
-        Me.lbOtherVolume.Text = "其他默认音量："
-        '
-        'lbNotifyVolume
-        '
-        Me.lbNotifyVolume.AutoSize = True
-        Me.lbNotifyVolume.Location = New System.Drawing.Point(15, 171)
-        Me.lbNotifyVolume.Name = "lbNotifyVolume"
-        Me.lbNotifyVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbNotifyVolume.TabIndex = 0
-        Me.lbNotifyVolume.Text = "通知默认音量："
-        '
-        'lbAlarmVolume
-        '
-        Me.lbAlarmVolume.AutoSize = True
-        Me.lbAlarmVolume.Location = New System.Drawing.Point(15, 135)
-        Me.lbAlarmVolume.Name = "lbAlarmVolume"
-        Me.lbAlarmVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbAlarmVolume.TabIndex = 0
-        Me.lbAlarmVolume.Text = "闹钟默认音量："
-        '
-        'lbMusicVolume
-        '
-        Me.lbMusicVolume.AutoSize = True
-        Me.lbMusicVolume.Location = New System.Drawing.Point(15, 98)
-        Me.lbMusicVolume.Name = "lbMusicVolume"
-        Me.lbMusicVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbMusicVolume.TabIndex = 0
-        Me.lbMusicVolume.Text = "音乐默认音量："
-        '
-        'lbRingVolume
-        '
-        Me.lbRingVolume.AutoSize = True
-        Me.lbRingVolume.Location = New System.Drawing.Point(15, 61)
-        Me.lbRingVolume.Name = "lbRingVolume"
-        Me.lbRingVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbRingVolume.TabIndex = 0
-        Me.lbRingVolume.Text = "铃声默认音量："
-        '
-        'lbCallVolume
-        '
-        Me.lbCallVolume.AutoSize = True
-        Me.lbCallVolume.Location = New System.Drawing.Point(15, 23)
-        Me.lbCallVolume.Name = "lbCallVolume"
-        Me.lbCallVolume.Size = New System.Drawing.Size(92, 17)
-        Me.lbCallVolume.TabIndex = 0
-        Me.lbCallVolume.Text = "通话默认音量："
-        '
-        'tpTee
-        '
-        Me.tpTee.Location = New System.Drawing.Point(4, 48)
-        Me.tpTee.Name = "tpTee"
-        Me.tpTee.Size = New System.Drawing.Size(815, 449)
-        Me.tpTee.TabIndex = 13
-        Me.tpTee.Text = "TEE"
-        Me.tpTee.UseVisualStyleBackColor = True
-        '
-        'tpGoogleCustom
-        '
-        Me.tpGoogleCustom.Location = New System.Drawing.Point(4, 48)
-        Me.tpGoogleCustom.Name = "tpGoogleCustom"
-        Me.tpGoogleCustom.Size = New System.Drawing.Size(815, 449)
-        Me.tpGoogleCustom.TabIndex = 14
-        Me.tpGoogleCustom.Text = "谷歌客制化"
-        Me.tpGoogleCustom.UseVisualStyleBackColor = True
-        '
-        'tpAnimation
-        '
-        Me.tpAnimation.Location = New System.Drawing.Point(4, 48)
-        Me.tpAnimation.Name = "tpAnimation"
-        Me.tpAnimation.Size = New System.Drawing.Size(815, 449)
-        Me.tpAnimation.TabIndex = 15
-        Me.tpAnimation.Text = "开关机动画"
-        Me.tpAnimation.UseVisualStyleBackColor = True
-        '
-        'tpSystemSettings
-        '
-        Me.tpSystemSettings.Location = New System.Drawing.Point(4, 48)
-        Me.tpSystemSettings.Name = "tpSystemSettings"
-        Me.tpSystemSettings.Size = New System.Drawing.Size(815, 449)
-        Me.tpSystemSettings.TabIndex = 17
-        Me.tpSystemSettings.Text = "系统配置"
-        Me.tpSystemSettings.UseVisualStyleBackColor = True
-        '
-        'ofdSelectFile
-        '
-        Me.ofdSelectFile.FileName = "OpenFileDialog1"
-        '
-        'AndroidSettingsForm
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(847, 522)
-        Me.Controls.Add(Me.tcAndroidSettings)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MaximizeBox = False
-        Me.Name = "AndroidSettingsForm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Android 工程配置"
-        Me.tcAndroidSettings.ResumeLayout(False)
-        Me.tpProjectInfo.ResumeLayout(False)
-        Me.GbChiperOptions.ResumeLayout(False)
-        Me.GbChiperOptions.PerformLayout()
-        Me.GbGoOptions.ResumeLayout(False)
-        Me.GbGoOptions.PerformLayout()
-        Me.GbGmsOptions.ResumeLayout(False)
-        Me.GbGmsOptions.PerformLayout()
-        Me.GBProject.ResumeLayout(False)
-        Me.GBProject.PerformLayout()
-        Me.tpProperty.ResumeLayout(False)
-        Me.tpProperty.PerformLayout()
-        Me.tpVersion.ResumeLayout(False)
-        Me.tpVersion.PerformLayout()
-        Me.tpFingerprint.ResumeLayout(False)
-        Me.tpFingerprint.PerformLayout()
-        Me.tpWifi.ResumeLayout(False)
-        Me.tpWifi.PerformLayout()
-        Me.tpBluetooth.ResumeLayout(False)
-        Me.tpBluetooth.PerformLayout()
-        Me.tpLanguage.ResumeLayout(False)
-        Me.tpLanguage.PerformLayout()
-        Me.tpTimezone.ResumeLayout(False)
-        Me.tpTimezone.PerformLayout()
-        Me.tpLogo.ResumeLayout(False)
-        Me.tpLogo.PerformLayout()
-        Me.tpWallpaper.ResumeLayout(False)
-        Me.tpWallpaper.PerformLayout()
-        Me.tpSample.ResumeLayout(False)
-        Me.tpSample.PerformLayout()
-        Me.tpScreenBrightness.ResumeLayout(False)
-        Me.tpScreenBrightness.PerformLayout()
-        Me.tpVolume.ResumeLayout(False)
-        Me.tpVolume.PerformLayout()
-        Me.ResumeLayout(False)
-
+        tcAndroidSettings = New TabControl()
+        tpProjectInfo = New TabPage()
+        GbChiperOptions = New GroupBox()
+        CbChiperModel = New ComboBox()
+        CbChiperMaker = New ComboBox()
+        LbChiperModel = New Label()
+        LbChiperMaker = New Label()
+        GbGoOptions = New GroupBox()
+        RbOneGbGo = New RadioButton()
+        RbTwoGbGo = New RadioButton()
+        RbNotGo = New RadioButton()
+        GbGmsOptions = New GroupBox()
+        RbNotGms = New RadioButton()
+        RbGms = New RadioButton()
+        GBProject = New GroupBox()
+        CbProjectPath = New ComboBox()
+        TbCustomName = New TextBox()
+        TbMssiName = New TextBox()
+        TbDriveName = New TextBox()
+        TbPublicName = New TextBox()
+        CbAndroidVersin = New ComboBox()
+        LbAndroidVersion = New Label()
+        Label4 = New Label()
+        LbDriveName = New Label()
+        LbMssiName = New Label()
+        LbPublicName = New Label()
+        BtSelectProjectPath = New Button()
+        LbProjectPath = New Label()
+        CBProjectId = New ComboBox()
+        LbProjectId = New Label()
+        tpProperty = New TabPage()
+        lbProductManufacturerState = New Label()
+        lbProductDeviceState = New Label()
+        lbProductBrandState = New Label()
+        lbProductModelState = New Label()
+        lbProductNameState = New Label()
+        btPropertySetting = New Button()
+        tbProductManufacturer = New TextBox()
+        lbProductManufacturer = New Label()
+        tbProductDevice = New TextBox()
+        lbProductDevice = New Label()
+        tbProductBrand = New TextBox()
+        lbProductBrand = New Label()
+        tbProductModel = New TextBox()
+        lbProductModel = New Label()
+        tbProductName = New TextBox()
+        lbProductName = New Label()
+        tpVersion = New TabPage()
+        lbVersionState = New Label()
+        btVersion = New Button()
+        tbVersion = New TextBox()
+        lbVersion = New Label()
+        tpFingerprint = New TabPage()
+        btFingerprintSet = New Button()
+        btRandom = New Button()
+        lbFingerprintState = New Label()
+        tbFingerprint = New TextBox()
+        lbFingerprint = New Label()
+        tpWifi = New TabPage()
+        btWifiSetting = New Button()
+        lbWifiScreenCastState = New Label()
+        lbWifiHotspotNameState = New Label()
+        lbWifiStatusState = New Label()
+        tbWifiScreenCast = New TextBox()
+        tbWifiHotspotName = New TextBox()
+        lbWifiScreenCast = New Label()
+        lbWifiHotspotName = New Label()
+        rbWifiClose = New RadioButton()
+        rbWifiOpen = New RadioButton()
+        lbWifiStatus = New Label()
+        tpBluetooth = New TabPage()
+        btBluetoothSetting = New Button()
+        tbBluetoothName = New TextBox()
+        rbBluetoothClose = New RadioButton()
+        rbBluetoothOpen = New RadioButton()
+        lbBluetoothNameState = New Label()
+        lbBluetoothName = New Label()
+        lbBluetoothStatusState = New Label()
+        lbBluetoothStatus = New Label()
+        tpLanguage = New TabPage()
+        btLanguageSetting = New Button()
+        cbLanguage = New ComboBox()
+        lbLanguageState = New Label()
+        Label1 = New Label()
+        tpTimezone = New TabPage()
+        rbTimezoneClose = New RadioButton()
+        rbTimezoneOpen = New RadioButton()
+        lbAutoTimezone = New Label()
+        cbTimezone = New ComboBox()
+        lbAutoTimezoneState = New Label()
+        lbTimezoneState = New Label()
+        lbTimezone = New Label()
+        btTimezoneSetting = New Button()
+        tpLogo = New TabPage()
+        btLogoSetting = New Button()
+        bLogo = New Button()
+        tbLogo = New TextBox()
+        lbLogoState = New Label()
+        lbLogo = New Label()
+        tpWallpaper = New TabPage()
+        btWallpaperSetting = New Button()
+        btInserWallpaper = New Button()
+        btWallpaper = New Button()
+        tbInsertWallpaper = New TextBox()
+        lbInsertWallpaperState = New Label()
+        tbWallpaper = New TextBox()
+        lbInsertWallpaper = New Label()
+        lbWallpaperState = New Label()
+        lbWallpaper = New Label()
+        tpSample = New TabPage()
+        btSampleName = New Button()
+        btSample = New Button()
+        tbSampleName = New TextBox()
+        btSampleSetting = New Button()
+        rbSampleClose = New RadioButton()
+        rbSampleOpen = New RadioButton()
+        Label3 = New Label()
+        lbSampleNameState = New Label()
+        lbSampleState = New Label()
+        lbSample = New Label()
+        tpScreenBrightness = New TabPage()
+        btBrightnessAllSet = New Button()
+        btMinBrightness = New Button()
+        btMaxBrightness = New Button()
+        btDefaultBrightness = New Button()
+        lbMinBrightnessStatus = New Label()
+        lbMaxBrightnessStatus = New Label()
+        lbDefaultBrightnessStatus = New Label()
+        tbMinBrightness = New TextBox()
+        lbMinBrightness = New Label()
+        tbMaxBrightness = New TextBox()
+        lbMaxBrightness = New Label()
+        tbDefaultBrightness = New TextBox()
+        lbDefaultBrightness = New Label()
+        tpVolume = New TabPage()
+        cbOtherVolume = New ComboBox()
+        cbNotifyVolume = New ComboBox()
+        cbAlarmVolume = New ComboBox()
+        cbMusicVolume = New ComboBox()
+        cbRingVolume = New ComboBox()
+        cbCallVolume = New ComboBox()
+        btVolumeAllSet = New Button()
+        btOtherVolume = New Button()
+        btNotifyVolume = New Button()
+        btAlarmVolume = New Button()
+        btMusicVolume = New Button()
+        btRingVolume = New Button()
+        btCallVolume = New Button()
+        lbOtherVolumeStatus = New Label()
+        lbNotifyVolumeStatus = New Label()
+        lbAlarmVolumeStatus = New Label()
+        lbMusicVolumeStatus = New Label()
+        lbRingVolumeStatus = New Label()
+        lbCallVolumeStatus = New Label()
+        lbOtherVolume = New Label()
+        lbNotifyVolume = New Label()
+        lbAlarmVolume = New Label()
+        lbMusicVolume = New Label()
+        lbRingVolume = New Label()
+        lbCallVolume = New Label()
+        tpTee = New TabPage()
+        lbTeeArrayStatus = New Label()
+        lbTeeCertStatus = New Label()
+        btTeeAllSet = New Button()
+        btTeeArray = New Button()
+        btnTeeSelectArray = New Button()
+        btnTeeSelectCert = New Button()
+        btTeeCert = New Button()
+        tbTeeArray = New TextBox()
+        lbTeeArray = New Label()
+        tbTeeCert = New TextBox()
+        lbTeeCert = New Label()
+        lbTeeStatus = New Label()
+        btTee = New Button()
+        rbTeeClose = New RadioButton()
+        rbTeeOpen = New RadioButton()
+        lbTee = New Label()
+        tpGoogleCustom = New TabPage()
+        tpAnimation = New TabPage()
+        tpSystemSettings = New TabPage()
+        FbdSelectPath = New FolderBrowserDialog()
+        ofdSelectFile = New OpenFileDialog()
+        tcAndroidSettings.SuspendLayout()
+        tpProjectInfo.SuspendLayout()
+        GbChiperOptions.SuspendLayout()
+        GbGoOptions.SuspendLayout()
+        GbGmsOptions.SuspendLayout()
+        GBProject.SuspendLayout()
+        tpProperty.SuspendLayout()
+        tpVersion.SuspendLayout()
+        tpFingerprint.SuspendLayout()
+        tpWifi.SuspendLayout()
+        tpBluetooth.SuspendLayout()
+        tpLanguage.SuspendLayout()
+        tpTimezone.SuspendLayout()
+        tpLogo.SuspendLayout()
+        tpWallpaper.SuspendLayout()
+        tpSample.SuspendLayout()
+        tpScreenBrightness.SuspendLayout()
+        tpVolume.SuspendLayout()
+        tpTee.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' tcAndroidSettings
+        ' 
+        tcAndroidSettings.Controls.Add(tpProjectInfo)
+        tcAndroidSettings.Controls.Add(tpProperty)
+        tcAndroidSettings.Controls.Add(tpVersion)
+        tcAndroidSettings.Controls.Add(tpFingerprint)
+        tcAndroidSettings.Controls.Add(tpWifi)
+        tcAndroidSettings.Controls.Add(tpBluetooth)
+        tcAndroidSettings.Controls.Add(tpLanguage)
+        tcAndroidSettings.Controls.Add(tpTimezone)
+        tcAndroidSettings.Controls.Add(tpLogo)
+        tcAndroidSettings.Controls.Add(tpWallpaper)
+        tcAndroidSettings.Controls.Add(tpSample)
+        tcAndroidSettings.Controls.Add(tpScreenBrightness)
+        tcAndroidSettings.Controls.Add(tpVolume)
+        tcAndroidSettings.Controls.Add(tpTee)
+        tcAndroidSettings.Controls.Add(tpGoogleCustom)
+        tcAndroidSettings.Controls.Add(tpAnimation)
+        tcAndroidSettings.Controls.Add(tpSystemSettings)
+        tcAndroidSettings.ItemSize = New Size(80, 22)
+        tcAndroidSettings.Location = New Point(12, 12)
+        tcAndroidSettings.Multiline = True
+        tcAndroidSettings.Name = "tcAndroidSettings"
+        tcAndroidSettings.SelectedIndex = 0
+        tcAndroidSettings.Size = New Size(823, 501)
+        tcAndroidSettings.SizeMode = TabSizeMode.Fixed
+        tcAndroidSettings.TabIndex = 0
+        ' 
+        ' tpProjectInfo
+        ' 
+        tpProjectInfo.Controls.Add(GbChiperOptions)
+        tpProjectInfo.Controls.Add(GbGoOptions)
+        tpProjectInfo.Controls.Add(GbGmsOptions)
+        tpProjectInfo.Controls.Add(GBProject)
+        tpProjectInfo.Location = New Point(4, 48)
+        tpProjectInfo.Name = "tpProjectInfo"
+        tpProjectInfo.Padding = New Padding(3)
+        tpProjectInfo.Size = New Size(815, 449)
+        tpProjectInfo.TabIndex = 0
+        tpProjectInfo.Text = "工程信息"
+        tpProjectInfo.UseVisualStyleBackColor = True
+        ' 
+        ' GbChiperOptions
+        ' 
+        GbChiperOptions.Controls.Add(CbChiperModel)
+        GbChiperOptions.Controls.Add(CbChiperMaker)
+        GbChiperOptions.Controls.Add(LbChiperModel)
+        GbChiperOptions.Controls.Add(LbChiperMaker)
+        GbChiperOptions.Location = New Point(6, 347)
+        GbChiperOptions.Name = "GbChiperOptions"
+        GbChiperOptions.Size = New Size(803, 97)
+        GbChiperOptions.TabIndex = 2
+        GbChiperOptions.TabStop = False
+        GbChiperOptions.Text = "芯片选项"
+        ' 
+        ' CbChiperModel
+        ' 
+        CbChiperModel.FormattingEnabled = True
+        CbChiperModel.Items.AddRange(New Object() {"MT6761", "MT6739", "MT8183"})
+        CbChiperModel.Location = New Point(80, 57)
+        CbChiperModel.Name = "CbChiperModel"
+        CbChiperModel.Size = New Size(212, 25)
+        CbChiperModel.TabIndex = 1
+        CbChiperModel.Text = "MT6761"
+        ' 
+        ' CbChiperMaker
+        ' 
+        CbChiperMaker.FormattingEnabled = True
+        CbChiperMaker.Items.AddRange(New Object() {"MTK"})
+        CbChiperMaker.Location = New Point(80, 21)
+        CbChiperMaker.Name = "CbChiperMaker"
+        CbChiperMaker.Size = New Size(212, 25)
+        CbChiperMaker.TabIndex = 1
+        CbChiperMaker.Text = "MTK"
+        ' 
+        ' LbChiperModel
+        ' 
+        LbChiperModel.AutoSize = True
+        LbChiperModel.Location = New Point(6, 60)
+        LbChiperModel.Name = "LbChiperModel"
+        LbChiperModel.Size = New Size(68, 17)
+        LbChiperModel.TabIndex = 0
+        LbChiperModel.Text = "芯片型号："
+        ' 
+        ' LbChiperMaker
+        ' 
+        LbChiperMaker.AutoSize = True
+        LbChiperMaker.Location = New Point(6, 24)
+        LbChiperMaker.Name = "LbChiperMaker"
+        LbChiperMaker.Size = New Size(68, 17)
+        LbChiperMaker.TabIndex = 0
+        LbChiperMaker.Text = "芯片厂商："
+        ' 
+        ' GbGoOptions
+        ' 
+        GbGoOptions.Controls.Add(RbOneGbGo)
+        GbGoOptions.Controls.Add(RbTwoGbGo)
+        GbGoOptions.Controls.Add(RbNotGo)
+        GbGoOptions.Location = New Point(6, 287)
+        GbGoOptions.Name = "GbGoOptions"
+        GbGoOptions.Size = New Size(803, 54)
+        GbGoOptions.TabIndex = 1
+        GbGoOptions.TabStop = False
+        GbGoOptions.Text = "Go 选项"
+        ' 
+        ' RbOneGbGo
+        ' 
+        RbOneGbGo.AutoSize = True
+        RbOneGbGo.Location = New Point(373, 22)
+        RbOneGbGo.Name = "RbOneGbGo"
+        RbOneGbGo.Size = New Size(73, 21)
+        RbOneGbGo.TabIndex = 1
+        RbOneGbGo.Text = "1GB GO"
+        RbOneGbGo.UseVisualStyleBackColor = True
+        ' 
+        ' RbTwoGbGo
+        ' 
+        RbTwoGbGo.AutoSize = True
+        RbTwoGbGo.Checked = True
+        RbTwoGbGo.Location = New Point(703, 22)
+        RbTwoGbGo.Name = "RbTwoGbGo"
+        RbTwoGbGo.Size = New Size(73, 21)
+        RbTwoGbGo.TabIndex = 1
+        RbTwoGbGo.TabStop = True
+        RbTwoGbGo.Text = "2GB GO"
+        RbTwoGbGo.UseVisualStyleBackColor = True
+        ' 
+        ' RbNotGo
+        ' 
+        RbNotGo.AutoSize = True
+        RbNotGo.Location = New Point(6, 22)
+        RbNotGo.Name = "RbNotGo"
+        RbNotGo.Size = New Size(61, 21)
+        RbNotGo.TabIndex = 0
+        RbNotGo.Text = "非 GO"
+        RbNotGo.UseVisualStyleBackColor = True
+        ' 
+        ' GbGmsOptions
+        ' 
+        GbGmsOptions.Controls.Add(RbNotGms)
+        GbGmsOptions.Controls.Add(RbGms)
+        GbGmsOptions.Location = New Point(6, 227)
+        GbGmsOptions.Name = "GbGmsOptions"
+        GbGmsOptions.Size = New Size(803, 54)
+        GbGmsOptions.TabIndex = 1
+        GbGmsOptions.TabStop = False
+        GbGmsOptions.Text = "GMS 选项"
+        ' 
+        ' RbNotGms
+        ' 
+        RbNotGms.AutoSize = True
+        RbNotGms.Location = New Point(6, 22)
+        RbNotGms.Name = "RbNotGms"
+        RbNotGms.Size = New Size(70, 21)
+        RbNotGms.TabIndex = 1
+        RbNotGms.Text = "非 GMS"
+        RbNotGms.UseVisualStyleBackColor = True
+        ' 
+        ' RbGms
+        ' 
+        RbGms.AutoSize = True
+        RbGms.Checked = True
+        RbGms.Location = New Point(373, 22)
+        RbGms.Name = "RbGms"
+        RbGms.Size = New Size(54, 21)
+        RbGms.TabIndex = 0
+        RbGms.TabStop = True
+        RbGms.Text = "GMS"
+        RbGms.UseVisualStyleBackColor = True
+        ' 
+        ' GBProject
+        ' 
+        GBProject.Controls.Add(CbProjectPath)
+        GBProject.Controls.Add(TbCustomName)
+        GBProject.Controls.Add(TbMssiName)
+        GBProject.Controls.Add(TbDriveName)
+        GBProject.Controls.Add(TbPublicName)
+        GBProject.Controls.Add(CbAndroidVersin)
+        GBProject.Controls.Add(LbAndroidVersion)
+        GBProject.Controls.Add(Label4)
+        GBProject.Controls.Add(LbDriveName)
+        GBProject.Controls.Add(LbMssiName)
+        GBProject.Controls.Add(LbPublicName)
+        GBProject.Controls.Add(BtSelectProjectPath)
+        GBProject.Controls.Add(LbProjectPath)
+        GBProject.Controls.Add(CBProjectId)
+        GBProject.Controls.Add(LbProjectId)
+        GBProject.Location = New Point(6, 6)
+        GBProject.Name = "GBProject"
+        GBProject.Size = New Size(803, 215)
+        GBProject.TabIndex = 0
+        GBProject.TabStop = False
+        GBProject.Text = "项目信息选项"
+        ' 
+        ' CbProjectPath
+        ' 
+        CbProjectPath.FormattingEnabled = True
+        CbProjectPath.Location = New Point(104, 98)
+        CbProjectPath.Name = "CbProjectPath"
+        CbProjectPath.Size = New Size(612, 25)
+        CbProjectPath.TabIndex = 16
+        ' 
+        ' TbCustomName
+        ' 
+        TbCustomName.Location = New Point(513, 173)
+        TbCustomName.Name = "TbCustomName"
+        TbCustomName.Size = New Size(284, 23)
+        TbCustomName.TabIndex = 15
+        ' 
+        ' TbMssiName
+        ' 
+        TbMssiName.Location = New Point(513, 137)
+        TbMssiName.Name = "TbMssiName"
+        TbMssiName.Size = New Size(284, 23)
+        TbMssiName.TabIndex = 15
+        ' 
+        ' TbDriveName
+        ' 
+        TbDriveName.Location = New Point(104, 173)
+        TbDriveName.Name = "TbDriveName"
+        TbDriveName.Size = New Size(293, 23)
+        TbDriveName.TabIndex = 15
+        ' 
+        ' TbPublicName
+        ' 
+        TbPublicName.Location = New Point(104, 137)
+        TbPublicName.Name = "TbPublicName"
+        TbPublicName.Size = New Size(293, 23)
+        TbPublicName.TabIndex = 15
+        ' 
+        ' CbAndroidVersin
+        ' 
+        CbAndroidVersin.FormattingEnabled = True
+        CbAndroidVersin.Items.AddRange(New Object() {"Android 11", "Android 12", "Android 13"})
+        CbAndroidVersin.Location = New Point(104, 62)
+        CbAndroidVersin.Name = "CbAndroidVersin"
+        CbAndroidVersin.Size = New Size(293, 25)
+        CbAndroidVersin.TabIndex = 14
+        CbAndroidVersin.Text = "Android 13"
+        ' 
+        ' LbAndroidVersion
+        ' 
+        LbAndroidVersion.AutoSize = True
+        LbAndroidVersion.Location = New Point(6, 65)
+        LbAndroidVersion.Name = "LbAndroidVersion"
+        LbAndroidVersion.Size = New Size(95, 17)
+        LbAndroidVersion.TabIndex = 13
+        LbAndroidVersion.Text = "Android 版本："
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(403, 176)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(104, 17)
+        Label4.TabIndex = 11
+        Label4.Text = "客制化目录名称："
+        ' 
+        ' LbDriveName
+        ' 
+        LbDriveName.AutoSize = True
+        LbDriveName.Location = New Point(6, 176)
+        LbDriveName.Name = "LbDriveName"
+        LbDriveName.Size = New Size(92, 17)
+        LbDriveName.TabIndex = 9
+        LbDriveName.Text = "驱动目录名称："
+        ' 
+        ' LbMssiName
+        ' 
+        LbMssiName.AutoSize = True
+        LbMssiName.Location = New Point(403, 142)
+        LbMssiName.Name = "LbMssiName"
+        LbMssiName.Size = New Size(75, 17)
+        LbMssiName.TabIndex = 7
+        LbMssiName.Text = "Mssi 名称："
+        ' 
+        ' LbPublicName
+        ' 
+        LbPublicName.AutoSize = True
+        LbPublicName.Location = New Point(6, 140)
+        LbPublicName.Name = "LbPublicName"
+        LbPublicName.Size = New Size(68, 17)
+        LbPublicName.TabIndex = 5
+        LbPublicName.Text = "公版名称："
+        ' 
+        ' BtSelectProjectPath
+        ' 
+        BtSelectProjectPath.Location = New Point(722, 98)
+        BtSelectProjectPath.Name = "BtSelectProjectPath"
+        BtSelectProjectPath.Size = New Size(75, 23)
+        BtSelectProjectPath.TabIndex = 4
+        BtSelectProjectPath.Text = "选择..."
+        BtSelectProjectPath.UseVisualStyleBackColor = True
+        ' 
+        ' LbProjectPath
+        ' 
+        LbProjectPath.AutoSize = True
+        LbProjectPath.Location = New Point(6, 101)
+        LbProjectPath.Name = "LbProjectPath"
+        LbProjectPath.Size = New Size(68, 17)
+        LbProjectPath.TabIndex = 2
+        LbProjectPath.Text = "工程路径："
+        ' 
+        ' CBProjectId
+        ' 
+        CBProjectId.FormattingEnabled = True
+        CBProjectId.Location = New Point(104, 26)
+        CBProjectId.Name = "CBProjectId"
+        CBProjectId.Size = New Size(293, 25)
+        CBProjectId.TabIndex = 1
+        ' 
+        ' LbProjectId
+        ' 
+        LbProjectId.AutoSize = True
+        LbProjectId.Location = New Point(6, 29)
+        LbProjectId.Name = "LbProjectId"
+        LbProjectId.Size = New Size(56, 17)
+        LbProjectId.TabIndex = 0
+        LbProjectId.Text = "禅道号："
+        ' 
+        ' tpProperty
+        ' 
+        tpProperty.Controls.Add(lbProductManufacturerState)
+        tpProperty.Controls.Add(lbProductDeviceState)
+        tpProperty.Controls.Add(lbProductBrandState)
+        tpProperty.Controls.Add(lbProductModelState)
+        tpProperty.Controls.Add(lbProductNameState)
+        tpProperty.Controls.Add(btPropertySetting)
+        tpProperty.Controls.Add(tbProductManufacturer)
+        tpProperty.Controls.Add(lbProductManufacturer)
+        tpProperty.Controls.Add(tbProductDevice)
+        tpProperty.Controls.Add(lbProductDevice)
+        tpProperty.Controls.Add(tbProductBrand)
+        tpProperty.Controls.Add(lbProductBrand)
+        tpProperty.Controls.Add(tbProductModel)
+        tpProperty.Controls.Add(lbProductModel)
+        tpProperty.Controls.Add(tbProductName)
+        tpProperty.Controls.Add(lbProductName)
+        tpProperty.Location = New Point(4, 48)
+        tpProperty.Name = "tpProperty"
+        tpProperty.Size = New Size(815, 449)
+        tpProperty.TabIndex = 3
+        tpProperty.Text = "系统属性"
+        tpProperty.UseVisualStyleBackColor = True
+        ' 
+        ' lbProductManufacturerState
+        ' 
+        lbProductManufacturerState.AutoSize = True
+        lbProductManufacturerState.Location = New Point(756, 158)
+        lbProductManufacturerState.Name = "lbProductManufacturerState"
+        lbProductManufacturerState.Size = New Size(37, 17)
+        lbProductManufacturerState.TabIndex = 3
+        lbProductManufacturerState.Text = "PASS"
+        ' 
+        ' lbProductDeviceState
+        ' 
+        lbProductDeviceState.AutoSize = True
+        lbProductDeviceState.Location = New Point(756, 123)
+        lbProductDeviceState.Name = "lbProductDeviceState"
+        lbProductDeviceState.Size = New Size(37, 17)
+        lbProductDeviceState.TabIndex = 3
+        lbProductDeviceState.Text = "PASS"
+        ' 
+        ' lbProductBrandState
+        ' 
+        lbProductBrandState.AutoSize = True
+        lbProductBrandState.Location = New Point(756, 88)
+        lbProductBrandState.Name = "lbProductBrandState"
+        lbProductBrandState.Size = New Size(37, 17)
+        lbProductBrandState.TabIndex = 3
+        lbProductBrandState.Text = "PASS"
+        ' 
+        ' lbProductModelState
+        ' 
+        lbProductModelState.AutoSize = True
+        lbProductModelState.Location = New Point(756, 51)
+        lbProductModelState.Name = "lbProductModelState"
+        lbProductModelState.Size = New Size(37, 17)
+        lbProductModelState.TabIndex = 3
+        lbProductModelState.Text = "PASS"
+        ' 
+        ' lbProductNameState
+        ' 
+        lbProductNameState.AutoSize = True
+        lbProductNameState.Location = New Point(756, 15)
+        lbProductNameState.Name = "lbProductNameState"
+        lbProductNameState.Size = New Size(37, 17)
+        lbProductNameState.TabIndex = 3
+        lbProductNameState.Text = "PASS"
+        ' 
+        ' btPropertySetting
+        ' 
+        btPropertySetting.Location = New Point(13, 211)
+        btPropertySetting.Name = "btPropertySetting"
+        btPropertySetting.Size = New Size(75, 23)
+        btPropertySetting.TabIndex = 2
+        btPropertySetting.Text = "设置"
+        btPropertySetting.UseVisualStyleBackColor = True
+        ' 
+        ' tbProductManufacturer
+        ' 
+        tbProductManufacturer.Location = New Point(257, 158)
+        tbProductManufacturer.Name = "tbProductManufacturer"
+        tbProductManufacturer.Size = New Size(493, 23)
+        tbProductManufacturer.TabIndex = 1
+        ' 
+        ' lbProductManufacturer
+        ' 
+        lbProductManufacturer.AutoSize = True
+        lbProductManufacturer.Location = New Point(13, 158)
+        lbProductManufacturer.Name = "lbProductManufacturer"
+        lbProductManufacturer.Size = New Size(238, 17)
+        lbProductManufacturer.TabIndex = 0
+        lbProductManufacturer.Text = "设备制造商（ro.product.manufacturer)："
+        ' 
+        ' tbProductDevice
+        ' 
+        tbProductDevice.Location = New Point(257, 120)
+        tbProductDevice.Name = "tbProductDevice"
+        tbProductDevice.Size = New Size(493, 23)
+        tbProductDevice.TabIndex = 1
+        ' 
+        ' lbProductDevice
+        ' 
+        lbProductDevice.AutoSize = True
+        lbProductDevice.Location = New Point(13, 123)
+        lbProductDevice.Name = "lbProductDevice"
+        lbProductDevice.Size = New Size(186, 17)
+        lbProductDevice.TabIndex = 0
+        lbProductDevice.Text = "设备名称（ro.product.device)："
+        ' 
+        ' tbProductBrand
+        ' 
+        tbProductBrand.Location = New Point(257, 85)
+        tbProductBrand.Name = "tbProductBrand"
+        tbProductBrand.Size = New Size(493, 23)
+        tbProductBrand.TabIndex = 1
+        ' 
+        ' lbProductBrand
+        ' 
+        lbProductBrand.AutoSize = True
+        lbProductBrand.Location = New Point(13, 88)
+        lbProductBrand.Name = "lbProductBrand"
+        lbProductBrand.Size = New Size(184, 17)
+        lbProductBrand.TabIndex = 0
+        lbProductBrand.Text = "设备品牌（ro.product.brand)："
+        ' 
+        ' tbProductModel
+        ' 
+        tbProductModel.Location = New Point(257, 48)
+        tbProductModel.Name = "tbProductModel"
+        tbProductModel.Size = New Size(493, 23)
+        tbProductModel.TabIndex = 1
+        ' 
+        ' lbProductModel
+        ' 
+        lbProductModel.AutoSize = True
+        lbProductModel.Location = New Point(13, 51)
+        lbProductModel.Name = "lbProductModel"
+        lbProductModel.Size = New Size(186, 17)
+        lbProductModel.TabIndex = 0
+        lbProductModel.Text = "产品型号（ro.product.model)："
+        ' 
+        ' tbProductName
+        ' 
+        tbProductName.Location = New Point(257, 12)
+        tbProductName.Name = "tbProductName"
+        tbProductName.Size = New Size(493, 23)
+        tbProductName.TabIndex = 1
+        ' 
+        ' lbProductName
+        ' 
+        lbProductName.AutoSize = True
+        lbProductName.Location = New Point(13, 15)
+        lbProductName.Name = "lbProductName"
+        lbProductName.Size = New Size(181, 17)
+        lbProductName.TabIndex = 0
+        lbProductName.Text = "产品名称（ro.product.name)："
+        ' 
+        ' tpVersion
+        ' 
+        tpVersion.Controls.Add(lbVersionState)
+        tpVersion.Controls.Add(btVersion)
+        tpVersion.Controls.Add(tbVersion)
+        tpVersion.Controls.Add(lbVersion)
+        tpVersion.Font = New Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        tpVersion.Location = New Point(4, 48)
+        tpVersion.Name = "tpVersion"
+        tpVersion.Padding = New Padding(3)
+        tpVersion.Size = New Size(815, 449)
+        tpVersion.TabIndex = 1
+        tpVersion.Text = "版本号"
+        tpVersion.UseVisualStyleBackColor = True
+        ' 
+        ' lbVersionState
+        ' 
+        lbVersionState.AutoSize = True
+        lbVersionState.BackColor = Color.Transparent
+        lbVersionState.Font = New Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        lbVersionState.ForeColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        lbVersionState.Location = New Point(772, 41)
+        lbVersionState.Name = "lbVersionState"
+        lbVersionState.Size = New Size(37, 17)
+        lbVersionState.TabIndex = 3
+        lbVersionState.Text = "PASS"
+        lbVersionState.Visible = False
+        ' 
+        ' btVersion
+        ' 
+        btVersion.Location = New Point(6, 75)
+        btVersion.Name = "btVersion"
+        btVersion.Size = New Size(75, 23)
+        btVersion.TabIndex = 2
+        btVersion.Text = "设置"
+        btVersion.UseVisualStyleBackColor = True
+        ' 
+        ' tbVersion
+        ' 
+        tbVersion.Location = New Point(6, 33)
+        tbVersion.Name = "tbVersion"
+        tbVersion.Size = New Size(760, 23)
+        tbVersion.TabIndex = 1
+        ' 
+        ' lbVersion
+        ' 
+        lbVersion.AutoSize = True
+        lbVersion.Location = New Point(6, 13)
+        lbVersion.Name = "lbVersion"
+        lbVersion.Size = New Size(355, 17)
+        lbVersion.TabIndex = 0
+        lbVersion.Text = "版本号：（例如：UMIDIGI_G3 Tab_V1.0_`date +%Y%m%d`）"
+        ' 
+        ' tpFingerprint
+        ' 
+        tpFingerprint.Controls.Add(btFingerprintSet)
+        tpFingerprint.Controls.Add(btRandom)
+        tpFingerprint.Controls.Add(lbFingerprintState)
+        tpFingerprint.Controls.Add(tbFingerprint)
+        tpFingerprint.Controls.Add(lbFingerprint)
+        tpFingerprint.Location = New Point(4, 48)
+        tpFingerprint.Name = "tpFingerprint"
+        tpFingerprint.Size = New Size(815, 449)
+        tpFingerprint.TabIndex = 2
+        tpFingerprint.Text = "Fingerprint"
+        tpFingerprint.UseVisualStyleBackColor = True
+        ' 
+        ' btFingerprintSet
+        ' 
+        btFingerprintSet.Location = New Point(6, 76)
+        btFingerprintSet.Name = "btFingerprintSet"
+        btFingerprintSet.Size = New Size(75, 23)
+        btFingerprintSet.TabIndex = 4
+        btFingerprintSet.Text = "设置"
+        btFingerprintSet.UseVisualStyleBackColor = True
+        ' 
+        ' btRandom
+        ' 
+        btRandom.Location = New Point(685, 35)
+        btRandom.Name = "btRandom"
+        btRandom.Size = New Size(75, 23)
+        btRandom.TabIndex = 3
+        btRandom.Text = "随机生成"
+        btRandom.UseVisualStyleBackColor = True
+        ' 
+        ' lbFingerprintState
+        ' 
+        lbFingerprintState.AutoSize = True
+        lbFingerprintState.ForeColor = Color.Green
+        lbFingerprintState.Location = New Point(766, 38)
+        lbFingerprintState.Name = "lbFingerprintState"
+        lbFingerprintState.Size = New Size(37, 17)
+        lbFingerprintState.TabIndex = 2
+        lbFingerprintState.Text = "PASS"
+        ' 
+        ' tbFingerprint
+        ' 
+        tbFingerprint.Location = New Point(6, 35)
+        tbFingerprint.Name = "tbFingerprint"
+        tbFingerprint.Size = New Size(673, 23)
+        tbFingerprint.TabIndex = 1
+        ' 
+        ' lbFingerprint
+        ' 
+        lbFingerprint.AutoSize = True
+        lbFingerprint.Location = New Point(6, 13)
+        lbFingerprint.Name = "lbFingerprint"
+        lbFingerprint.Size = New Size(83, 17)
+        lbFingerprint.TabIndex = 0
+        lbFingerprint.Text = "Fingerprint："
+        ' 
+        ' tpWifi
+        ' 
+        tpWifi.Controls.Add(btWifiSetting)
+        tpWifi.Controls.Add(lbWifiScreenCastState)
+        tpWifi.Controls.Add(lbWifiHotspotNameState)
+        tpWifi.Controls.Add(lbWifiStatusState)
+        tpWifi.Controls.Add(tbWifiScreenCast)
+        tpWifi.Controls.Add(tbWifiHotspotName)
+        tpWifi.Controls.Add(lbWifiScreenCast)
+        tpWifi.Controls.Add(lbWifiHotspotName)
+        tpWifi.Controls.Add(rbWifiClose)
+        tpWifi.Controls.Add(rbWifiOpen)
+        tpWifi.Controls.Add(lbWifiStatus)
+        tpWifi.Location = New Point(4, 48)
+        tpWifi.Name = "tpWifi"
+        tpWifi.Size = New Size(815, 449)
+        tpWifi.TabIndex = 4
+        tpWifi.Text = "WiFi"
+        tpWifi.UseVisualStyleBackColor = True
+        ' 
+        ' btWifiSetting
+        ' 
+        btWifiSetting.Location = New Point(14, 149)
+        btWifiSetting.Name = "btWifiSetting"
+        btWifiSetting.Size = New Size(75, 23)
+        btWifiSetting.TabIndex = 5
+        btWifiSetting.Text = "设置"
+        btWifiSetting.UseVisualStyleBackColor = True
+        ' 
+        ' lbWifiScreenCastState
+        ' 
+        lbWifiScreenCastState.AutoSize = True
+        lbWifiScreenCastState.Location = New Point(757, 100)
+        lbWifiScreenCastState.Name = "lbWifiScreenCastState"
+        lbWifiScreenCastState.Size = New Size(37, 17)
+        lbWifiScreenCastState.TabIndex = 4
+        lbWifiScreenCastState.Text = "PASS"
+        ' 
+        ' lbWifiHotspotNameState
+        ' 
+        lbWifiHotspotNameState.AutoSize = True
+        lbWifiHotspotNameState.Location = New Point(757, 59)
+        lbWifiHotspotNameState.Name = "lbWifiHotspotNameState"
+        lbWifiHotspotNameState.Size = New Size(37, 17)
+        lbWifiHotspotNameState.TabIndex = 4
+        lbWifiHotspotNameState.Text = "PASS"
+        ' 
+        ' lbWifiStatusState
+        ' 
+        lbWifiStatusState.AutoSize = True
+        lbWifiStatusState.Location = New Point(757, 22)
+        lbWifiStatusState.Name = "lbWifiStatusState"
+        lbWifiStatusState.Size = New Size(37, 17)
+        lbWifiStatusState.TabIndex = 4
+        lbWifiStatusState.Text = "PASS"
+        ' 
+        ' tbWifiScreenCast
+        ' 
+        tbWifiScreenCast.Location = New Point(116, 97)
+        tbWifiScreenCast.Name = "tbWifiScreenCast"
+        tbWifiScreenCast.Size = New Size(619, 23)
+        tbWifiScreenCast.TabIndex = 3
+        ' 
+        ' tbWifiHotspotName
+        ' 
+        tbWifiHotspotName.Location = New Point(116, 56)
+        tbWifiHotspotName.Name = "tbWifiHotspotName"
+        tbWifiHotspotName.Size = New Size(619, 23)
+        tbWifiHotspotName.TabIndex = 3
+        ' 
+        ' lbWifiScreenCast
+        ' 
+        lbWifiScreenCast.AutoSize = True
+        lbWifiScreenCast.Location = New Point(14, 100)
+        lbWifiScreenCast.Name = "lbWifiScreenCast"
+        lbWifiScreenCast.Size = New Size(96, 17)
+        lbWifiScreenCast.TabIndex = 2
+        lbWifiScreenCast.Text = "WiFi 投屏名称："
+        ' 
+        ' lbWifiHotspotName
+        ' 
+        lbWifiHotspotName.AutoSize = True
+        lbWifiHotspotName.Location = New Point(14, 59)
+        lbWifiHotspotName.Name = "lbWifiHotspotName"
+        lbWifiHotspotName.Size = New Size(96, 17)
+        lbWifiHotspotName.TabIndex = 2
+        lbWifiHotspotName.Text = "WiFi 热点名称："
+        ' 
+        ' rbWifiClose
+        ' 
+        rbWifiClose.AutoSize = True
+        rbWifiClose.Checked = True
+        rbWifiClose.Location = New Point(204, 18)
+        rbWifiClose.Name = "rbWifiClose"
+        rbWifiClose.Size = New Size(50, 21)
+        rbWifiClose.TabIndex = 1
+        rbWifiClose.TabStop = True
+        rbWifiClose.Text = "关闭"
+        rbWifiClose.UseVisualStyleBackColor = True
+        ' 
+        ' rbWifiOpen
+        ' 
+        rbWifiOpen.AutoSize = True
+        rbWifiOpen.Location = New Point(116, 18)
+        rbWifiOpen.Name = "rbWifiOpen"
+        rbWifiOpen.Size = New Size(50, 21)
+        rbWifiOpen.TabIndex = 1
+        rbWifiOpen.TabStop = True
+        rbWifiOpen.Text = "打开"
+        rbWifiOpen.UseVisualStyleBackColor = True
+        ' 
+        ' lbWifiStatus
+        ' 
+        lbWifiStatus.AutoSize = True
+        lbWifiStatus.Location = New Point(14, 20)
+        lbWifiStatus.Name = "lbWifiStatus"
+        lbWifiStatus.Size = New Size(96, 17)
+        lbWifiStatus.TabIndex = 0
+        lbWifiStatus.Text = "WiFi 默认状态："
+        ' 
+        ' tpBluetooth
+        ' 
+        tpBluetooth.Controls.Add(btBluetoothSetting)
+        tpBluetooth.Controls.Add(tbBluetoothName)
+        tpBluetooth.Controls.Add(rbBluetoothClose)
+        tpBluetooth.Controls.Add(rbBluetoothOpen)
+        tpBluetooth.Controls.Add(lbBluetoothNameState)
+        tpBluetooth.Controls.Add(lbBluetoothName)
+        tpBluetooth.Controls.Add(lbBluetoothStatusState)
+        tpBluetooth.Controls.Add(lbBluetoothStatus)
+        tpBluetooth.Location = New Point(4, 48)
+        tpBluetooth.Name = "tpBluetooth"
+        tpBluetooth.Size = New Size(815, 449)
+        tpBluetooth.TabIndex = 5
+        tpBluetooth.Text = "蓝牙"
+        tpBluetooth.UseVisualStyleBackColor = True
+        ' 
+        ' btBluetoothSetting
+        ' 
+        btBluetoothSetting.Location = New Point(20, 111)
+        btBluetoothSetting.Name = "btBluetoothSetting"
+        btBluetoothSetting.Size = New Size(75, 23)
+        btBluetoothSetting.TabIndex = 3
+        btBluetoothSetting.Text = "设置"
+        btBluetoothSetting.UseVisualStyleBackColor = True
+        ' 
+        ' tbBluetoothName
+        ' 
+        tbBluetoothName.Location = New Point(94, 59)
+        tbBluetoothName.Name = "tbBluetoothName"
+        tbBluetoothName.Size = New Size(644, 23)
+        tbBluetoothName.TabIndex = 2
+        ' 
+        ' rbBluetoothClose
+        ' 
+        rbBluetoothClose.AutoSize = True
+        rbBluetoothClose.Checked = True
+        rbBluetoothClose.Location = New Point(243, 21)
+        rbBluetoothClose.Name = "rbBluetoothClose"
+        rbBluetoothClose.Size = New Size(50, 21)
+        rbBluetoothClose.TabIndex = 1
+        rbBluetoothClose.TabStop = True
+        rbBluetoothClose.Text = "关闭"
+        rbBluetoothClose.UseVisualStyleBackColor = True
+        ' 
+        ' rbBluetoothOpen
+        ' 
+        rbBluetoothOpen.AutoSize = True
+        rbBluetoothOpen.Location = New Point(118, 21)
+        rbBluetoothOpen.Name = "rbBluetoothOpen"
+        rbBluetoothOpen.Size = New Size(50, 21)
+        rbBluetoothOpen.TabIndex = 1
+        rbBluetoothOpen.Text = "打开"
+        rbBluetoothOpen.UseVisualStyleBackColor = True
+        ' 
+        ' lbBluetoothNameState
+        ' 
+        lbBluetoothNameState.AutoSize = True
+        lbBluetoothNameState.Location = New Point(759, 62)
+        lbBluetoothNameState.Name = "lbBluetoothNameState"
+        lbBluetoothNameState.Size = New Size(37, 17)
+        lbBluetoothNameState.TabIndex = 0
+        lbBluetoothNameState.Text = "PASS"
+        ' 
+        ' lbBluetoothName
+        ' 
+        lbBluetoothName.AutoSize = True
+        lbBluetoothName.Location = New Point(20, 65)
+        lbBluetoothName.Name = "lbBluetoothName"
+        lbBluetoothName.Size = New Size(68, 17)
+        lbBluetoothName.TabIndex = 0
+        lbBluetoothName.Text = "蓝牙名称："
+        ' 
+        ' lbBluetoothStatusState
+        ' 
+        lbBluetoothStatusState.AutoSize = True
+        lbBluetoothStatusState.Location = New Point(759, 23)
+        lbBluetoothStatusState.Name = "lbBluetoothStatusState"
+        lbBluetoothStatusState.Size = New Size(37, 17)
+        lbBluetoothStatusState.TabIndex = 0
+        lbBluetoothStatusState.Text = "PASS"
+        ' 
+        ' lbBluetoothStatus
+        ' 
+        lbBluetoothStatus.AutoSize = True
+        lbBluetoothStatus.Location = New Point(20, 23)
+        lbBluetoothStatus.Name = "lbBluetoothStatus"
+        lbBluetoothStatus.Size = New Size(92, 17)
+        lbBluetoothStatus.TabIndex = 0
+        lbBluetoothStatus.Text = "蓝牙默认状态："
+        ' 
+        ' tpLanguage
+        ' 
+        tpLanguage.Controls.Add(btLanguageSetting)
+        tpLanguage.Controls.Add(cbLanguage)
+        tpLanguage.Controls.Add(lbLanguageState)
+        tpLanguage.Controls.Add(Label1)
+        tpLanguage.Location = New Point(4, 48)
+        tpLanguage.Name = "tpLanguage"
+        tpLanguage.Size = New Size(815, 449)
+        tpLanguage.TabIndex = 6
+        tpLanguage.Text = "语言"
+        tpLanguage.UseVisualStyleBackColor = True
+        ' 
+        ' btLanguageSetting
+        ' 
+        btLanguageSetting.Location = New Point(13, 67)
+        btLanguageSetting.Name = "btLanguageSetting"
+        btLanguageSetting.Size = New Size(75, 23)
+        btLanguageSetting.TabIndex = 4
+        btLanguageSetting.Text = "设置"
+        btLanguageSetting.UseVisualStyleBackColor = True
+        ' 
+        ' cbLanguage
+        ' 
+        cbLanguage.FormattingEnabled = True
+        cbLanguage.Location = New Point(63, 16)
+        cbLanguage.Name = "cbLanguage"
+        cbLanguage.Size = New Size(667, 25)
+        cbLanguage.TabIndex = 2
+        ' 
+        ' lbLanguageState
+        ' 
+        lbLanguageState.AutoSize = True
+        lbLanguageState.Location = New Point(752, 19)
+        lbLanguageState.Name = "lbLanguageState"
+        lbLanguageState.Size = New Size(37, 17)
+        lbLanguageState.TabIndex = 0
+        lbLanguageState.Text = "PASS"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(13, 19)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(44, 17)
+        Label1.TabIndex = 0
+        Label1.Text = "语言："
+        ' 
+        ' tpTimezone
+        ' 
+        tpTimezone.Controls.Add(rbTimezoneClose)
+        tpTimezone.Controls.Add(rbTimezoneOpen)
+        tpTimezone.Controls.Add(lbAutoTimezone)
+        tpTimezone.Controls.Add(cbTimezone)
+        tpTimezone.Controls.Add(lbAutoTimezoneState)
+        tpTimezone.Controls.Add(lbTimezoneState)
+        tpTimezone.Controls.Add(lbTimezone)
+        tpTimezone.Controls.Add(btTimezoneSetting)
+        tpTimezone.Location = New Point(4, 48)
+        tpTimezone.Name = "tpTimezone"
+        tpTimezone.Size = New Size(815, 449)
+        tpTimezone.TabIndex = 7
+        tpTimezone.Text = "时区"
+        tpTimezone.UseVisualStyleBackColor = True
+        ' 
+        ' rbTimezoneClose
+        ' 
+        rbTimezoneClose.AutoSize = True
+        rbTimezoneClose.Location = New Point(220, 16)
+        rbTimezoneClose.Name = "rbTimezoneClose"
+        rbTimezoneClose.Size = New Size(50, 21)
+        rbTimezoneClose.TabIndex = 10
+        rbTimezoneClose.TabStop = True
+        rbTimezoneClose.Text = "关闭"
+        rbTimezoneClose.UseVisualStyleBackColor = True
+        ' 
+        ' rbTimezoneOpen
+        ' 
+        rbTimezoneOpen.AutoSize = True
+        rbTimezoneOpen.Location = New Point(109, 16)
+        rbTimezoneOpen.Name = "rbTimezoneOpen"
+        rbTimezoneOpen.Size = New Size(50, 21)
+        rbTimezoneOpen.TabIndex = 10
+        rbTimezoneOpen.TabStop = True
+        rbTimezoneOpen.Text = "开启"
+        rbTimezoneOpen.UseVisualStyleBackColor = True
+        ' 
+        ' lbAutoTimezone
+        ' 
+        lbAutoTimezone.AutoSize = True
+        lbAutoTimezone.Location = New Point(11, 18)
+        lbAutoTimezone.Name = "lbAutoTimezone"
+        lbAutoTimezone.Size = New Size(92, 17)
+        lbAutoTimezone.TabIndex = 9
+        lbAutoTimezone.Text = "自动更新时区："
+        ' 
+        ' cbTimezone
+        ' 
+        cbTimezone.FormattingEnabled = True
+        cbTimezone.Location = New Point(61, 54)
+        cbTimezone.Name = "cbTimezone"
+        cbTimezone.Size = New Size(667, 25)
+        cbTimezone.TabIndex = 8
+        ' 
+        ' lbAutoTimezoneState
+        ' 
+        lbAutoTimezoneState.AutoSize = True
+        lbAutoTimezoneState.Location = New Point(750, 20)
+        lbAutoTimezoneState.Name = "lbAutoTimezoneState"
+        lbAutoTimezoneState.Size = New Size(37, 17)
+        lbAutoTimezoneState.TabIndex = 6
+        lbAutoTimezoneState.Text = "PASS"
+        ' 
+        ' lbTimezoneState
+        ' 
+        lbTimezoneState.AutoSize = True
+        lbTimezoneState.Location = New Point(750, 57)
+        lbTimezoneState.Name = "lbTimezoneState"
+        lbTimezoneState.Size = New Size(37, 17)
+        lbTimezoneState.TabIndex = 6
+        lbTimezoneState.Text = "PASS"
+        ' 
+        ' lbTimezone
+        ' 
+        lbTimezone.AutoSize = True
+        lbTimezone.Location = New Point(11, 57)
+        lbTimezone.Name = "lbTimezone"
+        lbTimezone.Size = New Size(44, 17)
+        lbTimezone.TabIndex = 7
+        lbTimezone.Text = "时区："
+        ' 
+        ' btTimezoneSetting
+        ' 
+        btTimezoneSetting.Location = New Point(11, 108)
+        btTimezoneSetting.Name = "btTimezoneSetting"
+        btTimezoneSetting.Size = New Size(75, 23)
+        btTimezoneSetting.TabIndex = 5
+        btTimezoneSetting.Text = "设置"
+        btTimezoneSetting.UseVisualStyleBackColor = True
+        ' 
+        ' tpLogo
+        ' 
+        tpLogo.Controls.Add(btLogoSetting)
+        tpLogo.Controls.Add(bLogo)
+        tpLogo.Controls.Add(tbLogo)
+        tpLogo.Controls.Add(lbLogoState)
+        tpLogo.Controls.Add(lbLogo)
+        tpLogo.Location = New Point(4, 48)
+        tpLogo.Name = "tpLogo"
+        tpLogo.Size = New Size(815, 449)
+        tpLogo.TabIndex = 8
+        tpLogo.Text = "LOGO"
+        tpLogo.UseVisualStyleBackColor = True
+        ' 
+        ' btLogoSetting
+        ' 
+        btLogoSetting.Location = New Point(18, 65)
+        btLogoSetting.Name = "btLogoSetting"
+        btLogoSetting.Size = New Size(75, 23)
+        btLogoSetting.TabIndex = 2
+        btLogoSetting.Text = "设置"
+        btLogoSetting.UseVisualStyleBackColor = True
+        ' 
+        ' bLogo
+        ' 
+        bLogo.Location = New Point(654, 17)
+        bLogo.Name = "bLogo"
+        bLogo.Size = New Size(75, 23)
+        bLogo.TabIndex = 2
+        bLogo.Text = "选择图片"
+        bLogo.UseVisualStyleBackColor = True
+        ' 
+        ' tbLogo
+        ' 
+        tbLogo.Location = New Point(102, 17)
+        tbLogo.Name = "tbLogo"
+        tbLogo.Size = New Size(546, 23)
+        tbLogo.TabIndex = 1
+        ' 
+        ' lbLogoState
+        ' 
+        lbLogoState.AutoSize = True
+        lbLogoState.Location = New Point(753, 20)
+        lbLogoState.Name = "lbLogoState"
+        lbLogoState.Size = New Size(37, 17)
+        lbLogoState.TabIndex = 0
+        lbLogoState.Text = "PASS"
+        ' 
+        ' lbLogo
+        ' 
+        lbLogo.AutoSize = True
+        lbLogo.Location = New Point(18, 20)
+        lbLogo.Name = "lbLogo"
+        lbLogo.Size = New Size(78, 17)
+        lbLogo.TabIndex = 0
+        lbLogo.Text = "Logo 图片："
+        ' 
+        ' tpWallpaper
+        ' 
+        tpWallpaper.Controls.Add(btWallpaperSetting)
+        tpWallpaper.Controls.Add(btInserWallpaper)
+        tpWallpaper.Controls.Add(btWallpaper)
+        tpWallpaper.Controls.Add(tbInsertWallpaper)
+        tpWallpaper.Controls.Add(lbInsertWallpaperState)
+        tpWallpaper.Controls.Add(tbWallpaper)
+        tpWallpaper.Controls.Add(lbInsertWallpaper)
+        tpWallpaper.Controls.Add(lbWallpaperState)
+        tpWallpaper.Controls.Add(lbWallpaper)
+        tpWallpaper.Location = New Point(4, 48)
+        tpWallpaper.Name = "tpWallpaper"
+        tpWallpaper.Size = New Size(815, 449)
+        tpWallpaper.TabIndex = 9
+        tpWallpaper.Text = "壁纸"
+        tpWallpaper.UseVisualStyleBackColor = True
+        ' 
+        ' btWallpaperSetting
+        ' 
+        btWallpaperSetting.Location = New Point(17, 103)
+        btWallpaperSetting.Name = "btWallpaperSetting"
+        btWallpaperSetting.Size = New Size(75, 23)
+        btWallpaperSetting.TabIndex = 6
+        btWallpaperSetting.Text = "设置"
+        btWallpaperSetting.UseVisualStyleBackColor = True
+        ' 
+        ' btInserWallpaper
+        ' 
+        btInserWallpaper.Location = New Point(647, 53)
+        btInserWallpaper.Name = "btInserWallpaper"
+        btInserWallpaper.Size = New Size(81, 23)
+        btInserWallpaper.TabIndex = 7
+        btInserWallpaper.Text = "选择内置壁纸"
+        btInserWallpaper.UseVisualStyleBackColor = True
+        ' 
+        ' btWallpaper
+        ' 
+        btWallpaper.Location = New Point(647, 14)
+        btWallpaper.Name = "btWallpaper"
+        btWallpaper.Size = New Size(81, 23)
+        btWallpaper.TabIndex = 7
+        btWallpaper.Text = "选择图片"
+        btWallpaper.UseVisualStyleBackColor = True
+        ' 
+        ' tbInsertWallpaper
+        ' 
+        tbInsertWallpaper.Location = New Point(101, 53)
+        tbInsertWallpaper.Name = "tbInsertWallpaper"
+        tbInsertWallpaper.Size = New Size(540, 23)
+        tbInsertWallpaper.TabIndex = 5
+        ' 
+        ' lbInsertWallpaperState
+        ' 
+        lbInsertWallpaperState.AutoSize = True
+        lbInsertWallpaperState.Location = New Point(752, 56)
+        lbInsertWallpaperState.Name = "lbInsertWallpaperState"
+        lbInsertWallpaperState.Size = New Size(37, 17)
+        lbInsertWallpaperState.TabIndex = 3
+        lbInsertWallpaperState.Text = "PASS"
+        ' 
+        ' tbWallpaper
+        ' 
+        tbWallpaper.Location = New Point(101, 14)
+        tbWallpaper.Name = "tbWallpaper"
+        tbWallpaper.Size = New Size(540, 23)
+        tbWallpaper.TabIndex = 5
+        ' 
+        ' lbInsertWallpaper
+        ' 
+        lbInsertWallpaper.AutoSize = True
+        lbInsertWallpaper.Location = New Point(17, 56)
+        lbInsertWallpaper.Name = "lbInsertWallpaper"
+        lbInsertWallpaper.Size = New Size(68, 17)
+        lbInsertWallpaper.TabIndex = 4
+        lbInsertWallpaper.Text = "内置壁纸："
+        ' 
+        ' lbWallpaperState
+        ' 
+        lbWallpaperState.AutoSize = True
+        lbWallpaperState.Location = New Point(752, 17)
+        lbWallpaperState.Name = "lbWallpaperState"
+        lbWallpaperState.Size = New Size(37, 17)
+        lbWallpaperState.TabIndex = 3
+        lbWallpaperState.Text = "PASS"
+        ' 
+        ' lbWallpaper
+        ' 
+        lbWallpaper.AutoSize = True
+        lbWallpaper.Location = New Point(17, 17)
+        lbWallpaper.Name = "lbWallpaper"
+        lbWallpaper.Size = New Size(44, 17)
+        lbWallpaper.TabIndex = 4
+        lbWallpaper.Text = "壁纸："
+        ' 
+        ' tpSample
+        ' 
+        tpSample.Controls.Add(btSampleName)
+        tpSample.Controls.Add(btSample)
+        tpSample.Controls.Add(tbSampleName)
+        tpSample.Controls.Add(btSampleSetting)
+        tpSample.Controls.Add(rbSampleClose)
+        tpSample.Controls.Add(rbSampleOpen)
+        tpSample.Controls.Add(Label3)
+        tpSample.Controls.Add(lbSampleNameState)
+        tpSample.Controls.Add(lbSampleState)
+        tpSample.Controls.Add(lbSample)
+        tpSample.Location = New Point(4, 48)
+        tpSample.Name = "tpSample"
+        tpSample.Size = New Size(815, 449)
+        tpSample.TabIndex = 10
+        tpSample.Text = "送样"
+        tpSample.UseVisualStyleBackColor = True
+        ' 
+        ' btSampleName
+        ' 
+        btSampleName.Location = New Point(660, 64)
+        btSampleName.Name = "btSampleName"
+        btSampleName.Size = New Size(75, 23)
+        btSampleName.TabIndex = 4
+        btSampleName.Text = "设置"
+        btSampleName.UseVisualStyleBackColor = True
+        ' 
+        ' btSample
+        ' 
+        btSample.Location = New Point(660, 19)
+        btSample.Name = "btSample"
+        btSample.Size = New Size(75, 23)
+        btSample.TabIndex = 4
+        btSample.Text = "设置"
+        btSample.UseVisualStyleBackColor = True
+        ' 
+        ' tbSampleName
+        ' 
+        tbSampleName.Location = New Point(97, 64)
+        tbSampleName.Name = "tbSampleName"
+        tbSampleName.Size = New Size(549, 23)
+        tbSampleName.TabIndex = 3
+        ' 
+        ' btSampleSetting
+        ' 
+        btSampleSetting.Location = New Point(23, 119)
+        btSampleSetting.Name = "btSampleSetting"
+        btSampleSetting.Size = New Size(75, 23)
+        btSampleSetting.TabIndex = 2
+        btSampleSetting.Text = "全部设置"
+        btSampleSetting.UseVisualStyleBackColor = True
+        ' 
+        ' rbSampleClose
+        ' 
+        rbSampleClose.AutoSize = True
+        rbSampleClose.Checked = True
+        rbSampleClose.Location = New Point(205, 20)
+        rbSampleClose.Name = "rbSampleClose"
+        rbSampleClose.Size = New Size(50, 21)
+        rbSampleClose.TabIndex = 1
+        rbSampleClose.TabStop = True
+        rbSampleClose.Text = "关闭"
+        rbSampleClose.UseVisualStyleBackColor = True
+        ' 
+        ' rbSampleOpen
+        ' 
+        rbSampleOpen.AutoSize = True
+        rbSampleOpen.Location = New Point(97, 20)
+        rbSampleOpen.Name = "rbSampleOpen"
+        rbSampleOpen.Size = New Size(50, 21)
+        rbSampleOpen.TabIndex = 1
+        rbSampleOpen.Text = "开启"
+        rbSampleOpen.UseVisualStyleBackColor = True
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(23, 67)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(68, 17)
+        Label3.TabIndex = 0
+        Label3.Text = "设备名称："
+        ' 
+        ' lbSampleNameState
+        ' 
+        lbSampleNameState.AutoSize = True
+        lbSampleNameState.Location = New Point(758, 67)
+        lbSampleNameState.Name = "lbSampleNameState"
+        lbSampleNameState.Size = New Size(37, 17)
+        lbSampleNameState.TabIndex = 0
+        lbSampleNameState.Text = "PASS"
+        ' 
+        ' lbSampleState
+        ' 
+        lbSampleState.AutoSize = True
+        lbSampleState.Location = New Point(758, 22)
+        lbSampleState.Name = "lbSampleState"
+        lbSampleState.Size = New Size(37, 17)
+        lbSampleState.TabIndex = 0
+        lbSampleState.Text = "PASS"
+        ' 
+        ' lbSample
+        ' 
+        lbSample.AutoSize = True
+        lbSample.Location = New Point(23, 20)
+        lbSample.Name = "lbSample"
+        lbSample.Size = New Size(68, 17)
+        lbSample.TabIndex = 0
+        lbSample.Text = "送样功能："
+        ' 
+        ' tpScreenBrightness
+        ' 
+        tpScreenBrightness.Controls.Add(btBrightnessAllSet)
+        tpScreenBrightness.Controls.Add(btMinBrightness)
+        tpScreenBrightness.Controls.Add(btMaxBrightness)
+        tpScreenBrightness.Controls.Add(btDefaultBrightness)
+        tpScreenBrightness.Controls.Add(lbMinBrightnessStatus)
+        tpScreenBrightness.Controls.Add(lbMaxBrightnessStatus)
+        tpScreenBrightness.Controls.Add(lbDefaultBrightnessStatus)
+        tpScreenBrightness.Controls.Add(tbMinBrightness)
+        tpScreenBrightness.Controls.Add(lbMinBrightness)
+        tpScreenBrightness.Controls.Add(tbMaxBrightness)
+        tpScreenBrightness.Controls.Add(lbMaxBrightness)
+        tpScreenBrightness.Controls.Add(tbDefaultBrightness)
+        tpScreenBrightness.Controls.Add(lbDefaultBrightness)
+        tpScreenBrightness.Location = New Point(4, 48)
+        tpScreenBrightness.Name = "tpScreenBrightness"
+        tpScreenBrightness.Size = New Size(815, 449)
+        tpScreenBrightness.TabIndex = 11
+        tpScreenBrightness.Text = "屏幕亮度"
+        tpScreenBrightness.UseVisualStyleBackColor = True
+        ' 
+        ' btBrightnessAllSet
+        ' 
+        btBrightnessAllSet.Location = New Point(15, 144)
+        btBrightnessAllSet.Name = "btBrightnessAllSet"
+        btBrightnessAllSet.Size = New Size(75, 23)
+        btBrightnessAllSet.TabIndex = 2
+        btBrightnessAllSet.Text = "全部设置"
+        btBrightnessAllSet.UseVisualStyleBackColor = True
+        ' 
+        ' btMinBrightness
+        ' 
+        btMinBrightness.Location = New Point(657, 92)
+        btMinBrightness.Name = "btMinBrightness"
+        btMinBrightness.Size = New Size(75, 23)
+        btMinBrightness.TabIndex = 2
+        btMinBrightness.Text = "设置"
+        btMinBrightness.UseVisualStyleBackColor = True
+        ' 
+        ' btMaxBrightness
+        ' 
+        btMaxBrightness.Location = New Point(657, 53)
+        btMaxBrightness.Name = "btMaxBrightness"
+        btMaxBrightness.Size = New Size(75, 23)
+        btMaxBrightness.TabIndex = 2
+        btMaxBrightness.Text = "设置"
+        btMaxBrightness.UseVisualStyleBackColor = True
+        ' 
+        ' btDefaultBrightness
+        ' 
+        btDefaultBrightness.Location = New Point(657, 13)
+        btDefaultBrightness.Name = "btDefaultBrightness"
+        btDefaultBrightness.Size = New Size(75, 23)
+        btDefaultBrightness.TabIndex = 2
+        btDefaultBrightness.Text = "设置"
+        btDefaultBrightness.UseVisualStyleBackColor = True
+        ' 
+        ' lbMinBrightnessStatus
+        ' 
+        lbMinBrightnessStatus.AutoSize = True
+        lbMinBrightnessStatus.Location = New Point(757, 95)
+        lbMinBrightnessStatus.Name = "lbMinBrightnessStatus"
+        lbMinBrightnessStatus.Size = New Size(37, 17)
+        lbMinBrightnessStatus.TabIndex = 0
+        lbMinBrightnessStatus.Text = "PASS"
+        ' 
+        ' lbMaxBrightnessStatus
+        ' 
+        lbMaxBrightnessStatus.AutoSize = True
+        lbMaxBrightnessStatus.Location = New Point(757, 56)
+        lbMaxBrightnessStatus.Name = "lbMaxBrightnessStatus"
+        lbMaxBrightnessStatus.Size = New Size(37, 17)
+        lbMaxBrightnessStatus.TabIndex = 0
+        lbMaxBrightnessStatus.Text = "PASS"
+        ' 
+        ' lbDefaultBrightnessStatus
+        ' 
+        lbDefaultBrightnessStatus.AutoSize = True
+        lbDefaultBrightnessStatus.Location = New Point(757, 16)
+        lbDefaultBrightnessStatus.Name = "lbDefaultBrightnessStatus"
+        lbDefaultBrightnessStatus.Size = New Size(37, 17)
+        lbDefaultBrightnessStatus.TabIndex = 0
+        lbDefaultBrightnessStatus.Text = "PASS"
+        ' 
+        ' tbMinBrightness
+        ' 
+        tbMinBrightness.Location = New Point(89, 92)
+        tbMinBrightness.Name = "tbMinBrightness"
+        tbMinBrightness.Size = New Size(562, 23)
+        tbMinBrightness.TabIndex = 1
+        ' 
+        ' lbMinBrightness
+        ' 
+        lbMinBrightness.AutoSize = True
+        lbMinBrightness.Location = New Point(15, 95)
+        lbMinBrightness.Name = "lbMinBrightness"
+        lbMinBrightness.Size = New Size(68, 17)
+        lbMinBrightness.TabIndex = 0
+        lbMinBrightness.Text = "最小亮度："
+        ' 
+        ' tbMaxBrightness
+        ' 
+        tbMaxBrightness.Location = New Point(89, 53)
+        tbMaxBrightness.Name = "tbMaxBrightness"
+        tbMaxBrightness.Size = New Size(562, 23)
+        tbMaxBrightness.TabIndex = 1
+        ' 
+        ' lbMaxBrightness
+        ' 
+        lbMaxBrightness.AutoSize = True
+        lbMaxBrightness.Location = New Point(15, 56)
+        lbMaxBrightness.Name = "lbMaxBrightness"
+        lbMaxBrightness.Size = New Size(68, 17)
+        lbMaxBrightness.TabIndex = 0
+        lbMaxBrightness.Text = "最大亮度："
+        ' 
+        ' tbDefaultBrightness
+        ' 
+        tbDefaultBrightness.Location = New Point(89, 13)
+        tbDefaultBrightness.Name = "tbDefaultBrightness"
+        tbDefaultBrightness.Size = New Size(562, 23)
+        tbDefaultBrightness.TabIndex = 1
+        ' 
+        ' lbDefaultBrightness
+        ' 
+        lbDefaultBrightness.AutoSize = True
+        lbDefaultBrightness.Location = New Point(15, 16)
+        lbDefaultBrightness.Name = "lbDefaultBrightness"
+        lbDefaultBrightness.Size = New Size(68, 17)
+        lbDefaultBrightness.TabIndex = 0
+        lbDefaultBrightness.Text = "默认亮度："
+        ' 
+        ' tpVolume
+        ' 
+        tpVolume.Controls.Add(cbOtherVolume)
+        tpVolume.Controls.Add(cbNotifyVolume)
+        tpVolume.Controls.Add(cbAlarmVolume)
+        tpVolume.Controls.Add(cbMusicVolume)
+        tpVolume.Controls.Add(cbRingVolume)
+        tpVolume.Controls.Add(cbCallVolume)
+        tpVolume.Controls.Add(btVolumeAllSet)
+        tpVolume.Controls.Add(btOtherVolume)
+        tpVolume.Controls.Add(btNotifyVolume)
+        tpVolume.Controls.Add(btAlarmVolume)
+        tpVolume.Controls.Add(btMusicVolume)
+        tpVolume.Controls.Add(btRingVolume)
+        tpVolume.Controls.Add(btCallVolume)
+        tpVolume.Controls.Add(lbOtherVolumeStatus)
+        tpVolume.Controls.Add(lbNotifyVolumeStatus)
+        tpVolume.Controls.Add(lbAlarmVolumeStatus)
+        tpVolume.Controls.Add(lbMusicVolumeStatus)
+        tpVolume.Controls.Add(lbRingVolumeStatus)
+        tpVolume.Controls.Add(lbCallVolumeStatus)
+        tpVolume.Controls.Add(lbOtherVolume)
+        tpVolume.Controls.Add(lbNotifyVolume)
+        tpVolume.Controls.Add(lbAlarmVolume)
+        tpVolume.Controls.Add(lbMusicVolume)
+        tpVolume.Controls.Add(lbRingVolume)
+        tpVolume.Controls.Add(lbCallVolume)
+        tpVolume.Location = New Point(4, 48)
+        tpVolume.Name = "tpVolume"
+        tpVolume.Size = New Size(815, 449)
+        tpVolume.TabIndex = 12
+        tpVolume.Text = "系统音量"
+        tpVolume.UseVisualStyleBackColor = True
+        ' 
+        ' cbOtherVolume
+        ' 
+        cbOtherVolume.FormattingEnabled = True
+        cbOtherVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        cbOtherVolume.Location = New Point(113, 206)
+        cbOtherVolume.Name = "cbOtherVolume"
+        cbOtherVolume.Size = New Size(546, 25)
+        cbOtherVolume.TabIndex = 3
+        ' 
+        ' cbNotifyVolume
+        ' 
+        cbNotifyVolume.FormattingEnabled = True
+        cbNotifyVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        cbNotifyVolume.Location = New Point(113, 168)
+        cbNotifyVolume.Name = "cbNotifyVolume"
+        cbNotifyVolume.Size = New Size(546, 25)
+        cbNotifyVolume.TabIndex = 3
+        ' 
+        ' cbAlarmVolume
+        ' 
+        cbAlarmVolume.FormattingEnabled = True
+        cbAlarmVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        cbAlarmVolume.Location = New Point(113, 132)
+        cbAlarmVolume.Name = "cbAlarmVolume"
+        cbAlarmVolume.Size = New Size(546, 25)
+        cbAlarmVolume.TabIndex = 3
+        ' 
+        ' cbMusicVolume
+        ' 
+        cbMusicVolume.FormattingEnabled = True
+        cbMusicVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        cbMusicVolume.Location = New Point(113, 95)
+        cbMusicVolume.Name = "cbMusicVolume"
+        cbMusicVolume.Size = New Size(546, 25)
+        cbMusicVolume.TabIndex = 3
+        ' 
+        ' cbRingVolume
+        ' 
+        cbRingVolume.FormattingEnabled = True
+        cbRingVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        cbRingVolume.Location = New Point(113, 58)
+        cbRingVolume.Name = "cbRingVolume"
+        cbRingVolume.Size = New Size(546, 25)
+        cbRingVolume.TabIndex = 3
+        ' 
+        ' cbCallVolume
+        ' 
+        cbCallVolume.FormattingEnabled = True
+        cbCallVolume.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7"})
+        cbCallVolume.Location = New Point(113, 20)
+        cbCallVolume.Name = "cbCallVolume"
+        cbCallVolume.Size = New Size(546, 25)
+        cbCallVolume.TabIndex = 3
+        ' 
+        ' btVolumeAllSet
+        ' 
+        btVolumeAllSet.Location = New Point(15, 263)
+        btVolumeAllSet.Name = "btVolumeAllSet"
+        btVolumeAllSet.Size = New Size(75, 23)
+        btVolumeAllSet.TabIndex = 2
+        btVolumeAllSet.Text = "全部设置"
+        btVolumeAllSet.UseVisualStyleBackColor = True
+        ' 
+        ' btOtherVolume
+        ' 
+        btOtherVolume.Location = New Point(665, 206)
+        btOtherVolume.Name = "btOtherVolume"
+        btOtherVolume.Size = New Size(75, 23)
+        btOtherVolume.TabIndex = 2
+        btOtherVolume.Text = "设置"
+        btOtherVolume.UseVisualStyleBackColor = True
+        ' 
+        ' btNotifyVolume
+        ' 
+        btNotifyVolume.Location = New Point(665, 168)
+        btNotifyVolume.Name = "btNotifyVolume"
+        btNotifyVolume.Size = New Size(75, 23)
+        btNotifyVolume.TabIndex = 2
+        btNotifyVolume.Text = "设置"
+        btNotifyVolume.UseVisualStyleBackColor = True
+        ' 
+        ' btAlarmVolume
+        ' 
+        btAlarmVolume.Location = New Point(665, 132)
+        btAlarmVolume.Name = "btAlarmVolume"
+        btAlarmVolume.Size = New Size(75, 23)
+        btAlarmVolume.TabIndex = 2
+        btAlarmVolume.Text = "设置"
+        btAlarmVolume.UseVisualStyleBackColor = True
+        ' 
+        ' btMusicVolume
+        ' 
+        btMusicVolume.Location = New Point(665, 95)
+        btMusicVolume.Name = "btMusicVolume"
+        btMusicVolume.Size = New Size(75, 23)
+        btMusicVolume.TabIndex = 2
+        btMusicVolume.Text = "设置"
+        btMusicVolume.UseVisualStyleBackColor = True
+        ' 
+        ' btRingVolume
+        ' 
+        btRingVolume.Location = New Point(665, 58)
+        btRingVolume.Name = "btRingVolume"
+        btRingVolume.Size = New Size(75, 23)
+        btRingVolume.TabIndex = 2
+        btRingVolume.Text = "设置"
+        btRingVolume.UseVisualStyleBackColor = True
+        ' 
+        ' btCallVolume
+        ' 
+        btCallVolume.Location = New Point(665, 20)
+        btCallVolume.Name = "btCallVolume"
+        btCallVolume.Size = New Size(75, 23)
+        btCallVolume.TabIndex = 2
+        btCallVolume.Text = "设置"
+        btCallVolume.UseVisualStyleBackColor = True
+        ' 
+        ' lbOtherVolumeStatus
+        ' 
+        lbOtherVolumeStatus.AutoSize = True
+        lbOtherVolumeStatus.Location = New Point(762, 209)
+        lbOtherVolumeStatus.Name = "lbOtherVolumeStatus"
+        lbOtherVolumeStatus.Size = New Size(37, 17)
+        lbOtherVolumeStatus.TabIndex = 0
+        lbOtherVolumeStatus.Text = "PASS"
+        ' 
+        ' lbNotifyVolumeStatus
+        ' 
+        lbNotifyVolumeStatus.AutoSize = True
+        lbNotifyVolumeStatus.Location = New Point(762, 171)
+        lbNotifyVolumeStatus.Name = "lbNotifyVolumeStatus"
+        lbNotifyVolumeStatus.Size = New Size(37, 17)
+        lbNotifyVolumeStatus.TabIndex = 0
+        lbNotifyVolumeStatus.Text = "PASS"
+        ' 
+        ' lbAlarmVolumeStatus
+        ' 
+        lbAlarmVolumeStatus.AutoSize = True
+        lbAlarmVolumeStatus.Location = New Point(762, 135)
+        lbAlarmVolumeStatus.Name = "lbAlarmVolumeStatus"
+        lbAlarmVolumeStatus.Size = New Size(37, 17)
+        lbAlarmVolumeStatus.TabIndex = 0
+        lbAlarmVolumeStatus.Text = "PASS"
+        ' 
+        ' lbMusicVolumeStatus
+        ' 
+        lbMusicVolumeStatus.AutoSize = True
+        lbMusicVolumeStatus.Location = New Point(762, 98)
+        lbMusicVolumeStatus.Name = "lbMusicVolumeStatus"
+        lbMusicVolumeStatus.Size = New Size(37, 17)
+        lbMusicVolumeStatus.TabIndex = 0
+        lbMusicVolumeStatus.Text = "PASS"
+        ' 
+        ' lbRingVolumeStatus
+        ' 
+        lbRingVolumeStatus.AutoSize = True
+        lbRingVolumeStatus.Location = New Point(762, 61)
+        lbRingVolumeStatus.Name = "lbRingVolumeStatus"
+        lbRingVolumeStatus.Size = New Size(37, 17)
+        lbRingVolumeStatus.TabIndex = 0
+        lbRingVolumeStatus.Text = "PASS"
+        ' 
+        ' lbCallVolumeStatus
+        ' 
+        lbCallVolumeStatus.AutoSize = True
+        lbCallVolumeStatus.Location = New Point(762, 23)
+        lbCallVolumeStatus.Name = "lbCallVolumeStatus"
+        lbCallVolumeStatus.Size = New Size(37, 17)
+        lbCallVolumeStatus.TabIndex = 0
+        lbCallVolumeStatus.Text = "PASS"
+        ' 
+        ' lbOtherVolume
+        ' 
+        lbOtherVolume.AutoSize = True
+        lbOtherVolume.Location = New Point(15, 209)
+        lbOtherVolume.Name = "lbOtherVolume"
+        lbOtherVolume.Size = New Size(92, 17)
+        lbOtherVolume.TabIndex = 0
+        lbOtherVolume.Text = "其他默认音量："
+        ' 
+        ' lbNotifyVolume
+        ' 
+        lbNotifyVolume.AutoSize = True
+        lbNotifyVolume.Location = New Point(15, 171)
+        lbNotifyVolume.Name = "lbNotifyVolume"
+        lbNotifyVolume.Size = New Size(92, 17)
+        lbNotifyVolume.TabIndex = 0
+        lbNotifyVolume.Text = "通知默认音量："
+        ' 
+        ' lbAlarmVolume
+        ' 
+        lbAlarmVolume.AutoSize = True
+        lbAlarmVolume.Location = New Point(15, 135)
+        lbAlarmVolume.Name = "lbAlarmVolume"
+        lbAlarmVolume.Size = New Size(92, 17)
+        lbAlarmVolume.TabIndex = 0
+        lbAlarmVolume.Text = "闹钟默认音量："
+        ' 
+        ' lbMusicVolume
+        ' 
+        lbMusicVolume.AutoSize = True
+        lbMusicVolume.Location = New Point(15, 98)
+        lbMusicVolume.Name = "lbMusicVolume"
+        lbMusicVolume.Size = New Size(92, 17)
+        lbMusicVolume.TabIndex = 0
+        lbMusicVolume.Text = "音乐默认音量："
+        ' 
+        ' lbRingVolume
+        ' 
+        lbRingVolume.AutoSize = True
+        lbRingVolume.Location = New Point(15, 61)
+        lbRingVolume.Name = "lbRingVolume"
+        lbRingVolume.Size = New Size(92, 17)
+        lbRingVolume.TabIndex = 0
+        lbRingVolume.Text = "铃声默认音量："
+        ' 
+        ' lbCallVolume
+        ' 
+        lbCallVolume.AutoSize = True
+        lbCallVolume.Location = New Point(15, 23)
+        lbCallVolume.Name = "lbCallVolume"
+        lbCallVolume.Size = New Size(92, 17)
+        lbCallVolume.TabIndex = 0
+        lbCallVolume.Text = "通话默认音量："
+        ' 
+        ' tpTee
+        ' 
+        tpTee.Controls.Add(lbTeeArrayStatus)
+        tpTee.Controls.Add(lbTeeCertStatus)
+        tpTee.Controls.Add(btTeeAllSet)
+        tpTee.Controls.Add(btTeeArray)
+        tpTee.Controls.Add(btnTeeSelectArray)
+        tpTee.Controls.Add(btnTeeSelectCert)
+        tpTee.Controls.Add(btTeeCert)
+        tpTee.Controls.Add(tbTeeArray)
+        tpTee.Controls.Add(lbTeeArray)
+        tpTee.Controls.Add(tbTeeCert)
+        tpTee.Controls.Add(lbTeeCert)
+        tpTee.Controls.Add(lbTeeStatus)
+        tpTee.Controls.Add(btTee)
+        tpTee.Controls.Add(rbTeeClose)
+        tpTee.Controls.Add(rbTeeOpen)
+        tpTee.Controls.Add(lbTee)
+        tpTee.Location = New Point(4, 48)
+        tpTee.Name = "tpTee"
+        tpTee.Size = New Size(815, 449)
+        tpTee.TabIndex = 13
+        tpTee.Text = "TEE"
+        tpTee.UseVisualStyleBackColor = True
+        ' 
+        ' lbTeeArrayStatus
+        ' 
+        lbTeeArrayStatus.AutoSize = True
+        lbTeeArrayStatus.Location = New Point(753, 104)
+        lbTeeArrayStatus.Name = "lbTeeArrayStatus"
+        lbTeeArrayStatus.Size = New Size(37, 17)
+        lbTeeArrayStatus.TabIndex = 8
+        lbTeeArrayStatus.Text = "PASS"
+        ' 
+        ' lbTeeCertStatus
+        ' 
+        lbTeeCertStatus.AutoSize = True
+        lbTeeCertStatus.Location = New Point(753, 58)
+        lbTeeCertStatus.Name = "lbTeeCertStatus"
+        lbTeeCertStatus.Size = New Size(37, 17)
+        lbTeeCertStatus.TabIndex = 8
+        lbTeeCertStatus.Text = "PASS"
+        ' 
+        ' btTeeAllSet
+        ' 
+        btTeeAllSet.Location = New Point(15, 157)
+        btTeeAllSet.Name = "btTeeAllSet"
+        btTeeAllSet.Size = New Size(75, 23)
+        btTeeAllSet.TabIndex = 7
+        btTeeAllSet.Text = "全部设置"
+        btTeeAllSet.UseVisualStyleBackColor = True
+        ' 
+        ' btTeeArray
+        ' 
+        btTeeArray.Location = New Point(656, 101)
+        btTeeArray.Name = "btTeeArray"
+        btTeeArray.Size = New Size(75, 23)
+        btTeeArray.TabIndex = 6
+        btTeeArray.Text = "设置"
+        btTeeArray.UseVisualStyleBackColor = True
+        ' 
+        ' btnTeeSelectArray
+        ' 
+        btnTeeSelectArray.Location = New Point(575, 101)
+        btnTeeSelectArray.Name = "btnTeeSelectArray"
+        btnTeeSelectArray.Size = New Size(75, 23)
+        btnTeeSelectArray.TabIndex = 7
+        btnTeeSelectArray.Text = "选择···"
+        btnTeeSelectArray.UseVisualStyleBackColor = True
+        ' 
+        ' btnTeeSelectCert
+        ' 
+        btnTeeSelectCert.Location = New Point(575, 55)
+        btnTeeSelectCert.Name = "btnTeeSelectCert"
+        btnTeeSelectCert.Size = New Size(75, 23)
+        btnTeeSelectCert.TabIndex = 7
+        btnTeeSelectCert.Text = "选择···"
+        btnTeeSelectCert.UseVisualStyleBackColor = True
+        ' 
+        ' btTeeCert
+        ' 
+        btTeeCert.Location = New Point(656, 55)
+        btTeeCert.Name = "btTeeCert"
+        btTeeCert.Size = New Size(75, 23)
+        btTeeCert.TabIndex = 7
+        btTeeCert.Text = "设置"
+        btTeeCert.UseVisualStyleBackColor = True
+        ' 
+        ' tbTeeArray
+        ' 
+        tbTeeArray.Location = New Point(117, 101)
+        tbTeeArray.Name = "tbTeeArray"
+        tbTeeArray.Size = New Size(452, 23)
+        tbTeeArray.TabIndex = 5
+        ' 
+        ' lbTeeArray
+        ' 
+        lbTeeArray.AutoSize = True
+        lbTeeArray.Location = New Point(15, 104)
+        lbTeeArray.Name = "lbTeeArray"
+        lbTeeArray.Size = New Size(87, 17)
+        lbTeeArray.TabIndex = 4
+        lbTeeArray.Text = "array.c 文件："
+        ' 
+        ' tbTeeCert
+        ' 
+        tbTeeCert.Location = New Point(117, 55)
+        tbTeeCert.Name = "tbTeeCert"
+        tbTeeCert.Size = New Size(452, 23)
+        tbTeeCert.TabIndex = 5
+        ' 
+        ' lbTeeCert
+        ' 
+        lbTeeCert.AutoSize = True
+        lbTeeCert.Location = New Point(15, 58)
+        lbTeeCert.Name = "lbTeeCert"
+        lbTeeCert.Size = New Size(92, 17)
+        lbTeeCert.TabIndex = 4
+        lbTeeCert.Text = "cert.dat 文件："
+        ' 
+        ' lbTeeStatus
+        ' 
+        lbTeeStatus.AutoSize = True
+        lbTeeStatus.Location = New Point(753, 19)
+        lbTeeStatus.Name = "lbTeeStatus"
+        lbTeeStatus.Size = New Size(37, 17)
+        lbTeeStatus.TabIndex = 3
+        lbTeeStatus.Text = "PASS"
+        ' 
+        ' btTee
+        ' 
+        btTee.Location = New Point(656, 16)
+        btTee.Name = "btTee"
+        btTee.Size = New Size(75, 23)
+        btTee.TabIndex = 2
+        btTee.Text = "设置"
+        btTee.UseVisualStyleBackColor = True
+        ' 
+        ' rbTeeClose
+        ' 
+        rbTeeClose.AutoSize = True
+        rbTeeClose.Checked = True
+        rbTeeClose.Location = New Point(190, 17)
+        rbTeeClose.Name = "rbTeeClose"
+        rbTeeClose.Size = New Size(50, 21)
+        rbTeeClose.TabIndex = 1
+        rbTeeClose.TabStop = True
+        rbTeeClose.Text = "关闭"
+        rbTeeClose.UseVisualStyleBackColor = True
+        ' 
+        ' rbTeeOpen
+        ' 
+        rbTeeOpen.AutoSize = True
+        rbTeeOpen.Location = New Point(117, 17)
+        rbTeeOpen.Name = "rbTeeOpen"
+        rbTeeOpen.Size = New Size(50, 21)
+        rbTeeOpen.TabIndex = 1
+        rbTeeOpen.Text = "打开"
+        rbTeeOpen.UseVisualStyleBackColor = True
+        ' 
+        ' lbTee
+        ' 
+        lbTee.AutoSize = True
+        lbTee.Location = New Point(15, 19)
+        lbTee.Name = "lbTee"
+        lbTee.Size = New Size(69, 17)
+        lbTee.TabIndex = 0
+        lbTee.Text = "TEE 状态："
+        ' 
+        ' tpGoogleCustom
+        ' 
+        tpGoogleCustom.Location = New Point(4, 48)
+        tpGoogleCustom.Name = "tpGoogleCustom"
+        tpGoogleCustom.Size = New Size(815, 449)
+        tpGoogleCustom.TabIndex = 14
+        tpGoogleCustom.Text = "谷歌客制化"
+        tpGoogleCustom.UseVisualStyleBackColor = True
+        ' 
+        ' tpAnimation
+        ' 
+        tpAnimation.Location = New Point(4, 48)
+        tpAnimation.Name = "tpAnimation"
+        tpAnimation.Size = New Size(815, 449)
+        tpAnimation.TabIndex = 15
+        tpAnimation.Text = "开关机动画"
+        tpAnimation.UseVisualStyleBackColor = True
+        ' 
+        ' tpSystemSettings
+        ' 
+        tpSystemSettings.Location = New Point(4, 48)
+        tpSystemSettings.Name = "tpSystemSettings"
+        tpSystemSettings.Size = New Size(815, 449)
+        tpSystemSettings.TabIndex = 17
+        tpSystemSettings.Text = "系统配置"
+        tpSystemSettings.UseVisualStyleBackColor = True
+        ' 
+        ' ofdSelectFile
+        ' 
+        ofdSelectFile.FileName = "OpenFileDialog1"
+        ' 
+        ' AndroidSettingsForm
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 17F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(847, 522)
+        Controls.Add(tcAndroidSettings)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        Name = "AndroidSettingsForm"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Android 工程配置"
+        tcAndroidSettings.ResumeLayout(False)
+        tpProjectInfo.ResumeLayout(False)
+        GbChiperOptions.ResumeLayout(False)
+        GbChiperOptions.PerformLayout()
+        GbGoOptions.ResumeLayout(False)
+        GbGoOptions.PerformLayout()
+        GbGmsOptions.ResumeLayout(False)
+        GbGmsOptions.PerformLayout()
+        GBProject.ResumeLayout(False)
+        GBProject.PerformLayout()
+        tpProperty.ResumeLayout(False)
+        tpProperty.PerformLayout()
+        tpVersion.ResumeLayout(False)
+        tpVersion.PerformLayout()
+        tpFingerprint.ResumeLayout(False)
+        tpFingerprint.PerformLayout()
+        tpWifi.ResumeLayout(False)
+        tpWifi.PerformLayout()
+        tpBluetooth.ResumeLayout(False)
+        tpBluetooth.PerformLayout()
+        tpLanguage.ResumeLayout(False)
+        tpLanguage.PerformLayout()
+        tpTimezone.ResumeLayout(False)
+        tpTimezone.PerformLayout()
+        tpLogo.ResumeLayout(False)
+        tpLogo.PerformLayout()
+        tpWallpaper.ResumeLayout(False)
+        tpWallpaper.PerformLayout()
+        tpSample.ResumeLayout(False)
+        tpSample.PerformLayout()
+        tpScreenBrightness.ResumeLayout(False)
+        tpScreenBrightness.PerformLayout()
+        tpVolume.ResumeLayout(False)
+        tpVolume.PerformLayout()
+        tpTee.ResumeLayout(False)
+        tpTee.PerformLayout()
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents tcAndroidSettings As TabControl
@@ -2059,4 +2237,20 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbMusicVolume As Label
     Friend WithEvents lbRingVolume As Label
     Friend WithEvents lbCallVolume As Label
+    Friend WithEvents lbTeeArrayStatus As Label
+    Friend WithEvents lbTeeCertStatus As Label
+    Friend WithEvents btTeeAllSet As Button
+    Friend WithEvents btTeeArray As Button
+    Friend WithEvents btTeeCert As Button
+    Friend WithEvents tbTeeArray As TextBox
+    Friend WithEvents lbTeeArray As Label
+    Friend WithEvents tbTeeCert As TextBox
+    Friend WithEvents lbTeeCert As Label
+    Friend WithEvents lbTeeStatus As Label
+    Friend WithEvents btTee As Button
+    Friend WithEvents rbTeeClose As RadioButton
+    Friend WithEvents rbTeeOpen As RadioButton
+    Friend WithEvents lbTee As Label
+    Friend WithEvents btnTeeSelectArray As Button
+    Friend WithEvents btnTeeSelectCert As Button
 End Class

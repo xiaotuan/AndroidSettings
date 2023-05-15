@@ -6,7 +6,7 @@ Public Class AndroidSettingsForm
 
     Public MyProjectInfo As ProjectInfo = New ProjectInfo()
 
-    Private Sub androidSettingsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub androidSettingsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitProjectIdComboBox()
         InitProjectPathComboBox()
         InitLanguageComboBox()
@@ -22,6 +22,7 @@ Public Class AndroidSettingsForm
     Private Sub InitProjectPathComboBox()
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\A\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\B\mtk_sp_t0")
+        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\C\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\A\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\B\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\12\mt8766\A\mt8766_s")
@@ -283,6 +284,8 @@ Public Class AndroidSettingsForm
             BrightnessController.UpdateBrightnessInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpVolume") Then
             VolumeController.UpdateVolumeInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpTee") Then
+            TeeController.UpdateTeeInfos(Me)
         End If
     End Sub
 
@@ -417,5 +420,41 @@ Public Class AndroidSettingsForm
         VolumeController.SetAlarmVolume(Me)
         VolumeController.SetNotificationVolume(Me)
         VolumeController.SetOtherVolume(Me)
+    End Sub
+
+    Private Sub btTee_Click(sender As Object, e As EventArgs) Handles btTee.Click
+        TeeController.SetTeeStatus(Me)
+    End Sub
+
+    Private Sub btTeeCert_Click(sender As Object, e As EventArgs) Handles btTeeCert.Click
+        TeeController.SetCertFile(Me)
+    End Sub
+
+    Private Sub btTeeArray_Click(sender As Object, e As EventArgs) Handles btTeeArray.Click
+        TeeController.SetArrayFile(Me)
+    End Sub
+
+    Private Sub btTeeAllSet_Click(sender As Object, e As EventArgs) Handles btTeeAllSet.Click
+        TeeController.SetTeeStatus(Me)
+        TeeController.SetCertFile(Me)
+        TeeController.SetArrayFile(Me)
+    End Sub
+
+    Private Sub btnTeeSelectCert_Click(sender As Object, e As EventArgs) Handles btnTeeSelectCert.Click
+        ofdSelectFile.Title = "选择 cert.dat"
+        ofdSelectFile.Filter = "DAT|*.dat"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbTeeCert.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btnTeeSelectArray_Click(sender As Object, e As EventArgs) Handles btnTeeSelectArray.Click
+        ofdSelectFile.Title = "选择 array.c"
+        ofdSelectFile.Filter = "C file|*.c"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbTeeArray.Text = ofdSelectFile.FileName
+        End If
     End Sub
 End Class
