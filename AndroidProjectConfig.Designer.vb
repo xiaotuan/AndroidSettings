@@ -200,6 +200,15 @@ Partial Class AndroidSettingsForm
         rbTeeOpen = New RadioButton()
         lbTee = New Label()
         tpGoogleCustom = New TabPage()
+        lbEmailSignatureStatus = New Label()
+        lbHomePageStatus = New Label()
+        btGoogleCustom = New Button()
+        btEmailSignature = New Button()
+        btHomePage = New Button()
+        tbEmailSignature = New TextBox()
+        lbEmailSignature = New Label()
+        tbHomePage = New TextBox()
+        lbHomePage = New Label()
         tpAnimation = New TabPage()
         tpSystemSettings = New TabPage()
         FbdSelectPath = New FolderBrowserDialog()
@@ -223,6 +232,7 @@ Partial Class AndroidSettingsForm
         tpScreenBrightness.SuspendLayout()
         tpVolume.SuspendLayout()
         tpTee.SuspendLayout()
+        tpGoogleCustom.SuspendLayout()
         SuspendLayout()
         ' 
         ' tcAndroidSettings
@@ -1992,12 +2002,98 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpGoogleCustom
         ' 
+        tpGoogleCustom.Controls.Add(lbEmailSignatureStatus)
+        tpGoogleCustom.Controls.Add(lbHomePageStatus)
+        tpGoogleCustom.Controls.Add(btGoogleCustom)
+        tpGoogleCustom.Controls.Add(btEmailSignature)
+        tpGoogleCustom.Controls.Add(btHomePage)
+        tpGoogleCustom.Controls.Add(tbEmailSignature)
+        tpGoogleCustom.Controls.Add(lbEmailSignature)
+        tpGoogleCustom.Controls.Add(tbHomePage)
+        tpGoogleCustom.Controls.Add(lbHomePage)
         tpGoogleCustom.Location = New Point(4, 48)
         tpGoogleCustom.Name = "tpGoogleCustom"
         tpGoogleCustom.Size = New Size(815, 449)
         tpGoogleCustom.TabIndex = 14
         tpGoogleCustom.Text = "谷歌客制化"
         tpGoogleCustom.UseVisualStyleBackColor = True
+        ' 
+        ' lbEmailSignatureStatus
+        ' 
+        lbEmailSignatureStatus.AutoSize = True
+        lbEmailSignatureStatus.Location = New Point(761, 49)
+        lbEmailSignatureStatus.Name = "lbEmailSignatureStatus"
+        lbEmailSignatureStatus.Size = New Size(37, 17)
+        lbEmailSignatureStatus.TabIndex = 3
+        lbEmailSignatureStatus.Text = "PASS"
+        ' 
+        ' lbHomePageStatus
+        ' 
+        lbHomePageStatus.AutoSize = True
+        lbHomePageStatus.Location = New Point(761, 16)
+        lbHomePageStatus.Name = "lbHomePageStatus"
+        lbHomePageStatus.Size = New Size(37, 17)
+        lbHomePageStatus.TabIndex = 3
+        lbHomePageStatus.Text = "PASS"
+        ' 
+        ' btGoogleCustom
+        ' 
+        btGoogleCustom.Location = New Point(17, 92)
+        btGoogleCustom.Name = "btGoogleCustom"
+        btGoogleCustom.Size = New Size(75, 23)
+        btGoogleCustom.TabIndex = 2
+        btGoogleCustom.Text = "全部设置"
+        btGoogleCustom.UseVisualStyleBackColor = True
+        ' 
+        ' btEmailSignature
+        ' 
+        btEmailSignature.Location = New Point(665, 46)
+        btEmailSignature.Name = "btEmailSignature"
+        btEmailSignature.Size = New Size(75, 23)
+        btEmailSignature.TabIndex = 2
+        btEmailSignature.Text = "设置"
+        btEmailSignature.UseVisualStyleBackColor = True
+        ' 
+        ' btHomePage
+        ' 
+        btHomePage.Location = New Point(665, 13)
+        btHomePage.Name = "btHomePage"
+        btHomePage.Size = New Size(75, 23)
+        btHomePage.TabIndex = 2
+        btHomePage.Text = "设置"
+        btHomePage.UseVisualStyleBackColor = True
+        ' 
+        ' tbEmailSignature
+        ' 
+        tbEmailSignature.Location = New Point(91, 46)
+        tbEmailSignature.Name = "tbEmailSignature"
+        tbEmailSignature.Size = New Size(566, 23)
+        tbEmailSignature.TabIndex = 1
+        ' 
+        ' lbEmailSignature
+        ' 
+        lbEmailSignature.AutoSize = True
+        lbEmailSignature.Location = New Point(17, 49)
+        lbEmailSignature.Name = "lbEmailSignature"
+        lbEmailSignature.Size = New Size(68, 17)
+        lbEmailSignature.TabIndex = 0
+        lbEmailSignature.Text = "邮箱签名："
+        ' 
+        ' tbHomePage
+        ' 
+        tbHomePage.Location = New Point(91, 13)
+        tbHomePage.Name = "tbHomePage"
+        tbHomePage.Size = New Size(566, 23)
+        tbHomePage.TabIndex = 1
+        ' 
+        ' lbHomePage
+        ' 
+        lbHomePage.AutoSize = True
+        lbHomePage.Location = New Point(17, 16)
+        lbHomePage.Name = "lbHomePage"
+        lbHomePage.Size = New Size(68, 17)
+        lbHomePage.TabIndex = 0
+        lbHomePage.Text = "默认网址："
         ' 
         ' tpAnimation
         ' 
@@ -2068,6 +2164,8 @@ Partial Class AndroidSettingsForm
         tpVolume.PerformLayout()
         tpTee.ResumeLayout(False)
         tpTee.PerformLayout()
+        tpGoogleCustom.ResumeLayout(False)
+        tpGoogleCustom.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -2253,4 +2351,13 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbTee As Label
     Friend WithEvents btnTeeSelectArray As Button
     Friend WithEvents btnTeeSelectCert As Button
+    Friend WithEvents lbEmailSignatureStatus As Label
+    Friend WithEvents lbHomePageStatus As Label
+    Friend WithEvents btGoogleCustom As Button
+    Friend WithEvents btEmailSignature As Button
+    Friend WithEvents btHomePage As Button
+    Friend WithEvents tbEmailSignature As TextBox
+    Friend WithEvents lbEmailSignature As Label
+    Friend WithEvents tbHomePage As TextBox
+    Friend WithEvents lbHomePage As Label
 End Class

@@ -286,6 +286,8 @@ Public Class AndroidSettingsForm
             VolumeController.UpdateVolumeInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpTee") Then
             TeeController.UpdateTeeInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpGoogleCustom") Then
+            GoogleCustomController.UpdateGoogleCustomInfos(Me)
         End If
     End Sub
 
@@ -456,5 +458,18 @@ Public Class AndroidSettingsForm
         If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
             tbTeeArray.Text = ofdSelectFile.FileName
         End If
+    End Sub
+
+    Private Sub btHomePage_Click(sender As Object, e As EventArgs) Handles btHomePage.Click
+        GoogleCustomController.SetChromeHomePage(Me)
+    End Sub
+
+    Private Sub btEmailSignature_Click(sender As Object, e As EventArgs) Handles btEmailSignature.Click
+        GoogleCustomController.SetEmailSignature(Me)
+    End Sub
+
+    Private Sub btGoogleCustom_Click(sender As Object, e As EventArgs) Handles btGoogleCustom.Click
+        GoogleCustomController.SetChromeHomePage(Me)
+        GoogleCustomController.SetEmailSignature(Me)
     End Sub
 End Class
