@@ -288,6 +288,8 @@ Public Class AndroidSettingsForm
             TeeController.UpdateTeeInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpGoogleCustom") Then
             GoogleCustomController.UpdateGoogleCustomInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpAnimation") Then
+            AnimationController.UpdateAnimationInfos(Me)
         End If
     End Sub
 
@@ -471,5 +473,68 @@ Public Class AndroidSettingsForm
     Private Sub btGoogleCustom_Click(sender As Object, e As EventArgs) Handles btGoogleCustom.Click
         GoogleCustomController.SetChromeHomePage(Me)
         GoogleCustomController.SetEmailSignature(Me)
+    End Sub
+
+    Private Sub btSelectBootRing_Click(sender As Object, e As EventArgs) Handles btSelectBootRing.Click
+        ofdSelectFile.Title = "选择开机铃声"
+        ofdSelectFile.Filter = "MP3 file|*.mp3"
+        ofdSelectFile.FileName = "bootaudio"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbBootRing.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btSelectBootAnim_Click(sender As Object, e As EventArgs) Handles btSelectBootAnim.Click
+        ofdSelectFile.Title = "选择开机动画"
+        ofdSelectFile.Filter = "ZIP file|*.zip"
+        ofdSelectFile.FileName = "bootanimation"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbBootAnim.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btSelectShutdownRing_Click(sender As Object, e As EventArgs) Handles btSelectShutdownRing.Click
+        ofdSelectFile.Title = "选择关机铃声"
+        ofdSelectFile.Filter = "MP3 file|*.mp3"
+        ofdSelectFile.FileName = "shutaudio"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbShutdownRing.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btSelectShutdownAnim_Click(sender As Object, e As EventArgs) Handles btSelectShutdownAnim.Click
+        ofdSelectFile.Title = "选择关机动画"
+        ofdSelectFile.Filter = "ZIP file|*.zip"
+        ofdSelectFile.FileName = "shutdownanimation"
+        ofdSelectFile.Multiselect = False
+        If ofdSelectFile.ShowDialog() <> DialogResult.Cancel Then
+            tbShutdownAnim.Text = ofdSelectFile.FileName
+        End If
+    End Sub
+
+    Private Sub btBootRing_Click(sender As Object, e As EventArgs) Handles btBootRing.Click
+        AnimationController.SetBootRing(Me)
+    End Sub
+
+    Private Sub btBootAnim_Click(sender As Object, e As EventArgs) Handles btBootAnim.Click
+        AnimationController.SetBootAnim(Me)
+    End Sub
+
+    Private Sub btShutdownRing_Click(sender As Object, e As EventArgs) Handles btShutdownRing.Click
+        AnimationController.SetShutdownRing(Me)
+    End Sub
+
+    Private Sub btShutdownAnim_Click(sender As Object, e As EventArgs) Handles btShutdownAnim.Click
+        AnimationController.SetShutdownAnim(Me)
+    End Sub
+
+    Private Sub btAnimSet_Click(sender As Object, e As EventArgs) Handles btAnimSet.Click
+        AnimationController.SetBootRing(Me)
+        AnimationController.SetBootAnim(Me)
+        AnimationController.SetShutdownRing(Me)
+        AnimationController.SetShutdownAnim(Me)
     End Sub
 End Class

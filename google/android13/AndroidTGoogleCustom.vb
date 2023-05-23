@@ -78,7 +78,6 @@ Module AndroidTGoogleCustom
             Loop
 
             If Not found Then
-                fileWriter.WriteLine()
                 fileWriter.WriteLine("PRODUCT_PACKAGES += PartnerCustomizationsProvider")
             End If
 
@@ -185,13 +184,12 @@ Module AndroidTGoogleCustom
             Do Until IsNothing(line)
                 If line.Trim.StartsWith("PRODUCT_PACKAGES += EmailPartnerProvider") Then
                     found = True
-                    End Ifdd
+                End If
                 fileWriter.WriteLine(line)
                 line = fileReader.ReadLine
             Loop
 
             If Not found Then
-                fileWriter.WriteLine()
                 fileWriter.WriteLine("PRODUCT_PACKAGES += EmailPartnerProvider")
             End If
 

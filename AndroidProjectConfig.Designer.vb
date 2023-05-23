@@ -210,6 +210,28 @@ Partial Class AndroidSettingsForm
         tbHomePage = New TextBox()
         lbHomePage = New Label()
         tpAnimation = New TabPage()
+        lbAnimTip = New Label()
+        lbShutdownAnimStatus = New Label()
+        lbShutdownRingStatus = New Label()
+        lbBootAnimStatus = New Label()
+        lbBootRingStatus = New Label()
+        btAnimSet = New Button()
+        btShutdownAnim = New Button()
+        btShutdownRing = New Button()
+        btBootAnim = New Button()
+        btBootRing = New Button()
+        btSelectShutdownAnim = New Button()
+        btSelectShutdownRing = New Button()
+        btSelectBootAnim = New Button()
+        btSelectBootRing = New Button()
+        tbShutdownAnim = New TextBox()
+        lbShutdownAnim = New Label()
+        tbShutdownRing = New TextBox()
+        lbShutdownRing = New Label()
+        tbBootAnim = New TextBox()
+        lbBootAnim = New Label()
+        tbBootRing = New TextBox()
+        lbBootRing = New Label()
         tpSystemSettings = New TabPage()
         FbdSelectPath = New FolderBrowserDialog()
         ofdSelectFile = New OpenFileDialog()
@@ -233,6 +255,7 @@ Partial Class AndroidSettingsForm
         tpVolume.SuspendLayout()
         tpTee.SuspendLayout()
         tpGoogleCustom.SuspendLayout()
+        tpAnimation.SuspendLayout()
         SuspendLayout()
         ' 
         ' tcAndroidSettings
@@ -2097,12 +2120,227 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpAnimation
         ' 
+        tpAnimation.Controls.Add(lbAnimTip)
+        tpAnimation.Controls.Add(lbShutdownAnimStatus)
+        tpAnimation.Controls.Add(lbShutdownRingStatus)
+        tpAnimation.Controls.Add(lbBootAnimStatus)
+        tpAnimation.Controls.Add(lbBootRingStatus)
+        tpAnimation.Controls.Add(btAnimSet)
+        tpAnimation.Controls.Add(btShutdownAnim)
+        tpAnimation.Controls.Add(btShutdownRing)
+        tpAnimation.Controls.Add(btBootAnim)
+        tpAnimation.Controls.Add(btBootRing)
+        tpAnimation.Controls.Add(btSelectShutdownAnim)
+        tpAnimation.Controls.Add(btSelectShutdownRing)
+        tpAnimation.Controls.Add(btSelectBootAnim)
+        tpAnimation.Controls.Add(btSelectBootRing)
+        tpAnimation.Controls.Add(tbShutdownAnim)
+        tpAnimation.Controls.Add(lbShutdownAnim)
+        tpAnimation.Controls.Add(tbShutdownRing)
+        tpAnimation.Controls.Add(lbShutdownRing)
+        tpAnimation.Controls.Add(tbBootAnim)
+        tpAnimation.Controls.Add(lbBootAnim)
+        tpAnimation.Controls.Add(tbBootRing)
+        tpAnimation.Controls.Add(lbBootRing)
+        tpAnimation.Font = New Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         tpAnimation.Location = New Point(4, 48)
         tpAnimation.Name = "tpAnimation"
         tpAnimation.Size = New Size(815, 449)
         tpAnimation.TabIndex = 15
         tpAnimation.Text = "开关机动画"
         tpAnimation.UseVisualStyleBackColor = True
+        ' 
+        ' lbAnimTip
+        ' 
+        lbAnimTip.AutoSize = True
+        lbAnimTip.Font = New Font("Microsoft YaHei UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        lbAnimTip.ForeColor = Color.Red
+        lbAnimTip.Location = New Point(17, 229)
+        lbAnimTip.Name = "lbAnimTip"
+        lbAnimTip.Size = New Size(780, 17)
+        lbAnimTip.TabIndex = 5
+        lbAnimTip.Text = "提示：设置关机动画或铃声还需要修改代码，请参照启昌智能 511 项目 b48d32c58bb44d75c1291c82c73097965ca476ce 修改提交进行修改。"
+        ' 
+        ' lbShutdownAnimStatus
+        ' 
+        lbShutdownAnimStatus.AutoSize = True
+        lbShutdownAnimStatus.Location = New Point(762, 139)
+        lbShutdownAnimStatus.Name = "lbShutdownAnimStatus"
+        lbShutdownAnimStatus.Size = New Size(37, 17)
+        lbShutdownAnimStatus.TabIndex = 4
+        lbShutdownAnimStatus.Text = "PASS"
+        ' 
+        ' lbShutdownRingStatus
+        ' 
+        lbShutdownRingStatus.AutoSize = True
+        lbShutdownRingStatus.Location = New Point(762, 98)
+        lbShutdownRingStatus.Name = "lbShutdownRingStatus"
+        lbShutdownRingStatus.Size = New Size(37, 17)
+        lbShutdownRingStatus.TabIndex = 4
+        lbShutdownRingStatus.Text = "PASS"
+        ' 
+        ' lbBootAnimStatus
+        ' 
+        lbBootAnimStatus.AutoSize = True
+        lbBootAnimStatus.Location = New Point(762, 57)
+        lbBootAnimStatus.Name = "lbBootAnimStatus"
+        lbBootAnimStatus.Size = New Size(37, 17)
+        lbBootAnimStatus.TabIndex = 4
+        lbBootAnimStatus.Text = "PASS"
+        ' 
+        ' lbBootRingStatus
+        ' 
+        lbBootRingStatus.AutoSize = True
+        lbBootRingStatus.Location = New Point(762, 17)
+        lbBootRingStatus.Name = "lbBootRingStatus"
+        lbBootRingStatus.Size = New Size(37, 17)
+        lbBootRingStatus.TabIndex = 4
+        lbBootRingStatus.Text = "PASS"
+        ' 
+        ' btAnimSet
+        ' 
+        btAnimSet.Location = New Point(17, 186)
+        btAnimSet.Name = "btAnimSet"
+        btAnimSet.Size = New Size(75, 23)
+        btAnimSet.TabIndex = 3
+        btAnimSet.Text = "全部设置"
+        btAnimSet.UseVisualStyleBackColor = True
+        ' 
+        ' btShutdownAnim
+        ' 
+        btShutdownAnim.Location = New Point(671, 136)
+        btShutdownAnim.Name = "btShutdownAnim"
+        btShutdownAnim.Size = New Size(75, 23)
+        btShutdownAnim.TabIndex = 3
+        btShutdownAnim.Text = "设置"
+        btShutdownAnim.UseVisualStyleBackColor = True
+        ' 
+        ' btShutdownRing
+        ' 
+        btShutdownRing.Location = New Point(671, 95)
+        btShutdownRing.Name = "btShutdownRing"
+        btShutdownRing.Size = New Size(75, 23)
+        btShutdownRing.TabIndex = 3
+        btShutdownRing.Text = "设置"
+        btShutdownRing.UseVisualStyleBackColor = True
+        ' 
+        ' btBootAnim
+        ' 
+        btBootAnim.Location = New Point(671, 54)
+        btBootAnim.Name = "btBootAnim"
+        btBootAnim.Size = New Size(75, 23)
+        btBootAnim.TabIndex = 3
+        btBootAnim.Text = "设置"
+        btBootAnim.UseVisualStyleBackColor = True
+        ' 
+        ' btBootRing
+        ' 
+        btBootRing.Location = New Point(671, 14)
+        btBootRing.Name = "btBootRing"
+        btBootRing.Size = New Size(75, 23)
+        btBootRing.TabIndex = 3
+        btBootRing.Text = "设置"
+        btBootRing.UseVisualStyleBackColor = True
+        ' 
+        ' btSelectShutdownAnim
+        ' 
+        btSelectShutdownAnim.Location = New Point(590, 136)
+        btSelectShutdownAnim.Name = "btSelectShutdownAnim"
+        btSelectShutdownAnim.Size = New Size(75, 23)
+        btSelectShutdownAnim.TabIndex = 2
+        btSelectShutdownAnim.Text = "选择动画"
+        btSelectShutdownAnim.UseVisualStyleBackColor = True
+        ' 
+        ' btSelectShutdownRing
+        ' 
+        btSelectShutdownRing.Location = New Point(590, 95)
+        btSelectShutdownRing.Name = "btSelectShutdownRing"
+        btSelectShutdownRing.Size = New Size(75, 23)
+        btSelectShutdownRing.TabIndex = 2
+        btSelectShutdownRing.Text = "选择铃声"
+        btSelectShutdownRing.UseVisualStyleBackColor = True
+        ' 
+        ' btSelectBootAnim
+        ' 
+        btSelectBootAnim.Location = New Point(590, 54)
+        btSelectBootAnim.Name = "btSelectBootAnim"
+        btSelectBootAnim.Size = New Size(75, 23)
+        btSelectBootAnim.TabIndex = 2
+        btSelectBootAnim.Text = "选择动画"
+        btSelectBootAnim.UseVisualStyleBackColor = True
+        ' 
+        ' btSelectBootRing
+        ' 
+        btSelectBootRing.Location = New Point(590, 14)
+        btSelectBootRing.Name = "btSelectBootRing"
+        btSelectBootRing.Size = New Size(75, 23)
+        btSelectBootRing.TabIndex = 2
+        btSelectBootRing.Text = "选择铃声"
+        btSelectBootRing.UseVisualStyleBackColor = True
+        ' 
+        ' tbShutdownAnim
+        ' 
+        tbShutdownAnim.Location = New Point(91, 136)
+        tbShutdownAnim.Name = "tbShutdownAnim"
+        tbShutdownAnim.Size = New Size(493, 23)
+        tbShutdownAnim.TabIndex = 1
+        ' 
+        ' lbShutdownAnim
+        ' 
+        lbShutdownAnim.AutoSize = True
+        lbShutdownAnim.Location = New Point(17, 139)
+        lbShutdownAnim.Name = "lbShutdownAnim"
+        lbShutdownAnim.Size = New Size(68, 17)
+        lbShutdownAnim.TabIndex = 0
+        lbShutdownAnim.Text = "关机动画："
+        ' 
+        ' tbShutdownRing
+        ' 
+        tbShutdownRing.Location = New Point(91, 95)
+        tbShutdownRing.Name = "tbShutdownRing"
+        tbShutdownRing.Size = New Size(493, 23)
+        tbShutdownRing.TabIndex = 1
+        ' 
+        ' lbShutdownRing
+        ' 
+        lbShutdownRing.AutoSize = True
+        lbShutdownRing.Location = New Point(17, 98)
+        lbShutdownRing.Name = "lbShutdownRing"
+        lbShutdownRing.Size = New Size(68, 17)
+        lbShutdownRing.TabIndex = 0
+        lbShutdownRing.Text = "关机铃声："
+        ' 
+        ' tbBootAnim
+        ' 
+        tbBootAnim.Location = New Point(91, 54)
+        tbBootAnim.Name = "tbBootAnim"
+        tbBootAnim.Size = New Size(493, 23)
+        tbBootAnim.TabIndex = 1
+        ' 
+        ' lbBootAnim
+        ' 
+        lbBootAnim.AutoSize = True
+        lbBootAnim.Location = New Point(17, 57)
+        lbBootAnim.Name = "lbBootAnim"
+        lbBootAnim.Size = New Size(68, 17)
+        lbBootAnim.TabIndex = 0
+        lbBootAnim.Text = "开机动画："
+        ' 
+        ' tbBootRing
+        ' 
+        tbBootRing.Location = New Point(91, 14)
+        tbBootRing.Name = "tbBootRing"
+        tbBootRing.Size = New Size(493, 23)
+        tbBootRing.TabIndex = 1
+        ' 
+        ' lbBootRing
+        ' 
+        lbBootRing.AutoSize = True
+        lbBootRing.Location = New Point(17, 17)
+        lbBootRing.Name = "lbBootRing"
+        lbBootRing.Size = New Size(68, 17)
+        lbBootRing.TabIndex = 0
+        lbBootRing.Text = "开机铃声："
         ' 
         ' tpSystemSettings
         ' 
@@ -2166,6 +2404,8 @@ Partial Class AndroidSettingsForm
         tpTee.PerformLayout()
         tpGoogleCustom.ResumeLayout(False)
         tpGoogleCustom.PerformLayout()
+        tpAnimation.ResumeLayout(False)
+        tpAnimation.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -2360,4 +2600,26 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbEmailSignature As Label
     Friend WithEvents tbHomePage As TextBox
     Friend WithEvents lbHomePage As Label
+    Friend WithEvents lbAnimTip As Label
+    Friend WithEvents lbShutdownAnimStatus As Label
+    Friend WithEvents lbShutdownRingStatus As Label
+    Friend WithEvents lbBootAnimStatus As Label
+    Friend WithEvents lbBootRingStatus As Label
+    Friend WithEvents btAnimSet As Button
+    Friend WithEvents btShutdownAnim As Button
+    Friend WithEvents btShutdownRing As Button
+    Friend WithEvents btBootAnim As Button
+    Friend WithEvents btBootRing As Button
+    Friend WithEvents btSelectShutdownAnim As Button
+    Friend WithEvents btSelectShutdownRing As Button
+    Friend WithEvents btSelectBootAnim As Button
+    Friend WithEvents btSelectBootRing As Button
+    Friend WithEvents tbShutdownAnim As TextBox
+    Friend WithEvents lbShutdownAnim As Label
+    Friend WithEvents tbShutdownRing As TextBox
+    Friend WithEvents lbShutdownRing As Label
+    Friend WithEvents tbBootAnim As TextBox
+    Friend WithEvents lbBootAnim As Label
+    Friend WithEvents tbBootRing As TextBox
+    Friend WithEvents lbBootRing As Label
 End Class
