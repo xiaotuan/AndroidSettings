@@ -4,6 +4,51 @@
         Dim Projects As New ArrayList()
 
         ' 纳斯达 395 项目
+        Dim CC769Project As New ProjectInfo()
+        CC769Project.ProjectId = "769"
+        CC769Project.AndroidVersion = "Android 13"
+        CC769Project.ProjectPath = ""
+        CC769Project.PublicDirName = "tb8768p1_64_bsp"
+        CC769Project.MssiDirName = "mssi_t_64_cn_wifi"
+        CC769Project.DriveDirName = "M863YAR310_CC_769_WIFI"
+        CC769Project.CustomDirName = "M863YAR310_CC_769_WIFI-MMI"
+        CC769Project.Gms = 1
+        CC769Project.Go = 2
+        CC769Project.ChiperMaker = "MTK"
+        CC769Project.ChiperModel = "MT8768"
+        Projects.Add(CC769Project)
+
+        ' 纳斯达 395 项目
+        Dim CC768Project As New ProjectInfo()
+        CC768Project.ProjectId = "768"
+        CC768Project.AndroidVersion = "Android 13"
+        CC768Project.ProjectPath = ""
+        CC768Project.PublicDirName = "tb8768p1_64_bsp"
+        CC768Project.MssiDirName = "mssi_t_64_cn_wifi"
+        CC768Project.DriveDirName = "M863YAR310_CC_768_WIFI"
+        CC768Project.CustomDirName = "M863YAR310_CC_768_WIFI-MMI"
+        CC768Project.Gms = 1
+        CC768Project.Go = 2
+        CC768Project.ChiperMaker = "MTK"
+        CC768Project.ChiperModel = "MT8768"
+        Projects.Add(CC768Project)
+
+        ' 优米 775 项目
+        Dim YM775Project As New ProjectInfo()
+        YM775Project.ProjectId = "775"
+        YM775Project.AndroidVersion = "Android 13"
+        YM775Project.ProjectPath = ""
+        YM775Project.PublicDirName = "tb8766p1_64_bsp"
+        YM775Project.MssiDirName = "mssi_t_64_cn"
+        YM775Project.DriveDirName = "M869YCR100_YM_775"
+        YM775Project.CustomDirName = "M869YCR100_YM_775-MMI"
+        YM775Project.Gms = 1
+        YM775Project.Go = 0
+        YM775Project.ChiperMaker = "MTK"
+        YM775Project.ChiperModel = "MT8766"
+        Projects.Add(YM775Project)
+
+        ' 纳斯达 395 项目
         Dim NSD395Project As New ProjectInfo()
         NSD395Project.ProjectId = "395"
         NSD395Project.AndroidVersion = "Android 12"

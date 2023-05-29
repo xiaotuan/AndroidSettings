@@ -233,6 +233,36 @@ Partial Class AndroidSettingsForm
         tbBootRing = New TextBox()
         lbBootRing = New Label()
         tpSystemSettings = New TabPage()
+        cbDisableScreenlock = New ComboBox()
+        cbAutoBrightness = New ComboBox()
+        cbAutoTime = New ComboBox()
+        cb24TimeFormat = New ComboBox()
+        cbGps = New ComboBox()
+        cbAutoRotation = New ComboBox()
+        Label7 = New Label()
+        lb24TimeFormatStatus = New Label()
+        lbGpsStatus = New Label()
+        lbAutoRotationStatus = New Label()
+        btSystemConfig = New Button()
+        bt24TimeFormat = New Button()
+        btGps = New Button()
+        btAutoRotation = New Button()
+        lbDisableScreenlockStatus = New Label()
+        lbAutoBrightnessStatus = New Label()
+        lbAutoTimeStatus = New Label()
+        lbScreenOffTimeStatus = New Label()
+        btDisableScreenlock = New Button()
+        btAutoBrightness = New Button()
+        btAutoTime = New Button()
+        btnScreenOffTime = New Button()
+        lb24TimeFormat = New Label()
+        lbGps = New Label()
+        lbDisableScreenlock = New Label()
+        lbAutoRotation = New Label()
+        lbAutoBrightness = New Label()
+        tbScreenOffTime = New TextBox()
+        lbAutoTime = New Label()
+        lbScreenOffTime = New Label()
         FbdSelectPath = New FolderBrowserDialog()
         ofdSelectFile = New OpenFileDialog()
         tcAndroidSettings.SuspendLayout()
@@ -256,6 +286,7 @@ Partial Class AndroidSettingsForm
         tpTee.SuspendLayout()
         tpGoogleCustom.SuspendLayout()
         tpAnimation.SuspendLayout()
+        tpSystemSettings.SuspendLayout()
         SuspendLayout()
         ' 
         ' tcAndroidSettings
@@ -2344,12 +2375,316 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpSystemSettings
         ' 
+        tpSystemSettings.Controls.Add(cbDisableScreenlock)
+        tpSystemSettings.Controls.Add(cbAutoBrightness)
+        tpSystemSettings.Controls.Add(cbAutoTime)
+        tpSystemSettings.Controls.Add(cb24TimeFormat)
+        tpSystemSettings.Controls.Add(cbGps)
+        tpSystemSettings.Controls.Add(cbAutoRotation)
+        tpSystemSettings.Controls.Add(Label7)
+        tpSystemSettings.Controls.Add(lb24TimeFormatStatus)
+        tpSystemSettings.Controls.Add(lbGpsStatus)
+        tpSystemSettings.Controls.Add(lbAutoRotationStatus)
+        tpSystemSettings.Controls.Add(btSystemConfig)
+        tpSystemSettings.Controls.Add(bt24TimeFormat)
+        tpSystemSettings.Controls.Add(btGps)
+        tpSystemSettings.Controls.Add(btAutoRotation)
+        tpSystemSettings.Controls.Add(lbDisableScreenlockStatus)
+        tpSystemSettings.Controls.Add(lbAutoBrightnessStatus)
+        tpSystemSettings.Controls.Add(lbAutoTimeStatus)
+        tpSystemSettings.Controls.Add(lbScreenOffTimeStatus)
+        tpSystemSettings.Controls.Add(btDisableScreenlock)
+        tpSystemSettings.Controls.Add(btAutoBrightness)
+        tpSystemSettings.Controls.Add(btAutoTime)
+        tpSystemSettings.Controls.Add(btnScreenOffTime)
+        tpSystemSettings.Controls.Add(lb24TimeFormat)
+        tpSystemSettings.Controls.Add(lbGps)
+        tpSystemSettings.Controls.Add(lbDisableScreenlock)
+        tpSystemSettings.Controls.Add(lbAutoRotation)
+        tpSystemSettings.Controls.Add(lbAutoBrightness)
+        tpSystemSettings.Controls.Add(tbScreenOffTime)
+        tpSystemSettings.Controls.Add(lbAutoTime)
+        tpSystemSettings.Controls.Add(lbScreenOffTime)
         tpSystemSettings.Location = New Point(4, 48)
         tpSystemSettings.Name = "tpSystemSettings"
         tpSystemSettings.Size = New Size(815, 449)
         tpSystemSettings.TabIndex = 17
         tpSystemSettings.Text = "系统配置"
         tpSystemSettings.UseVisualStyleBackColor = True
+        ' 
+        ' cbDisableScreenlock
+        ' 
+        cbDisableScreenlock.FormattingEnabled = True
+        cbDisableScreenlock.Items.AddRange(New Object() {"打开", "关闭"})
+        cbDisableScreenlock.Location = New Point(93, 137)
+        cbDisableScreenlock.Name = "cbDisableScreenlock"
+        cbDisableScreenlock.Size = New Size(174, 25)
+        cbDisableScreenlock.TabIndex = 4
+        cbDisableScreenlock.Text = "关闭"
+        ' 
+        ' cbAutoBrightness
+        ' 
+        cbAutoBrightness.FormattingEnabled = True
+        cbAutoBrightness.Items.AddRange(New Object() {"打开", "关闭"})
+        cbAutoBrightness.Location = New Point(92, 95)
+        cbAutoBrightness.Name = "cbAutoBrightness"
+        cbAutoBrightness.Size = New Size(174, 25)
+        cbAutoBrightness.TabIndex = 4
+        cbAutoBrightness.Text = "关闭"
+        ' 
+        ' cbAutoTime
+        ' 
+        cbAutoTime.FormattingEnabled = True
+        cbAutoTime.Items.AddRange(New Object() {"打开", "关闭"})
+        cbAutoTime.Location = New Point(93, 54)
+        cbAutoTime.Name = "cbAutoTime"
+        cbAutoTime.Size = New Size(174, 25)
+        cbAutoTime.TabIndex = 4
+        cbAutoTime.Text = "关闭"
+        ' 
+        ' cb24TimeFormat
+        ' 
+        cb24TimeFormat.FormattingEnabled = True
+        cb24TimeFormat.Items.AddRange(New Object() {"打开", "关闭"})
+        cb24TimeFormat.Location = New Point(491, 97)
+        cb24TimeFormat.Name = "cb24TimeFormat"
+        cb24TimeFormat.Size = New Size(169, 25)
+        cb24TimeFormat.TabIndex = 4
+        cb24TimeFormat.Text = "关闭"
+        ' 
+        ' cbGps
+        ' 
+        cbGps.FormattingEnabled = True
+        cbGps.Items.AddRange(New Object() {"打开", "关闭"})
+        cbGps.Location = New Point(491, 55)
+        cbGps.Name = "cbGps"
+        cbGps.Size = New Size(169, 25)
+        cbGps.TabIndex = 4
+        cbGps.Text = "关闭"
+        ' 
+        ' cbAutoRotation
+        ' 
+        cbAutoRotation.FormattingEnabled = True
+        cbAutoRotation.Items.AddRange(New Object() {"打开", "关闭"})
+        cbAutoRotation.Location = New Point(491, 13)
+        cbAutoRotation.Name = "cbAutoRotation"
+        cbAutoRotation.Size = New Size(169, 25)
+        cbAutoRotation.TabIndex = 4
+        cbAutoRotation.Text = "关闭"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(1293, -122)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(37, 17)
+        Label7.TabIndex = 3
+        Label7.Text = "PASS"
+        ' 
+        ' lb24TimeFormatStatus
+        ' 
+        lb24TimeFormatStatus.AutoSize = True
+        lb24TimeFormatStatus.Location = New Point(762, 100)
+        lb24TimeFormatStatus.Name = "lb24TimeFormatStatus"
+        lb24TimeFormatStatus.Size = New Size(37, 17)
+        lb24TimeFormatStatus.TabIndex = 3
+        lb24TimeFormatStatus.Text = "PASS"
+        ' 
+        ' lbGpsStatus
+        ' 
+        lbGpsStatus.AutoSize = True
+        lbGpsStatus.Location = New Point(762, 58)
+        lbGpsStatus.Name = "lbGpsStatus"
+        lbGpsStatus.Size = New Size(37, 17)
+        lbGpsStatus.TabIndex = 3
+        lbGpsStatus.Text = "PASS"
+        ' 
+        ' lbAutoRotationStatus
+        ' 
+        lbAutoRotationStatus.AutoSize = True
+        lbAutoRotationStatus.Location = New Point(762, 16)
+        lbAutoRotationStatus.Name = "lbAutoRotationStatus"
+        lbAutoRotationStatus.Size = New Size(37, 17)
+        lbAutoRotationStatus.TabIndex = 3
+        lbAutoRotationStatus.Text = "PASS"
+        ' 
+        ' btSystemConfig
+        ' 
+        btSystemConfig.Location = New Point(18, 195)
+        btSystemConfig.Name = "btSystemConfig"
+        btSystemConfig.Size = New Size(75, 23)
+        btSystemConfig.TabIndex = 2
+        btSystemConfig.Text = "全部设置"
+        btSystemConfig.UseVisualStyleBackColor = True
+        ' 
+        ' bt24TimeFormat
+        ' 
+        bt24TimeFormat.Location = New Point(666, 97)
+        bt24TimeFormat.Name = "bt24TimeFormat"
+        bt24TimeFormat.Size = New Size(75, 23)
+        bt24TimeFormat.TabIndex = 2
+        bt24TimeFormat.Text = "设置"
+        bt24TimeFormat.UseVisualStyleBackColor = True
+        ' 
+        ' btGps
+        ' 
+        btGps.Location = New Point(666, 55)
+        btGps.Name = "btGps"
+        btGps.Size = New Size(75, 23)
+        btGps.TabIndex = 2
+        btGps.Text = "设置"
+        btGps.UseVisualStyleBackColor = True
+        ' 
+        ' btAutoRotation
+        ' 
+        btAutoRotation.Location = New Point(666, 13)
+        btAutoRotation.Name = "btAutoRotation"
+        btAutoRotation.Size = New Size(75, 23)
+        btAutoRotation.TabIndex = 2
+        btAutoRotation.Text = "设置"
+        btAutoRotation.UseVisualStyleBackColor = True
+        ' 
+        ' lbDisableScreenlockStatus
+        ' 
+        lbDisableScreenlockStatus.AutoSize = True
+        lbDisableScreenlockStatus.Location = New Point(365, 140)
+        lbDisableScreenlockStatus.Name = "lbDisableScreenlockStatus"
+        lbDisableScreenlockStatus.Size = New Size(37, 17)
+        lbDisableScreenlockStatus.TabIndex = 3
+        lbDisableScreenlockStatus.Text = "PASS"
+        ' 
+        ' lbAutoBrightnessStatus
+        ' 
+        lbAutoBrightnessStatus.AutoSize = True
+        lbAutoBrightnessStatus.Location = New Point(365, 98)
+        lbAutoBrightnessStatus.Name = "lbAutoBrightnessStatus"
+        lbAutoBrightnessStatus.Size = New Size(37, 17)
+        lbAutoBrightnessStatus.TabIndex = 3
+        lbAutoBrightnessStatus.Text = "PASS"
+        ' 
+        ' lbAutoTimeStatus
+        ' 
+        lbAutoTimeStatus.AutoSize = True
+        lbAutoTimeStatus.Location = New Point(365, 56)
+        lbAutoTimeStatus.Name = "lbAutoTimeStatus"
+        lbAutoTimeStatus.Size = New Size(37, 17)
+        lbAutoTimeStatus.TabIndex = 3
+        lbAutoTimeStatus.Text = "PASS"
+        ' 
+        ' lbScreenOffTimeStatus
+        ' 
+        lbScreenOffTimeStatus.AutoSize = True
+        lbScreenOffTimeStatus.Location = New Point(365, 16)
+        lbScreenOffTimeStatus.Name = "lbScreenOffTimeStatus"
+        lbScreenOffTimeStatus.Size = New Size(37, 17)
+        lbScreenOffTimeStatus.TabIndex = 3
+        lbScreenOffTimeStatus.Text = "PASS"
+        ' 
+        ' btDisableScreenlock
+        ' 
+        btDisableScreenlock.Location = New Point(272, 137)
+        btDisableScreenlock.Name = "btDisableScreenlock"
+        btDisableScreenlock.Size = New Size(75, 23)
+        btDisableScreenlock.TabIndex = 2
+        btDisableScreenlock.Text = "设置"
+        btDisableScreenlock.UseVisualStyleBackColor = True
+        ' 
+        ' btAutoBrightness
+        ' 
+        btAutoBrightness.Location = New Point(272, 95)
+        btAutoBrightness.Name = "btAutoBrightness"
+        btAutoBrightness.Size = New Size(75, 23)
+        btAutoBrightness.TabIndex = 2
+        btAutoBrightness.Text = "设置"
+        btAutoBrightness.UseVisualStyleBackColor = True
+        ' 
+        ' btAutoTime
+        ' 
+        btAutoTime.Location = New Point(272, 53)
+        btAutoTime.Name = "btAutoTime"
+        btAutoTime.Size = New Size(75, 23)
+        btAutoTime.TabIndex = 2
+        btAutoTime.Text = "设置"
+        btAutoTime.UseVisualStyleBackColor = True
+        ' 
+        ' btnScreenOffTime
+        ' 
+        btnScreenOffTime.Location = New Point(272, 13)
+        btnScreenOffTime.Name = "btnScreenOffTime"
+        btnScreenOffTime.Size = New Size(75, 23)
+        btnScreenOffTime.TabIndex = 2
+        btnScreenOffTime.Text = "设置"
+        btnScreenOffTime.UseVisualStyleBackColor = True
+        ' 
+        ' lb24TimeFormat
+        ' 
+        lb24TimeFormat.AutoSize = True
+        lb24TimeFormat.Location = New Point(411, 100)
+        lb24TimeFormat.Name = "lb24TimeFormat"
+        lb24TimeFormat.Size = New Size(74, 17)
+        lb24TimeFormat.TabIndex = 0
+        lb24TimeFormat.Text = "24 小时制："
+        ' 
+        ' lbGps
+        ' 
+        lbGps.AutoSize = True
+        lbGps.Location = New Point(442, 58)
+        lbGps.Name = "lbGps"
+        lbGps.Size = New Size(43, 17)
+        lbGps.TabIndex = 0
+        lbGps.Text = "GPS："
+        ' 
+        ' lbDisableScreenlock
+        ' 
+        lbDisableScreenlock.AutoSize = True
+        lbDisableScreenlock.Location = New Point(18, 140)
+        lbDisableScreenlock.Name = "lbDisableScreenlock"
+        lbDisableScreenlock.Size = New Size(68, 17)
+        lbDisableScreenlock.TabIndex = 0
+        lbDisableScreenlock.Text = "禁止锁屏："
+        ' 
+        ' lbAutoRotation
+        ' 
+        lbAutoRotation.AutoSize = True
+        lbAutoRotation.Location = New Point(417, 16)
+        lbAutoRotation.Name = "lbAutoRotation"
+        lbAutoRotation.Size = New Size(68, 17)
+        lbAutoRotation.TabIndex = 0
+        lbAutoRotation.Text = "自动旋转："
+        ' 
+        ' lbAutoBrightness
+        ' 
+        lbAutoBrightness.AutoSize = True
+        lbAutoBrightness.Location = New Point(18, 98)
+        lbAutoBrightness.Name = "lbAutoBrightness"
+        lbAutoBrightness.Size = New Size(68, 17)
+        lbAutoBrightness.TabIndex = 0
+        lbAutoBrightness.Text = "自动亮度："
+        ' 
+        ' tbScreenOffTime
+        ' 
+        tbScreenOffTime.Location = New Point(92, 13)
+        tbScreenOffTime.Name = "tbScreenOffTime"
+        tbScreenOffTime.Size = New Size(174, 23)
+        tbScreenOffTime.TabIndex = 1
+        ' 
+        ' lbAutoTime
+        ' 
+        lbAutoTime.AutoSize = True
+        lbAutoTime.Location = New Point(18, 56)
+        lbAutoTime.Name = "lbAutoTime"
+        lbAutoTime.Size = New Size(68, 17)
+        lbAutoTime.TabIndex = 0
+        lbAutoTime.Text = "自动时间："
+        ' 
+        ' lbScreenOffTime
+        ' 
+        lbScreenOffTime.AutoSize = True
+        lbScreenOffTime.Location = New Point(18, 16)
+        lbScreenOffTime.Name = "lbScreenOffTime"
+        lbScreenOffTime.Size = New Size(68, 17)
+        lbScreenOffTime.TabIndex = 0
+        lbScreenOffTime.Text = "灭屏时间："
         ' 
         ' ofdSelectFile
         ' 
@@ -2406,6 +2741,8 @@ Partial Class AndroidSettingsForm
         tpGoogleCustom.PerformLayout()
         tpAnimation.ResumeLayout(False)
         tpAnimation.PerformLayout()
+        tpSystemSettings.ResumeLayout(False)
+        tpSystemSettings.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -2622,4 +2959,34 @@ Partial Class AndroidSettingsForm
     Friend WithEvents lbBootAnim As Label
     Friend WithEvents tbBootRing As TextBox
     Friend WithEvents lbBootRing As Label
+    Friend WithEvents cbAutoTime As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As Global.System.Windows.Forms.Label
+    Friend WithEvents lb24TimeFormatStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents lbGpsStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents lbAutoRotationStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents btSystemConfig As Global.System.Windows.Forms.Button
+    Friend WithEvents bt24TimeFormat As Global.System.Windows.Forms.Button
+    Friend WithEvents btGps As Global.System.Windows.Forms.Button
+    Friend WithEvents btAutoRotation As Global.System.Windows.Forms.Button
+    Friend WithEvents lbDisableScreenlockStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents lbAutoBrightnessStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents lbAutoTimeStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents lbScreenOffTimeStatus As Global.System.Windows.Forms.Label
+    Friend WithEvents btDisableScreenlock As Global.System.Windows.Forms.Button
+    Friend WithEvents btAutoBrightness As Global.System.Windows.Forms.Button
+    Friend WithEvents btAutoTime As Global.System.Windows.Forms.Button
+    Friend WithEvents btnScreenOffTime As Global.System.Windows.Forms.Button
+    Friend WithEvents lb24TimeFormat As Global.System.Windows.Forms.Label
+    Friend WithEvents lbGps As Global.System.Windows.Forms.Label
+    Friend WithEvents lbDisableScreenlock As Global.System.Windows.Forms.Label
+    Friend WithEvents lbAutoRotation As Global.System.Windows.Forms.Label
+    Friend WithEvents lbAutoBrightness As Global.System.Windows.Forms.Label
+    Friend WithEvents tbScreenOffTime As Global.System.Windows.Forms.TextBox
+    Friend WithEvents lbAutoTime As Global.System.Windows.Forms.Label
+    Friend WithEvents lbScreenOffTime As Global.System.Windows.Forms.Label
+    Friend WithEvents cbDisableScreenlock As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents cbAutoBrightness As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents cb24TimeFormat As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents cbGps As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents cbAutoRotation As Global.System.Windows.Forms.ComboBox
 End Class

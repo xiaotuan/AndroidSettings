@@ -290,6 +290,8 @@ Public Class AndroidSettingsForm
             GoogleCustomController.UpdateGoogleCustomInfos(Me)
         ElseIf sender.SelectedTab.Name.Equals("tpAnimation") Then
             AnimationController.UpdateAnimationInfos(Me)
+        ElseIf sender.SelectedTab.Name.Equals("tpSystemSettings") Then
+            SystemConfigController.UpdateSystemConfigInfos(Me)
         End If
     End Sub
 
@@ -536,5 +538,43 @@ Public Class AndroidSettingsForm
         AnimationController.SetBootAnim(Me)
         AnimationController.SetShutdownRing(Me)
         AnimationController.SetShutdownAnim(Me)
+    End Sub
+
+    Private Sub btnScreenOffTime_Click(sender As Object, e As EventArgs) Handles btnScreenOffTime.Click
+        SystemConfigController.SetScreenOffTime(Me)
+    End Sub
+
+    Private Sub btAutoRotation_Click(sender As Object, e As EventArgs) Handles btAutoRotation.Click
+        SystemConfigController.SetAutoRotation(Me)
+    End Sub
+
+    Private Sub btAutoTime_Click(sender As Object, e As EventArgs) Handles btAutoTime.Click
+        SystemConfigController.SetAutoTime(Me)
+    End Sub
+
+    Private Sub btGps_Click(sender As Object, e As EventArgs) Handles btGps.Click
+        SystemConfigController.SetGps(Me)
+    End Sub
+
+    Private Sub btAutoBrightness_Click(sender As Object, e As EventArgs) Handles btAutoBrightness.Click
+        SystemConfigController.SetAutoBrightness(Me)
+    End Sub
+
+    Private Sub bt24TimeFormat_Click(sender As Object, e As EventArgs) Handles bt24TimeFormat.Click
+        SystemConfigController.Set24TimeFormat(Me)
+    End Sub
+
+    Private Sub btDisableScreenlock_Click(sender As Object, e As EventArgs) Handles btDisableScreenlock.Click
+        SystemConfigController.SetDisableScreenLock(Me)
+    End Sub
+
+    Private Sub btSystemConfig_Click(sender As Object, e As EventArgs) Handles btSystemConfig.Click
+        SystemConfigController.SetScreenOffTime(Me)
+        SystemConfigController.SetAutoRotation(Me)
+        SystemConfigController.SetAutoTime(Me)
+        SystemConfigController.SetGps(Me)
+        SystemConfigController.SetAutoBrightness(Me)
+        SystemConfigController.Set24TimeFormat(Me)
+        SystemConfigController.SetDisableScreenLock(Me)
     End Sub
 End Class
