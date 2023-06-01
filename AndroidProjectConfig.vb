@@ -304,8 +304,32 @@ Public Class AndroidSettingsForm
         FingerprintController.SetFingerprint(Me, tbFingerprint.Text)
     End Sub
 
+    Private Sub btName_Click(sender As Object, e As EventArgs) Handles btName.Click
+        PropertyController.SetProductName(Me)
+    End Sub
+
+    Private Sub btModel_Click(sender As Object, e As EventArgs) Handles btModel.Click
+        PropertyController.SetProductModel(Me)
+    End Sub
+
+    Private Sub btBrand_Click(sender As Object, e As EventArgs) Handles btBrand.Click
+        PropertyController.SetProductBrand(Me)
+    End Sub
+
+    Private Sub btDevice_Click(sender As Object, e As EventArgs) Handles btDevice.Click
+        PropertyController.SetProductDevice(Me)
+    End Sub
+
+    Private Sub btManufacturer_Click(sender As Object, e As EventArgs) Handles btManufacturer.Click
+        PropertyController.SetProductManufacturer(Me)
+    End Sub
+
     Private Sub btPropertySetting_Click(sender As Object, e As EventArgs) Handles btPropertySetting.Click
-        PropertyController.SetProperties(Me)
+        PropertyController.SetProductName(Me)
+        PropertyController.SetProductModel(Me)
+        PropertyController.SetProductBrand(Me)
+        PropertyController.SetProductDevice(Me)
+        PropertyController.SetProductManufacturer(Me)
     End Sub
 
     Private Sub btWifiSetting_Click(sender As Object, e As EventArgs) Handles btWifiSetting.Click
@@ -577,4 +601,5 @@ Public Class AndroidSettingsForm
         SystemConfigController.Set24TimeFormat(Me)
         SystemConfigController.SetDisableScreenLock(Me)
     End Sub
+
 End Class
