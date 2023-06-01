@@ -251,12 +251,7 @@ Public Class AndroidSettingsForm
     End Sub
 
     Private Sub btVersion_Click(sender As Object, e As EventArgs) Handles btVersion.Click
-
-        If tbVersion.Text.Trim().Length > 0 Then
-            VersionController.SetVersion(Me, tbVersion.Text)
-        Else
-            MessageBox.Show("版本号不能为空！")
-        End If
+        VersionController.SetVersion(Me)
     End Sub
 
     Private Sub tcAndroidSettings_SelectedIndexChanged(sender As TabControl, e As EventArgs) Handles tcAndroidSettings.SelectedIndexChanged

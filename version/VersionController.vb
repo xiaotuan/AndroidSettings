@@ -1,15 +1,20 @@
 ﻿Module VersionController
 
+    ' 更新版本号选项卡视图控件状态
+    '
+    ' form：AndroidSettingsForm 对象
     Public Sub UpdateVersionInfo(ByRef form As AndroidSettingsForm)
         Debug.WriteLine("[VersionController] UpdateVersionInfo()...")
         form.lbVersionState.Visible = False
         form.tbVersion.Text = Version.GetVersion(form.MyProjectInfo)
     End Sub
 
-    Public Sub SetVersion(ByRef form As AndroidSettingsForm, ByVal text As String)
-        Dim result As Boolean = Version.SetVersion(form.MyProjectInfo, text)
-        Debug.WriteLine("SetVersion=>result: " & Str(result))
-        If result Then
+    ' 设置软件版本号
+    '
+    ' form：AndroidSettingsForm 对象
+    Public Sub SetVersion(ByRef form As AndroidSettingsForm)
+        Dim ver As String = form.tbVersion.Text
+        If Not Utils.IsEmptyText(ver) And Version.SetVersion(form.MyProjectInfo, ver) Then
             form.lbVersionState.Text = "PASS"
             form.lbVersionState.ForeColor = Color.Green
             form.lbVersionState.Visible = True

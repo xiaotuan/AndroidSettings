@@ -1,7 +1,7 @@
 ﻿Module Utils
 
-    Public Function IsEmptyText(ByVal value As String) As Boolean
-        If IsNothing(value) Or Len(value.Trim) = 0 Then
+    Public Function IsEmptyText(Optional value As String = Nothing) As Boolean
+        If value Is Nothing Or Len(value.Trim) = 0 Then
             Return True
         End If
         Return False

@@ -186,14 +186,17 @@ Module FileUtils
                         If items.Length = 2 Then
                             value = items(1).Trim
                             Dim startIndex = value.IndexOf(startTag)
+                            'Debug.WriteLine($"[FileUtils] GetShellFileValue=>startIndex: {startIndex}")
                             If startIndex < 0 Then
                                 startIndex = 0
                             End If
                             Dim endIndex = value.IndexOf(endTag)
+                            'Debug.WriteLine($"[FileUtils] GetShellFileValue=>endIndex: {endIndex}")
                             If endIndex < 0 Then
                                 endIndex = value.Length
                             End If
-                            value = value.Substring(startTag, endIndex)
+                            'Debug.WriteLine($"[FileUtils] GetShellFileValue=>startIndex: {startIndex}, endIndex: {endIndex}")
+                            value = value.Substring(startIndex, endIndex)
                             found = True
                         End If
                     End If
@@ -217,7 +220,7 @@ Module FileUtils
                             If endIndex < 0 Then
                                 endIndex = value.Length
                             End If
-                            value = value.Substring(startTag, endIndex)
+                            value = value.Substring(startIndex, endIndex)
                             found = True
                         End If
                     End If
@@ -236,7 +239,19 @@ Module FileUtils
 
     ' 设置 .sh 文件属性值
     '
-    ' 
+    ' 如果客制化文件不存在，则拷贝原始文件内容到客制化文件中
+    ' 根据 indexTag 参数判断是否是要修改的行
+    ' 如果未找到要修改的行，且 insertTag 参数不为空字符串，则在找到 insertTag 相关行时，在其前面插入 value
+    '如果 insertTag 为空字符串，且未找到要修改的行，则在文件末尾添加 value
+    '
+    ' originFilePath：原始文件路径
+    ' customFilePath：客制化文件路径
+    ' newLine：换行符
+    ' indexTag：用于查找要修改行的标识字符串
+    ' insertTag：如果在找到该字符串对应的行时，还为发现 indexTag 对应的行，则在该行的前面插入 value
+    ' value：要插入的字符串（完整的一行）
+    '
+    ' return：修改成功返回 True，否则返回 False
     Public Function SetShellFileValue(originFilePath As String, customFilePath As String, newLine As String,
                                       indexTag As String, insertTag As String, value As String) As Boolean
         Dim result As Boolean = False
@@ -273,11 +288,13 @@ Module FileUtils
             Dim line As String = fileReader.ReadLine
             Do Until line Is Nothing
                 If line.Trim.StartsWith(indexTag) Then
-                    fileWriter.WriteLine(value)
+                    Dim spaces As String = line.Substring(0, line.IndexOf(indexTag))
+                    fileWriter.WriteLine(spaces & value)
                     found = True
                 Else
                     If Not found And insertTag.Trim.Length > 0 And line.Trim.StartsWith(insertTag) Then
-                        fileWriter.WriteLine(value)
+                        Dim spaces As String = line.Substring(0, line.IndexOf(insertTag))
+                        fileWriter.WriteLine(spaces & value)
                         found = True
                     End If
                     fileWriter.WriteLine(line)
