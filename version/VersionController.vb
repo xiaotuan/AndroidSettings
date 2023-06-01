@@ -1,4 +1,5 @@
-﻿Module VersionController
+﻿' VersionController 模块用于管理版本号选项卡视图
+Module VersionController
 
     ' 更新版本号选项卡视图控件状态
     '

@@ -296,7 +296,7 @@ Public Class AndroidSettingsForm
     End Sub
 
     Private Sub btFingerprintSet_Click(sender As Object, e As EventArgs) Handles btFingerprintSet.Click
-        FingerprintController.SetFingerprint(Me, tbFingerprint.Text)
+        FingerprintController.SetFingerprint(Me)
     End Sub
 
     Private Sub btName_Click(sender As Object, e As EventArgs) Handles btName.Click
