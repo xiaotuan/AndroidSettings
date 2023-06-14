@@ -22,6 +22,7 @@ Partial Class AndroidSettingsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As Global.System.ComponentModel.ComponentResourceManager = New Global.System.ComponentModel.ComponentResourceManager(GetType(Global.AndroidSettings.AndroidSettingsForm))
         Me.tcAndroidSettings = New Global.System.Windows.Forms.TabControl()
         Me.tpProjectInfo = New Global.System.Windows.Forms.TabPage()
         Me.GbChiperOptions = New Global.System.Windows.Forms.GroupBox()
@@ -86,6 +87,9 @@ Partial Class AndroidSettingsForm
         Me.tbFingerprint = New Global.System.Windows.Forms.TextBox()
         Me.lbFingerprint = New Global.System.Windows.Forms.Label()
         Me.tpWifi = New Global.System.Windows.Forms.TabPage()
+        Me.btWifiScreenCast = New Global.System.Windows.Forms.Button()
+        Me.BtWifiHost = New Global.System.Windows.Forms.Button()
+        Me.btWifiState = New Global.System.Windows.Forms.Button()
         Me.btWifiSetting = New Global.System.Windows.Forms.Button()
         Me.lbWifiScreenCastState = New Global.System.Windows.Forms.Label()
         Me.lbWifiHotspotNameState = New Global.System.Windows.Forms.Label()
@@ -936,6 +940,9 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpWifi
         ' 
+        Me.tpWifi.Controls.Add(Me.btWifiScreenCast)
+        Me.tpWifi.Controls.Add(Me.BtWifiHost)
+        Me.tpWifi.Controls.Add(Me.btWifiState)
         Me.tpWifi.Controls.Add(Me.btWifiSetting)
         Me.tpWifi.Controls.Add(Me.lbWifiScreenCastState)
         Me.tpWifi.Controls.Add(Me.lbWifiHotspotNameState)
@@ -953,6 +960,33 @@ Partial Class AndroidSettingsForm
         Me.tpWifi.TabIndex = 4
         Me.tpWifi.Text = "WiFi"
         Me.tpWifi.UseVisualStyleBackColor = True
+        ' 
+        ' btWifiScreenCast
+        ' 
+        Me.btWifiScreenCast.Location = New Global.System.Drawing.Point(660, 97)
+        Me.btWifiScreenCast.Name = "btWifiScreenCast"
+        Me.btWifiScreenCast.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btWifiScreenCast.TabIndex = 6
+        Me.btWifiScreenCast.Text = "设置"
+        Me.btWifiScreenCast.UseVisualStyleBackColor = True
+        ' 
+        ' BtWifiHost
+        ' 
+        Me.BtWifiHost.Location = New Global.System.Drawing.Point(660, 56)
+        Me.BtWifiHost.Name = "BtWifiHost"
+        Me.BtWifiHost.Size = New Global.System.Drawing.Size(75, 23)
+        Me.BtWifiHost.TabIndex = 6
+        Me.BtWifiHost.Text = "设置"
+        Me.BtWifiHost.UseVisualStyleBackColor = True
+        ' 
+        ' btWifiState
+        ' 
+        Me.btWifiState.Location = New Global.System.Drawing.Point(660, 17)
+        Me.btWifiState.Name = "btWifiState"
+        Me.btWifiState.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btWifiState.TabIndex = 6
+        Me.btWifiState.Text = "设置"
+        Me.btWifiState.UseVisualStyleBackColor = True
         ' 
         ' btWifiSetting
         ' 
@@ -994,14 +1028,14 @@ Partial Class AndroidSettingsForm
         ' 
         Me.tbWifiScreenCast.Location = New Global.System.Drawing.Point(116, 97)
         Me.tbWifiScreenCast.Name = "tbWifiScreenCast"
-        Me.tbWifiScreenCast.Size = New Global.System.Drawing.Size(619, 23)
+        Me.tbWifiScreenCast.Size = New Global.System.Drawing.Size(538, 23)
         Me.tbWifiScreenCast.TabIndex = 3
         ' 
         ' tbWifiHotspotName
         ' 
         Me.tbWifiHotspotName.Location = New Global.System.Drawing.Point(116, 56)
         Me.tbWifiHotspotName.Name = "tbWifiHotspotName"
-        Me.tbWifiHotspotName.Size = New Global.System.Drawing.Size(619, 23)
+        Me.tbWifiHotspotName.Size = New Global.System.Drawing.Size(538, 23)
         Me.tbWifiHotspotName.TabIndex = 3
         ' 
         ' lbWifiScreenCast
@@ -2752,6 +2786,7 @@ Partial Class AndroidSettingsForm
         Me.ClientSize = New Global.System.Drawing.Size(847, 522)
         Me.Controls.Add(Me.tcAndroidSettings)
         Me.FormBorderStyle = Global.System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), Global.System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "AndroidSettingsForm"
         Me.StartPosition = Global.System.Windows.Forms.FormStartPosition.CenterScreen
@@ -3049,4 +3084,7 @@ Partial Class AndroidSettingsForm
     Friend WithEvents btDevice As Global.System.Windows.Forms.Button
     Friend WithEvents btModel As Global.System.Windows.Forms.Button
     Friend WithEvents btName As Global.System.Windows.Forms.Button
+    Friend WithEvents btWifiScreenCast As Global.System.Windows.Forms.Button
+    Friend WithEvents BtWifiHost As Global.System.Windows.Forms.Button
+    Friend WithEvents btWifiState As Global.System.Windows.Forms.Button
 End Class

@@ -45,30 +45,6 @@
                 ConfigForm.MyProjectInfo.Go = Project.Go
             End If
         Next
-        If Not Found Then
-            ConfigForm.CbAndroidVersin.Text = "Android 13"
-            ConfigForm.TbPublicName.Text = ""
-            ConfigForm.TbMssiName.Text = ""
-            ConfigForm.TbDriveName.Text = ""
-            ConfigForm.TbCustomName.Text = ""
-            ConfigForm.CbChiperMaker.Text = "MTK"
-            ConfigForm.CbChiperModel.Text = "MT6761"
-            ConfigForm.RbNotGms.Checked = False
-            ConfigForm.RbGms.Checked = True
-            ConfigForm.RbNotGo.Checked = True
-            ConfigForm.RbOneGbGo.Checked = False
-            ConfigForm.RbTwoGbGo.Checked = False
-
-            ConfigForm.MyProjectInfo.ProjectId = "Android 13"
-            ConfigForm.MyProjectInfo.PublicDirName = ""
-            ConfigForm.MyProjectInfo.MssiDirName = ""
-            ConfigForm.MyProjectInfo.DriveDirName = ""
-            ConfigForm.MyProjectInfo.CustomDirName = ""
-            ConfigForm.MyProjectInfo.ChiperMaker = "MTK"
-            ConfigForm.MyProjectInfo.ChiperModel = "MT6761"
-            ConfigForm.MyProjectInfo.Gms = 1
-            ConfigForm.MyProjectInfo.Go = 0
-        End If
     End Sub
 
 End Module

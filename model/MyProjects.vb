@@ -3,7 +3,7 @@
     Public Function GetProjects() As ArrayList
         Dim Projects As New ArrayList()
 
-        ' 纳斯达 395 项目
+        ' 长城 769 项目
         Dim CC769Project As New ProjectInfo()
         CC769Project.ProjectId = "769"
         CC769Project.AndroidVersion = "Android 13"
@@ -18,7 +18,7 @@
         CC769Project.ChiperModel = "MT8768"
         Projects.Add(CC769Project)
 
-        ' 纳斯达 395 项目
+        ' 长城 768 项目
         Dim CC768Project As New ProjectInfo()
         CC768Project.ProjectId = "768"
         CC768Project.AndroidVersion = "Android 13"
@@ -32,6 +32,21 @@
         CC768Project.ChiperMaker = "MTK"
         CC768Project.ChiperModel = "MT8768"
         Projects.Add(CC768Project)
+
+        ' 长城 763 项目
+        Dim CC763Project As New ProjectInfo()
+        CC763Project.ProjectId = "763"
+        CC763Project.AndroidVersion = "Android 13"
+        CC763Project.ProjectPath = ""
+        CC763Project.PublicDirName = "tb8781p1_64"
+        CC763Project.MssiDirName = "mssi_t_64_cn_armv82_wifi"
+        CC763Project.DriveDirName = "M100TB_CC_763_WIFI"
+        CC763Project.CustomDirName = "M100TB_CC_763_WIFI-MMI"
+        CC763Project.Gms = 1
+        CC763Project.Go = 0
+        CC763Project.ChiperMaker = "MTK"
+        CC763Project.ChiperModel = "MT8781"
+        Projects.Add(CC763Project)
 
         ' 优米 775 项目
         Dim YM775Project As New ProjectInfo()
