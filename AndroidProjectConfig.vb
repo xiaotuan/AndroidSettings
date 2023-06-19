@@ -25,7 +25,6 @@ Public Class AndroidSettingsForm
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\13\mt8766_t\C\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\A\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\B\mtk_sp_t0")
-        CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\13\mt8766_t\C\mtk_sp_t0")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work2\mtk\12\mt8766\A\mt8766_s")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\12\mt8766_s\A\mt8766_s")
         CbProjectPath.Items.Add("\\192.168.0.38\qintuanye\work1\mtk\12\mt8766_s\B\mt8766_s")
@@ -328,21 +327,8 @@ Public Class AndroidSettingsForm
         PropertyController.SetProductManufacturer(Me)
     End Sub
 
-    Private Sub btWifiState_Click(sender As Object, e As EventArgs) Handles btWifiState.Click
-        WifiController.SetWifiDefaultState(Me)
-    End Sub
-
-    Private Sub BtWifiHost_Click(sender As Object, e As EventArgs) Handles BtWifiHost.Click
-        WifiController.SetHotspotName(Me)
-    End Sub
-
-    Private Sub btWifiScreenCast_Click(sender As Object, e As EventArgs) Handles btWifiScreenCast.Click
-        WifiController.SetScreenCastName(Me)
-    End Sub
     Private Sub btWifiSetting_Click(sender As Object, e As EventArgs) Handles btWifiSetting.Click
-        WifiController.SetWifiDefaultState(Me)
-        WifiController.SetHotspotName(Me)
-        WifiController.SetScreenCastName(Me)
+        WifiController.SetWifiInfos(Me)
     End Sub
 
     Private Sub CbProjectPath_SelectedIndexChanged(sender As ComboBox, e As EventArgs) Handles CbProjectPath.SelectedIndexChanged

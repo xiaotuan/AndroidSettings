@@ -6,12 +6,7 @@
     <StartupObject>Sub Main</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
-    <ApplicationIcon>AndroidSettings.ico</ApplicationIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="AndroidSettings.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
