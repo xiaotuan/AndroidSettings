@@ -863,6 +863,397 @@ Module FileUtils
 
     '
     ' 摘要:
+    '       从 cpp 文件中获取值
+    '
+    ' 参数:
+    '   originFilePath:
+    '       原始文件路径
+    '
+    '   customFilePath:
+    '       客制化文件路径
+    '
+    '   methodLine:
+    '       方法定义所在的行字符串，不包括前后空白符
+    '
+    '   indexTag:
+    '       用于判断该行是否是要获取值的行
+    '
+    '   startTag:
+    '       值前面的字符串
+    '
+    '   endTag:
+    '       值后面的字符串
+    '   
+    ' 返回结果:
+    '       获取成功返回值，否则返回空字符串
+    Public Function GetCppFileValue(originFilePath As String, customFilePath As String, methodLine As String, indexTag As String, startTag As String, endTag As String) As String
+        Dim value As String = ""
+        Dim fileReader As IO.StreamReader = Nothing
+        Dim utf8 = New Text.UTF8Encoding(False)
+        Dim found As Boolean = False
+        Try
+            If File.Exists(customFilePath) Then
+                fileReader = New StreamReader(customFilePath, utf8)
+                Dim methodCode As StringBuilder = New StringBuilder()
+                Dim isMultilineSearch As Boolean = indexTag.Contains(vbLf)
+                Dim isInMethod As Boolean = False
+                Dim braceCount As Integer = 0
+                Dim line = fileReader.ReadLine()
+                Do Until line Is Nothing
+                    If Not String.IsNullOrEmpty(methodLine) And line.Trim.StartsWith(methodLine) Then
+                        ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>method start line: {line}")
+                        If isMultilineSearch Then
+                            methodCode.Append(line)
+                        End If
+                        isInMethod = True
+                        If line.Contains("{") Then
+                            braceCount += GetCharCount(line, "{")
+                            braceCount -= GetCharCount(line, "}")
+                            If braceCount = 0 Then
+                                isInMethod = False
+                                Dim startIndex = line.Trim.IndexOf(startTag)
+                                Dim endIndex = line.Trim.IndexOf(endTag)
+                                If startIndex >= 0 And endIndex >= 0 Then
+                                    Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line1: {line}")
+                                    startIndex += startTag.Length
+                                    value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                                End If
+                            End If
+                        End If
+                    Else
+                        If Not String.IsNullOrEmpty(methodLine) And isInMethod Then
+                            If isMultilineSearch Then
+                                methodCode.Append(line)
+                            End If
+                            braceCount += GetCharCount(line, "{")
+                            braceCount -= GetCharCount(line, "}")
+                            ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line: {line}, braceCount: {braceCount}")
+                            If braceCount = 0 Then
+                                isInMethod = False
+                                If isMultilineSearch Then
+                                    Dim methodCodeStr As String = methodCode.ToString()
+                                    Dim index As Integer = methodCodeStr.IndexOf(indexTag)
+                                    If index >= 0 Then
+                                        methodCodeStr = methodCodeStr.Substring(index)
+                                        Dim startIndex = methodCodeStr.Trim.IndexOf(startTag)
+                                        Dim endIndex = methodCodeStr.Trim.IndexOf(endTag)
+                                        If startIndex >= 0 And endIndex >= 0 Then
+                                            startIndex += startTag.Length
+                                            value = methodCodeStr.Trim.Substring(startIndex, endIndex - startIndex)
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                    If Not String.IsNullOrEmpty(methodLine) Then
+                        If isInMethod And Not isMultilineSearch And line.Trim.StartsWith(indexTag) Then
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line2: {line}")
+                            Dim startIndex = line.Trim.IndexOf(startTag)
+                            Dim endIndex = line.Trim.IndexOf(endTag)
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>startIndex: {startIndex}, endIndex: {endIndex}")
+                            If startIndex >= 0 And endIndex >= 0 Then
+                                startIndex += startTag.Length
+                                value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                            End If
+                        End If
+                    Else
+                        If Not String.IsNullOrEmpty(indexTag) And line.Trim.StartsWith(indexTag) Then
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line3: {line}")
+                            Dim startIndex = line.Trim.IndexOf(startTag)
+                            Dim endIndex = line.Trim.IndexOf(endTag)
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>startIndex: {startIndex}, endIndex: {endIndex}")
+                            If startIndex >= 0 And endIndex >= 0 Then
+                                startIndex += startTag.Length
+                                value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                            End If
+                        End If
+                    End If
+                    line = fileReader.ReadLine()
+                Loop
+                fileReader.Close()
+            End If
+            If Not found And File.Exists(originFilePath) Then
+                fileReader = New StreamReader(originFilePath, utf8)
+                Dim methodCode As StringBuilder = New StringBuilder()
+                Dim isMultilineSearch As Boolean = indexTag.Contains(vbLf)
+                Dim isInMethod As Boolean = False
+                Dim braceCount As Integer = 0
+                Dim line = fileReader.ReadLine()
+                Do Until line Is Nothing
+                    If Not String.IsNullOrEmpty(methodLine) And line.Trim.StartsWith(methodLine) Then
+                        ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>method start line: {line}")
+                        If isMultilineSearch Then
+                            methodCode.Append(line)
+                        End If
+                        isInMethod = True
+                        If line.Contains("{") Then
+                            braceCount += GetCharCount(line, "{")
+                            braceCount -= GetCharCount(line, "}")
+                            If braceCount = 0 Then
+                                isInMethod = False
+                                Dim startIndex = line.Trim.IndexOf(startTag)
+                                Dim endIndex = line.Trim.IndexOf(endTag)
+                                If startIndex >= 0 And endIndex >= 0 Then
+                                    Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line1: {line}")
+                                    startIndex += startTag.Length
+                                    value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                                End If
+                            End If
+                        End If
+                    Else
+                        If Not String.IsNullOrEmpty(methodLine) And isInMethod Then
+                            If isMultilineSearch Then
+                                methodCode.Append(line)
+                            End If
+                            braceCount += GetCharCount(line, "{")
+                            braceCount -= GetCharCount(line, "}")
+                            ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line: {line}, braceCount: {braceCount}")
+                            If braceCount = 0 Then
+                                isInMethod = False
+                                If isMultilineSearch Then
+                                    Dim methodCodeStr As String = methodCode.ToString()
+                                    Dim index As Integer = methodCodeStr.IndexOf(indexTag)
+                                    If index >= 0 Then
+                                        methodCodeStr = methodCodeStr.Substring(index)
+                                        Dim startIndex = methodCodeStr.Trim.IndexOf(startTag)
+                                        Dim endIndex = methodCodeStr.Trim.IndexOf(endTag)
+                                        If startIndex >= 0 And endIndex >= 0 Then
+                                            startIndex += startTag.Length
+                                            value = methodCodeStr.Trim.Substring(startIndex, endIndex - startIndex)
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                    If Not String.IsNullOrEmpty(methodLine) Then
+                        If isInMethod And Not isMultilineSearch And line.Trim.StartsWith(indexTag) Then
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line2: {line}")
+                            Dim startIndex = line.Trim.IndexOf(startTag)
+                            Dim endIndex = line.Trim.IndexOf(endTag)
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>startIndex: {startIndex}, endIndex: {endIndex}")
+                            If startIndex >= 0 And endIndex >= 0 Then
+                                startIndex += startTag.Length
+                                value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                            End If
+                        End If
+                    Else
+                        If Not String.IsNullOrEmpty(indexTag) And line.Trim.StartsWith(indexTag) Then
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line3: {line}")
+                            Dim startIndex = line.Trim.IndexOf(startTag)
+                            Dim endIndex = line.Trim.IndexOf(endTag)
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>startIndex: {startIndex}, endIndex: {endIndex}")
+                            If startIndex >= 0 And endIndex >= 0 Then
+                                startIndex += startTag.Length
+                                value = line.Trim.Substring(startIndex, endIndex - startIndex)
+                            End If
+                        End If
+                    End If
+                    line = fileReader.ReadLine()
+                Loop
+            End If
+        Catch ex As Exception
+            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>error: {ex}")
+        Finally
+            If Not IsNothing(fileReader) Then
+                fileReader.Close()
+            End If
+        End Try
+        Return value
+    End Function
+
+    '
+    ' 摘要:
+    '       修改 Cpp 文件中的代码
+    '
+    ' 参数:
+    '   originFilePath:
+    '       原始文件路径
+    '   
+    '   customFilePath:
+    '       客制化文件路径
+    '  
+    '   newLine:
+    '       文件使用的换行符
+    '
+    '   methodLine:
+    '       要修改的代码所在的方法的第一行定义
+    '
+    '   indexTag:
+    '       判断是否是要修改的行的字符串
+    '
+    '   insertTag:
+    '       判断是否是要插入代码的行的字符串
+    '
+    ' 返回结果:
+    '       设置成功返回 True，否则返回 False
+    Public Function SetCppFileValue(originFilePath As String, customFilePath As String, newLine As String, value As String, methodLine As String, indexTag As String, insertTag As String) As Boolean
+        Dim result As Boolean = False
+        Dim fileExists As Boolean = False
+        Dim needRestore As Boolean = False
+        Dim backPath As String = customFilePath & ".bk"
+
+        Dim fileReader As StreamReader = Nothing
+        Dim fileWriter As StreamWriter = Nothing
+
+        Try
+            If Not File.Exists(customFilePath) Then
+                If Not Directory.Exists(Path.GetDirectoryName(customFilePath)) Then
+                    Directory.CreateDirectory(Path.GetDirectoryName(customFilePath))
+                End If
+                If File.Exists(originFilePath) Then
+                    File.Copy(originFilePath, customFilePath)
+                Else
+                    File.Create(customFilePath).Close()
+                End If
+            Else
+                fileExists = True
+            End If
+
+            File.Copy(customFilePath, backPath, True)
+
+            Dim utf8 = New Text.UTF8Encoding(False)
+            fileReader = New StreamReader(backPath, utf8)
+            fileWriter = New StreamWriter(customFilePath, False, utf8) With {
+                .NewLine = newLine
+            }
+
+            Dim methodCode As StringBuilder = New StringBuilder()
+            Dim isMultilineSearch As Boolean = indexTag.Contains(vbLf)
+            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>isMultilineSearch: {isMultilineSearch}")
+            Dim isInMethod As Boolean = False
+            Dim braceCount As Integer = 0
+            Dim foundFirstBrace As Boolean = False
+            Dim found As Boolean = False
+            Dim line As String = fileReader.ReadLine
+            Do Until line Is Nothing
+                If Not String.IsNullOrEmpty(methodLine) And line.Trim.StartsWith(methodLine) Then
+                    ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>method start line: {line}")
+                    If isMultilineSearch Then
+                        methodCode.Append(line).Append(newLine)
+                    End If
+                    isInMethod = True
+                    If line.Contains("{") Then
+                        foundFirstBrace = True
+                        braceCount += GetCharCount(line, "{")
+                        braceCount -= GetCharCount(line, "}")
+                        ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>braceCount: {braceCount}")
+                        ' 说明该方法在一行内定义完成
+                        If braceCount = 0 Then
+                            isInMethod = False
+                            If line.Trim.StartsWith(indexTag) Then
+                                fileWriter.WriteLine(value)
+                                result = True
+                            ElseIf line.Trim.StartsWith(insertTag) Then
+                                fileWriter.WriteLine(value)
+                                result = True
+                            End If
+                        End If
+                    End If
+                    If isMultilineSearch Then
+                        line = fileReader.ReadLine
+                        Continue Do
+                    End If
+                Else
+                    If Not String.IsNullOrEmpty(methodLine) And isInMethod Then
+                        If isMultilineSearch Then
+                            methodCode.Append(line).Append(newLine)
+                        End If
+                        braceCount += GetCharCount(line, "{")
+                        If Not foundFirstBrace And braceCount > 0 Then
+                            foundFirstBrace = True
+                        End If
+                        braceCount -= GetCharCount(line, "}")
+                        ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line: {line}, braceCount: {braceCount}")
+                        If foundFirstBrace And braceCount = 0 Then
+                            isInMethod = False
+                            If isMultilineSearch Then
+                                Dim methodCodeStr As String = methodCode.ToString()
+                                ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>methodCodeStr: {methodCodeStr}")
+                                If methodCodeStr.Contains(indexTag) Then
+                                    methodCodeStr = methodCodeStr.Replace(indexTag, value)
+                                    Debug.WriteLine($"[FileUtils] GetJavaFileValue=>after replace methodCodeStr: {methodCodeStr}")
+                                    methodCodeStr = methodCodeStr.Substring(0, methodCodeStr.LastIndexOf(vbLf))
+                                    fileWriter.WriteLine(methodCodeStr)
+                                    result = True
+                                End If
+                            End If
+                        End If
+                        If isMultilineSearch Then
+                            line = fileReader.ReadLine
+                            Continue Do
+                        End If
+                    End If
+                End If
+
+                If Not String.IsNullOrEmpty(methodLine) Then
+                    If isInMethod Then
+                        ' Debug.WriteLine($"[FileUtils] GetJavaFileValue=>line: {line}")
+                        If Not isMultilineSearch Then
+                            If indexTag.Trim.Length > 0 And line.Trim.StartsWith(indexTag) Then
+                                Debug.WriteLine($"[FileUtils] GetJavaFileValue=>replace line: {line}")
+                                fileWriter.WriteLine(value)
+                                result = True
+                            Else
+                                If Not result And insertTag.Trim.Length > 0 And line.Trim.StartsWith(insertTag) Then
+                                    Debug.WriteLine($"[FileUtils] GetJavaFileValue=>insert line: {line}")
+                                    fileWriter.WriteLine(value)
+                                    result = True
+                                End If
+                                fileWriter.WriteLine(line)
+                            End If
+                        End If
+                    Else
+                        fileWriter.WriteLine(line)
+                    End If
+                Else
+                    If indexTag.Trim.Length > 0 And line.Trim.StartsWith(indexTag) Then
+                        Debug.WriteLine($"[FileUtils] GetJavaFileValue=>replace line: {line}")
+                        fileWriter.WriteLine(value)
+                        result = True
+                    Else
+                        If Not result And insertTag.Trim.Length > 0 And line.Trim.StartsWith(insertTag) Then
+                            Debug.WriteLine($"[FileUtils] GetJavaFileValue=>insert line: {line}")
+                            fileWriter.WriteLine(value)
+                            result = True
+                        End If
+                        fileWriter.WriteLine(line)
+                    End If
+                End If
+                line = fileReader.ReadLine
+            Loop
+        Catch ex As Exception
+            result = False
+            needRestore = True
+            Debug.WriteLine($"[FileUtils] SetJavaFileValue=>error: {ex}")
+        Finally
+            If Not IsNothing(fileReader) Then
+                fileReader.Close()
+            End If
+            If Not IsNothing(fileWriter) Then
+                fileWriter.Close()
+            End If
+            If needRestore Then
+                If Not fileExists Then
+                    If File.Exists(customFilePath) Then
+                        File.Delete(customFilePath)
+                    End If
+                Else
+                    If File.Exists(backPath) Then
+                        File.Copy(backPath, customFilePath, True)
+                    End If
+                End If
+            End If
+        End Try
+        If File.Exists(backPath) Then
+            File.Delete(backPath)
+        End If
+        Return result
+    End Function
+
+    '
+    ' 摘要:
     '       在一个字符串中获取某个字符出现的次数
     '
     ' 参数:

@@ -274,6 +274,8 @@ Partial Class AndroidSettingsForm
         Me.lbScreenOffTime = New Global.System.Windows.Forms.Label()
         Me.FbdSelectPath = New Global.System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New Global.System.Windows.Forms.OpenFileDialog()
+        Me.btBluetoothStatus = New Global.System.Windows.Forms.Button()
+        Me.btBluetoothName = New Global.System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -1090,6 +1092,8 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpBluetooth
         ' 
+        Me.tpBluetooth.Controls.Add(Me.btBluetoothName)
+        Me.tpBluetooth.Controls.Add(Me.btBluetoothStatus)
         Me.tpBluetooth.Controls.Add(Me.btBluetoothSetting)
         Me.tpBluetooth.Controls.Add(Me.tbBluetoothName)
         Me.tpBluetooth.Controls.Add(Me.rbBluetoothClose)
@@ -1118,7 +1122,7 @@ Partial Class AndroidSettingsForm
         ' 
         Me.tbBluetoothName.Location = New Global.System.Drawing.Point(94, 59)
         Me.tbBluetoothName.Name = "tbBluetoothName"
-        Me.tbBluetoothName.Size = New Global.System.Drawing.Size(644, 23)
+        Me.tbBluetoothName.Size = New Global.System.Drawing.Size(563, 23)
         Me.tbBluetoothName.TabIndex = 2
         ' 
         ' rbBluetoothClose
@@ -2779,6 +2783,24 @@ Partial Class AndroidSettingsForm
         ' 
         Me.ofdSelectFile.FileName = "OpenFileDialog1"
         ' 
+        ' btBluetoothStatus
+        ' 
+        Me.btBluetoothStatus.Location = New Global.System.Drawing.Point(663, 20)
+        Me.btBluetoothStatus.Name = "btBluetoothStatus"
+        Me.btBluetoothStatus.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btBluetoothStatus.TabIndex = 4
+        Me.btBluetoothStatus.Text = "设置"
+        Me.btBluetoothStatus.UseVisualStyleBackColor = True
+        ' 
+        ' btBluetoothName
+        ' 
+        Me.btBluetoothName.Location = New Global.System.Drawing.Point(663, 59)
+        Me.btBluetoothName.Name = "btBluetoothName"
+        Me.btBluetoothName.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btBluetoothName.TabIndex = 4
+        Me.btBluetoothName.Text = "设置"
+        Me.btBluetoothName.UseVisualStyleBackColor = True
+        ' 
         ' AndroidSettingsForm
         ' 
         Me.AutoScaleDimensions = New Global.System.Drawing.SizeF(7F, 17F)
@@ -3087,4 +3109,6 @@ Partial Class AndroidSettingsForm
     Friend WithEvents btWifiStatus As Global.System.Windows.Forms.Button
     Friend WithEvents btWifiCastName As Global.System.Windows.Forms.Button
     Friend WithEvents btWifiHostName As Global.System.Windows.Forms.Button
+    Friend WithEvents btBluetoothName As Global.System.Windows.Forms.Button
+    Friend WithEvents btBluetoothStatus As Global.System.Windows.Forms.Button
 End Class

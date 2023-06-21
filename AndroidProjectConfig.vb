@@ -354,8 +354,17 @@ Public Class AndroidSettingsForm
         MyProjectInfo.ProjectPath = sender.Text
     End Sub
 
+    Private Sub btBluetoothStatus_Click(sender As Object, e As EventArgs) Handles btBluetoothStatus.Click
+        BluetoothController.SetBluetoothStatus(Me)
+    End Sub
+
+    Private Sub btBluetoothName_Click(sender As Object, e As EventArgs) Handles btBluetoothName.Click
+        BluetoothController.SetBluetoothName(Me)
+    End Sub
+
     Private Sub btBluetoothSetting_Click(sender As Object, e As EventArgs) Handles btBluetoothSetting.Click
-        BluetoothController.SetBluetoothInfos(Me)
+        BluetoothController.SetBluetoothStatus(Me)
+        BluetoothController.SetBluetoothName(Me)
     End Sub
 
     Private Sub btLanguageSetting_Click(sender As Object, e As EventArgs) Handles btLanguageSetting.Click
