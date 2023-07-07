@@ -21,8 +21,8 @@ Module AndroidTLogo
                 screenType = screenType & "nl"
             End If
 
-            Dim ubootFilePath = info.ProjectPath & "/sys/weibu/" & info.MssiDirName & "/" & info.CustomDirName & "/alps/vendor/mediatek/proprietary/external/BootLogo/logo/" & screenType & "/" & screenType & "_uboot.bmp"
-            Dim kernelFilePath = info.ProjectPath & "/sys/weibu/" & info.MssiDirName & "/" & info.CustomDirName & "/alps/vendor/mediatek/proprietary/external/BootLogo/logo/" & screenType & "/" & screenType & "_kernel.bmp"
+            Dim ubootFilePath = info.ProjectPath & "/vnd/weibu/" & info.PublicDirName & "/" & info.DriveDirName & "/alps/vendor/mediatek/proprietary/external/BootLogo/logo/" & screenType & "/" & screenType & "_uboot.bmp"
+            Dim kernelFilePath = info.ProjectPath & "/vnd/weibu/" & info.PublicDirName & "/" & info.DriveDirName & "/alps/vendor/mediatek/proprietary/external/BootLogo/logo/" & screenType & "/" & screenType & "_kernel.bmp"
 
             result = SetLogo(info, ubootFilePath, kernelFilePath, logoPath)
         End If
@@ -38,8 +38,8 @@ Module AndroidTLogo
                 screenType = screenType & "nl"
             End If
 
-            Dim ubootFilePath = info.ProjectPath & "/sys/weibu/" & info.MssiDirName & "/" & info.CustomDirName & "/alps/vendor/mediatek/proprietary/bootable/bootloader/lk/dev/logo/" & screenType & "/" & screenType & "_uboot.bmp"
-            Dim kernelFilePath = info.ProjectPath & "/sys/weibu/" & info.MssiDirName & "/" & info.CustomDirName & "/alps/vendor/mediatek/proprietary/bootable/bootloader/lk/dev/logo/" & screenType & "/" & screenType & "_kernel.bmp"
+            Dim ubootFilePath = info.ProjectPath & "/vnd/weibu/" & info.PublicDirName & "/" & info.DriveDirName & "/alps/vendor/mediatek/proprietary/bootable/bootloader/lk/dev/logo/" & screenType & "/" & screenType & "_uboot.bmp"
+            Dim kernelFilePath = info.ProjectPath & "/vnd/weibu/" & info.PublicDirName & "/" & info.DriveDirName & "/alps/vendor/mediatek/proprietary/bootable/bootloader/lk/dev/logo/" & screenType & "/" & screenType & "_kernel.bmp"
 
             result = SetLogo(info, ubootFilePath, kernelFilePath, logoPath)
         End If
@@ -163,7 +163,7 @@ Module AndroidTLogo
                 Dim line = fileReader.ReadLine()
                 Do Until IsNothing(line)
                     If line.StartsWith("BOOT_LOGO") And line.Split("=").Length = 2 Then
-                        screenType = line.Split("=")(0).Trim
+                        screenType = line.Split("=")(1).Trim
                         Debug.WriteLine("[AndroidTLogo] GetScreenType=>screenType : " & screenType)
                         Exit Do
                     End If

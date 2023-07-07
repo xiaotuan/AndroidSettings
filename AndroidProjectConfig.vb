@@ -371,8 +371,17 @@ Public Class AndroidSettingsForm
         LanguageController.SetLanguage(Me)
     End Sub
 
+    Private Sub btAutoTimeZone_Click(sender As Object, e As EventArgs) Handles btAutoTimeZone.Click
+        TimezoneController.SetAutoTimezone(Me)
+    End Sub
+
+    Private Sub btTimeZone_Click(sender As Object, e As EventArgs) Handles btTimeZone.Click
+        TimezoneController.SetTimezone(Me)
+    End Sub
+
     Private Sub btTimezoneSetting_Click(sender As Object, e As EventArgs) Handles btTimezoneSetting.Click
-        TimezoneController.setTimezoneInfos(Me)
+        TimezoneController.SetAutoTimezone(Me)
+        TimezoneController.SetTimezone(Me)
     End Sub
 
     Private Sub bLogo_Click(sender As Object, e As EventArgs) Handles bLogo.Click

@@ -102,6 +102,8 @@ Partial Class AndroidSettingsForm
         Me.rbWifiOpen = New Global.System.Windows.Forms.RadioButton()
         Me.lbWifiStatus = New Global.System.Windows.Forms.Label()
         Me.tpBluetooth = New Global.System.Windows.Forms.TabPage()
+        Me.btBluetoothName = New Global.System.Windows.Forms.Button()
+        Me.btBluetoothStatus = New Global.System.Windows.Forms.Button()
         Me.btBluetoothSetting = New Global.System.Windows.Forms.Button()
         Me.tbBluetoothName = New Global.System.Windows.Forms.TextBox()
         Me.rbBluetoothClose = New Global.System.Windows.Forms.RadioButton()
@@ -116,6 +118,8 @@ Partial Class AndroidSettingsForm
         Me.lbLanguageState = New Global.System.Windows.Forms.Label()
         Me.Label1 = New Global.System.Windows.Forms.Label()
         Me.tpTimezone = New Global.System.Windows.Forms.TabPage()
+        Me.btTimeZone = New Global.System.Windows.Forms.Button()
+        Me.btAutoTimeZone = New Global.System.Windows.Forms.Button()
         Me.rbTimezoneClose = New Global.System.Windows.Forms.RadioButton()
         Me.rbTimezoneOpen = New Global.System.Windows.Forms.RadioButton()
         Me.lbAutoTimezone = New Global.System.Windows.Forms.Label()
@@ -274,8 +278,6 @@ Partial Class AndroidSettingsForm
         Me.lbScreenOffTime = New Global.System.Windows.Forms.Label()
         Me.FbdSelectPath = New Global.System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New Global.System.Windows.Forms.OpenFileDialog()
-        Me.btBluetoothStatus = New Global.System.Windows.Forms.Button()
-        Me.btBluetoothName = New Global.System.Windows.Forms.Button()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -996,7 +998,7 @@ Partial Class AndroidSettingsForm
         Me.btWifiSetting.Name = "btWifiSetting"
         Me.btWifiSetting.Size = New Global.System.Drawing.Size(75, 23)
         Me.btWifiSetting.TabIndex = 5
-        Me.btWifiSetting.Text = "设置"
+        Me.btWifiSetting.Text = "全部设置"
         Me.btWifiSetting.UseVisualStyleBackColor = True
         ' 
         ' lbWifiScreenCastState
@@ -1109,13 +1111,31 @@ Partial Class AndroidSettingsForm
         Me.tpBluetooth.Text = "蓝牙"
         Me.tpBluetooth.UseVisualStyleBackColor = True
         ' 
+        ' btBluetoothName
+        ' 
+        Me.btBluetoothName.Location = New Global.System.Drawing.Point(663, 59)
+        Me.btBluetoothName.Name = "btBluetoothName"
+        Me.btBluetoothName.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btBluetoothName.TabIndex = 4
+        Me.btBluetoothName.Text = "设置"
+        Me.btBluetoothName.UseVisualStyleBackColor = True
+        ' 
+        ' btBluetoothStatus
+        ' 
+        Me.btBluetoothStatus.Location = New Global.System.Drawing.Point(663, 20)
+        Me.btBluetoothStatus.Name = "btBluetoothStatus"
+        Me.btBluetoothStatus.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btBluetoothStatus.TabIndex = 4
+        Me.btBluetoothStatus.Text = "设置"
+        Me.btBluetoothStatus.UseVisualStyleBackColor = True
+        ' 
         ' btBluetoothSetting
         ' 
         Me.btBluetoothSetting.Location = New Global.System.Drawing.Point(20, 111)
         Me.btBluetoothSetting.Name = "btBluetoothSetting"
         Me.btBluetoothSetting.Size = New Global.System.Drawing.Size(75, 23)
         Me.btBluetoothSetting.TabIndex = 3
-        Me.btBluetoothSetting.Text = "设置"
+        Me.btBluetoothSetting.Text = "全部设置"
         Me.btBluetoothSetting.UseVisualStyleBackColor = True
         ' 
         ' tbBluetoothName
@@ -1233,6 +1253,8 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpTimezone
         ' 
+        Me.tpTimezone.Controls.Add(Me.btTimeZone)
+        Me.tpTimezone.Controls.Add(Me.btAutoTimeZone)
         Me.tpTimezone.Controls.Add(Me.rbTimezoneClose)
         Me.tpTimezone.Controls.Add(Me.rbTimezoneOpen)
         Me.tpTimezone.Controls.Add(Me.lbAutoTimezone)
@@ -1247,6 +1269,24 @@ Partial Class AndroidSettingsForm
         Me.tpTimezone.TabIndex = 7
         Me.tpTimezone.Text = "时区"
         Me.tpTimezone.UseVisualStyleBackColor = True
+        ' 
+        ' btTimeZone
+        ' 
+        Me.btTimeZone.Location = New Global.System.Drawing.Point(653, 54)
+        Me.btTimeZone.Name = "btTimeZone"
+        Me.btTimeZone.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btTimeZone.TabIndex = 11
+        Me.btTimeZone.Text = "设置"
+        Me.btTimeZone.UseVisualStyleBackColor = True
+        ' 
+        ' btAutoTimeZone
+        ' 
+        Me.btAutoTimeZone.Location = New Global.System.Drawing.Point(653, 17)
+        Me.btAutoTimeZone.Name = "btAutoTimeZone"
+        Me.btAutoTimeZone.Size = New Global.System.Drawing.Size(75, 23)
+        Me.btAutoTimeZone.TabIndex = 11
+        Me.btAutoTimeZone.Text = "设置"
+        Me.btAutoTimeZone.UseVisualStyleBackColor = True
         ' 
         ' rbTimezoneClose
         ' 
@@ -1284,7 +1324,7 @@ Partial Class AndroidSettingsForm
         Me.cbTimezone.FormattingEnabled = True
         Me.cbTimezone.Location = New Global.System.Drawing.Point(61, 54)
         Me.cbTimezone.Name = "cbTimezone"
-        Me.cbTimezone.Size = New Global.System.Drawing.Size(667, 25)
+        Me.cbTimezone.Size = New Global.System.Drawing.Size(586, 25)
         Me.cbTimezone.TabIndex = 8
         ' 
         ' lbAutoTimezoneState
@@ -1320,7 +1360,7 @@ Partial Class AndroidSettingsForm
         Me.btTimezoneSetting.Name = "btTimezoneSetting"
         Me.btTimezoneSetting.Size = New Global.System.Drawing.Size(75, 23)
         Me.btTimezoneSetting.TabIndex = 5
-        Me.btTimezoneSetting.Text = "设置"
+        Me.btTimezoneSetting.Text = "全部设置"
         Me.btTimezoneSetting.UseVisualStyleBackColor = True
         ' 
         ' tpLogo
@@ -2783,24 +2823,6 @@ Partial Class AndroidSettingsForm
         ' 
         Me.ofdSelectFile.FileName = "OpenFileDialog1"
         ' 
-        ' btBluetoothStatus
-        ' 
-        Me.btBluetoothStatus.Location = New Global.System.Drawing.Point(663, 20)
-        Me.btBluetoothStatus.Name = "btBluetoothStatus"
-        Me.btBluetoothStatus.Size = New Global.System.Drawing.Size(75, 23)
-        Me.btBluetoothStatus.TabIndex = 4
-        Me.btBluetoothStatus.Text = "设置"
-        Me.btBluetoothStatus.UseVisualStyleBackColor = True
-        ' 
-        ' btBluetoothName
-        ' 
-        Me.btBluetoothName.Location = New Global.System.Drawing.Point(663, 59)
-        Me.btBluetoothName.Name = "btBluetoothName"
-        Me.btBluetoothName.Size = New Global.System.Drawing.Size(75, 23)
-        Me.btBluetoothName.TabIndex = 4
-        Me.btBluetoothName.Text = "设置"
-        Me.btBluetoothName.UseVisualStyleBackColor = True
-        ' 
         ' AndroidSettingsForm
         ' 
         Me.AutoScaleDimensions = New Global.System.Drawing.SizeF(7F, 17F)
@@ -3111,4 +3133,6 @@ Partial Class AndroidSettingsForm
     Friend WithEvents btWifiHostName As Global.System.Windows.Forms.Button
     Friend WithEvents btBluetoothName As Global.System.Windows.Forms.Button
     Friend WithEvents btBluetoothStatus As Global.System.Windows.Forms.Button
+    Friend WithEvents btTimeZone As Global.System.Windows.Forms.Button
+    Friend WithEvents btAutoTimeZone As Global.System.Windows.Forms.Button
 End Class

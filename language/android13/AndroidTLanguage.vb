@@ -1,16 +1,15 @@
-﻿Imports System.Drawing.Imaging
-Imports System.IO
+﻿Imports System.IO
 
 Module AndroidTLanguage
 
     Public Function GetLanguage(ByRef info As ProjectInfo) As String
         Dim language As String = "en_US"
         Dim customFilePath As String = info.ProjectPath & "/vnd/weibu/" & info.PublicDirName & "/" & info.DriveDirName & "/alps/device/mediateksample/" & info.PublicDirName & "/vnd_" & info.PublicDirName & ".mk"
-        If System.IO.File.Exists(customFilePath) Then
-            Dim utf8 = New System.Text.UTF8Encoding(False)
+        If File.Exists(customFilePath) Then
+            Dim utf8 = New Text.UTF8Encoding(False)
             Dim fileReader As StreamReader = Nothing
             Try
-                fileReader = New System.IO.StreamReader(customFilePath, utf8)
+                fileReader = New StreamReader(customFilePath, utf8)
                 Dim line = fileReader.ReadLine()
                 Do Until IsNothing(line)
                     If line.StartsWith("PRODUCT_LOCALES :=") Then
@@ -25,7 +24,6 @@ Module AndroidTLanguage
             Finally
                 If Not IsNothing(fileReader) Then
                     fileReader.Close()
-                    fileReader = Nothing
                 End If
             End Try
         End If
