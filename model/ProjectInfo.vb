@@ -23,4 +23,11 @@
     ' 芯片型号，例如 MT8766
     Public ChiperModel As String
 
+    Public Overrides Function ToString() As String
+        Return "Project [ ProjectId: " & ProjectId & ", AndroidVersion: " & AndroidVersion &
+            ", ProjectPath: " & ProjectPath & ", PublicDirName: " & PublicDirName & ", MssiDirName: " &
+            MssiDirName & ", DriveDirName: " & DriveDirName & ", CustomDirName: " & CustomDirName & ", Gms: " &
+            Gms & ", Go: " & Gms & ", ChiperMaker: " & ChiperMaker & ", ChiperModel: " & ChiperModel
+    End Function
+
 End Class

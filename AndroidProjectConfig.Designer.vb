@@ -38,12 +38,12 @@ Partial Class AndroidSettingsForm
         Me.RbNotGms = New Global.System.Windows.Forms.RadioButton()
         Me.RbGms = New Global.System.Windows.Forms.RadioButton()
         Me.GBProject = New Global.System.Windows.Forms.GroupBox()
+        Me.CbDriveName = New Global.System.Windows.Forms.ComboBox()
+        Me.CbCustomName = New Global.System.Windows.Forms.ComboBox()
+        Me.CbMssiName = New Global.System.Windows.Forms.ComboBox()
+        Me.CbPublicName = New Global.System.Windows.Forms.ComboBox()
         Me.CbProjectPath = New Global.System.Windows.Forms.ComboBox()
-        Me.TbCustomName = New Global.System.Windows.Forms.TextBox()
-        Me.TbMssiName = New Global.System.Windows.Forms.TextBox()
-        Me.TbDriveName = New Global.System.Windows.Forms.TextBox()
-        Me.TbPublicName = New Global.System.Windows.Forms.TextBox()
-        Me.CbAndroidVersin = New Global.System.Windows.Forms.ComboBox()
+        Me.CbAndroidVersion = New Global.System.Windows.Forms.ComboBox()
         Me.LbAndroidVersion = New Global.System.Windows.Forms.Label()
         Me.Label4 = New Global.System.Windows.Forms.Label()
         Me.LbDriveName = New Global.System.Windows.Forms.Label()
@@ -135,6 +135,8 @@ Partial Class AndroidSettingsForm
         Me.lbLogoState = New Global.System.Windows.Forms.Label()
         Me.lbLogo = New Global.System.Windows.Forms.Label()
         Me.tpWallpaper = New Global.System.Windows.Forms.TabPage()
+        Me.BtSetIn = New Global.System.Windows.Forms.Button()
+        Me.BtSetWallpaper = New Global.System.Windows.Forms.Button()
         Me.btWallpaperSetting = New Global.System.Windows.Forms.Button()
         Me.btInserWallpaper = New Global.System.Windows.Forms.Button()
         Me.btWallpaper = New Global.System.Windows.Forms.Button()
@@ -278,6 +280,7 @@ Partial Class AndroidSettingsForm
         Me.lbScreenOffTime = New Global.System.Windows.Forms.Label()
         Me.FbdSelectPath = New Global.System.Windows.Forms.FolderBrowserDialog()
         Me.ofdSelectFile = New Global.System.Windows.Forms.OpenFileDialog()
+        Me.PageSetupDialog1 = New Global.System.Windows.Forms.PageSetupDialog()
         Me.tcAndroidSettings.SuspendLayout()
         Me.tpProjectInfo.SuspendLayout()
         Me.GbChiperOptions.SuspendLayout()
@@ -360,22 +363,18 @@ Partial Class AndroidSettingsForm
         ' CbChiperModel
         ' 
         Me.CbChiperModel.FormattingEnabled = True
-        Me.CbChiperModel.Items.AddRange(New System.Object() {"MT6761", "MT6739", "MT8183"})
         Me.CbChiperModel.Location = New Global.System.Drawing.Point(80, 57)
         Me.CbChiperModel.Name = "CbChiperModel"
         Me.CbChiperModel.Size = New Global.System.Drawing.Size(212, 25)
         Me.CbChiperModel.TabIndex = 1
-        Me.CbChiperModel.Text = "MT6761"
         ' 
         ' CbChiperMaker
         ' 
         Me.CbChiperMaker.FormattingEnabled = True
-        Me.CbChiperMaker.Items.AddRange(New System.Object() {"MTK"})
         Me.CbChiperMaker.Location = New Global.System.Drawing.Point(80, 21)
         Me.CbChiperMaker.Name = "CbChiperMaker"
         Me.CbChiperMaker.Size = New Global.System.Drawing.Size(212, 25)
         Me.CbChiperMaker.TabIndex = 1
-        Me.CbChiperMaker.Text = "MTK"
         ' 
         ' LbChiperModel
         ' 
@@ -420,22 +419,22 @@ Partial Class AndroidSettingsForm
         ' RbTwoGbGo
         ' 
         Me.RbTwoGbGo.AutoSize = True
-        Me.RbTwoGbGo.Checked = True
         Me.RbTwoGbGo.Location = New Global.System.Drawing.Point(703, 22)
         Me.RbTwoGbGo.Name = "RbTwoGbGo"
         Me.RbTwoGbGo.Size = New Global.System.Drawing.Size(73, 21)
         Me.RbTwoGbGo.TabIndex = 1
-        Me.RbTwoGbGo.TabStop = True
         Me.RbTwoGbGo.Text = "2GB GO"
         Me.RbTwoGbGo.UseVisualStyleBackColor = True
         ' 
         ' RbNotGo
         ' 
         Me.RbNotGo.AutoSize = True
+        Me.RbNotGo.Checked = True
         Me.RbNotGo.Location = New Global.System.Drawing.Point(6, 22)
         Me.RbNotGo.Name = "RbNotGo"
         Me.RbNotGo.Size = New Global.System.Drawing.Size(61, 21)
         Me.RbNotGo.TabIndex = 0
+        Me.RbNotGo.TabStop = True
         Me.RbNotGo.Text = "非 GO"
         Me.RbNotGo.UseVisualStyleBackColor = True
         ' 
@@ -474,12 +473,12 @@ Partial Class AndroidSettingsForm
         ' 
         ' GBProject
         ' 
+        Me.GBProject.Controls.Add(Me.CbDriveName)
+        Me.GBProject.Controls.Add(Me.CbCustomName)
+        Me.GBProject.Controls.Add(Me.CbMssiName)
+        Me.GBProject.Controls.Add(Me.CbPublicName)
         Me.GBProject.Controls.Add(Me.CbProjectPath)
-        Me.GBProject.Controls.Add(Me.TbCustomName)
-        Me.GBProject.Controls.Add(Me.TbMssiName)
-        Me.GBProject.Controls.Add(Me.TbDriveName)
-        Me.GBProject.Controls.Add(Me.TbPublicName)
-        Me.GBProject.Controls.Add(Me.CbAndroidVersin)
+        Me.GBProject.Controls.Add(Me.CbAndroidVersion)
         Me.GBProject.Controls.Add(Me.LbAndroidVersion)
         Me.GBProject.Controls.Add(Me.Label4)
         Me.GBProject.Controls.Add(Me.LbDriveName)
@@ -496,6 +495,38 @@ Partial Class AndroidSettingsForm
         Me.GBProject.TabStop = False
         Me.GBProject.Text = "项目信息选项"
         ' 
+        ' CbDriveName
+        ' 
+        Me.CbDriveName.FormattingEnabled = True
+        Me.CbDriveName.Location = New Global.System.Drawing.Point(104, 173)
+        Me.CbDriveName.Name = "CbDriveName"
+        Me.CbDriveName.Size = New Global.System.Drawing.Size(293, 25)
+        Me.CbDriveName.TabIndex = 17
+        ' 
+        ' CbCustomName
+        ' 
+        Me.CbCustomName.FormattingEnabled = True
+        Me.CbCustomName.Location = New Global.System.Drawing.Point(513, 173)
+        Me.CbCustomName.Name = "CbCustomName"
+        Me.CbCustomName.Size = New Global.System.Drawing.Size(284, 25)
+        Me.CbCustomName.TabIndex = 17
+        ' 
+        ' CbMssiName
+        ' 
+        Me.CbMssiName.FormattingEnabled = True
+        Me.CbMssiName.Location = New Global.System.Drawing.Point(513, 137)
+        Me.CbMssiName.Name = "CbMssiName"
+        Me.CbMssiName.Size = New Global.System.Drawing.Size(284, 25)
+        Me.CbMssiName.TabIndex = 17
+        ' 
+        ' CbPublicName
+        ' 
+        Me.CbPublicName.FormattingEnabled = True
+        Me.CbPublicName.Location = New Global.System.Drawing.Point(104, 137)
+        Me.CbPublicName.Name = "CbPublicName"
+        Me.CbPublicName.Size = New Global.System.Drawing.Size(293, 25)
+        Me.CbPublicName.TabIndex = 17
+        ' 
         ' CbProjectPath
         ' 
         Me.CbProjectPath.FormattingEnabled = True
@@ -504,43 +535,13 @@ Partial Class AndroidSettingsForm
         Me.CbProjectPath.Size = New Global.System.Drawing.Size(612, 25)
         Me.CbProjectPath.TabIndex = 16
         ' 
-        ' TbCustomName
-        ' 
-        Me.TbCustomName.Location = New Global.System.Drawing.Point(513, 173)
-        Me.TbCustomName.Name = "TbCustomName"
-        Me.TbCustomName.Size = New Global.System.Drawing.Size(284, 23)
-        Me.TbCustomName.TabIndex = 15
-        ' 
-        ' TbMssiName
-        ' 
-        Me.TbMssiName.Location = New Global.System.Drawing.Point(513, 137)
-        Me.TbMssiName.Name = "TbMssiName"
-        Me.TbMssiName.Size = New Global.System.Drawing.Size(284, 23)
-        Me.TbMssiName.TabIndex = 15
-        ' 
-        ' TbDriveName
-        ' 
-        Me.TbDriveName.Location = New Global.System.Drawing.Point(104, 173)
-        Me.TbDriveName.Name = "TbDriveName"
-        Me.TbDriveName.Size = New Global.System.Drawing.Size(293, 23)
-        Me.TbDriveName.TabIndex = 15
-        ' 
-        ' TbPublicName
-        ' 
-        Me.TbPublicName.Location = New Global.System.Drawing.Point(104, 137)
-        Me.TbPublicName.Name = "TbPublicName"
-        Me.TbPublicName.Size = New Global.System.Drawing.Size(293, 23)
-        Me.TbPublicName.TabIndex = 15
-        ' 
         ' CbAndroidVersin
         ' 
-        Me.CbAndroidVersin.FormattingEnabled = True
-        Me.CbAndroidVersin.Items.AddRange(New System.Object() {"Android 11", "Android 12", "Android 13"})
-        Me.CbAndroidVersin.Location = New Global.System.Drawing.Point(104, 62)
-        Me.CbAndroidVersin.Name = "CbAndroidVersin"
-        Me.CbAndroidVersin.Size = New Global.System.Drawing.Size(293, 25)
-        Me.CbAndroidVersin.TabIndex = 14
-        Me.CbAndroidVersin.Text = "Android 13"
+        Me.CbAndroidVersion.FormattingEnabled = True
+        Me.CbAndroidVersion.Location = New Global.System.Drawing.Point(104, 62)
+        Me.CbAndroidVersion.Name = "CbAndroidVersin"
+        Me.CbAndroidVersion.Size = New Global.System.Drawing.Size(293, 25)
+        Me.CbAndroidVersion.TabIndex = 14
         ' 
         ' LbAndroidVersion
         ' 
@@ -1422,6 +1423,8 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpWallpaper
         ' 
+        Me.tpWallpaper.Controls.Add(Me.BtSetIn)
+        Me.tpWallpaper.Controls.Add(Me.BtSetWallpaper)
         Me.tpWallpaper.Controls.Add(Me.btWallpaperSetting)
         Me.tpWallpaper.Controls.Add(Me.btInserWallpaper)
         Me.tpWallpaper.Controls.Add(Me.btWallpaper)
@@ -1438,18 +1441,36 @@ Partial Class AndroidSettingsForm
         Me.tpWallpaper.Text = "壁纸"
         Me.tpWallpaper.UseVisualStyleBackColor = True
         ' 
+        ' BtSetIn
+        ' 
+        Me.BtSetIn.Location = New Global.System.Drawing.Point(653, 53)
+        Me.BtSetIn.Name = "BtSetIn"
+        Me.BtSetIn.Size = New Global.System.Drawing.Size(75, 23)
+        Me.BtSetIn.TabIndex = 8
+        Me.BtSetIn.Text = "设置"
+        Me.BtSetIn.UseVisualStyleBackColor = True
+        ' 
+        ' BtSetWallpaper
+        ' 
+        Me.BtSetWallpaper.Location = New Global.System.Drawing.Point(653, 14)
+        Me.BtSetWallpaper.Name = "BtSetWallpaper"
+        Me.BtSetWallpaper.Size = New Global.System.Drawing.Size(75, 23)
+        Me.BtSetWallpaper.TabIndex = 8
+        Me.BtSetWallpaper.Text = "设置"
+        Me.BtSetWallpaper.UseVisualStyleBackColor = True
+        ' 
         ' btWallpaperSetting
         ' 
         Me.btWallpaperSetting.Location = New Global.System.Drawing.Point(17, 103)
         Me.btWallpaperSetting.Name = "btWallpaperSetting"
         Me.btWallpaperSetting.Size = New Global.System.Drawing.Size(75, 23)
         Me.btWallpaperSetting.TabIndex = 6
-        Me.btWallpaperSetting.Text = "设置"
+        Me.btWallpaperSetting.Text = "全部设置"
         Me.btWallpaperSetting.UseVisualStyleBackColor = True
         ' 
         ' btInserWallpaper
         ' 
-        Me.btInserWallpaper.Location = New Global.System.Drawing.Point(647, 53)
+        Me.btInserWallpaper.Location = New Global.System.Drawing.Point(560, 53)
         Me.btInserWallpaper.Name = "btInserWallpaper"
         Me.btInserWallpaper.Size = New Global.System.Drawing.Size(81, 23)
         Me.btInserWallpaper.TabIndex = 7
@@ -1458,7 +1479,7 @@ Partial Class AndroidSettingsForm
         ' 
         ' btWallpaper
         ' 
-        Me.btWallpaper.Location = New Global.System.Drawing.Point(647, 14)
+        Me.btWallpaper.Location = New Global.System.Drawing.Point(560, 14)
         Me.btWallpaper.Name = "btWallpaper"
         Me.btWallpaper.Size = New Global.System.Drawing.Size(81, 23)
         Me.btWallpaper.TabIndex = 7
@@ -1469,7 +1490,7 @@ Partial Class AndroidSettingsForm
         ' 
         Me.tbInsertWallpaper.Location = New Global.System.Drawing.Point(101, 53)
         Me.tbInsertWallpaper.Name = "tbInsertWallpaper"
-        Me.tbInsertWallpaper.Size = New Global.System.Drawing.Size(540, 23)
+        Me.tbInsertWallpaper.Size = New Global.System.Drawing.Size(453, 23)
         Me.tbInsertWallpaper.TabIndex = 5
         ' 
         ' lbInsertWallpaperState
@@ -1485,7 +1506,7 @@ Partial Class AndroidSettingsForm
         ' 
         Me.tbWallpaper.Location = New Global.System.Drawing.Point(101, 14)
         Me.tbWallpaper.Name = "tbWallpaper"
-        Me.tbWallpaper.Size = New Global.System.Drawing.Size(540, 23)
+        Me.tbWallpaper.Size = New Global.System.Drawing.Size(453, 23)
         Me.tbWallpaper.TabIndex = 5
         ' 
         ' lbInsertWallpaper
@@ -2883,7 +2904,7 @@ Partial Class AndroidSettingsForm
     Friend WithEvents tcAndroidSettings As TabControl
     Friend WithEvents tpProjectInfo As TabPage
     Friend WithEvents GBProject As GroupBox
-    Friend WithEvents CbAndroidVersin As ComboBox
+    Friend WithEvents CbAndroidVersion As ComboBox
     Friend WithEvents LbAndroidVersion As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents LbDriveName As Label
@@ -2906,10 +2927,6 @@ Partial Class AndroidSettingsForm
     Friend WithEvents CbChiperMaker As ComboBox
     Friend WithEvents LbChiperModel As Label
     Friend WithEvents LbChiperMaker As Label
-    Friend WithEvents TbCustomName As TextBox
-    Friend WithEvents TbMssiName As TextBox
-    Friend WithEvents TbDriveName As TextBox
-    Friend WithEvents TbPublicName As TextBox
     Friend WithEvents FbdSelectPath As FolderBrowserDialog
     Friend WithEvents btVersion As Button
     Friend WithEvents tbVersion As TextBox
@@ -3135,4 +3152,11 @@ Partial Class AndroidSettingsForm
     Friend WithEvents btBluetoothStatus As Global.System.Windows.Forms.Button
     Friend WithEvents btTimeZone As Global.System.Windows.Forms.Button
     Friend WithEvents btAutoTimeZone As Global.System.Windows.Forms.Button
+    Friend WithEvents BtSetIn As Global.System.Windows.Forms.Button
+    Friend WithEvents BtSetWallpaper As Global.System.Windows.Forms.Button
+    Friend WithEvents PageSetupDialog1 As Global.System.Windows.Forms.PageSetupDialog
+    Friend WithEvents CbDriveName As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents CbCustomName As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents CbMssiName As Global.System.Windows.Forms.ComboBox
+    Friend WithEvents CbPublicName As Global.System.Windows.Forms.ComboBox
 End Class
