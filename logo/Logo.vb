@@ -1,7 +1,7 @@
 ﻿Module Logo
 
     Public Function SetLogo(ByRef info As ProjectInfo, ByVal logoPath As String) As Boolean
-        If info.AndroidVersion.Equals("Android 13") Then
+        If "Android 13".Equals(info.AndroidVersion) Then
             Return AndroidTLogo.SetLogo(info, logoPath)
         Else
             Return False

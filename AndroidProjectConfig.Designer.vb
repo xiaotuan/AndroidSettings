@@ -225,7 +225,6 @@ Partial Class AndroidSettingsForm
         Me.tbHomePage = New Global.System.Windows.Forms.TextBox()
         Me.lbHomePage = New Global.System.Windows.Forms.Label()
         Me.tpAnimation = New Global.System.Windows.Forms.TabPage()
-        Me.lbAnimTip = New Global.System.Windows.Forms.Label()
         Me.lbShutdownAnimStatus = New Global.System.Windows.Forms.Label()
         Me.lbShutdownRingStatus = New Global.System.Windows.Forms.Label()
         Me.lbBootAnimStatus = New Global.System.Windows.Forms.Label()
@@ -535,11 +534,11 @@ Partial Class AndroidSettingsForm
         Me.CbProjectPath.Size = New Global.System.Drawing.Size(612, 25)
         Me.CbProjectPath.TabIndex = 16
         ' 
-        ' CbAndroidVersin
+        ' CbAndroidVersion
         ' 
         Me.CbAndroidVersion.FormattingEnabled = True
         Me.CbAndroidVersion.Location = New Global.System.Drawing.Point(104, 62)
-        Me.CbAndroidVersion.Name = "CbAndroidVersin"
+        Me.CbAndroidVersion.Name = "CbAndroidVersion"
         Me.CbAndroidVersion.Size = New Global.System.Drawing.Size(293, 25)
         Me.CbAndroidVersion.TabIndex = 14
         ' 
@@ -2305,7 +2304,6 @@ Partial Class AndroidSettingsForm
         ' 
         ' tpAnimation
         ' 
-        Me.tpAnimation.Controls.Add(Me.lbAnimTip)
         Me.tpAnimation.Controls.Add(Me.lbShutdownAnimStatus)
         Me.tpAnimation.Controls.Add(Me.lbShutdownRingStatus)
         Me.tpAnimation.Controls.Add(Me.lbBootAnimStatus)
@@ -2334,17 +2332,6 @@ Partial Class AndroidSettingsForm
         Me.tpAnimation.TabIndex = 15
         Me.tpAnimation.Text = "开关机动画"
         Me.tpAnimation.UseVisualStyleBackColor = True
-        ' 
-        ' lbAnimTip
-        ' 
-        Me.lbAnimTip.AutoSize = True
-        Me.lbAnimTip.Font = New Global.System.Drawing.Font("Microsoft YaHei UI", 9F, Global.System.Drawing.FontStyle.Bold, Global.System.Drawing.GraphicsUnit.Point)
-        Me.lbAnimTip.ForeColor = Global.System.Drawing.Color.Red
-        Me.lbAnimTip.Location = New Global.System.Drawing.Point(17, 229)
-        Me.lbAnimTip.Name = "lbAnimTip"
-        Me.lbAnimTip.Size = New Global.System.Drawing.Size(780, 17)
-        Me.lbAnimTip.TabIndex = 5
-        Me.lbAnimTip.Text = "提示：设置关机动画或铃声还需要修改代码，请参照启昌智能 511 项目 b48d32c58bb44d75c1291c82c73097965ca476ce 修改提交进行修改。"
         ' 
         ' lbShutdownAnimStatus
         ' 

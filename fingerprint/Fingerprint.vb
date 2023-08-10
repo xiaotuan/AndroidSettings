@@ -9,7 +9,7 @@ Module Fingerprint
     ' return：获取成功返回 fingerprint，否则返回空字符串
     Public Function GetFingerprint(ByRef info As ProjectInfo) As String
         Debug.WriteLine("[Fingerprint] GetFingerprint=>Android version: " + info.AndroidVersion)
-        If info.AndroidVersion.Equals("Android 13") Then
+        If "Android 13".Equals(info.AndroidVersion) Then
             Return AndroidTFingerprint.GetFingerprint(info)
         Else
             Return ""
@@ -24,7 +24,7 @@ Module Fingerprint
     ' return：设置成功返回 True，否则返回 False
     Public Function SetFingerprint(ByRef info As ProjectInfo, ByVal fp As String) As Boolean
         Debug.WriteLine("[Version] SetFingerprint=>fp: " + fp)
-        If info.AndroidVersion.Equals("Android 13") Then
+        If "Android 13".Equals(info.AndroidVersion) Then
             Return AndroidTFingerprint.SetFingerprint(info, fp)
         Else
             Return False

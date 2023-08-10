@@ -7,11 +7,6 @@ Module AnimationController
         form.lbBootAnimStatus.Visible = False
         form.lbShutdownRingStatus.Visible = False
         form.lbShutdownAnimStatus.Visible = False
-        If "Android 13".Equals(form.MyProjectInfo.AndroidVersion) Then
-            form.lbAnimTip.Visible = True
-        Else
-            form.lbAnimTip.Visible = False
-        End If
     End Sub
 
     Public Sub SetBootRing(ByRef form As AndroidSettingsForm)
@@ -28,7 +23,7 @@ Module AnimationController
     End Sub
 
     Public Sub SetBootAnim(ByRef form As AndroidSettingsForm)
-        Dim filePath As String = form.tbBootRing.Text
+        Dim filePath As String = form.tbBootAnim.Text
         If Not Utils.IsEmptyText(filePath) And File.Exists(filePath) And Animation.SetBootAnim(form.MyProjectInfo, filePath) Then
             form.lbBootAnimStatus.Text = "PASS"
             form.lbBootAnimStatus.ForeColor = Color.Green
@@ -41,7 +36,7 @@ Module AnimationController
     End Sub
 
     Public Sub SetShutdownRing(ByRef form As AndroidSettingsForm)
-        Dim filePath As String = form.tbBootRing.Text
+        Dim filePath As String = form.tbShutdownRing.Text
         If Not Utils.IsEmptyText(filePath) And File.Exists(filePath) And Animation.SetShutdownRing(form.MyProjectInfo, filePath) Then
             form.lbShutdownRingStatus.Text = "PASS"
             form.lbShutdownRingStatus.ForeColor = Color.Green
@@ -54,7 +49,7 @@ Module AnimationController
     End Sub
 
     Public Sub SetShutdownAnim(ByRef form As AndroidSettingsForm)
-        Dim filePath As String = form.tbBootRing.Text
+        Dim filePath As String = form.tbShutdownAnim.Text
         If Not Utils.IsEmptyText(filePath) And File.Exists(filePath) And Animation.SetShutdownAnim(form.MyProjectInfo, filePath) Then
             form.lbShutdownAnimStatus.Text = "PASS"
             form.lbShutdownAnimStatus.ForeColor = Color.Green
