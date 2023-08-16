@@ -11,7 +11,7 @@ Module MakeFileUtils
                                         separator As String ' 名称与值的分隔符
                                         ) As String
         Dim result As String = Nothing
-        If Not IsEmptyText(filePath) And File.Exists(filePath) Then
+        If File.Exists(filePath) Then
             Dim fileReader = New StreamReader(filePath, encoding)
             Dim line = fileReader.ReadLine()
             Do Until line Is Nothing
