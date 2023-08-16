@@ -80,6 +80,104 @@ Module JavaFileUtils
         Return result
     End Function
 
+    Function SetValueToJavaFile(
+                               filePath As String, ' 文件路径
+                               encoding As Encoding, ' 编码格式
+                               method As String, ' 要获取的值所在的方法所在的行字符串（不包含空格）
+                               setPosition As String, ' 要设置值的位置
+                               newValue As String ' 要设置的值
+                               ) As String
+        Dim result As Boolean = False
+
+        Dim fileReader As StreamReader = Nothing
+        Dim fileWriter As StreamWriter = Nothing
+
+        Try
+            If File.Exists(filePath) Then
+                Dim tempPath = GetTempFilePath()
+                Dim newLine = GetNewLineCharacter(File.ReadAllText(filePath))
+                File.Copy(filePath, tempPath, True)
+                fileReader = New StreamReader(tempPath, encoding)
+                fileWriter = New StreamWriter(filePath, False, encoding) With {
+                    .NewLine = newLine
+                }
+
+                ' 是否发现方法名
+                Dim isInMethod As Boolean = False
+                ' 是否发现方法名后的第一个大括号
+                Dim foundBrace As Boolean = False
+                ' 大括号数量
+                Dim braceCount As Integer = 0
+                Dim lineNumber As Integer = 1
+
+                Dim line As String = fileReader.ReadLine
+
+                Do Until IsNothing(line)
+                    If Not IsEmptyText(method) Then
+                        ' 判断当前行是否方法名代码
+                        If Not isInMethod And line.Trim.Equals(method) Then
+                            Debug.WriteLine("[JavaFileUtils] SetValueToJavaFile=>Method start line number: " & Str(lineNumber))
+                            isInMethod = True
+                            braceCount = GetBraceCount(line, "{")
+                            foundBrace = braceCount > 0
+                            braceCount -= GetBraceCount(line, "}")
+                            If foundBrace And braceCount = 0 Then
+                                isInMethod = False
+                            End If
+                        Else
+                            If isInMethod Then
+                                braceCount += GetBraceCount(line, "{")
+                                foundBrace = braceCount > 0
+                                braceCount -= GetBraceCount(line, "}")
+                                If foundBrace And braceCount = 0 Then
+                                    Debug.WriteLine("[JavaFileUtils] SetValueToJavaFile=>Method end line: " & Str(lineNumber))
+                                    isInMethod = False
+                                End If
+                            End If
+                        End If
+
+                        If isInMethod Then
+                            If line.Trim.StartsWith(setPosition) Then
+                                fileWriter.WriteLine(newValue)
+                                result = True
+                            Else
+                                fileWriter.WriteLine(line)
+                            End If
+                        Else
+                            fileWriter.WriteLine(line)
+                        End If
+                    Else
+                        If line.Trim.StartsWith(setPosition) Then
+                            fileWriter.WriteLine(newValue)
+                            result = True
+                        Else
+                            fileWriter.WriteLine(line)
+                        End If
+                    End If
+                    line = fileReader.ReadLine
+                    lineNumber += 1
+                Loop
+            Else
+                Debug.WriteLine("[JavaFileUtils] SetValueToJavaFile=>" & filePath & " isn't exist.")
+            End If
+        Catch ex As Exception
+            Debug.WriteLine("[JavaFileUtils] SetValueToJavaFile=>error: " & ex.ToString)
+        End Try
+
+        If Not IsNothing(fileReader) Then
+            fileReader.Close()
+            fileReader = Nothing
+        End If
+
+        If Not IsNothing(fileWriter) Then
+            fileWriter.Close()
+            fileWriter = Nothing
+        End If
+
+        Debug.WriteLine("[JavaFileUtils] SetValueToJavaFile=>result: " & result)
+        Return result
+    End Function
+
     Function GetNewLineCharacter(line As String) As String
         If line.Contains(vbCrLf) Then
             Return vbCrLf

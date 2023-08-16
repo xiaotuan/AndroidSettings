@@ -28,7 +28,7 @@ Module AndroidProjectInit
         If Not File.Exists(ConfigFilePath) Then
             Dim DefaultConfigPath = Application.StartupPath & "\config.json"
             Debug.WriteLine("DefaultConfigPath: " & DefaultConfigPath)
-            File.Copy(DefaultConfigPath, ConfigFilePath)
+            File.Copy(DefaultConfigPath, ConfigFilePath, True)
         End If
         Dim JsonString = File.ReadAllText(ConfigFilePath)
         Dim RootNode = JsonDocument.Parse(JsonString).RootElement

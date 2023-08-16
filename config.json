@@ -1,19 +1,6 @@
 {
   "Projects": [
     {
-      "ProjectId": "763",
-      "AndroidVersion": "Android 13",
-      "ProjectPath": "",
-      "PublicDirName": "tb8768p1_64_bsp",
-      "MssiDirName": "mssi_t_64_cn_wifi",
-      "DriveDirName": "M863YAR310_CC_768_WIFI",
-      "CustomDirName": "M863YAR310_CC_768_WIFI-MMI",
-      "Gms": 1,
-      "Go": 0,
-      "ChiperMaker": "MTK",
-      "ChiperModel": "MT6771"
-    },
-    {
       "ProjectId": "768",
       "AndroidVersion": "Android 13",
       "ProjectPath": "",
@@ -27,7 +14,7 @@
       "ChiperModel": "MT6771"
     },
     {
-      "ProjectId": "768",
+      "ProjectId": "769",
       "AndroidVersion": "Android 13",
       "ProjectPath": "",
       "PublicDirName": "tb8768p1_64_bsp",
