@@ -209,6 +209,19 @@
       "ChiperModel": "MT6761"
     },
     {
+      "ProjectId": "910",
+      "AndroidVersion": "Android 13",
+      "ProjectPath": "",
+      "PublicDirName": "tb8766p1_64_bsp",
+      "MssiDirName": "mssi_t_64_cn_datasms",
+      "DriveDirName": "M869YCR200_YM_910",
+      "CustomDirName": "M869YCR200_YM_910-MMI",
+      "Gms": 1,
+      "Go": 0,
+      "ChiperMaker": "MTK",
+      "ChiperModel": "MT6761"
+    },
+    {
       "ProjectId": "775",
       "AndroidVersion": "Android 13",
       "ProjectPath": "",

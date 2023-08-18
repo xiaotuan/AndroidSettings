@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Text
-Imports System.Text.Unicode
 
 Module MakeFileUtils
 
@@ -10,6 +9,7 @@ Module MakeFileUtils
                                         encoding As Encoding, ' 编码格式
                                         separator As String ' 名称与值的分隔符
                                         ) As String
+        Debug.WriteLine("[MakeFileUtils] GetValueFromMakeFile=>filePath: " & filePath)
         Dim result As String = Nothing
         If File.Exists(filePath) Then
             Dim fileReader = New StreamReader(filePath, encoding)
@@ -19,7 +19,6 @@ Module MakeFileUtils
                     Dim items = line.Split(separator)
                     If items.Length = 2 And items(0).Trim.Equals(macroName) Then
                         result = items(1).Trim
-                        Exit Do
                     End If
                 End If
                 line = fileReader.ReadLine()
@@ -54,14 +53,49 @@ Module MakeFileUtils
     End Function
 
     Public Function SetValueToMakeFile(
-                                      originFilePath As String, ' 原始文件路径
-                                      customFilePath As String, ' 客制文件路径
-                                      macroName As String, ' 宏的名称
-                                      newLine As String, ' 换行符
-                                      insertPosition As String, ' 如果宏不存在，则指示要插入宏的位置（位于该位置的上一行）
-                                      newValue As String ' 要插入或替换的值
+                                      filePath As String, ' 原始文件路径
+                                      encoding As Encoding, ' 换行符
+                                      setPosition As String, ' 要修改的位置（该行开头的一段字符串）
+                                      newValue As String ' 修改的值（整行字符串）
                                       ) As Boolean
-        Return False
+        Dim result As Boolean = False
+
+        Dim fileReader As StreamReader = Nothing
+        Dim fileWriter As StreamWriter = Nothing
+        Try
+            If File.Exists(filePath) Then
+                Dim tempFilePath = Utils.GetTempFilePath()
+                File.Copy(filePath, tempFilePath)
+                Dim newLine As String = Utils.GetNewLineCharacter(File.ReadAllText(tempFilePath))
+                fileReader = New StreamReader(tempFilePath, encoding)
+                fileWriter = New StreamWriter(filePath, False, encoding) With {
+                    .NewLine = newLine
+                }
+
+                Dim line As String = fileReader.ReadLine
+                Do Until IsNothing(line)
+                    If line.Trim.StartsWith(setPosition) Then
+                        fileWriter.WriteLine(newValue)
+                        result = True
+                    Else
+                        fileWriter.WriteLine(line)
+                    End If
+                    line = fileReader.ReadLine
+                Loop
+            End If
+        Catch ex As Exception
+            Debug.WriteLine("[MakeFileUtils] SetValueToMakeFile=>error: " & ex.ToString)
+        End Try
+
+        If Not IsNothing(fileReader) Then
+            fileReader.Close()
+        End If
+        If Not IsNothing(fileWriter) Then
+            fileWriter.Close()
+        End If
+
+        Debug.WriteLine("[MakeFileUtils] SetValueToMakeFile=>result: " & result)
+        Return result
     End Function
 
     Public Function AddValueToMakeFile(
@@ -76,14 +110,15 @@ Module MakeFileUtils
         Dim fileWriter As StreamWriter = Nothing
         Try
             If File.Exists(filePath) Then
-                Dim tempFilePath = GetTempFilePath()
+                Dim tempFilePath = Utils.GetTempFilePath()
                 File.Copy(filePath, tempFilePath)
+                Dim newLine As String = Utils.GetNewLineCharacter(File.ReadAllText(tempFilePath))
                 fileReader = New StreamReader(tempFilePath, encoding)
-                Dim line = fileReader.ReadLine
                 fileWriter = New StreamWriter(filePath, False, encoding) With {
-                    .NewLine = GetNewLineCharacter(line)
+                    .NewLine = newLine
                 }
 
+                Dim line = fileReader.ReadLine
                 Do Until IsNothing(line)
                     If Not IsEmptyText(insertPosition) And line.Trim().StartsWith(insertPosition) Then
                         fileWriter.WriteLine(value)
@@ -125,27 +160,4 @@ Module MakeFileUtils
         Return False
     End Function
 
-    Function GetNewLineCharacter(line As String) As String
-        If line.Contains(vbCrLf) Then
-            Return vbCrLf
-        ElseIf line.Contains(vbCr) Then
-            Return vbCr
-        ElseIf line.Contains(vbLf) Then
-            Return vbLf
-        Else
-            Return Environment.NewLine
-        End If
-    End Function
-
-    Function GetTempFilePath() As String
-        Dim tempFloderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "/AndroidProjectConfig/Temp"
-        If Not Directory.Exists(tempFloderPath) Then
-            Directory.CreateDirectory(tempFloderPath)
-        End If
-        Dim tempFilePath = tempFloderPath & "/back.tmp"
-        If File.Exists(tempFilePath) Then
-            File.Delete(tempFilePath)
-        End If
-        Return tempFilePath
-    End Function
 End Module
